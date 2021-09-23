@@ -1,0 +1,121 @@
+/*colors used :
+#635039 : dark brown
+#ab8963 : light brown
+#76e3ed : turquoise
+#5cf2ff : light turqoise
+#f7c88d : peach
+*/
+
+/*bootstrap css used
+.pt : padding top
+.pb : padding bottom
+.px : padding sides
+.py : padding vertical
+
+*/
+
+
+/*Styles for text*/
+p {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+h2 {
+  color: white;
+  text-shadow: 1px 4px 6px rgba(0,0,0,0.75);
+  font-size: 5vW; /*size is relative to screen size*/
+}
+h5 {
+  color: #635039; /*dark brown*/
+}
+h6 {
+  font-size: 16px;
+}
+.smallp {
+  font-size: 12px;
+}
+.whitep {
+  color: white;
+  text-shadow: 1px 4px 6px rgb(0,0,0,0.55);
+}
+/*link styles */
+a{
+  text-decoration: none;
+  color: white;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
+}
+/* unvisited link */
+a:link {
+  color: white;
+}
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+  color: #5cf2ff; /*light turqoise*/
+}
+/* selected link */
+a:active {
+  color: #ab8963; /*light brown*/
+}
+
+/*button styles */
+button {
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.75);
+  background-color: #f7c88d;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:hover {
+  box-shadow: 0px 0px 8px #76e3ed; /*turqoise*/
+}
+
+/*styles to use on divs*/
+.outlined-t {
+  border-top: 5px groove #76e3ed; /*top turqoise border*/
+}
+.outlined-b {
+  border-bottom: 5px groove #76e3ed; /*bottom turquoise border*/
+}
+.shadow-b {
+  box-shadow: 0px 8px 8px -8px rgba(0,0,0,0.75); /*bottom box shadow*/
+}
+.inset-b {
+  box-shadow: inset -2px -1px 15px 5px rgb(0,0,0,0.55); /*inset box shadow*/
+}
+.bluebg {
+  background-color: rgb(71, 186, 196, 0.65); /*turquoise background*/
+}
+.greybg {
+  background-color: rgb(0,0,0,0.25); /*light grey background*/
+}
+
+/*styling for the navigation bar*/
+.topbar {
+  background-color: white;
+  position: sticky; /*so it sticks to top of page even when scrolling down*/
+  top: 0;
+}
+
+/*background pictures*/
+.kmbg { /*small KM logo*/
+  background-image: url("images/km.1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.midimage {
+  background-image: url("images/MiddleBanner.jpg");
+  background-size: cover;
+}
