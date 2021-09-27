@@ -18,11 +18,16 @@
 /*Styles for text*/
 p {
   font-family: Helvetica, Verdana, sans-serif;
+  color: black;
 }
 h2 {
   color: white;
   text-shadow: 1px 4px 6px rgba(0,0,0,0.75);
   font-size: 5vW; /*size is relative to screen size*/
+}
+h4 {
+  color: #635039; /* dark brown */
+  letter-spacing: 5px;
 }
 h5 {
   color: #635039; /*dark brown*/
@@ -37,6 +42,7 @@ h6 {
   color: white;
   text-shadow: 1px 4px 6px rgb(0,0,0,0.55);
 }
+
 /*link styles */
 a{
   text-decoration: none;
@@ -118,4 +124,58 @@ button:hover {
 .midimage {
   background-image: url("images/MiddleBanner.jpg");
   background-size: cover;
+}
+#sidebar {
+  background-color: #f7c88d;
+
+}
+#sidebar ul {
+  list-style: none;
+  padding-left: 10px;
+}
+#sidebar a {
+  font-size: 13px;
+}
+li {
+  font-size: 13px;
+  color: #5cf2ff;
+}
+figcaption {
+  color: black;
+  font-size: 14px;
+  text-shadow: none;
+}
+figcaption:hover {
+  color: #ab8963 /* light brown*/
+}
+
+#main .col {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+.thumbnail {
+  width: 120px;
+}
+@media only screen and (min-width: 768px) {
+  .thumbnail {
+      width: 140px;
+  }
+
+@media only screen and (min-width: 1024px) {
+  .thumbnail {
+      width: 180px;
+  }
+
+
+#footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background-color: #b0b0b0; /*light grey*/
+}
+#bottom {
+  padding-bottom: 40px;
 }
