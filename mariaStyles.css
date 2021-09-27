@@ -6,7 +6,7 @@
 #f7c88d : peach
 */
 
-/*bootstrap css used
+/*bootstrap css used in html
 .pt : padding top
 .pb : padding bottom
 .px : padding sides
@@ -86,6 +86,20 @@ button {
 button:hover {
   box-shadow: 0px 0px 8px #76e3ed; /*turqoise*/
 }
+/*list styles*/
+li {
+  font-size: 13px;
+  color: #5cf2ff; /*light turqoise*/
+}
+/*figcaption styles*/
+figcaption {
+  color: black;
+  font-size: 14px;
+  text-shadow: none;
+}
+figcaption:hover {
+  color: #ab8963 /* light brown*/
+}
 
 /*styles to use on divs*/
 .outlined-t {
@@ -108,26 +122,14 @@ button:hover {
 }
 
 /*styling for the navigation bar*/
-.topbar {
+#topbar {
   background-color: white;
   position: sticky; /*so it sticks to top of page even when scrolling down*/
   top: 0;
 }
-
-/*background pictures*/
-.kmbg { /*small KM logo*/
-  background-image: url("images/km.1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.midimage {
-  background-image: url("images/MiddleBanner.jpg");
-  background-size: cover;
-}
+/*styling for the sidebar*/
 #sidebar {
   background-color: #f7c88d;
-
 }
 #sidebar ul {
   list-style: none;
@@ -136,26 +138,29 @@ button:hover {
 #sidebar a {
   font-size: 13px;
 }
-li {
-  font-size: 13px;
-  color: #5cf2ff;
-}
-figcaption {
-  color: black;
-  font-size: 14px;
-  text-shadow: none;
-}
-figcaption:hover {
-  color: #ab8963 /* light brown*/
-}
 
+/*styling for main columns (padding and alignment)*/
 #main .col {
   padding-bottom: 20px;
   padding-top: 20px;
   display: grid;
-  justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
+
+/*styling for the footer*/
+#footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background-color: #b0b0b0; /*light grey*/
+  height: 40px;
+}
+/*padding for the bottom so that the footer can fit*/
+#bottom {
+  padding-bottom: 40px;
+}
+
+/*sizing for thumbnail images*/
 .thumbnail {
   width: 120px;
 }
@@ -169,13 +174,14 @@ figcaption:hover {
       width: 180px;
   }
 
-
-#footer {
-  position:fixed;
-  bottom:0;
-  width:100%;
-  background-color: #b0b0b0; /*light grey*/
+/*background pictures*/
+.kmbg { /*small KM logo*/
+  background-image: url("images/km.1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#bottom {
-  padding-bottom: 40px;
+.midimage {
+  background-image: url("images/MiddleBanner.jpg");
+  background-size: cover;
 }

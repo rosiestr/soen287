@@ -19,9 +19,9 @@
 
 <body>
   <!-- HEADER -->
-  <header class="container-fluid">
+  <header class="container-fluid"> <!--container that fills width of page-->
     <div class="row">
-      <div class="col-md-auto">
+      <div class="col-md-auto"> <!--column width is size of its contents-->
         <img class = "img-fluid" src = "images/header.png">
       </div>
       <div class = "col d-flex align-items-center">
@@ -31,59 +31,56 @@
   </header>
 
   <!--NAVIGATION BAR -->
-  <nav class="container-fluid topbar outlined-b outlined-t">
+  <nav class="container-fluid outlined-b outlined-t" id = "topbar">
     <!--first row of navigation bar-->
 
     <!-- only appears on small screens -->
     <section class="row pb-2 d-md-none">
       <div class = "col-5">
-        <button><a href="#"><i class="fas fa-bars px-1"></i></a></button>
+        <button><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
       </div>
       <div class = "col-2">
-        <button><a href="#"><i class="fas fa-shopping-cart px-1"></i></a></button>
+        <button><a href="#"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
       </div>
       <div class = "col-2">
-        <button><a href="#"><i class="fas fa-sign-in-alt px-1"></i></a></button>
+        <button><a href="#"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
       </div>
       <div class = "col-2">
-        <button><a href="#"><i class="fas fa-user-plus px-1"></i></a></button>
+        <button><a href="#"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
       </div>
     </section>
     <!-- only appears on medium/large screens -->
     <section class = "d-none d-md-block">
       <div class = "row">
         <div class = "col-md-auto">
-          <a href="#"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a>
+          <a href="#"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
         </div>
         <div class= "col d-flex justify-content-center align-items-center">
-          <h4>FRUITS AND VEGETABLES</h4>
+          <h4>FRUITS AND VEGETABLES</h4> <!--Aisle section title -->
         </div>
         <div class="col-md-auto d-flex justify-content-end">
-          <a href="#"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a>
-          <a href="#"><button>Register <i class="fas fa-user-plus"></i></button></a>
+          <a href="#"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+          <a href="#"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
         </div>
       </div>
     </section>
     <!--end of html for first row of topbar -->
 
     <!--second row of navigation, doesn't appear on small screens-->
-
-    <!-- only appears on medium screens -->
     <section class = "d-none d-md-block">
       <div class = "row px-0 bluebg outlined-t">
         <div class = "col">
-
-          <a href = "index.html"><i class="fas fa-home"></i> HOME</a>
+          <a href = "index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
         </div>
       </div>
     </section>
-    <!-- only appears on large screens -->
+
   </nav> <!-- end of navigation-->
 
   <div class = container-fluid>
     <div class = "row">
+      <!-- Sidebar -->
       <aside class="col-md-auto" id = "sidebar">
-        <!-- Sidebar -->
         <ul>
           <li><a href="#">Deals</a></li>
           <li>Fruits and Vegetables</li>
@@ -117,7 +114,9 @@
             <li><a href="#">Household items</a></li>
           </ul>
         </aside>
+        <!-- main body -->
         <main class = "col" id = "main">
+          <!-- Aisle subsection - fruits -->
           <section class = "row" id = "#fruits">
             <h4>Fruits</h4>
             <div class = "col" id = "applesAndPears">
@@ -207,7 +206,9 @@
                   <figcaption><b>$0.59/lb</b><br> Banana</figcaption>
                 </a>
               </div>
-            </section>
+            </section> <!--end of fruits section -->
+
+            <!-- Aisle subsection - Vegetables -->
             <section class = "row" id = "vegetables">
               <h4>Vegetables</h4>
               <div class = "col" id = "tomato">
@@ -271,18 +272,19 @@
                         </a>
                       </div>
                     </section>
-                    <a href = "#top"><button><i class = "fas fa-arrow-up"></i></button></a>
-                  </main>
+                    <!-- end of vegetables section -->
+                    <a href = "#top"><button><i class = "fas fa-arrow-up"></i></button></a> <!-- button to return to top of page-->
+                  </main> <!--end of main body content-->
 
-                </div>
+                </div><!--end of row-->
               </div><!-- end of container -->
 
               <!-- footer -->
               <footer>
                 <!-- first row -->
                 <div class = "outlined-t outlined-b greybg px-3"  id="footer">
-                  <a href><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a>
-                  <a href><i class="fas fa-map-pin"></i> Find a Store</a>
+                  <a href><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+                  <a href><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
                 </div>
                 <!-- second row -->
                 <div class = "outlined-t inset-b smallp px-2" id = "bottom">
