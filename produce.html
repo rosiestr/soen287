@@ -36,8 +36,11 @@
 
     <!-- only appears on small screens -->
     <section class="row pb-2 d-md-none">
-      <div class = "col-5">
+      <div class = "col-3">
         <button><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="#"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
       </div>
       <div class = "col-2">
         <button><a href="#"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
@@ -65,7 +68,6 @@
       </div>
     </section>
     <!--end of html for first row of topbar -->
-
     <!--second row of navigation, doesn't appear on small screens-->
     <section class = "d-none d-md-block">
       <div class = "row px-0 bluebg outlined-t">
@@ -116,6 +118,10 @@
         </aside>
         <!-- main body -->
         <main class = "col" id = "main">
+          <!-- Aisle title to appear on small screens -->
+          <section class = "d-md-block d-flex justify-content-center outlined-tb mt-1"> 
+            <h5>Fruits & Vegetables</h5>
+          </section>
           <!-- Aisle subsection - fruits -->
           <section class = "row" id = "#fruits">
             <h4>Fruits</h4>
@@ -330,5 +336,5 @@
 
               <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-            </body>
-            </html>
+</body>
+</html>
