@@ -55,6 +55,42 @@
           <button>
             <a href="#"><i class="fas fa-shopping-cart px-1"></i></a>
           </button>
+
+    <!-- only appears on small screens -->
+    <section class="row pb-2 d-md-none">
+      <div class = "col-5 dropdown">
+        <button class = "dropbtn" onclick="dropMenu()"><i class="fas fa-arrow-circle-down px-1"></i></button>
+        <div id = "aisleMenu" class = "dropdown-content">
+          <ul>
+            <li><a href = "produce.html">Fruits & Vegetables</a></li>
+            <li><a href = "">Dairy & Eggs</a></li>
+            <li><a href = "">Meat & Poultry</a></li>
+            <li><a href = "">Bakery Products</a></li>
+            <li><a href = "">Fish & Seafood</a></li>
+            <li><a href = "">Beverages</a></li>
+            <li><a href = "">Frozen</a></li>
+            <li><a href = "">Household items</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class = "col-2">
+        <button><a href="#"><i class="fas fa-shopping-cart px-1"></i></a></button>
+      </div>
+      <div class = "col-2">
+        <button><a href="#"><i class="fas fa-sign-in-alt px-1"></i></a></button>
+      </div>
+      <div class = "col-2">
+        <button><a href="#"><i class="fas fa-user-plus px-1"></i></a></button>
+      </div>
+    </section>
+    <!-- only appears on medium/large screens -->
+    <section class = "d-none d-md-block">
+      <div class = "row d-flex justify-content-between">
+        <div class = "col-4">
+          <a href="#"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a>
+        </div>
+        <div class = "col-2 kmbg">
+          <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
         </div>
         <div class="col-2">
           <button>
@@ -163,6 +199,25 @@
       <section class="row">
         <div class="col">
           <h2>START SHOPPING NOW!</h2>
+        <div class = "col dropdown">
+          <h6><button>More aisles <i class="fas fa-arrow-circle-right"></i></button></h6>
+          <div class = "dropdown-content">
+            <ul>
+              <li><a href = "">Bakery Products</a></li>
+              <li><a href = "">Fish & Seafood</a></li>
+              <li><a href = "">Beverages</a></li>
+              <li><a href = "">Frozen</a></li>
+              <li><a href = "">Household items</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- only appears on large screens -->
+    <section class = "d-none d-lg-block">
+      <div class = "row bluebg outlined-t px-0 pt-1 d-flex align-items-center">
+        <div class = "col">
+          <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
         </div>
       </section>
       <!-- second row -->

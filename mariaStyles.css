@@ -25,7 +25,7 @@ p {
 h2 {
   color: white;
   text-shadow: 1px 4px 6px rgba(0,0,0,0.75);
-  font-size: 5vW; /*size is relative to screen size*/
+  font-size: 40px;
 }
 h4 {
   color: #635039; /* dark brown */
@@ -43,6 +43,10 @@ h6 {
 .whitep {
   color: white;
   text-shadow: 1px 4px 6px rgb(0,0,0,0.55);
+}
+ul{
+  list-style: none;
+  padding-left: 10px;
 }
 
 h3{
@@ -157,17 +161,13 @@ button {
   margin: 5px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 button:hover {
   box-shadow: 0px 0px 8px #76e3ed; /*turqoise*/
 }
-/*list styles*/
-li {
-  font-size: 13px;
-  color: #5cf2ff; /*light turqoise*/
-}
+
+
 /*figcaption styles*/
 figcaption {
   color: black;
@@ -209,8 +209,8 @@ figcaption:hover {
   background-color: #f7c88d;
 }
 #sidebar ul {
-  list-style: none;
-  padding-left: 10px;
+  font-size: 13px;
+  color: #5cf2ff; /*light turqoise*/
 }
 #sidebar a {
   font-size: 13px;
@@ -237,6 +237,55 @@ figcaption:hover {
   padding-bottom: 40px;
 }
 
+/*styles for the dropdown menu*/
+.dropdown {
+  display: flex;
+}
+.dropdown-content {
+  display: none;
+  width: 80%;
+  position: absolute;
+  padding-right: 5px;
+  padding-top: 5px;
+  background-color: #f7c88d;
+  z-index: 1;
+  box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.50);
+  border-radius: 5px;
+  margin-top: 52px;
+}
+
+.dropdown ul {
+  padding-left: 5px;
+  font-size: 16px;
+}
+.dropdown li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .dropdown button {
+    background-color: transparent;
+    margin: 0;
+    text-decoration: bold;
+    padding: 0;
+    text-transform: none;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
+  }
+  .dropdown-content {
+    margin-top: 30px;
+  }
+  .dropdown:hover {
+    color: #f7c88d; /* peach*/
+    box-shadow: none;
+  }
+}
+
+
 /*sizing for thumbnail images*/
 .thumbnail {
   width: 120px;
@@ -245,12 +294,12 @@ figcaption:hover {
   .thumbnail {
       width: 140px;
   }
-
+}
 @media only screen and (min-width: 1024px) {
   .thumbnail {
       width: 180px;
   }
-
+}
 /*background pictures*/
 .kmbg { /*small KM logo*/
   background-image: url("images/km.1.png");
