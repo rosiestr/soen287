@@ -277,7 +277,7 @@ figcaption:hover {
 }
 
 /*styling for the footer*/
-#footer {
+footer {
   position:fixed;
   bottom:0;
   width:100%;
@@ -286,7 +286,7 @@ figcaption:hover {
 }
 /*padding for the bottom so that the footer can fit*/
 #bottom {
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 }
 
 
