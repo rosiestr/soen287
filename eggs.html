@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags for Bootstrap, provided by https.getbootstrap.com-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -21,12 +21,10 @@
     />
     <!-- Link to icon for title -->
     <link rel="shortcut icon" href="images/KMicon.ico" />
-    <!-- css for index.html -->
-    <link rel="stylesheet" href="mariaStyles.css" />
-    <!--title to appear in tab-->
-    <title>Kalamari Market: Online Groceries</title>
-  </head>
 
+    <link rel="stylesheet" href="mariaStyles.css" />
+    <title>Brown Eggs</title>
+  </head>
   <body>
     <!-- HEADER -->
     <header class="container-fluid">
@@ -142,106 +140,51 @@
       </section>
     </nav>
     <!-- end of navigation-->
-
-    <!-- advertisement section -->
-    <section class="container-fluid midimage py-3 inset-b">
-      <!--container background is "images/produce.jpg" alt="Produce at a Grocery Store" -->
-      <div class="row align-items-center">
-        <div class="col d-flex justify-content-center">
-          <h2>10% OFF FOR STUDENTS</h2>
-        </div>
-        <div class="w-100"></div>
-        <div class="col d-flex justify-content-center">
-          <p class="whitep smallp">*With valid photo student ID</p>
-        </div>
+    <!--<header>-->
+    <article class="musselsarticle">
+      <img
+        src="images/Dairy/eggs.png"
+        alt="Eggs"
+        height="450"
+        class="imgmussels"
+      />
+      <!--</header>-->
+      <class class="container">
+        <h3>Brown Eggs</h3>
+        <h4>Extra Large</h4>
+        <p>
+          <strong style="font-size: larger">$2.99/carton</strong>
+        </p>
+        <hr />
+       
+        <p>Curbside pickup eligible</p>
+        <p>Free standard shipping</p>
+        <button class="description">
+          <img src="images/desc.png" alt="list" width="18" />
+          More Description
+        </button>
+        <br />
+        <br />
+        <form action="/action_page.php">
+          <label for="quantity">Enter Desired Number of Boxes :</label><br />
+          <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <br />
+          <label for="size"></label><br />
+          <select name="sizes" class="selects">
+            <option value="none">Select Size</option>
+            <option value="small">12 Count</option>
+            <option value="medium">18 Count</option>
+            <option value="large">24 Count</option>
+          </select>
+          <br /><br />
+          
+        </form>
+        <br />
+        <p>Get this item with your grocery order:</p>
+        <button class="cart">Add To Cart</button>
+        <br /><br /><br />
       </div>
-    </section>
-
-    <!-- section with deals and foods -->
-    <main class="container" id="main">
-      <!-- first row -->
-      <section class="row">
-        <div class="col">
-          <h2>START SHOPPING NOW!</h2>
-        </div>
-      </section>
-      <!-- second row -->
-      <section class="row">
-        <div class="col">
-          <h3>This Week's Deals!</h3>
-        </div>
-        <div class="col">
-          <p>VALID UNTIL: <span>09/26/2021</span></p>
-        </div>
-      </section>
-      <!-- third row -->
-      <section class="row">
-        <div class="col">
-          <a href="beef.html" target="_blank">
-            <figure>
-              <img src="images/Meat/beef.png" class="thumbnail" />
-              <figcaption><b>$1.99/lb </b><br />Fresh Beef Flank</figcaption>
-            </figure>
-          </a>
-        </div>
-        <div class="col">
-          <a href="mussels.html" target="_blank">
-            <figure>
-              <img src="images/Seafood/mussels.png" class="thumbnail" />
-              <figcaption><b>$2.99/lb </b><br />Fresh mussels</figcaption>
-            </figure>
-          </a>
-        </div>
-        <div class="col">
-          <a href="eggs.html" target="_blank">
-            <figure>
-              <img src="images/Dairy/Eggs.png" class="thumbnail" />
-              <figcaption>
-                <b>$2.99/carton </b><br />Brown eggs, extra large
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <div class="col d-flex justify-content-center">
-          <a href="broccoli.html" target="_blank">
-            <figure>
-              <img src="images/Produce/broccoli.png" class="thumbnail" />
-              <figcaption>
-                <b>$1.99 ea.</b> (reg. 2.39)<br />Broccoli
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <div class="col">
-          <a href="lime.html" target="_blank">
-            <figure>
-              <img src="images/Produce/lime.jpg" class="thumbnail" />
-              <figcaption><b>$0.49 ea. </b><br />Lime</figcaption>
-            </figure>
-          </a>
-        </div>
-        <div class="col">
-          <figure>
-            <img src="images/Dairy/cheese.png" class="thumbnail" />
-            <figcaption><b>$4.99/lb </b>Australian Swiss Cheese</figcaption>
-          </figure>
-        </div>
-        <div class="col">
-          <figure>
-            <img src="images/Dairy/cheese.png" class="thumbnail" />
-            <figcaption><b>$4.99/lb </b>Australian Swiss Cheese</figcaption>
-          </figure>
-        </div>
-        <div class="col">
-          <figure>
-            <img src="images/Dairy/cheese.png" class="thumbnail" />
-            <figcaption><b>$4.99/lb </b>Australian Swiss Cheese</figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-    <!-- end of deals section -->
-
+    </article>
     <!-- footer -->
     <footer>
       <!-- first row -->
@@ -288,7 +231,6 @@
         </table>
       </div>
     </footer>
-    <!--end of footer -->
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script
