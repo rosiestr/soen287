@@ -176,6 +176,13 @@ figcaption {
 figcaption:hover {
   color: #ab8963 /* light brown*/
 }
+figure p{
+  color: white;
+  background-color: #34eba1; /*bright green*/
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 /*styles to use on divs*/
 .outlined-t {
@@ -212,6 +219,7 @@ figcaption:hover {
   background-color: white;
   position: sticky; /*so it sticks to top of page even when scrolling down*/
   top: 0;
+  z-index: 1;
 }
 /*styles for the dropdown menu*/
 .dropdown {
