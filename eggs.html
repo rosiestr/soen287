@@ -38,108 +38,131 @@
       </div>
     </header>
 
-    <!--NAVIGATION BAR -->
-    <nav class="container-fluid outlined-b outlined-t" id="topbar">
-      <!--first row of navigation bar-->
+   <!--NAVIGATION BAR -->
+   <nav class="container-fluid outlined-b outlined-t" id="topbar">
+    <!--first row of navigation bar-->
 
-      <!-- only appears on small screens -->
-      <section class="row pb-2 d-md-none">
-        <div class="col-5">
-          <button>
-            <a href="#"><i class="fas fa-arrow-circle-down px-1"></i></a>
-          </button>
+    <!-- only appears on small screens -->
+    <section class="row d-md-none">
+      <div class="col-5">
+        <button id = "phoneBtn"><i class="fas fa-arrow-circle-down px-1"></i></button>
+      </div>
+      <div class="col-2">
+        <button>
+          <a href="#"><i class="fas fa-shopping-cart px-1"></i></a>
+        </button>
+      </div>
+      <div class="col-2">
+        <button>
+          <a href="#"><i class="fas fa-sign-in-alt px-1"></i></a>
+        </button>
+      </div>
+      <div class="col-2">
+        <button>
+          <a href="#"><i class="fas fa-user-plus px-1"></i></a>
+        </button>
+      </div>
+    </section>
+    <!-- only appears on medium/large screens -->
+    <section class="d-none d-md-block">
+      <div class="row d-flex justify-content-between">
+        <div class="col-4">
+          <a href="#"
+            ><button>My Cart <i class="fas fa-shopping-cart"></i></button
+          ></a>
         </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-shopping-cart px-1"></i></a>
-          </button>
+        <div class="col-2 kmbg">
+          <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
         </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-sign-in-alt px-1"></i></a>
-          </button>
+        <div class="col-4 d-flex justify-content-end">
+          <a href="#"
+            ><button>Login <i class="fas fa-sign-in-alt"></i></button
+          ></a>
+          <a href="#"
+            ><button>Register <i class="fas fa-user-plus"></i></button
+          ></a>
         </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-user-plus px-1"></i></a>
-          </button>
-        </div>
-      </section>
-      <!-- only appears on medium/large screens -->
-      <section class="d-none d-md-block">
-        <div class="row d-flex justify-content-between">
-          <div class="col-4">
-            <a href="#"
-              ><button>My Cart <i class="fas fa-shopping-cart"></i></button
-            ></a>
-          </div>
-          <div class="col-2 kmbg">
-            <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
-          </div>
-          <div class="col-4 d-flex justify-content-end">
-            <a href="#"
-              ><button>Login <i class="fas fa-sign-in-alt"></i></button
-            ></a>
-            <a href="#"
-              ><button>Register <i class="fas fa-user-plus"></i></button
-            ></a>
-          </div>
-        </div>
-      </section>
-      <!--end of html for first row of topbar -->
+      </div>
+    </section>
+    
+    <div id="myDropdown" class="clickdown-content orangeBox">
+      <ul>
+        <li><a href="produce.html">Fruits & Vegetables</a></li>
+        <li><a href="">Dairy & Eggs</a></li>
+        <li><a href="">Meat & Poultry</a></li>
+        <li><a href="">Bakery Products</a></li>
+        <li><a href="">Fish & Seafood</a></li>
+        <li><a href="">Beverages</a></li>
+        <li><a href="">Frozen</a></li>
+        <li><a href="">Household items</a></li>
+      </ul>
+    </div>
+    <!--end of html for first row of topbar -->
 
-      <!--second row of navigation, doesn't appear on small screens-->
+    <!--second row of navigation, doesn't appear on small screens-->
 
-      <!-- only appears on medium screens -->
-      <section class="d-none d-md-block d-lg-none">
-        <div class="row px-0 bluebg outlined-t">
-          <div class="col">
-            <a href><h6>Fruits and Vegetables</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Dairy & Eggs</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Meat & Poultry</h6></a>
-          </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >More aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
+    <!-- only appears on medium screens -->
+    <section class="d-none d-md-block d-lg-none">
+      <div class="row px-0 bluebg outlined-t">
+        <div class="col">
+          <a href><h6>Fruits and Vegetables</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Dairy & Eggs</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Meat & Poultry</h6></a>
+        </div>
+        <div class="col dropdown">
+          <button>
+            <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+          </button>
+          <div class="dropdown-content orangeBox">
+            <ul>
+              <li><a href="">Bakery Products</a></li>
+              <li><a href="">Fish & Seafood</a></li>
+              <li><a href="">Beverages</a></li>
+              <li><a href="">Frozen</a></li>
+              <li><a href="">Household items</a></li>
+            </ul>
           </div>
         </div>
-      </section>
-      <!-- only appears on large screens -->
-      <section class="d-none d-lg-block">
-        <div class="row bluebg outlined-t px-0 pt-1">
-          <div class="col">
-            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Dairy & Eggs</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Meat & Poultry</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Bakery Products</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Fish & Seafood</h6></a>
-          </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >See more aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
+      </div>
+    </section>
+    <!-- only appears on large screens -->
+    <section class="d-none d-lg-block">
+      <div class="row bluebg outlined-t px-0 pt-1">
+        <div class="col">
+          <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Dairy & Eggs</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Meat & Poultry</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Bakery Products</h6></a>
+        </div>
+        <div class="col">
+          <a href=""><h6>Fish & Seafood</h6></a>
+        </div>
+        <div class="col dropdown">
+          <button>
+            <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+          </button>
+          <div class="dropdown-content orangeBox">
+            <ul>
+              <li><a href="">Beverages</a></li>
+              <li><a href="">Frozen</a></li>
+              <li><a href="">Household items</a></li>
+            </ul>
           </div>
         </div>
-      </section>
-    </nav>
-    <!-- end of navigation-->
+      </div>
+    </section>
+  </nav>
+  <!-- end of navigation-->
     <!--<header>-->
     <article class="musselsarticle">
       <img
