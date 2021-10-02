@@ -46,20 +46,8 @@
 
       <!-- only appears on small screens -->
       <section class="row d-md-none">
-        <div class="col-5 dropdown">
-          <button><i class="fas fa-arrow-circle-down px-1"></i></button>
-          <div id="aisleMenu" class="dropdown-content">
-            <ul>
-              <li><a href="produce.html">Fruits & Vegetables</a></li>
-              <li><a href="">Dairy & Eggs</a></li>
-              <li><a href="">Meat & Poultry</a></li>
-              <li><a href="">Bakery Products</a></li>
-              <li><a href="">Fish & Seafood</a></li>
-              <li><a href="">Beverages</a></li>
-              <li><a href="">Frozen</a></li>
-              <li><a href="">Household items</a></li>
-            </ul>
-          </div>
+        <div class="col-5">
+          <button id = "phoneBtn"><i class="fas fa-arrow-circle-down px-1"></i></button>
         </div>
         <div class="col-2">
           <button>
@@ -98,6 +86,19 @@
           </div>
         </div>
       </section>
+      
+      <div id="myDropdown" class="clickdown-content orangeBox">
+        <ul>
+          <li><a href="produce.html">Fruits & Vegetables</a></li>
+          <li><a href="">Dairy & Eggs</a></li>
+          <li><a href="">Meat & Poultry</a></li>
+          <li><a href="">Bakery Products</a></li>
+          <li><a href="">Fish & Seafood</a></li>
+          <li><a href="">Beverages</a></li>
+          <li><a href="">Frozen</a></li>
+          <li><a href="">Household items</a></li>
+        </ul>
+      </div>
       <!--end of html for first row of topbar -->
 
       <!--second row of navigation, doesn't appear on small screens-->
@@ -118,7 +119,7 @@
             <button>
               <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
             </button>
-            <div id="aisleMenu" class="dropdown-content">
+            <div class="dropdown-content orangeBox">
               <ul>
                 <li><a href="">Bakery Products</a></li>
                 <li><a href="">Fish & Seafood</a></li>
@@ -152,7 +153,7 @@
             <button>
               <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
             </button>
-            <div id="aisleMenu" class="dropdown-content">
+            <div class="dropdown-content orangeBox">
               <ul>
                 <li><a href="">Beverages</a></li>
                 <li><a href="">Frozen</a></li>
@@ -356,6 +357,17 @@
     </div>
 
     <!--end of footer -->
+
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("phoneBtn").onclick = function() {dropContent()};
+      document.getElementById("compBtn").onclick = function() {dropContent()};
+      
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function dropContent() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script

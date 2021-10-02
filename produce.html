@@ -37,7 +37,7 @@
     <!-- only appears on small screens -->
     <section class="row pb-2 d-md-none">
       <div class = "col-3">
-        <button><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+        <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
       </div>
       <div class = "col-2">
         <button><a href="#"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
@@ -71,6 +71,9 @@
     <!--second row of navigation, doesn't appear on small screens-->
     <section class = "d-none d-md-block">
       <div class = "row px-0 bluebg outlined-t">
+        <div class = "col-md-auto">
+          <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
+        </div>
         <div class = "col">
           <a href = "index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
         </div>
@@ -78,44 +81,24 @@
     </section>
 
   </nav> <!-- end of navigation-->
-
   <div class = container-fluid>
     <div class = "row">
       <!-- Sidebar -->
-      <aside class="col-md-auto" id = "sidebar">
+      <div class = "clickdown">
+      <aside class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
           <li><a href="#">Deals</a></li>
-          <li>Fruits and Vegetables</li>
-          <uL>
-            <li><a href = "#fruits">Fruits</a></li>
-            <ul class = "list-content">
-                <li><a href = "#applesAndPears"> Apples and pears</a></li>
-                <li><a href = "#citrus">Citrus<a></li>
-                <li><a href = "#stoneFruits">Stone fruit</a></li>
-                <li><a href = "#tropical">Tropical And Exotic</a></li>
-                <li><a href = "#berries">Berries</a></li>
-                <li><a href = "#melons">Melons</a></li>
-              </ul>
-              <li><a href = "#vegetables">Vegetables</a></li>
-              <ul>
-                <li><a href = "#tomato">Tomatoes and Herbs</a></li>
-                <li><a href = "#leafyGreens">Leafy Greens</a></li>
-                <li><a href = "#broccoli">Broccoli, Cabbage, and Cauliflower</a></li>
-                <li><a href = "#pumpkin">Pumpkin, Cucumber, and Zucchini</a></li>
-                <li><a href = "#roots">Potato, Yam, and other roots</a></li>
-                <li><a href = "#celery">Celery and Asparagus</a></li>
-                <li><a href = "#onion">Onion, Garlic, and Shallot</a></li>
-              </ul>
-            </ul>
-            <li><a href="#">Dairy and Eggs</a></li>
-            <li><a href="#">Meat & Poultry</a></li>
-            <li><a href="#">Bakery Products</a></li>
-            <li><a href="#">Fish & Seafood</a></li>
-            <li><a href="#">Beverages</a></li>
-            <li><a href="#">Frozen</a></li>
-            <li><a href="#">Household items</a></li>
+          <li><a href="produce.html">Fruits and Vegetables</a></li>
+          <li><a href="#">Dairy and Eggs</a></li>
+          <li><a href="#">Meat & Poultry</a></li>
+          <li><a href="#">Bakery Products</a></li>
+          <li><a href="#">Fish & Seafood</a></li>
+          <li><a href="#">Beverages</a></li>
+          <li><a href="#">Frozen</a></li>
+          <li><a href="#">Household items</a></li>
           </ul>
         </aside>
+      </div>
         <!-- main body -->
         <main class = "col" id = "main">
           <!-- Aisle title to appear on small screens -->
@@ -335,7 +318,17 @@
                 </div>
            
 
-
+                <script>
+                  // Get the button, and when the user clicks on it, execute myFunction
+                  document.getElementById("phoneBtn").onclick = function() {dropContent()};
+                  document.getElementById("compBtn").onclick = function() {dropContent()};
+                  
+                  /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+                  function dropContent() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                  }
+                </script>
+                  
 
               <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
