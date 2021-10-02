@@ -261,6 +261,16 @@
       </div>
     </footer>
 
+    <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("phoneBtn").onclick = function() {dropContent()};
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function dropContent() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
