@@ -166,7 +166,6 @@ button:hover {
   box-shadow: 0px 0px 8px #76e3ed; /*turquoise*/
 }
 
-
 /*figcaption styles*/
 figcaption {
   color: black;
@@ -221,7 +220,33 @@ figure p{
   top: 0;
   z-index: 1;
 }
-/*styles for the dropdown menu*/
+/*styling for the clickdown menu*/
+.clickdown {
+  position: relative;
+}
+.clickdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  transition: 0.5s;
+}
+.clickdown-content ul {
+  font-size: 16px;
+  color: #5cf2ff; /*light turqoise*/ 
+}
+
+.clickdown-content a {
+  display: block;
+  font-size: 13px;
+}
+
+.show {
+  display:block;}
+/*styles for the hoverdown menu*/
+
+@media only screen and (min-width: 768px) {
+
 .dropdown {
   display: flex;
 }
@@ -229,57 +254,40 @@ figure p{
   display: none; /*not displated until hover over dropdown*/
   width: 80%;
   position: absolute;
-  padding-right: 5px;
-  padding-top: 5px;
-  background-color: #f7c88d;
   z-index: 1;
-  box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.50);
-  border-radius: 5px;
-  margin-top: 52px;
+  margin-top: 30px;
 }
 
-.dropdown ul {
+.dropdown-content ul {
   padding-left: 5px;
   font-size: 16px;
 }
-.dropdown li {
+.dropdown-content li {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .dropdown:hover .dropdown-content {
   display: block;
+  color: #f7c88d; /* peach*/
+  box-shadow: none;
+}
+.dropdown button {
+  background-color: transparent;
+  margin: 0;
+  text-decoration: bold;
+  padding: 0;
+  text-transform: none;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
+}
+}
+.orangeBox {
+  box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.50);
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  background-color: #f7c88d;/* peach*/
 }
 
-/*for medium/large screen*/
-@media only screen and (min-width: 768px) {
-  .dropdown button {
-    background-color: transparent;
-    margin: 0;
-    text-decoration: bold;
-    padding: 0;
-    text-transform: none;
-    text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
-  }
-  .dropdown-content {
-    margin-top: 30px;
-  }
-  .dropdown:hover {
-    color: #f7c88d; /* peach*/
-    box-shadow: none;
-  }
-}
-
-/*styling for the sidebar*/
-#sidebar {
-  background-color: #f7c88d;
-}
-#sidebar ul {
-  font-size: 16px;
-  color: #5cf2ff; /*light turqoise*/
-}
-#sidebar a {
-  font-size: 13px;
-}
 
 /*styling for main columns (padding and alignment)*/
 #main .col {
