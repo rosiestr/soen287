@@ -20,17 +20,17 @@
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="images/KMicon.ico" />
+    <link rel="shortcut icon" href="/images/KMicon.ico" />
 
-    <link rel="stylesheet" href="frontStyles.css" />
-    <title>Fresh Mussels</title>
+    <link rel="stylesheet" href="/frontStyles.css" />
+    <title>Frozen: Pizza Pops</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-auto">
-          <img class="img-fluid" src="images/header.png" />
+          <img class="img-fluid" src="/images/header.png" />
         </div>
         <div class="col d-flex align-items-center">
           <h5>Buy Groceries Online!</h5>
@@ -87,13 +87,13 @@
       
       <div id="myDropdown" class="clickdown-content orangeBox">
         <ul>
-          <li><a href="produce.html">Fruits & Vegetables</a></li>
+          <li><a href="/produce.html">Fruits & Vegetables</a></li>
           <li><a href="">Dairy & Eggs</a></li>
           <li><a href="">Meat & Poultry</a></li>
           <li><a href="">Bakery Products</a></li>
           <li><a href="">Fish & Seafood</a></li>
           <li><a href="">Beverages</a></li>
-          <li><a href="">Frozen</a></li>
+          <li><a href="/frozen.html">Frozen</a></li>
           <li><a href="">Household items</a></li>
         </ul>
       </div>
@@ -105,7 +105,7 @@
       <section class="d-none d-md-block d-lg-none">
         <div class="row px-0 bluebg outlined-t">
           <div class="col">
-            <a href><h6>Fruits and Vegetables</h6></a>
+            <a href = "/produce.html"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Dairy & Eggs</h6></a>
@@ -122,7 +122,7 @@
                 <li><a href="">Bakery Products</a></li>
                 <li><a href="">Fish & Seafood</a></li>
                 <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="/frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -133,7 +133,7 @@
       <section class="d-none d-lg-block">
         <div class="row bluebg outlined-t px-0 pt-1">
           <div class="col">
-            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
+            <a href="/produce.html"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Dairy & Eggs</h6></a>
@@ -154,7 +154,7 @@
             <div class="dropdown-content orangeBox">
               <ul>
                 <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="/frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -166,53 +166,32 @@
     <!--<header>-->
     <article class="musselsarticle">
       <img
-        src="images/Seafood/mussels2.jpeg"
-        alt="Mussels"
+        src="/images/Frozen/pizzaPops.jpg"
+        alt="Pizza Pops"
         height="450"
         class="imgmussels"
       />
       <!--</header>-->
-      <div class="container">
-        <h3>Fresh Mussels</h3>
+      <div class="container"> 
+        <h4>PILLSBURY</h4>
+        <h3>Frozen 3 Cheese Pizza Snacks, Pizza Pops</h3>
         <p>
-          <strong style="font-size: larger">$2.99/lb</strong>
-          <s>$4.79/lb</s> Save $1.80/lb
+          <strong style="font-size: larger">$4.99</strong> (600g)
         </p>
         <hr />
-        <p>
-          Fresh mussels of various sizes and types imported from a wide range of
-          locations
-        </p>
+        <p>Sold by the box</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
         <button class="description">
-          <img src="images/desc.png" alt="list" width="18" />
+          <img src="/images/desc.png" alt="list" width="18" />
           More Description
         </button>
-        <!--for More Description:-->
-        <!--<p>The KALAMARI market mussels can complement your seafood dishes.</p>-->
-        <!-- Mussels are rich in the marine Omega-3s, EPA and DHA. If you are trying to lose weight, mussels give you a lot of nutrition without a lot of calories.-->
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Pounds :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
-          <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br /><br />
-          <label for="types"></label><br />
-          <select name="types" class="selects">
-            <option value="none">Select Type</option>
-            <option value="canadian">Canadian Mussels</option>
-            <option value="blue">Blue Mussels</option>
-            <option value="Mediterranean">Mediterranean Mussels</option>
-          </select>
+            <label for="quantity">Enter Desired Quantity :</label><br />
+            <input type="text" class="quantity" name="quantity" value="0" /><br />
+            <br />           
         </form>
         <br />
         <p>Get this item with your grocery order:</p>
@@ -222,49 +201,11 @@
     </article>
     <!-- footer -->
     <footer>
-      <!-- first row -->
-      <div class="outlined-t outlined-b greybg px-3" id="footer">
-        <a href><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
-        <a href><i class="fas fa-map-pin"></i> Find a Store</a>
-      </div>
-      <!-- second row -->
-      <div class="outlined-t inset-b smallp px-2" id="bottom">
-        <!--table with hours-->
-        <table>
-          <tr>
-            <th>Hours</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>Monday</td>
-            <td>7AM - 10PM</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>7AM - 10PM</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>7AM - 10PM</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td>8AM - 11PM</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>8AM - 11PM</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>9AM - 10PM</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>9AM - 9PM</td>
-          </tr>
-        </table>
-      </div>
+        <!-- first row -->
+        <div class="outlined-t outlined-b greybg px-3" id="footer">
+          <a href = ""><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
+          <a href = ""><i class="fas fa-map-pin"></i> Find a Store</a>
+        </div>
     </footer>
 
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->

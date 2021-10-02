@@ -313,14 +313,14 @@
     <footer>
       <!-- first row -->
       <div class="outlined-t outlined-b greybg px-3" id="footer">
-        <a href><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
-        <a href><i class="fas fa-map-pin"></i> Find a Store</a>
+        <a href = ""><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
+        <a href = ""><i class="fas fa-map-pin"></i> Find a Store</a>
       </div>
     </footer>
     <!-- second row -->
-    <div class="outlined-t smallp px-2" id="bottom">
+    <div class="outlined-t px-2" id="bottom">
       <!--table with hours-->
-      <table>
+      <table class = "smallp">
         <tr>
           <th>Hours</th>
           <th></th>
@@ -361,8 +361,6 @@
     <script>
       // Get the button, and when the user clicks on it, execute myFunction
       document.getElementById("phoneBtn").onclick = function() {dropContent()};
-      document.getElementById("compBtn").onclick = function() {dropContent()};
-      
       /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
       function dropContent() {
         document.getElementById("myDropdown").classList.toggle("show");
