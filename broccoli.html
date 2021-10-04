@@ -45,7 +45,9 @@
       <!-- only appears on small screens -->
       <section class="row d-md-none">
         <div class="col-5">
-          <button id = "phoneBtn"><i class="fas fa-arrow-circle-down px-1"></i></button>
+          <button id="phoneBtn">
+            <i class="fas fa-arrow-circle-down px-1"></i>
+          </button>
         </div>
         <div class="col-2">
           <button>
@@ -67,7 +69,7 @@
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
-            <a href="#"
+            <a href="shoppingCart.html"
               ><button>My Cart <i class="fas fa-shopping-cart"></i></button
             ></a>
           </div>
@@ -84,7 +86,7 @@
           </div>
         </div>
       </section>
-      
+
       <div id="myDropdown" class="clickdown-content orangeBox">
         <ul>
           <li><a href="produce.html">Fruits & Vegetables</a></li>
@@ -264,7 +266,9 @@
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>
       // Get the button, and when the user clicks on it, execute myFunction
-      document.getElementById("phoneBtn").onclick = function() {dropContent()};
+      document.getElementById("phoneBtn").onclick = function () {
+        dropContent();
+      };
       /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
       function dropContent() {
         document.getElementById("myDropdown").classList.toggle("show");

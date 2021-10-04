@@ -45,7 +45,9 @@
       <!-- only appears on small screens -->
       <section class="row d-md-none">
         <div class="col-5">
-          <button id = "phoneBtn"><i class="fas fa-arrow-circle-down px-1"></i></button>
+          <button id="phoneBtn">
+            <i class="fas fa-arrow-circle-down px-1"></i>
+          </button>
         </div>
         <div class="col-2">
           <button>
@@ -67,7 +69,7 @@
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
-            <a href="#"
+            <a href="shoppingCart.html"
               ><button>My Cart <i class="fas fa-shopping-cart"></i></button
             ></a>
           </div>
@@ -84,7 +86,7 @@
           </div>
         </div>
       </section>
-      
+
       <div id="myDropdown" class="clickdown-content orangeBox">
         <ul>
           <li><a href="/produce.html">Fruits & Vegetables</a></li>
@@ -105,7 +107,7 @@
       <section class="d-none d-md-block d-lg-none">
         <div class="row px-0 bluebg outlined-t">
           <div class="col">
-            <a href = "/produce.html"><h6>Fruits and Vegetables</h6></a>
+            <a href="/produce.html"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Dairy & Eggs</h6></a>
@@ -172,11 +174,12 @@
         class="imgmussels"
       />
       <!--</header>-->
-      <div class="container"> 
+      <div class="container">
         <h4>CHAPMAN'S</h4>
         <h3>Vanilla Super Ice Cream Sandwiches</h3>
         <p>
-          <strong style="font-size: larger">$4.99</strong> <s> $6.99</s> 12 X 120G
+          <strong style="font-size: larger">$4.99</strong> <s> $6.99</s> 12 X
+          120G
         </p>
         <hr />
         <p>Sold by the box</p>
@@ -189,9 +192,9 @@
         <br />
         <br />
         <form action="/action_page.php">
-            <label for="quantity">Enter Desired Quantity :</label><br />
-            <input type="text" class="quantity" name="quantity" value="0" /><br />
-            <br />           
+          <label for="quantity">Enter Desired Quantity :</label><br />
+          <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <br />
         </form>
         <br />
         <p>Get this item with your grocery order:</p>
@@ -201,17 +204,19 @@
     </article>
     <!-- footer -->
     <footer>
-        <!-- first row -->
-        <div class="outlined-t outlined-b greybg px-3" id="footer">
-          <a href = ""><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
-          <a href = ""><i class="fas fa-map-pin"></i> Find a Store</a>
-        </div>
+      <!-- first row -->
+      <div class="outlined-t outlined-b greybg px-3" id="footer">
+        <a href=""><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
+        <a href=""><i class="fas fa-map-pin"></i> Find a Store</a>
+      </div>
     </footer>
 
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>
       // Get the button, and when the user clicks on it, execute myFunction
-      document.getElementById("phoneBtn").onclick = function() {dropContent()};
+      document.getElementById("phoneBtn").onclick = function () {
+        dropContent();
+      };
       /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
       function dropContent() {
         document.getElementById("myDropdown").classList.toggle("show");
