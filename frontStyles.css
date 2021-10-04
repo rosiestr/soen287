@@ -227,18 +227,13 @@ figure p {
 .clickdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
+  min-width: 200px;
   overflow: auto;
   transition: 0.5s;
 }
-.clickdown-content ul {
-  font-size: 16px;
-  color: #5cf2ff; /*light turqoise*/
-}
-
 .clickdown-content a {
   display: block;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .show {
@@ -320,7 +315,12 @@ footer {
 }
 @media only screen and (min-width: 1024px) {
   .thumbnail {
-    width: 180px;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .thumbnail {
+    width: 600px;
   }
 }
 /*background pictures*/
