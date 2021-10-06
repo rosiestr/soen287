@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+</head>
+<body>
+    <form>
+        <label for="name">Customer Name</label>
+        <input type="text" id="name" name="name" value = "Jane Doe"> <br>
+        <label for="email">Email</label>
+        <input type = "email" id="email" name="email" value = "janedoe@gmail.com"><br>
+        <label for="phone">Phone</label>
+        <input type = "phone" id = "phone" name ="phone" value = 438889999><br> 
+        <label for="billingAddress">Billing Address</label><br>
+        <textarea id = "billingAddress" name = "billingAddress" cols = "20" rows="6"
+        >8888 Ave Stuart Montreal, QC T5H 5H6</textarea><br> 
+        <label for="shippingAddress">Shipping Address</label><br>
+        <label for="sameAddress">Same as billing address</label>
+        <input type = "checkbox" id = "sameAddress" name = "sameAddress"><br>
+        <label for="pickup">Order for pickup</label>
+        <input type = "checkbox" id = "pickup" name = "pickup"><br>
+        <textarea id = "shippingAddress" cols ="20" rows="6"
+        >9999 Oak Avenue Montreal, QC T1S 2G4
+        </textarea><br> 
+
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Ristorante Frozen Spinach Thin Crust Pizza</td>
+                <td>$6.49</td>
+                <td>
+                    <input type="number" id ="quantity" name = "quantity" value = 1>
+                </td>
+                <td>
+                    <input type="discount" id ="discount" name = "discount" value = 10>
+                    <label for="discount">%</label>
+                </td>
+                <td>
+                    $5.84
+                </td>
+            </tr>
+            <tr>
+                <td>Key Lime</td>
+                <td>$0.49</td>
+                <td>
+                    <input type="number" id ="quantity" name = "quantity" value = 5>
+                </td>
+                <td>
+                    <input type="discount" id ="discount" name = "discount">
+                    <label for="discount">%</label>
+                </td>
+                <td>$2.45</td>
+            </tr>
+            <tr>
+                <td>Mandarin Orange</td>
+                <td>$0.99</td>
+                <td>
+                    <input type = "number" id="quantity" name = "quantity" value = 8>
+                </td>
+                <td>
+                    <input type="discount" id ="discount" name = "discount">
+                    <label for="discount">%</label>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Chapman's Vanilla Super Ice Cream Sandwiches</td>
+                <td>
+                    <input type = "number" id="quantity" name = "quantity" value = 1>
+                </td>
+            </tr>
+
+        </table>
+        
+    </form>
+
+
+
+</body>
+</html>
