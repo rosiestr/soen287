@@ -17,46 +17,64 @@
     <title>Edit Order</title>
 </head>
 <body>
-    <section class = "container d-flex justify-content-between">
+    <!--NAVIGATION BAR -->
+    <nav class="nav-top" id = "topbar">
+        <!--first row of navigation bar-->
+        <section>
+            <div><a class="active" href="#home">Home</a></div>
+            <div><a href="#products">Products</a></div>
+            <div><a href="#orders">Orders</a></div>
+            <div><a href="#users">Users</a></div>
+            <img src="images/KMicon.ico">
+        </section>
+    </nav>
+    <h1>Edit Order</h1>
+    <main class = "container-fluid d-flex justify-content-center py-3">
         <form>
-            <div class = "row">
-                <div class = "col">
-                <label for="name">Customer Name</label>
-                <input type="text" id="name" name="name" value = "Jane Doe"> <br>
-                <label for="email">Email</label>
-                <input type = "email" id="email" name="email" value = "janedoe@gmail.com"><br>
-                <label for="phone">Phone</label>
-                <input type = "phone" id = "phone" name ="phone" value = 438889999>
+            <section class = "row">
+                <div class = "col-sm-4">
+                    <label for="name"><b>Customer Name</b></label>
+                    <input type="text" id="name" name="name" value = "Jane Doe"> <br>
+                    <label for="email"><b>Email</b></label> <br>
+                    <input type = "email" id="email" name="email" value = "janedoe@gmail.com"><br>
+                    <label for="phone"><b>Phone</b></label> <br>
+                    <input type = "tel" id = "phone" name ="phone" value = 438889999>
                 </div>
-                <div class = "col">
-                <label for="billingAddress">Billing Address</label><br>
-                <textarea id = "billingAddress" name = "billingAddress" cols = "20" rows="6"
-                >8888 Ave Stuart Montreal, QC T5H 5H6</textarea><br>
-            </div> 
-                <div class = "col">
-                <label for="shippingAddress">Shipping Address</label><br>
-                <label for="sameAddress">Same as billing address</label>
-                <input type = "checkbox" id = "sameAddress" name = "sameAddress"><br>
-                <label for="pickup">Order for pickup</label>
-                <input type = "checkbox" id = "pickup" name = "pickup"><br>
-                <textarea id = "shippingAddress" cols ="20" rows="6"
-                >9999 Oak Avenue Montreal, QC T1S 2G4
-                </textarea>
-            </div>
+                <div class = "col-sm-4">
+                    <label for="billingAddress"><b>Billing Address</b></label><br>
+                    <textarea id = "billingAddress" name = "billingAddress" cols = "20" rows="6"
+                    >8888 Ave Stuart Montreal, QC T5H 5H6</textarea>
+                </div> 
+                <div class = "col-sm-4 d-flex flex-column">
+                    <label for="shippingAddress"><b>Shipping Address</b></label>
+                    <textarea id = "shippingAddress" cols ="20" rows="6"
+                    >9999 Oak Avenue Montreal, QC T1S 2G4
+                    </textarea>
+                    <div>
+                        <label for="sameAddress">Same as billing address</label>
+                        <input type = "checkbox" id = "sameAddress" name = "sameAddress">
+                    </div>
+                    <div>
+                        <label for="pickup">Order for pickup</label>
+                        <input type = "checkbox" id = "pickup" name = "pickup">
+                    </div>
+                </div> 
+            </section>
             
-            </div>
-            
-                
-            <table>
+            <div class = "table-responsive row">
+            <table class = "product-table order-table table col">
+                <thead>
+                    <tr>
+                        <th scope = "col">Item</th>
+                        <th scope = "col">Cost</th>
+                        <th scope = "col">Quantity</th>
+                        <th scope = "col">Discount</th>
+                        <th scope = "col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
-                    <th>Item</th>
-                    <th>Cost</th>
-                    <th>Quantity</th>
-                    <th>Discount</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>Ristorante Frozen Spinach Thin Crust Pizza</td>
+                    <td scope = "row">Ristorante Frozen Spinach Thin Crust Pizza</td>
                     <td>$6.49</td>
                     <td>
                         <input type="number" id ="quantity" name = "quantity" value = 1>
@@ -71,7 +89,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Key Lime</td>
+                    <td scope = "row">Key Lime</td>
                     <td>$0.49</td>
                     <td>
                         <input type="number" id ="quantity" name = "quantity" value = 5>
@@ -84,7 +102,7 @@
                     <td>$2.45</td>
                 </tr>
                 <tr>
-                    <td>Mandarin Orange</td>
+                    <td scope = "row">Mandarin Orange</td>
                     <td>$0.99</td>
                     <td>
                         <input type = "number" id="quantity" name = "quantity" value = 8>
@@ -99,7 +117,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Chapman's Vanilla Super Ice Cream Sandwiches</td>
+                    <td scope = "row">Chapman's Vanilla Super Ice Cream Sandwiches</td>
                     <td>$4.99</td>
                     <td>
                         <input type = "number" id="quantity" name = "quantity" value = 1>
@@ -113,43 +131,49 @@
                         $4.99
                     </td>
                 </tr>
+            </tbody>
+            <tfoot>
                 <tr>
-                    <td colspan="2"></td>
+                    <td scope = "row" colspan="2"></td>
                     <td>Total before tax: </td>
                     <td id = "totalBeforeTax">$21.20</td>
                 </tr>
                 <tr>
-                    <td colspan="2"></td>
+                    <td scope = "row" colspan="2"></td>
                     <td>Delivery fee: </td>
                     <td>$5.00</td>
                 </tr>
                 <tr>
-                    <td colspan="2"></td>
+                    <td scope = "row" colspan="2"></td>
                     <td>Discount: </td>
                     <td>
-                        <input type="discount" id ="discount" name = "discount">
+                        <input type="number" id ="discount" name = "discount">
                         <label for="discount">% </label>
                         <input type ="button" id = "apply" name = "apply" value = "APPLY">
                     <td>
                 </tr>
                 <tr>
-                    <td colspan="2"></td>
+                    <td scope = "row" colspan="2"></td>
                     <td>Tax: </td>
                     <td id = "tax">$3.93</td>
                 </tr>
                 <tr>
-                    <td colspan="2"></td>
+                    <td scope = "row" colspan="2"></td>
                     <td>Order Total: </td>
                     <td id = "orderTotal">$25.13</td>
                 </tr>
+            </tfoot>
             </table>
-            <div class = "d-flex justify-content-end"> 
+        </div>
+            <div class = "d-flex justify-content-end row"> 
             <input type ="submit" id = "save" name = "save" value="SAVE ORDER">
             </div>
         </form>
-    </section>
+    </main>
 
 
-
+    <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
+
 </html>

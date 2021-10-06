@@ -91,6 +91,10 @@ h1 {
     font-weight: bold;
     color: #76e3ed;
 }
+.order-table {
+  width: 100%;
+  overflow: scroll;
+}
 
 .button-bar{
   display: flex;
@@ -117,6 +121,21 @@ h1 {
     background-color: #76e3ed;
     color: white;
   }
+
+  /*input styles*/ 
+input[type=button], input[type=submit] {
+  border: 2px solid #76e3ed;
+  border-radius: 5px;
+}
+input[type=button] {
+  font-size: 16px;
+}
+input[type=submit] {
+  background-color: #dddddd;
+}
+input[type=number]{
+  width: 50px;
+}
 
 
 /*footer style*/
