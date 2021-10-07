@@ -18,7 +18,7 @@
 </head>
 <body>
     <!--NAVIGATION BAR -->
-    <nav class="nav-top" id = "topbar">
+    <nav class="nav-top pb-2" id = "topbar">
         <!--first row of navigation bar-->
         <section>
             <div><a class="active" href="#home">Home</a></div>
@@ -29,9 +29,9 @@
         </section>
     </nav>
     <h1>Edit Order</h1>
-    <section class = "container-fluid d-flex justify-content-center py-3">
+    <section class = "container d-flex justify-content-center py-3 bluebg">
         <form>
-            <div class = "row bluebg">
+            <div class = "row">
                 <div class = "col-sm-4">
                     <label for="name"><b>Customer Name</b></label>
                     <input type="text" id="name" name="name" value = "Jane Doe"> <br>
@@ -157,13 +157,20 @@
                         </tr>
                         <tr>
                             <td scope = "row" colspan="2"></td>
+                            <td>Total discounts: </td>
+                            <td id = "discountTotal">-$0.65</td>
+                        </tr>
+                        <tr>
+                            <td scope = "row" colspan="2"></td>
                             <td>Tax: </td>
                             <td id = "tax">$3.93</td>
                         </tr>
                         <tr>
+                        </tr>
+                        <tr>
                             <td scope = "row" colspan="2"></td>
-                            <td>Order Total: </td>
-                            <td id = "orderTotal">$25.13</td>
+                            <th>Order Total: </th>
+                            <th id = "orderTotal">$25.13</b></th>
                         </tr>
                     </tfoot>
                 </table>
