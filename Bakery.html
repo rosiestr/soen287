@@ -1,191 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-        <!-- Bootstrap CSS -->
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-          crossorigin="anonymous"
-        />
-        <!-- FontAwesome CSS - for icons -->
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-          crossorigin="anonymous"
-        />
-        <!-- Link to icon for title -->
-        <link rel="shortcut icon" href="images/KMicon.ico" />
-    
-        <link rel="stylesheet" href="mariaStyles.css" />
-  <title>Kalamari Market: Bakery </title>
+  <head>
+    <!-- Required meta tags for Bootstrap, provided by https.getbootstrap.com-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- FontAwesome CSS - for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Link to icon for title -->
+    <link rel="shortcut icon" href="images/KMicon.ico" />
+    <!-- css for index.html -->
+    <link rel="stylesheet" href="mariaStyles.css">
+    <!--title to appear in tab-->
+    <title>Kalamari Market: Bakery Products</title>
+  </head>
 
-    </head>
-    <body>
-    <!-- HEADER -->
-    <header class="container-fluid">
-        <div class="row">
-          <div class="col-md-auto">
-            <img class="img-fluid" src="images/header.png" />
-          </div>
-          <div class="col d-flex align-items-center">
-            <h5>Buy Groceries Online!</h5>
-          </div>
+  <body>
+     <!-- HEADER -->
+     <header class="container-fluid"> <!--container that fills width of page-->
+      <div class="row">
+        <div class="col-md-auto"> <!--column width is size of its contents-->
+          <img class = "img-fluid" src = "images/header.png">
         </div>
-      </header>
-
-        <!--NAVIGATION BAR -->
-    <nav class="container-fluid outlined-b outlined-t" id = "topbar">
-        <!--first row of navigation bar-->
-
-       <!-- only appears on small screens -->
-      <section class="row pb-2 d-md-none">
-        <div class="col-5">
-          <button>
-            <a href="#"><i class="fas fa-arrow-circle-down px-1"></i></a>
-          </button>
+        <div class = "col d-flex align-items-center">
+          <h5>Buy Groceries Online!</h5>
         </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-shopping-cart px-1"></i></a>
-          </button>
-        </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-sign-in-alt px-1"></i></a>
-          </button>
-        </div>
-        <div class="col-2">
-          <button>
-            <a href="#"><i class="fas fa-user-plus px-1"></i></a>
-          </button>
-        </div>
-      </section>
-      <!-- only appears on medium/large screens -->
-      <section class="d-none d-md-block">
-        <div class="row d-flex justify-content-between">
-          <div class="col-4">
-            <a href="#"
-              ><button>My Cart <i class="fas fa-shopping-cart"></i></button
-            ></a>
-          </div>
-          <div class="col-2 kmbg">
-            <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
-          </div>
-          <div class="col-4 d-flex justify-content-end">
-            <a href="#"
-              ><button>Login <i class="fas fa-sign-in-alt"></i></button
-            ></a>
-            <a href="#"
-              ><button>Register <i class="fas fa-user-plus"></i></button
-            ></a>
-          </div>
-        </div>
-      </section>
-      <!--end of html for first row of topbar -->
-
-      <!--second row of navigation, doesn't appear on small screens-->
-
-      <!-- only appears on medium screens -->
-      <section class="d-none d-md-block d-lg-none">
-        <div class="row px-0 bluebg outlined-t">
-          <div class="col">
-            <a href><h6>Fruits and Vegetables</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Dairy & Eggs</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Meat & Poultry</h6></a>
-          </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >More aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
-          </div>
-        </div>
-      </section>
-      <!-- only appears on large screens -->
-      <section class="d-none d-lg-block">
-        <div class="row bluebg outlined-t px-0 pt-1">
-          <div class="col">
-            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Dairy & Eggs</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Meat & Poultry</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Bakery Products</h6></a>
-          </div>
-          <div class="col">
-            <a href=""><h6>Fish & Seafood</h6></a>
-          </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >See more aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
-          </div>
-        </div>
-      </section>
-    </nav>
-    <!-- end of navigation-->
-    <!--<header>-->
-        <article class="musselsarticle">
-            <img
-        src="images/cake.png.png"
-        alt="Chocolate Cake"
-        height="450"
-        class="imgmussels"
-      />
-      <class class="container">
-        <h3>Chocolate cake</h3>
-        <!--<h4>All sizes</h4>--> 
-        <p>
-          <strong style="font-size: larger">$9.99 for small, 12.99$ for medium, 15.99$ for large</strong>
-        </p>
-        <hr />
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description">
-          <img src="images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Number of Boxes :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
-          <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects">
-            <option value="none">Select Size</option>
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
-          </select>
-          <br /><br />
-          
-        </form>
-        <br />
-        <p>Get this item with your grocery order:</p>
-        <button class="cart">Add To Cart</button>
-        <br /><br /><br />
       </div>
+    </header>
 
-            </article>
+    <style>
+        td {
+            padding: 25px;
+        }
+        table{
+            width: 100%;
+        }
+    </style>
+
+    <!--NAVIGATION BAR -->
+<nav class="container-fluid outlined-b outlined-t" id = "topbar">
+<!--first row of navigation bar-->
+
+<!-- only appears on small screens -->
+<section class="row pb-2 d-md-none">
+  <div class = "col-3">
+    <button><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+  </div>
+  <div class = "col-2">
+    <button><a href="#"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+  </div>
+  <div class = "col-2">
+    <button><a href="#"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+  </div>
+  <div class = "col-2">
+    <button><a href="#"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+  </div>
+  <div class = "col-2">
+    <button><a href="#"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+  </div>
+</section>
+<!-- only appears on medium/large screens -->
+<section class = "d-none d-md-block">
+  <div class = "row">
+    <div class = "col-md-auto">
+      <a href="#"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
+    </div>
+    <div class= "col d-flex justify-content-center align-items-center">
+      <h4>BAKERY PRODUCTS</h4> <!--Aisle section title -->
+    </div>
+    <div class="col-md-auto d-flex justify-content-end">
+      <a href="#"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+      <a href="#"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
+    </div>
+  </div>
+</section>
+<!--end of html for first row of topbar -->
+<!--second row of navigation, doesn't appear on small screens-->
+<section class = "d-none d-md-block">
+  <div class = "row px-0 bluebg outlined-t">
+    <div class = "col">
+      <a href = "index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
+    </div>
+  </div>
+</section>
+
+</nav> <!-- end of navigation-->
+
+<div class = container-fluid>
+<div class = "row">
+
+    <aside class="col-md-auto" id = "sidebar">
+        <ul>
+          <li><a href="#">Deals</a></li>
+          <li>Fruits and Vegetables</li>
+          <uL>
+            <li><a href = "#fruits">Fruits</a></li>
+            <ul class = "list-content">
+                <li><a href = "#applesAndPears"> Apples and pears</a></li>
+                <li><a href = "#citrus">Citrus<a></li>
+                <li><a href = "#stoneFruits">Stone fruit</a></li>
+                <li><a href = "#tropical">Tropical And Exotic</a></li>
+                <li><a href = "#berries">Berries</a></li>
+                <li><a href = "#melons">Melons</a></li>
+              </ul>
+              <li><a href = "#vegetables">Vegetables</a></li>
+              <ul>
+                <li><a href = "#tomato">Tomatoes and Herbs</a></li>
+                <li><a href = "#leafyGreens">Leafy Greens</a></li>
+                <li><a href = "#broccoli">Broccoli, Cabbage, and Cauliflower</a></li>
+                <li><a href = "#pumpkin">Pumpkin, Cucumber, and Zucchini</a></li>
+                <li><a href = "#roots">Potato, Yam, and other roots</a></li>
+                <li><a href = "#celery">Celery and Asparagus</a></li>
+                <li><a href = "#onion">Onion, Garlic, and Shallot</a></li>
+             </ul>
+            </ul>
+            <li><a href="#">Dairy and Eggs</a></li>
+            <li><a href="#">Meat & Poultry</a></li>
+            <li><a href="#">Bakery Products</a></li>
+            <li><a href="#">Fish & Seafood</a></li>
+            <li><a href="#">Beverages</a></li>
+            <li><a href="#">Frozen</a></li>
+            <li><a href="#">Household items</a></li>
+        </ul>
+    </aside>
+        <!-- main body -->
+        <main class = "col" id = "main">
+          <!-- Aisle title to appear on small screens -->
+          <section class = "d-md-none d-flex justify-content-center outlined-tb mt-1"> 
+            <h5>Bakery Products</h5>
+          </section>
+          <!-- Aisle subsection - BAKERY -->
+          <section class = "row" id = "#bakery"></section>
+          <h4>Bakery</h4>
+
+          <table>
+              <tr>
+                  <td>
+                        <div class = "col" id = "ChocolateCake">
+                            <a href = "">
+                            <figure>
+                                <img src="images/cake.png.png" class = "thumbnail">
+                            </figure>
+                            <figcaption><b>Price depends on size. </b><br> Choclolate Cake</figcaption>
+                            </a>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class = "col" id = "ChocolateChip ">
+                            <a href = "">
+                            <figure>
+                                <img src="images/chocoChipCookie.png" class = "thumbnail">
+                            </figure>
+                            <figcaption><b>$7.00 for 10 pieces. </b><br> Choclolate Chip Cookies</figcaption>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class = "col" id = "ApplePie ">
+                            <a href = "">
+                            <figure>
+                                <img src="images/ApplePie.png" class = "thumbnail">
+                            </figure>
+                            <figcaption><b>$12.00 </b><br> Apple Pie</figcaption>
+                            </a>
+                        </div>
+
+                    </td>
+              </tr>
+              <td>
+                <div class = "col" id = "Croissants ">
+                    <a href = "">
+                    <figure>
+                        <img src="images/Croisssants.png" class = "thumbnail">
+                    </figure>
+                    <figcaption><b>$6.00 for 7 pieces. </b><br> Croissants</figcaption>
+                    </a>
+                </div>
+                  </td>
+                  <td>
+                    <div class = "col" id = "Mini Bagets">
+                        <a href = "">
+                        <figure>
+                            <img src="images/MiniBagets.png" class = "thumbnail">
+                        </figure>
+                        <figcaption><b>$3.99 for 2 pieces </b><br> Mini Bagets</figcaption>
+                        </a>
+                    </div>
+
+                  </td>
+
+          </table>
+
+          <!-- fixed footer -->
+         <footer> 
+          <div class = "outlined-t outlined-b greybg px-3">
+            <a href><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+            <a href><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+          </div>
+        </footer> 
+         <!-- footer for absolute bottom of page -->
+         <div class = "outlined-t inset-b smallp px-2" id = "bottom">
+          <!--table with hours-->
+          <table>
+            <tr>
+              <th>Hours</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>9AM - 10PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>9AM - 9PM</td>
+            </tr>
+          </table>
+        </div>
 
 
-    </body>
+
+
+        <!-- <div class = "col" id = "Chocolate Cake"></div>
+          <a href = "">
+            <figure>
+                <img src="images/cake.png.png" class = "thumbnail">
+            </figure>
+            <figcaption><b>Price depends on size. </b><br> Choclolate Cake</figcaption>
+          </a>
+        </div> -->
+
+
+  </body>
 </html>
+  
+       
+
+          
+
+            
+              
+              
