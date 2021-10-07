@@ -20,17 +20,17 @@
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="images/KMicon.ico" />
+    <link rel="shortcut icon" href="../images/KMicon.ico" />
 
-    <link rel="stylesheet" href="frontStyles.css" />
-    <title>Broccoli</title>
+    <link rel="stylesheet" href="../frontStyles.css" />
+    <title>Bubly Sparkling Water</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-auto">
-          <img class="img-fluid" src="images/header.png" />
+          <img class="img-fluid" src="../images/header.png" />
         </div>
         <div class="col d-flex align-items-center">
           <h5>Buy Groceries Online!</h5>
@@ -69,7 +69,7 @@
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
-            <a href="shoppingCart.html"
+            <a href="#shoppingCart.html"
               ><button>My Cart <i class="fas fa-shopping-cart"></i></button
             ></a>
           </div>
@@ -89,13 +89,13 @@
 
       <div id="myDropdown" class="clickdown-content orangeBox">
         <ul>
-          <li><a href="produce.html">Fruits & Vegetables</a></li>
+          <li><a href="../produce.html">Fruits & Vegetables</a></li>
           <li><a href="">Dairy & Eggs</a></li>
           <li><a href="">Meat & Poultry</a></li>
-          <li><a href="">Bakery Products</a></li>
+          <li><a href="../Bakery.html">Bakery Products</a></li>
           <li><a href="">Fish & Seafood</a></li>
-          <li><a href="">Beverages</a></li>
-          <li><a href="">Frozen</a></li>
+          <li><a href="../beverages.html">Beverages</a></li>
+          <li><a href="../frozen.html">Frozen</a></li>
           <li><a href="">Household items</a></li>
         </ul>
       </div>
@@ -107,7 +107,7 @@
       <section class="d-none d-md-block d-lg-none">
         <div class="row px-0 bluebg outlined-t">
           <div class="col">
-            <a href><h6>Fruits and Vegetables</h6></a>
+            <a href="../produce.html"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Dairy & Eggs</h6></a>
@@ -121,10 +121,10 @@
             </button>
             <div class="dropdown-content orangeBox">
               <ul>
-                <li><a href="">Bakery Products</a></li>
+                <li><a href="../Bakery.html">Bakery Products</a></li>
                 <li><a href="">Fish & Seafood</a></li>
-                <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="../beverages.html">Beverages</a></li>
+                <li><a href="../frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -135,7 +135,7 @@
       <section class="d-none d-lg-block">
         <div class="row bluebg outlined-t px-0 pt-1">
           <div class="col">
-            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
+            <a href="../produce.html"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Dairy & Eggs</h6></a>
@@ -144,7 +144,7 @@
             <a href=""><h6>Meat & Poultry</h6></a>
           </div>
           <div class="col">
-            <a href=""><h6>Bakery Products</h6></a>
+            <a href="../Bakery.html"><h6>Bakery Products</h6></a>
           </div>
           <div class="col">
             <a href=""><h6>Fish & Seafood</h6></a>
@@ -155,8 +155,8 @@
             </button>
             <div class="dropdown-content orangeBox">
               <ul>
-                <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="../beverages.html">Beverages</a></li>
+                <li><a href="../frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -166,48 +166,44 @@
     </nav>
     <!-- end of navigation-->
     <!--<header>-->
-    <article class="musselsarticle">
+    <article class="bublyarticle">
       <img
-        src="images/Produce/broccoli.png"
-        alt="Broccoli"
+        src="../images/Beverages/bubly.jpg"
+        alt="Bubly Sparkling Water"
         height="450"
-        class="imgmussels"
+        class="imgbubly"
       />
       <!--</header>-->
       <div class="container">
-        <h3>Broccoli</h3>
+        <h3>Lime</h3>
         <p>
-          <strong style="font-size: larger">$1.99/lb</strong>
-          <s>$2.39/lb</s> Save $0.80/lb
+          <strong style="font-size: larger">$6.49 per case</strong>
         </p>
         <hr />
-        <p>Sold in clusters</p>
+        <p>Sold in cases of 12</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
         <button class="description">
-          <img src="images/desc.png" alt="list" width="18" />
+          <img src="../images/desc.png" alt="list" width="18" />
           More Description
         </button>
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Pounds :</label><br />
+          <label for="quantity">Enter Desired Quantity :</label><br />
           <input type="text" class="quantity" name="quantity" value="0" /><br />
           <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br /><br />
           <label for="types"></label><br />
           <select name="types" class="selects">
             <option value="none">Select Type</option>
-            <option value="Calabrese">Calabrese</option>
-            <option value="Destiny">Destiny</option>
-            <option value="Sun King">Sun King</option>
+            <option value="Orange">Orange</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Lime">Lime</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Apple">Apple</option>
+            <option value="Mango">Mango</option>
+            <option value="Grapefruit">Grapefruit</option>
+            <option value="Lemon">Lemon</option>
           </select>
         </form>
         <br />

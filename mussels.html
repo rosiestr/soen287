@@ -22,7 +22,7 @@
     <!-- Link to icon for title -->
     <link rel="shortcut icon" href="images/KMicon.ico" />
 
-    <link rel="stylesheet" href="mariaStyles.css" />
+    <link rel="stylesheet" href="frontStyles.css" />
     <title>Fresh Mussels</title>
   </head>
   <body>
@@ -43,10 +43,10 @@
       <!--first row of navigation bar-->
 
       <!-- only appears on small screens -->
-      <section class="row pb-2 d-md-none">
+      <section class="row d-md-none">
         <div class="col-5">
-          <button>
-            <a href="#"><i class="fas fa-arrow-circle-down px-1"></i></a>
+          <button id="phoneBtn">
+            <i class="fas fa-arrow-circle-down px-1"></i>
           </button>
         </div>
         <div class="col-2">
@@ -69,7 +69,7 @@
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
-            <a href="#"
+            <a href="shoppingCart.html"
               ><button>My Cart <i class="fas fa-shopping-cart"></i></button
             ></a>
           </div>
@@ -86,6 +86,19 @@
           </div>
         </div>
       </section>
+
+      <div id="myDropdown" class="clickdown-content orangeBox">
+        <ul>
+          <li><a href="produce.html">Fruits & Vegetables</a></li>
+          <li><a href="">Dairy & Eggs</a></li>
+          <li><a href="">Meat & Poultry</a></li>
+          <li><a href="">Bakery Products</a></li>
+          <li><a href="">Fish & Seafood</a></li>
+          <li><a href="">Beverages</a></li>
+          <li><a href="">Frozen</a></li>
+          <li><a href="">Household items</a></li>
+        </ul>
+      </div>
       <!--end of html for first row of topbar -->
 
       <!--second row of navigation, doesn't appear on small screens-->
@@ -102,12 +115,19 @@
           <div class="col">
             <a href=""><h6>Meat & Poultry</h6></a>
           </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >More aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
+          <div class="col dropdown">
+            <button>
+              <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+            </button>
+            <div class="dropdown-content orangeBox">
+              <ul>
+                <li><a href="">Bakery Products</a></li>
+                <li><a href="">Fish & Seafood</a></li>
+                <li><a href="">Beverages</a></li>
+                <li><a href="">Frozen</a></li>
+                <li><a href="">Household items</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -129,12 +149,17 @@
           <div class="col">
             <a href=""><h6>Fish & Seafood</h6></a>
           </div>
-          <div class="col">
-            <h6>
-              <a href="aisles.html"
-                >See more aisles <i class="fas fa-arrow-circle-right"></i
-              ></a>
-            </h6>
+          <div class="col dropdown">
+            <button>
+              <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+            </button>
+            <div class="dropdown-content orangeBox">
+              <ul>
+                <li><a href="">Beverages</a></li>
+                <li><a href="">Frozen</a></li>
+                <li><a href="">Household items</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -243,6 +268,18 @@
         </table>
       </div>
     </footer>
+
+    <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("phoneBtn").onclick = function () {
+        dropContent();
+      };
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function dropContent() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script

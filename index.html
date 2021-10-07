@@ -22,7 +22,7 @@
     <!-- Link to icon for title -->
     <link rel="shortcut icon" href="images/KMicon.ico" />
     <!-- my css -->
-    <link rel="stylesheet" href="mariaStyles.css" />
+    <link rel="stylesheet" href="frontStyles.css" />
     <!--title to appear in tab-->
     <title>Kalamari Market: Online Groceries</title>
   </head>
@@ -46,20 +46,10 @@
 
       <!-- only appears on small screens -->
       <section class="row d-md-none">
-        <div class="col-5 dropdown">
-          <button><i class="fas fa-arrow-circle-down px-1"></i></button>
-          <div id="aisleMenu" class="dropdown-content">
-            <ul>
-              <li><a href="produce.html">Fruits & Vegetables</a></li>
-              <li><a href="">Dairy & Eggs</a></li>
-              <li><a href="">Meat & Poultry</a></li>
-              <li><a href="">Bakery Products</a></li>
-              <li><a href="">Fish & Seafood</a></li>
-              <li><a href="">Beverages</a></li>
-              <li><a href="">Frozen</a></li>
-              <li><a href="">Household items</a></li>
-            </ul>
-          </div>
+        <div class="col-5">
+          <button id="phoneBtn">
+            <i class="fas fa-arrow-circle-down px-1"></i>
+          </button>
         </div>
         <div class="col-2">
           <button>
@@ -81,7 +71,7 @@
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
-            <a href="#"
+            <a href="shoppingCart.html"
               ><button>My Cart <i class="fas fa-shopping-cart"></i></button
             ></a>
           </div>
@@ -98,6 +88,19 @@
           </div>
         </div>
       </section>
+
+      <div id="myDropdown" class="clickdown-content orangeBox">
+        <ul>
+          <li><a href="produce.html">Fruits & Vegetables</a></li>
+          <li><a href="">Dairy & Eggs</a></li>
+          <li><a href="">Meat & Poultry</a></li>
+          <li><a href="">Bakery Products</a></li>
+          <li><a href="">Fish & Seafood</a></li>
+          <li><a href="">Beverages</a></li>
+          <li><a href="frozen.html">Frozen</a></li>
+          <li><a href="">Household items</a></li>
+        </ul>
+      </div>
       <!--end of html for first row of topbar -->
 
       <!--second row of navigation, doesn't appear on small screens-->
@@ -118,12 +121,12 @@
             <button>
               <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
             </button>
-            <div id="aisleMenu" class="dropdown-content">
+            <div class="dropdown-content orangeBox">
               <ul>
                 <li><a href="">Bakery Products</a></li>
                 <li><a href="">Fish & Seafood</a></li>
                 <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -152,10 +155,10 @@
             <button>
               <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
             </button>
-            <div id="aisleMenu" class="dropdown-content">
+            <div class="dropdown-content orangeBox">
               <ul>
                 <li><a href="">Beverages</a></li>
-                <li><a href="">Frozen</a></li>
+                <li><a href="frozen.html">Frozen</a></li>
                 <li><a href="">Household items</a></li>
               </ul>
             </div>
@@ -179,30 +182,29 @@
       </div>
     </section>
 
-    
     <section class="container-fluid" id="main">
       <div class="row">
         <!--gradient color aside - only shows on large screens -->
-        <aside class="col-xl-2 gradientbg"></aside>       
+        <aside class="col-xl-1 gradientbg"></aside>
         <!-- section with deals and foods -->
-        <main class="col-xl-8">
+        <main class="col-xl-10">
           <h2>START SHOPPING NOW!</h2>
-          <div class="row">
+          <header class="row">
             <div class="col">
               <h3>This Week's Deals!</h3>
             </div>
             <div class="col">
               <p>VALID UNTIL: <span>09/26/2021</span></p>
             </div>
-          </div>
-          <picture class="row">
+          </header>
+          <section class="row">
             <div class="col">
               <a href="beef.html" target="_blank">
                 <figure>
                   <img src="images/Meat/beef.png" class="thumbnail" />
                   <figcaption>
-                    <strike>$4.99 </strike><b>$1.99/lb </b>
-                    <br>Fresh Beef Flank
+                    <strike>$4.99 </strike><b>$1.99/lb </b> <br />Fresh Beef
+                    Flank
                   </figcaption>
                 </figure>
               </a>
@@ -212,7 +214,7 @@
                 <figure>
                   <img src="images/Seafood/mussels.png" class="thumbnail" />
                   <figcaption>
-                    <strike>$4.99 </strike><b>$2.99/lb </b><br>
+                    <strike>$4.99 </strike><b>$2.99/lb </b><br />
                     Fresh mussels
                   </figcaption>
                 </figure>
@@ -221,10 +223,10 @@
             <div class="col">
               <a href="eggs.html" target="_blank">
                 <figure>
-                  <img src="images/Dairy/Eggs.png" class="thumbnail"/>
+                  <img src="images/Dairy/Eggs.png" class="thumbnail" />
                   <figcaption>
-                    <strike>$3.99 </strike><b>$2.99/carton </b>
-                    <br>Brown eggs, extra large
+                    <strike>$3.99 </strike><b>$2.99/carton </b> <br />Brown
+                    eggs, extra large
                   </figcaption>
                 </figure>
               </a>
@@ -234,7 +236,7 @@
                 <figure>
                   <img src="images/Produce/broccoli.png" class="thumbnail" />
                   <figcaption>
-                    <strike>$2.39 </strike><b>$1.99 ea.</b><br>
+                    <strike>$2.39 </strike><b>$1.99 ea.</b><br />
                     Broccoli
                   </figcaption>
                 </figure>
@@ -244,67 +246,87 @@
               <a href="lime.html" target="_blank">
                 <figure>
                   <img src="images/Produce/lime.jpg" class="thumbnail" />
-                  <figcaption><strike>$0.99 </strike><b>$0.49 ea. </b><br>
+                  <figcaption>
+                    <strike>$0.99 </strike><b>$0.49 ea. </b><br />
                     Lime
                   </figcaption>
                 </figure>
               </a>
             </div>
             <div class="col">
-              <a href = "">
-              <figure>
-                <img src="images/Dairy/cheese.png" class="thumbnail" />
-                <figcaption><strike>$6.99 </strike><b>$4.99/lb </b><br>
-                  Australian Swiss Cheese
-                </figcaption>
-              </figure>
-            </a>
+              <a href="">
+                <figure>
+                  <img src="images/Dairy/cheese.png" class="thumbnail" />
+                  <figcaption>
+                    <strike>$6.99 </strike><b>$4.99/lb </b><br />
+                    Australian Swiss Cheese
+                  </figcaption>
+                </figure>
+              </a>
             </div>
-            <div class="col">
-              <a href = "">
-              <figure>
-                <img src="images/Dairy/bococcini.jpg" class="thumbnail" />
-                <figcaption><strike>$3.99 </strike><b>$2.99/ea.</b><br>
-                  Cocktail Bococcini, Saputo, 300g
-                </figcaption>
-              </figure>
-            </a>
-            </div>
-            <div class="col">
-              <a href = "">
-              <figure>
-                <img src="images/Pantry/fiveRoses.jpg" class="thumbnail" />
-                <figcaption><strike>$3.49 </strike>><b>$2.99/ea.</b><br>
-                  All purpose flour, Five Roses, 1kg
-                </figcaption>
-              </figure>
-            </a>
-            </div>           
             <div class="col">
               <a href="">
-              <figure>
-                <img src="images/Pantry/almondButter.jpg" class="thumbnail" />
-                <figcaption><strike>$4.99 </strike><b>$2.99/ea.</b><br>
-                  Organic Almond Butter, 546g
-                </figcaption>
-              </figure>
-            </a>
+                <figure>
+                  <img src="images/Dairy/bococcini.jpg" class="thumbnail" />
+                  <figcaption>
+                    <strike>$3.99 </strike><b>$2.99/ea.</b><br />
+                    Cocktail Bococcini, Saputo, 300g
+                  </figcaption>
+                </figure>
+              </a>
             </div>
             <div class="col">
-              <a href = "">
-              <figure>
-                <img src="images/Dairy/yogurtVanilla.jpg" class="thumbnail" />
-                <figcaption><strike>$3.49 </strike><b>$1.99/ea.</b><br>
-                  Vanilla Yogurt, 946g
-                </figcaption>               
-              </figure>
-            </a>
+              <a href="">
+                <figure>
+                  <img src="images/Pantry/fiveRoses.jpg" class="thumbnail" />
+                  <figcaption>
+                    <strike>$3.49 </strike>><b>$2.99/ea.</b><br />
+                    All purpose flour, Five Roses, 1kg
+                  </figcaption>
+                </figure>
+              </a>
             </div>
-          </picture>
+            <div class="col">
+              <a href="">
+                <figure>
+                  <img src="images/Pantry/almondButter.jpg" class="thumbnail" />
+                  <figcaption>
+                    <strike>$4.99 </strike><b>$2.99/ea.</b><br />
+                    Organic Almond Butter, 546g
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <figure>
+                  <img src="images/Dairy/yogurtVanilla.jpg" class="thumbnail" />
+                  <figcaption>
+                    <strike>$3.49 </strike><b>$1.99/ea.</b><br />
+                    Vanilla Yogurt, 946g
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+            <div class="col">
+              <a href="products/iceCreamSandwich.html">
+                <figure>
+                  <img
+                    src="images/Frozen/iceCreamSandwich.jpg"
+                    class="thumbnail"
+                  />
+                </figure>
+                <figcaption>
+                  <s>$6.99 </s><b>$4.99 ea.</b> 12 X 120G<br />CHAPMAN'S Vanilla
+                  Super Ice Cream Sandwiches
+                </figcaption>
+              </a>
+            </div>
+          </section>
         </main>
         <!-- end of deals section -->
         <!--gradient color aside - only shows on large screens -->
-        <aside class="col-xl-2 gradientbg"></aside>
+        <aside class="col-xl-1 gradientbg"></aside>
       </div>
     </section>
 
@@ -312,14 +334,16 @@
     <footer>
       <!-- first row -->
       <div class="outlined-t outlined-b greybg px-3" id="footer">
-        <a href><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
-        <a href><i class="fas fa-map-pin"></i> Find a Store</a>
+        <a href="contact.html"
+          ><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp
+        </a>
+        <a href="map.html"><i class="fas fa-map-pin"></i> Find a Store</a>
       </div>
     </footer>
     <!-- second row -->
-    <div class="outlined-t smallp px-2" id="bottom">
+    <div class="outlined-t px-2" id="bottom">
       <!--table with hours-->
-      <table>
+      <table class="smallp">
         <tr>
           <th>Hours</th>
           <th></th>
@@ -356,6 +380,17 @@
     </div>
 
     <!--end of footer -->
+
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("phoneBtn").onclick = function () {
+        dropContent();
+      };
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function dropContent() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script

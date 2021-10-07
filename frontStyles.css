@@ -13,7 +13,7 @@
 .py : padding vertical
 
 */
-body{
+body {
   margin: 0;
 }
 /*Styles for text*/
@@ -23,7 +23,7 @@ p {
 }
 h2 {
   color: white;
-  text-shadow: 1px 4px 6px rgba(0,0,0,0.75);
+  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
   font-size: 40px;
 }
 h4 {
@@ -41,22 +41,22 @@ h6 {
 }
 .whitep {
   color: white;
-  text-shadow: 1px 4px 6px rgb(0,0,0,0.55);
+  text-shadow: 1px 4px 6px rgb(0, 0, 0, 0.55);
 }
-ul{
+ul {
   list-style: none;
   padding-left: 10px;
 }
 
-h3{
+h3 {
   color: #5c5c5c;
-  text-shadow: 1px 4px 6px rgba(0,0,0,0.75) ;
+  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
 
-  font-size: 3vW; /*size is relative to screen size*/
+  font-size: 3vw; /*size is relative to screen size*/
   font-family: Helvetica, Verdana, sans-serif;
 }
-
-.selects{
+/* product description pages */
+.selects {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
@@ -72,7 +72,7 @@ h3{
   font-size: 16px;
   cursor: pointer;
 }
-article{
+article {
   padding-top: 30px;
   text-align: center;
   display: flex;
@@ -80,33 +80,33 @@ article{
   align-items: center;
   /* align-items: center; */
 }
-select:hover{
-
-    color: #5cf2ff; /*light turqoise*/
-    box-shadow: 0px 0px 8px #76e3ed; /*turqoise*/
+select:hover {
+  color: #5cf2ff; /*light turqoise*/
+  box-shadow: 0px 0px 8px #76e3ed; /*turqoise*/
 }
-select:after{
+select:after {
   color: #ab8963; /*light brown*/
 }
-.container{
+.container {
   padding-left: 10px;
 }
 
-.imgmussels{
+.imgmussels {
   padding-left: 50px;
 }
 
-input,select{
-  width:27%;
+input,
+select {
+  width: 27%;
   box-sizing: border-box;
 }
-.cart{
+.cart {
   width: 27%;
 }
-.description{
+.description {
   width: 27%;
 }
-.quantity{ 
+.quantity {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
@@ -122,12 +122,12 @@ input,select{
   font-size: 16px;
   cursor: pointer;
 }
-
+/* end of product description pages */
 /*link styles */
-a{
+a {
   text-decoration: none;
   color: white;
-  text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
 }
 /* unvisited link */
 a:link {
@@ -152,7 +152,7 @@ button {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.75);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
   background-color: #f7c88d;
   color: white;
   padding: 10px 10px;
@@ -166,7 +166,6 @@ button:hover {
   box-shadow: 0px 0px 8px #76e3ed; /*turquoise*/
 }
 
-
 /*figcaption styles*/
 figcaption {
   color: black;
@@ -174,9 +173,9 @@ figcaption {
   text-shadow: none;
 }
 figcaption:hover {
-  color: #ab8963 /* light brown*/
+  color: #ab8963; /* light brown*/
 }
-figure p{
+figure p {
   color: white;
   background-color: #34eba1; /*bright green*/
   position: absolute;
@@ -196,21 +195,21 @@ figure p{
   border-bottom: 5px groove #76e3ed; /*bottom turquoise border*/
 }
 .shadow-b {
-  box-shadow: 0px 8px 8px -8px rgba(0,0,0,0.75); /*bottom box shadow*/
+  box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.75); /*bottom box shadow*/
 }
 .inset-b {
-  box-shadow: inset -2px -1px 15px 5px rgb(0,0,0,0.55); /*inset box shadow*/
+  box-shadow: inset -2px -1px 15px 5px rgb(0, 0, 0, 0.55); /*inset box shadow*/
 }
 .bluebg {
   background-color: rgb(71, 186, 196, 0.65); /*turquoise background*/
 }
 .greybg {
-  background-color: rgb(0,0,0,0.25); /*light grey background*/
+  background-color: rgb(0, 0, 0, 0.25); /*light grey background*/
 }
 .gradientbg {
   background-image: url("images/gradientbg.jpg");
-  background-size: stretch;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat;
   background-position: center;
 }
 
@@ -221,64 +220,67 @@ figure p{
   top: 0;
   z-index: 1;
 }
-/*styles for the dropdown menu*/
-.dropdown {
-  display: flex;
+/*styling for the clickdown menu*/
+.clickdown {
+  position: relative;
 }
-.dropdown-content {
-  display: none; /*not displated until hover over dropdown*/
-  width: 80%;
+.clickdown-content {
+  display: none;
   position: absolute;
-  padding-right: 5px;
-  padding-top: 5px;
-  background-color: #f7c88d;
-  z-index: 1;
-  box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.50);
-  border-radius: 5px;
-  margin-top: 52px;
+  min-width: 200px;
+  overflow: auto;
+  transition: 0.5s;
+}
+.clickdown-content a {
+  display: block;
+  font-size: 18px;
 }
 
-.dropdown ul {
-  padding-left: 5px;
-  font-size: 16px;
-}
-.dropdown li {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.dropdown:hover .dropdown-content {
+.show {
   display: block;
 }
+/*styles for the hoverdown menu*/
 
-/*for medium/large screen*/
 @media only screen and (min-width: 768px) {
+  .dropdown {
+    display: flex;
+  }
+  .dropdown-content {
+    display: none; /*not displated until hover over dropdown*/
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 30px;
+  }
+
+  .dropdown-content ul {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  .dropdown-content li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    color: #f7c88d; /* peach*/
+    box-shadow: none;
+  }
   .dropdown button {
     background-color: transparent;
     margin: 0;
     text-decoration: bold;
     padding: 0;
     text-transform: none;
-    text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
-  }
-  .dropdown-content {
-    margin-top: 30px;
-  }
-  .dropdown:hover {
-    color: #f7c88d; /* peach*/
-    box-shadow: none;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
   }
 }
-
-/*styling for the sidebar*/
-#sidebar {
-  background-color: #f7c88d;
-}
-#sidebar ul {
-  font-size: 16px;
-  color: #5cf2ff; /*light turqoise*/
-}
-#sidebar a {
-  font-size: 13px;
+.orangeBox {
+  box-shadow: 1px 4px 15px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  background-color: #f7c88d; /* peach*/
 }
 
 /*styling for main columns (padding and alignment)*/
@@ -291,9 +293,9 @@ figure p{
 
 /*styling for the footer*/
 footer {
-  position:fixed;
-  bottom:0;
-  width:100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #b0b0b0; /*light grey*/
   height: 40px;
 }
@@ -302,24 +304,28 @@ footer {
   padding-bottom: 39px;
 }
 
-
-
 /*sizing for thumbnail images*/
 .thumbnail {
   width: 120px;
 }
 @media only screen and (min-width: 768px) {
   .thumbnail {
-      width: 140px;
+    width: 140px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .thumbnail {
-      width: 180px;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .thumbnail {
+    width: 600px;
   }
 }
 /*background pictures*/
-.kmbg { /*small KM logo*/
+.kmbg {
+  /*small KM logo*/
   background-image: url("images/km.1.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -329,3 +335,38 @@ footer {
   background-image: url("images/MiddleBanner.jpg");
   background-size: cover;
 }
+/* Shopping Cart style */
+.cartHeader {
+  text-align: center;
+  color: #5c5c5c;
+}
+.shoppingCart {
+  text-align: left;
+}
+.shoppingCart .container {
+  font-size: 25px;
+  padding-right: 100px;
+}
+.shoppingCart .container .tab {
+  text-align: right;
+}
+.summary {
+  padding: 40px;
+  border: 2px solid;
+  display: block;
+  margin-right: 20px;
+  border-style: inset;
+  font-size: 20px;
+}
+.price,
+.numOfItems {
+  float: right;
+}
+.summaryHeader {
+  color: rgba(0, 0, 0, 0.815);
+  text-shadow: none;
+  text-align: center;
+  text-decoration: overline;
+}
+
+/* End of Shopping Cart style */
