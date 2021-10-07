@@ -361,7 +361,8 @@ figure p {
   padding-bottom: 20px;
   padding-top: 20px;
   display: grid;
-  align-items: flex-end;
+  align-items: flex-start;
+  border-bottom: 1px solid #BDFFF6;
 }
 
 /*styling for the footer*/
@@ -379,21 +380,21 @@ footer {
 
 /*sizing for thumbnail images*/
 .thumbnail {
-  width: 120px;
+  height: 120px;
 }
 @media only screen and (min-width: 768px) {
   .thumbnail {
-    width: 140px;
+    height: 140px; 
   }
 }
 @media only screen and (min-width: 1024px) {
   .thumbnail {
-    width: 200px;
+    height: 200px;
   }
 }
 @media only screen and (min-width: 2560px) {
   .thumbnail {
-    width: 600px;
+    height: 500px;
   }
 }
 /*background pictures*/

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome CSS - for icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <!-- Link to icon for title -->
+    <link rel="shortcut icon" href="images/KMicon.ico" />
+
+    <link rel="stylesheet" href="mariaStyles.css" />
+    <title>Kalamari Market: Bakery </title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="container-fluid">
+        <div class="row">
+          <div class="col-md-auto">
+            <img class="img-fluid" src="images/header.png" />
+          </div>
+          <div class="col d-flex align-items-center">
+            <h5>Buy Groceries Online!</h5>
+          </div>
+        </div>
+      </header>
+
+        <!--NAVIGATION BAR -->
+    <nav class="container-fluid outlined-b outlined-t" id = "topbar">
+        <!--first row of navigation bar-->
+
+       <!-- only appears on small screens -->
+      <section class="row pb-2 d-md-none">
+        <div class="col-5">
+          <button>
+            <a href="#"><i class="fas fa-arrow-circle-down px-1"></i></a>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="#"><i class="fas fa-shopping-cart px-1"></i></a>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="#"><i class="fas fa-sign-in-alt px-1"></i></a>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="#"><i class="fas fa-user-plus px-1"></i></a>
+          </button>
+        </div>
+      </section>
+      <!-- only appears on medium/large screens -->
+      <section class="d-none d-md-block">
+        <div class="row d-flex justify-content-between">
+          <div class="col-4">
+            <a href="#"
+              ><button>My Cart <i class="fas fa-shopping-cart"></i></button
+            ></a>
+          </div>
+          <div class="col-2 kmbg">
+            <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <a href="#"
+              ><button>Login <i class="fas fa-sign-in-alt"></i></button
+            ></a>
+            <a href="#"
+              ><button>Register <i class="fas fa-user-plus"></i></button
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!--end of html for first row of topbar -->
+
+      <!--second row of navigation, doesn't appear on small screens-->
+
+      <!-- only appears on medium screens -->
+      <section class="d-none d-md-block d-lg-none">
+        <div class="row px-0 bluebg outlined-t">
+          <div class="col">
+            <a href><h6>Fruits and Vegetables</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Dairy & Eggs</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Meat & Poultry</h6></a>
+          </div>
+          <div class="col">
+            <h6>
+              <a href="aisles.html"
+                >More aisles <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </h6>
+          </div>
+        </div>
+      </section>
+      <!-- only appears on large screens -->
+      <section class="d-none d-lg-block">
+        <div class="row bluebg outlined-t px-0 pt-1">
+          <div class="col">
+            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Dairy & Eggs</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Meat & Poultry</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Bakery Products</h6></a>
+          </div>
+          <div class="col">
+            <a href=""><h6>Fish & Seafood</h6></a>
+          </div>
+          <div class="col">
+            <h6>
+              <a href="aisles.html"
+                >See more aisles <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </h6>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- end of navigation-->
+    <!--<header>-->
+        <article class="musselsarticle">
+            <img
+        src="images/chocoChipCookie.png"
+        alt="Chocolate Chip Cookies"
+        height="450"
+        class="imgmussels"
+      />
+      <class class="container">
+        <h3>Chocolate Chip Cookies</h3>
+        <!--<h4>All sizes</h4>--> 
+        <p>
+          <strong style="font-size: larger">$7.00 per 10 pieces</strong>
+        </p>
+        <hr />
+        <p>Curbside pickup eligible</p>
+        <p>Free standard shipping</p>
+        <button class="description">
+          <img src="images/desc.png" alt="list" width="18" />
+          More Description
+        </button>
+        <br />
+        <br />
+        <form action="/action_page.php">
+            <label for="quantity">Enter Desired Number of Boxes :</label><br />
+            <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <br />
+          <label for="size"></label><br />
+
+        </form>
+        
+        <p>Get this item with your grocery order:</p>
+        <button class="cart">Add To Cart</button>
+        <br /><br /><br />
+    </div>
+
+    </article>
+
+</body>
+</html>
