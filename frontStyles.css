@@ -26,6 +26,13 @@ h2 {
   text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
   font-size: 40px;
 }
+h3 {
+  color: #5c5c5c;
+  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
+
+  font-size: 3vw; /*size is relative to screen size*/
+  font-family: Helvetica, Verdana, sans-serif;
+}
 h4 {
   color: #635039; /* dark brown */
   letter-spacing: 5px;
@@ -48,13 +55,6 @@ ul {
   padding-left: 10px;
 }
 
-h3 {
-  color: #5c5c5c;
-  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
-
-  font-size: 3vw; /*size is relative to screen size*/
-  font-family: Helvetica, Verdana, sans-serif;
-}
 /* product description pages */
 .selects {
   border: none;
@@ -368,6 +368,7 @@ figure p {
   display: grid;
   align-items: flex-start;
   border-bottom: 1px solid #BDFFF6;
+  justify-content: center;
 }
 
 /*styling for the footer*/
