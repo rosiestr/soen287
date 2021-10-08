@@ -41,10 +41,10 @@
     </header>
 
     <!--NAVIGATION BAR -->
-    <nav class="container-fluid outlined-b outlined-t" id="topbar">
+    <nav id="topbar" class="container-fluid outlined-b outlined-t">
       <!--first row of navigation bar-->
 
-      <!-- only appears on small screens -->
+      <!-- section only appears on small screens -->
       <section class="row d-md-none">
         <div class="col-5">
           <button id="phoneBtn">
@@ -67,7 +67,7 @@
           </button>
         </div>
       </section>
-      <!-- only appears on medium/large screens -->
+      <!-- section only appears on medium/large screens -->
       <section class="d-none d-md-block">
         <div class="row d-flex justify-content-between">
           <div class="col-4">
@@ -88,7 +88,7 @@
           </div>
         </div>
       </section>
-
+      <!--DROPDOWN FOR PHONES-->
       <div id="myDropdown" class="clickdown-content orangeBox">
         <ul>
           <li><a href="produce.html">Fruits & Vegetables</a></li>
@@ -103,9 +103,9 @@
       </div>
       <!--end of html for first row of topbar -->
 
-      <!--second row of navigation, doesn't appear on small screens-->
+      <!--second row of navigation, doesn't appear on small screens at all-->
 
-      <!-- only appears on medium screens -->
+      <!-- section that only appears on medium screens -->
       <section class="d-none d-md-block d-lg-none">
         <div class="row px-0 bluebg outlined-t">
           <div class="col">
@@ -133,7 +133,7 @@
           </div>
         </div>
       </section>
-      <!-- only appears on large screens -->
+      <!-- section that only appears on large screens -->
       <section class="d-none d-lg-block">
         <div class="row bluebg outlined-t px-0 pt-1">
           <div class="col">
@@ -165,12 +165,13 @@
           </div>
         </div>
       </section>
+
     </nav>
     <!-- end of navigation-->
 
     <!-- ADVERTISEMENT SECTION -->
     <section class="container-fluid midimage py-3 inset-b">
-      <!--container background is "images/produce.jpg" alt="Produce at a Grocery Store" -->
+      <!--section background is "images/produce.jpg" alt="Produce at a Grocery Store" -->
       <div class="row align-items-center">
         <div class="col d-flex justify-content-center">
           <h2>10% OFF FOR STUDENTS</h2>
@@ -182,20 +183,22 @@
       </div>
     </section>
 
-    <!---->
+    <!--WRAPPER-->
     <div class="container-fluid">
       <div class="row">
-        <!--gradient color aside - only shows on large screens -->
+        <!--FRADIENT COLOR ASIDE- only shows on large screens -->
         <aside class="col-xl-1 gradientbg"></aside>
+        <!--MAIN-->
         <main class="col-xl-10" id = "main">
           <!--SECTION HEADER-->
-          <h2>START SHOPPING NOW!</h2>
           <header class="row">
-            <div class="col">
-              <h5>Check out this week's deals!</h5>
+            <h2>START SHOPPING NOW!</h2>
+            <div class="col-sm-6 d-flex justify-content-start">
+              <h5 class = "gradientbg shadow-b px-3 py-2">Check out this week's deals!
+              </h5>
             </div>
-            <div class="col">
-              <p>VALID UNTIL: <span>09/26/2021</span></p>
+            <div class="col-sm-6 d-flex justify-content-end">
+              <p class = "greybg px-3 py-2">VALID UNTIL: <span>09/26/2021</span></p>
             </div>
           </header>
           <!-- SECTION WITH DEALS -->
