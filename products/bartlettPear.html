@@ -93,17 +93,17 @@
       <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
-          <ul>
-            <li><a href="produce.html">Fruits and Vegetables</a></li>
-            <li><a href="dairy.html">Dairy and Eggs</a></li>
-            <li><a href="meat.html">Meat & Poultry</a></li>
-            <li><a href="bakery.html">Bakery Products</a></li>
-            <li><a href="seafood.html">Fish & Seafood</a></li>
-            <li><a href="beverages.html">Beverages</a></li>
-            <li><a href="frozen.html">Frozen</a></li>
-            <li><a href="household.html">Household items</a></li>
-          </ul>
-        </nev>
+        <ul>
+          <li><a href="/produce.html">Fruits and Vegetables</a></li>
+          <li><a href="/dairy.html">Dairy and Eggs</a></li>
+          <li><a href="/meat.html">Meat & Poultry</a></li>
+          <li><a href="/bakery.html">Bakery Products</a></li>
+          <li><a href="/seafood.html">Fish & Seafood</a></li>
+          <li><a href="/beverages.html">Beverages</a></li>
+          <li><a href="/frozen.html">Frozen</a></li>
+          <li><a href="/household.html">Household items</a></li>
+        </ul>
+      </nev>
     </aside>
     <!--<header>-->
     <article class="musselsarticle">
@@ -140,23 +140,63 @@
         <br /><br /><br />
       </div>
     </article>
-    <!-- footer -->
-    <footer>
-        <!-- first row -->
-        <div class="outlined-t outlined-b greybg px-3" id="footer">
-          <a href = "/contact.html"><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
-          <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a>
-        </div>
-    </footer>
+    <!-- STICKY FOOTER-->
+    <footer> 
+      <div class = "outlined-t outlined-b greybg px-3">
+        <a href = "/contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+        <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+      </div>
+    </footer> 
+    <!--end of sticky footer -->
+    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <div class = "outlined-t inset-b smallp px-2" id = "bottom">
+    <!--table with hours-->
+        <table>
+            <tr>
+                <th>Hours</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>9AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>9AM - 9PM</td>
+            </tr>
+        </table>
+    </div>
 
-    <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
+
     <script>
-      // Get the button, and when the user clicks on it, execute myFunction
-      document.getElementById("phoneBtn").onclick = function() {dropContent()};
-      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-      function dropContent() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+        // Get the button, and when the user clicks on it, execute myFunction
+        document.getElementById("phoneBtn").onclick = function() {dropContent()};
+        document.getElementById("compBtn").onclick = function() {dropContent()};
+    
+        /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+        function dropContent() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
     </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
