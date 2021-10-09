@@ -26,6 +26,13 @@ h2 {
   text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
   font-size: 40px;
 }
+h3 {
+  color: #5c5c5c;
+  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
+
+  font-size: 3vw; /*size is relative to screen size*/
+  font-family: Helvetica, Verdana, sans-serif;
+}
 h4 {
   color: #635039; /* dark brown */
   letter-spacing: 5px;
@@ -48,13 +55,6 @@ ul {
   padding-left: 10px;
 }
 
-h3 {
-  color: #5c5c5c;
-  text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.75);
-
-  font-size: 3vw; /*size is relative to screen size*/
-  font-family: Helvetica, Verdana, sans-serif;
-}
 /* product description pages */
 .selects {
   border: none;
@@ -100,6 +100,79 @@ select {
   width: 27%;
   box-sizing: border-box;
 }
+
+  /*BEGINING of Styles for particular elements of LOGIN and REGISTRATION pages */
+  label {
+    display: block;
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  .userdiv{
+    display:inline-block;
+    margin:7px
+  }
+
+  legend{
+     font-family: 'Droid serif', serif;
+  }
+
+#userform, #province{
+  background-color: #CDF0EA;
+  border-radius: 10px;
+  border: 2px solid;
+  font-family: Helvetica, Verdana, sans-serif;
+  height: auto;
+  width: auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  padding:10px;
+}
+
+input.user{
+  border-radius: 10px;
+  width:200px;
+  height:35px;
+}
+
+#inputZip{
+  width: 90px;
+}
+
+#inputStreet{
+  width: 400px;
+}
+
+select#province{
+  width: 70px;
+  margin-top:0;
+  height: 40px;
+  font-size: 10px;
+}
+
+select.province:hover {
+  color: #EEB76B;
+  box-shadow: 0px 0px 8px;
+}
+
+input[type=checkbox]{
+  margin:0px;
+  width:15px;
+  height:15px;
+}
+
+input[type=submit]{
+  height: 45px;
+}
+
+ul.news{
+  list-style-type: circle;
+  margin-left: 10px;
+}
+/*END of Styles for particular elements of LOGIN and REGISTRATION pages */
+
 .cart {
   width: 27%;
 }
@@ -148,7 +221,7 @@ a:active {
 }
 
 /*button styles */
-button {
+input[type=submit], button {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
@@ -211,6 +284,11 @@ figure p {
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
+}
+@media only screen and (min-width: 2000px){
+  #contactInfo {
+    height: 55vh;
+  }
 }
 
 /*styling for the navigation bar*/
@@ -288,7 +366,9 @@ figure p {
   padding-bottom: 20px;
   padding-top: 20px;
   display: grid;
-  align-items: flex-end;
+  align-items: flex-start;
+  border-bottom: 1px solid #BDFFF6;
+  justify-content: center;
 }
 
 /*styling for the footer*/
@@ -296,7 +376,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #b0b0b0; /*light grey*/
+  background-color: #dadada; /*light grey*/
   height: 40px;
 }
 /*padding for the bottom so that the footer can fit*/
@@ -306,21 +386,21 @@ footer {
 
 /*sizing for thumbnail images*/
 .thumbnail {
-  width: 120px;
+  height: 120px;
 }
 @media only screen and (min-width: 768px) {
   .thumbnail {
-    width: 140px;
+    height: 140px; 
   }
 }
 @media only screen and (min-width: 1024px) {
   .thumbnail {
-    width: 200px;
+    height: 200px;
   }
 }
 @media only screen and (min-width: 2560px) {
   .thumbnail {
-    width: 600px;
+    height: 500px;
   }
 }
 /*background pictures*/

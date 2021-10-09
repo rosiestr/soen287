@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags for Bootstrap, provided by https.getbootstrap.com-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- FontAwesome CSS - for icons -->
@@ -14,12 +14,11 @@
     <!-- css for index.html -->
     <link rel="stylesheet" href="frontStyles.css">
     <!--title to appear in tab-->
-    <title>Kalamari Market: Beverages</title>
-</head>
+    <title>Kalamari Market: Bakery Products</title>
+  </head>
 
-<body>
-    <!-- HEADER -->
-  <header class="container-fluid"> <!--container that fills width of page-->
+  <body>
+    <header class="container-fluid"> <!--container that fills width of page-->
       <div class="row">
       <div class="col-md-auto"> <!--column width is size of its contents-->
           <img class = "img-fluid" src = "images/header.png">
@@ -28,12 +27,12 @@
           <h5>Buy Groceries Online!</h5>
       </div>
       </div>
-  </header>
-  <!--NAVIGATION BAR-->
-  <nav class="container-fluid outlined-b outlined-t" id = "topbar">
-  <!--first row of navigation bar-->
+    </header>
+    <!--NAVIGATION BAR-->
+    <nav class="container-fluid outlined-b outlined-t" id = "topbar">
+    <!--first row of navigation bar-->
 
-  <!-- only appears on small screens -->
+    <!-- only appears on small screens -->
       <section class="row pb-2 d-md-none">
           <div class = "col-3">
               <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
@@ -58,7 +57,7 @@
               <a href="shoppingCart.html"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
               </div>
               <div class= "col d-flex justify-content-center align-items-center">
-              <h4>BEVERAGES</h4> <!--Aisle section title --> <!--CHANGE THIS-->
+              <h4>BAKERY PRODUCTS</h4> <!--Aisle section title --> <!--CHANGE THIS-->
               </div>
               <div class="col-md-auto d-flex justify-content-end">
               <a href="login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
@@ -96,69 +95,66 @@
           </ul>
       </nev>
   </aside>
+          <!-- MAIN -->
   <div class = "container-fluid">
     <div class = "row">
-      <!--gradient color aside - only shows on large screens -->
-      <aside class="col-xl-1 gradientbg"></aside> 
-      <!-- MAIN -->
-      <main class = "col-xl-10" id = "main">
-          <!-- Aisle title to appear on small screens -->
-          <section class = "d-md-none d-flex justify-content-center outlined-tb mt-1"> 
-              <h5>Beverages</h5>
-          </section>
-          <section class = "row">
-              <div class = "col">
-                  <a href = "products/bubly.html">
-                  <figure>
-                      <img src = "images/Beverages/bubly.jpg" class = "thumbnail">
-                  </figure>
-                  <figcaption><b>$6.49 per case</b> (12X250ML)<br> Sparkling Water, Bubly</figcaption>
-                  </a>
-              </div>
-              <div class = "col">
-                  <a href = "products/juicebox.html">
+          <!--gradient color aside - only shows on large screens -->
+          <aside class="col-xl-1 gradientbg"></aside> 
+          <main class = "col-xl-10" id = "main">
+            <!-- Aisle title to appear on small screens -->
+            <section class = "d-md-none d-flex justify-content-center outlined-tb mt-1"> 
+                <h5>Bakery Products</h5> 
+            </section>
+            <section class = "row">
+                <div class = "col">
+                    <a href = "products/"> <!--CHANGE THIS-->
                       <figure>
-                          <img src = "images/Beverages/juicebox.jpg" class = "thumbnail">
-                      </figure>
-                      <figcaption><b>$2.99 per case</b> (6x200ml)<br> Juice Boxes, Kirkland Signature</figcaption>
-                  </a>
-              </div>
-              <div class = "col">
-                  <a href = "products/orangejuice.html">
-                  <figure>
-                      <img src = "images/Beverages/OrangeJuice.png" class = "thumbnail">
-                  </figure>
-                  <figcaption><b>$4.99 ea.</b> 1.75L<br> Orange Juice, Minute Maid</figcaption>
-                  </a>
-              </div>
-              <div class = "col">
-                  <a href = "products/softdrink.html">
-                  <figure>
-                      <img src = "images/Beverages/softdrink.jpg" class = "thumbnail">
-                  </figure>
-                  <figcaption><b>$4.99 ea.</b> 12 X 355ml<br>Soft Drink, Various
-                  </figcaption>
-                  </a>
-              </div>
-              <div class = "col">
-                  <a href = "products/water.html">
+                        <img src="images/cake.png.png" class = "thumbnail">
+                    </figure>
+                    <figcaption><b>Price depends on size. </b><br> Choclolate Cake</figcaption>
+                    </a>
+                </div>
+                <div class = "col">
+                    <a href = "products/"> <!--CHANGE THIS-->
                       <figure>
-                      <p>ON SALE</p>  
-                      <img src = "images/Beverages/water.jpg" class = "thumbnail">
+                        <img src="images/chocoChipCookie.png" class = "thumbnail">
                       </figure>
-                      <figcaption><b>$1.99 ea.</b> 1L<br>Boxed Water</figcaption>
-                  </a>
-              </div>
-          </section> <!--end of beverage section -->  
-          <a href = "#top"><button><i class = "fas fa-arrow-up"></i></button></a> <!-- button to return to top of page-->
-      </main> <!--end of main body content-->
-      <!--gradient color aside - only shows on large screens -->
-      <aside class="col-xl-1 gradientbg"></aside> 
+                      <figcaption><b>$7.00 for 10 pieces. </b><br> Choclolate Chip Cookies</figcaption>
+                    </a>
+                </div>
+                <div class = "col">
+                    <a href = "products/"> <!--CHANGE THIS-->
+                      <figure>
+                          <img src="images/ApplePie.png" class = "thumbnail">
+                      </figure>
+                      <figcaption><b>$12.00 </b><br> Apple Pie</figcaption>
+                    </a>
+                </div>
+                <div class = "col">
+                    <a href = "products/"> <!--CHANGE THIS-->
+                      <figure>
+                        <img src="images/Croisssants.png" class = "thumbnail">
+                    </figure>
+                    <figcaption><b>$6.00 for 7 pieces. </b><br> Croissants</figcaption>
+                    </a>
+                </div>
+                <div class = "col"> 
+                    <a href = "products/"> <!--CHANGE THIS-->
+                      <figure>
+                        <img src="images/MiniBagets.png" class = "thumbnail">
+                      </figure>
+                      <figcaption><b>$3.99 for 2 pieces </b><br> Mini Bagets</figcaption>
+                    </a>
+                </div>
+            </section> <!--end of food section-->
+            <a href = "#top"><button><i class = "fas fa-arrow-up"></i></button></a> <!-- button to return to top of page-->
+        </main> <!--end of main body content-->
+        <!--gradient color aside - only shows on large screens -->
+        <aside class="col-xl-1 gradientbg"></aside> 
+      </div>
     </div>
-  </div>
         
-
-    <!-- fixed footer -->
+    <!-- sticky footer -->
     <footer> 
         <div class = "outlined-t outlined-b greybg px-3">
             <a href = "contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
@@ -167,7 +163,7 @@
     </footer> 
     <!--end of footer -->
     <!-- footer for absolute bottom of page -->
-    <div class = "outlined-t inset-b smallp px-2" id = "bottom">
+    <div id = "bottom" class = "outlined-t inset-b smallp px-2">
     <!--table with hours-->
         <table>
             <tr>
@@ -216,9 +212,13 @@
             document.getElementById("myDropdown").classList.toggle("show");
         }
     </script>
-
-
-    <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
+  
+       
+
+          
+
+            
+              
+              
