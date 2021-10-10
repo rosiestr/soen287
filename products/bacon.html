@@ -20,76 +20,77 @@
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="images/KMicon.ico" />
+    <link rel="shortcut icon" href="/images/KMicon.ico" />
 
-    <link rel="stylesheet" href="frontStyles.css" />
-    <title>Fresh Beef Flank</title>
+    <link rel="stylesheet" href="/frontStyles.css" />
+    <title>Kalamari Market: Applewood Smoked Bacon</title>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="container-fluid">
+    <header class="container-fluid"> <!--container that fills width of page-->
       <div class="row">
-        <div class="col-md-auto">
-          <img class="img-fluid" src="images/header.png" />
+        <div class="col-md-auto"> <!--column width is size of its contents-->
+          <img class = "img-fluid" src = "/images/header.png" alt = "KALAMARI MARKET">
         </div>
-        <div class="col d-flex align-items-center">
+        <div class = "col d-flex align-items-center">
           <h5>Buy Groceries Online!</h5>
         </div>
       </div>
     </header>
-
+  
+  
     <!--NAVIGATION BAR -->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
-      <!--first row of navigation bar-->
-  
-      <!-- only appears on small screens -->
-      <section class="row pb-2 d-md-none">
-        <div class = "col-3">
-          <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+    <!--first row of navigation bar-->
+
+    <!-- only appears on small screens -->
+    <section class="row pb-2 d-md-none">
+      <div class = "col-3">
+        <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/shoppingCart.html"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+      </div>
+    </section>
+    <!-- only appears on medium/large screens -->
+    <section class = "d-none d-md-block">
+      <div class = "row">
+        <div class = "col-md-auto">
+          <a href="/shoppingCart.html"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
         </div>
-        <div class = "col-2">
-          <button><a href="/index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+        <div class= "col d-flex justify-content-center align-items-center kmbg">
         </div>
-        <div class = "col-2">
-          <button><a href="/shoppingCart.html"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+        <div class="col-md-auto d-flex justify-content-end">
+          <a href="/login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+          <a href="/register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
         </div>
-        <div class = "col-2">
-          <button><a href="/login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+      </div>
+    </section>
+    <!--end of html for first row of topbar -->
+    <!--second row of navigation, doesn't appear on small screens-->
+    <section class = "d-none d-md-block">
+      <div class = "row px-0 bluebg outlined-t">
+        <div class = "col-md-auto">
+          <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
         </div>
-        <div class = "col-2">
-          <button><a href="/register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+        <div class = "col">
+          <a href = "/index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
         </div>
-      </section>
-      <!-- only appears on medium/large screens -->
-      <section class = "d-none d-md-block">
-        <div class = "row">
-          <div class = "col-md-auto">
-            <a href="/shoppingCart.html"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
-          </div>
-          <div class= "col d-flex justify-content-center align-items-center kmbg">
-          </div>
-          <div class="col-md-auto d-flex justify-content-end">
-            <a href="/login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-            <a href="/register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
-          </div>
-        </div>
-      </section>
-      <!--end of html for first row of topbar -->
-      <!--second row of navigation, doesn't appear on small screens-->
-      <section class = "d-none d-md-block">
-        <div class = "row px-0 bluebg outlined-t">
-          <div class = "col-md-auto">
-            <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
-          </div>
-          <div class = "col">
-            <a href = "/index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
-          </div>
-        </div>
-      </section>
-  
+      </div>
+    </section>
+
     </nav> <!-- end of navigation-->
-    
-    <!-- SIDEBAR -->
+  
+      <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
@@ -108,49 +109,32 @@
     <!--<header>-->
     <article class="musselsarticle">
       <img
-        src="images/Meat/beef.png"
-        alt="Beef"
+        src="/images/Meat/bacon.png"
+        alt="Applewood Smoked Bacon"
         height="450"
         class="imgmussels"
       />
       <!--</header>-->
       <div class="container">
-        <h3>Fresh Beef Flank</h3>
+        <h4>SHNIEDER'S</h4>
+        <h3>Applewood Smoked Bacon</h3>
         <p>
-          <strong style="font-size: larger">$1.99/lb</strong>
+          <strong style="font-size: larger">$5.99</strong>  (400g)
         </p>
         <hr />
-        <p>Sold in tray</p>
-
+        <p>Sold by the pack</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
         <button class="description">
-          <img src="images/desc.png" alt="list" width="18" />
+          <img src="/images/desc.png" alt="list" width="18" />
           More Description
         </button>
-        <!-- for MORE DESCRIPTION: -->
-        <!-- Flank steak relatively long and flat cut, with significant graining. Flavorful but chewy, it is characteristically cut Finley on the bias for ease of consumption. -->
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Pounds :</label><br />
+          <label for="quantity">Enter Desired Quantity :</label><br />
           <input type="text" class="quantity" name="quantity" value="0" /><br />
           <br />
-          <!-- <label for="size"></label><br />
-          <select name="sizes" class="selects">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select> -->
-          <!-- <br /><br /> -->
-          <!-- <label for="types"></label><br />
-          <select name="types" class="selects">
-            <option value="none">Select Type</option>
-            <option value="canadian">Canadian Mussels</option>
-            <option value="blue">Blue Mussels</option>
-            <option value="Mediterranean">Mediterranean Mussels</option>
-          </select> -->
         </form>
         <br />
         <p>Get this item with your grocery order:</p>
@@ -166,7 +150,7 @@
       </div>
     </footer> 
     <!--end of sticky footer -->
-    <!-- BOTTOM OF PAGE -->
+    <!-- FOOTER FOR BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>
