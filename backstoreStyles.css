@@ -160,11 +160,14 @@ input[type=number]{
   font-style: normal;
   border-collapse: collapse;
   width: 50%;
+  /* height:150%; */
   border-radius: 15px;
   overflow: hidden;
   margin: 25px auto;
   box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
   transition: all 1s;
+
+  
 
 }
 
@@ -172,6 +175,9 @@ input[type=number]{
   background-color: #f3f3f3;
   color: #76e3ed;
   text-align: left;
+  /* width: 100%; */
+
+  
 }
 
 .user-table th,
@@ -179,22 +185,28 @@ input[type=number]{
   padding: 12px 15px;
   text-align: center;
   vertical-align: middle;
+  /* width: 100%; */
+  
 }
 .user-table tbody tr {
   border-bottom: 1px solid #dddddd;
+  
 }
 
 .user-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
+  
 }
 
 .user-table tbody tr:last-of-type {
   border-bottom: 2px solid #f3f3f3;
+  
 }
 
 .user-table tbody tr.active-row {
   font-weight: bold;
   color: #f3f3f3;
+  
 }
 .user-table:hover{
   /* width:100px;
@@ -203,6 +215,89 @@ input[type=number]{
 box-shadow: 0px 8px 30px;
 
 }
+input [type="text"],input[type="email"]{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+
+
+}
+label{
+  width:240px;
+  display: inline-block;
+  text-align: right;
+}
+input [type="text"],input[type="password"]{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+
+}
+
+input[type="text"],
+input[type="email"]{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+    /* display:block;
+    box-sizing: border-box;
+    background-color: none;
+    color:#3498db;
+    margin-bottom: 30px;
+    padding:4px;
+    width:220px;
+    border:none;
+    border-bottom: 1px solid #0082e6;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    transition: 0.2s ease; */
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+input[type="file"]{
+    display:none;
+}  
+/* label{
+  box-sizing: border-box;
+  font-size:20px;
+  background-color: white;
+  color: white;
+  border:1px solid #3498db;
+  padding:2px 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+}
+label:hover{
+  background-color: #3498db;
+  color: black;
+
+} */
+
+
+
+
+
 /* img{
   box-sizing: border-box;
   width:149px;
