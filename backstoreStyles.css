@@ -161,7 +161,6 @@ input[type=number]{
 }
 
 /* styling for table for userList page*/
-=======
 input [type="text"] .user,input[type="email"] .user{
   display:block;
   box-sizing: border-box;
@@ -262,10 +261,8 @@ input[type="file"]{
   color: #f3f3f3;
   
 }
-.user-table:hover{
-  
+.user-table:hover{ 
 box-shadow: 0px 8px 30px;
-
 }
 
 
@@ -274,9 +271,17 @@ label {
   display: inline-block;
   text-align: right;
 }
+#editOrder label {
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+#editOrder textarea { 
+  width: 100%;
+}
 
 /* styling for input type street*/
-input [type="text"],input[type="street"]{
+input [type="text"] .user,input[type="street"] .user{
   display:block;
   box-sizing: border-box;
   border: 1px solid #76e3ed;
@@ -316,11 +321,6 @@ input[type="file"]{
 /* styling for input type city*/
 input [type="text"] .user,input[type="city"] .user{
   display:block;
-
-#editOrder label {
-  width: 100%;
-  display: block;
-  text-align: start;
 }
 
 /* label{
@@ -415,7 +415,7 @@ footer a:hover{
 }
 /*styles for divs*/ 
 .bluebg {
-  background-color: #f3f3f3;
+  background-color: #cefdff;
   border-radius: 20px;
 }
 /* end of styling*/
