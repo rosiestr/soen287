@@ -43,7 +43,7 @@
     <!--NAVIGATION BAR -->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
       <!--first row of navigation bar-->
-  
+
       <!-- only appears on small screens -->
       <section class="row pb-2 d-md-none">
         <div class = "col-3">
@@ -88,9 +88,9 @@
           </div>
         </div>
       </section>
-  
+
     </nav> <!-- end of navigation-->
-  
+
       <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
@@ -216,7 +216,7 @@
                          <option value="Prince Edward Island">PE</option>
                          <option value="Quebec">QC</option>
                          <option value="Saskatchewan">SK</option>
-                         <option value="Nortwest">NT</option>
+                         <option value="Northwest">NT</option>
                          <option value="Nunavut">NU</option>
                          <option value="Yukon">YT</option>
                        </select>
@@ -250,7 +250,7 @@
             <fieldset>
             <legend>Terms &amp Conditions</legend>
             <input type="checkbox" name="policy" value="*policy" required>
-            *I have read Kalamari Market <a href="#">policy</a> and accept all the terms and conditions.
+            *I have read Kalamari Market <a href="#">policy</a> and accept all the terms and conditions.  <!--For now the policy link is empty-->
             </fieldset>
 
             <input type="submit" name="Register" value="Sign Up" class="user">
@@ -268,12 +268,12 @@
     <!--END OF FORM SECTION-->
 
     <!-- STICKY FOOTER-->
-    <footer> 
+    <footer>
       <div class = "outlined-t outlined-b greybg px-3">
         <a href = "/contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
         <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
-    </footer> 
+    </footer>
     <!--end of sticky footer -->
     <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
@@ -319,7 +319,7 @@
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};
         document.getElementById("compBtn").onclick = function() {dropContent()};
-    
+
         /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
         function dropContent() {
             document.getElementById("myDropdown").classList.toggle("show");
