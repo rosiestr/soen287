@@ -34,21 +34,21 @@
       <div class="row">
         <div class="col-md-auto">
           <!--column width is size of its contents-->
-          <img class="img-fluid" src="images/header.png" />
+          <img class="img-fluid" src="images/header.png" alt = "KALAMARI MARKET"/>
         </div>
         <div class="col d-flex align-items-center">
           <h5>Buy Groceries Online!</h5>
         </div>
       </div>
     </header>
-
+    <!--NAVIGATION-->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
       <!--first row of navigation bar-->
   
       <!-- only appears on small screens -->
       <section class="row pb-2 d-md-none">
         <div class = "col-3">
-          <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+          <button id = "phoneBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i></button> <!--menu button-->
         </div>
         <div class = "col-2">
           <button><a href="index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
@@ -128,70 +128,63 @@
       </div>
     </section>
 
-    <!-- fixed footer -->
-    <footer>
-      <div class="outlined-t outlined-b greybg px-3">
-        <a href="contact.html"
-          ><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp
-        </a>
-        <!--Contact button-->
-        <a href=""><i class="fas fa-map-pin"></i> Find a Store</a>
-        <!-- map pin button -->
+    <!-- STICKY FOOTER-->
+    <footer> 
+      <div class = "outlined-t outlined-b greybg px-3">
+        <a href = "/contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+        <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
-    </footer>
-    <!--end of footer -->
-    <!-- footer for absolute bottom of page -->
-    <div class="outlined-t inset-b smallp px-2" id="bottom">
-      <!--table with hours-->
-      <table>
-        <tr>
-          <th>Hours</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>Monday</td>
-          <td>7AM - 10PM</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>7AM - 10PM</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-          <td>7AM - 10PM</td>
-        </tr>
-        <tr>
-          <td>Thursday</td>
-          <td>8AM - 11PM</td>
-        </tr>
-        <tr>
-          <td>Friday</td>
-          <td>8AM - 11PM</td>
-        </tr>
-        <tr>
-          <td>Saturday</td>
-          <td>9AM - 10PM</td>
-        </tr>
-        <tr>
-          <td>Sunday</td>
-          <td>9AM - 9PM</td>
-        </tr>
-      </table>
+    </footer> 
+    <!--end of sticky footer -->
+    <!-- BOTTOM OF PAGE -->
+    <div class = "outlined-t inset-b smallp px-2" id = "bottom">
+    <!--table with hours-->
+        <table>
+            <tr>
+                <th>Hours</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>8AM - 11PM</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>9AM - 10PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>9AM - 9PM</td>
+            </tr>
+        </table>
     </div>
 
-    <script>
-      // Get the button, and when the user clicks on it, execute myFunction
-      document.getElementById("phoneBtn").onclick = function () {
-        dropContent();
-      };
-      document.getElementById("compBtn").onclick = function () {
-        dropContent();
-      };
 
-      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-      function dropContent() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+    <script>
+        // Get the button, and when the user clicks on it, execute myFunction
+        document.getElementById("phoneBtn").onclick = function() {dropContent()};
+        document.getElementById("compBtn").onclick = function() {dropContent()};
+    
+        /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+        function dropContent() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
     </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->

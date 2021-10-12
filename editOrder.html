@@ -16,15 +16,14 @@
     <!--title to appear in tab-->
     <title>Edit Order</title>
 </head>
-<body>
+<body id = "editOrder">
     <!--NAVIGATION BAR -->
     <nav class="nav-top pb-2" id = "topbar">
         <!--first row of navigation bar-->
         <section>
-            <div><a class="active" href="#home">Home</a></div>
-            <div><a href="#products">Products</a></div>
-            <div><a href="#orders">Orders</a></div>
-            <div><a href="#users">Users</a></div>
+            <div><a href="products.html">Products</a></div>
+            <div><a href="orderList.html">Orders</a></div>
+            <div><a href="UserList.html">Users</a></div>
             <img src="images/KMicon.ico">
         </section>
     </nav>
@@ -32,32 +31,36 @@
     <section class = "container d-flex justify-content-center py-3 bluebg">
         <form>
             <div class = "row">
-                <div class = "col-sm-4">
+                <div class = "col-sm-4 d-flex flex-column align-items-center">
                     <label for="name"><b>Customer Name</b></label>
-                    <input type="text" id="name" name="name" value = "Jane Doe"> <br>
-                    <label for="email"><b>Email</b></label> <br>
-                    <input type = "email" id="email" name="email" value = "janedoe@gmail.com"><br>
-                    <label for="phone"><b>Phone</b></label> <br>
+                    <input type="text" id="name" name="name" value = "Jane Doe" class = "editOrder"> 
+                    <label for="email"><b>Email</b></label>
+                    <input type = "email" id="email" name="email" value = "janedoe@gmail.com" class = "editOrder"> 
+                    <label for="phone"><b>Phone</b></label> 
                     <input type = "tel" id = "phone" name ="phone" value = 438889999>
                 </div>
-                <div class = "col-sm-4">
-                    <label for="billingAddress"><b>Billing Address</b></label><br>
+                <div class = "col-sm-4 d-flex flex-column align-items-center">
+                    <label for="billingAddress" class = "px-3"><b>Billing Address</b></label>
                     <textarea id = "billingAddress" name = "billingAddress" cols = "20" rows="6"
                     >8888 Ave Stuart Montreal, QC T5H 5H6</textarea>
                 </div> 
-                <div class = "col-sm-4 d-flex flex-column">
-                    <label for="shippingAddress"><b>Shipping Address</b></label>
+                <div class = "col-sm-4 d-flex flex-column align-items-center">
+                    <label for="shippingAddress" class = "px-3"><b>Shipping Address</b></label>
                     <textarea id = "shippingAddress" cols ="20" rows="6"
                     >9999 Oak Avenue Montreal, QC T1S 2G4
                     </textarea>
-                    <div>
-                        <label for="sameAddress">Same as billing address</label>
+                
+                    <span class = "d-flex align-items-center">
                         <input type = "checkbox" id = "sameAddress" name = "sameAddress">
-                    </div>
-                    <div>
-                        <label for="pickup">Order for pickup</label>
+                        <label for="sameAddress">Same as billing address</label>
+                    </span>
+                
+                
+                    <span class = "d-flex align-items-center">
                         <input type = "checkbox" id = "pickup" name = "pickup">
-                    </div>
+                        <label for="pickup">Order for pickup</label>
+                    </span>
+                    
                 </div> 
             </div>
         </form>
@@ -71,7 +74,8 @@
                             <th scope = "col">Item</th>
                             <th scope = "col">Cost</th>
                             <th scope = "col">Quantity</th>
-                            <th scope = "col">Discount</th>
+                            <th scope = "col">Discount (%)</th>
+                            <th scope = "col"></th>
                             <th scope = "col">Total</th>
                         </tr>
                     </thead>
@@ -84,7 +88,8 @@
                             </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount" value = 10>
-                                <label for="discount">% </label>
+                            </td>
+                            <td>
                                 <input type ="button" id = "apply" name = "apply" value = "APPLY">
                             </td>
                             <td>
@@ -99,7 +104,8 @@
                             </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount">
-                                <label for="discount">% </label>
+                            </td>
+                            <td>
                                 <input type ="button" id = "apply" name = "apply" value = "APPLY">
                             </td>
                             <td>$2.45</td>
@@ -112,7 +118,8 @@
                             </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount">
-                                <label for="discount">% </label>
+                            </td>
+                            <td>
                                 <input type ="button" id = "apply" name = "apply" value = "APPLY">
                             </td>
                             <td>
@@ -127,7 +134,8 @@
                             </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount" max=100 maxlength="5">
-                                <label for="discount">% </label>
+                            </td>
+                            <td>
                                 <input type ="button" id = "apply" name = "apply" value = "APPLY">
                             </td>
                             <td>
@@ -137,40 +145,46 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
+                            <td scope = "row" colspan="3"></td>
                             <td>Total before tax: </td>
                             <td id = "totalBeforeTax">$21.20</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
+                            <td scope = "row" colspan="3"></td>
                             <td>Delivery fee: </td>
                             <td>$5.00</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
-                            <td>Discount: </td>
+                            <td scope = "row" colspan="3"></td>
+                            <td>Discount (%): </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount">
-                                <label for="discount">% </label>
+                            </td>
+                            <td>
                                 <input type ="button" id = "apply" name = "apply" value = "APPLY">
                             <td>
                         </tr>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
+                            <td scope = "row" colspan="3"></td>
                             <td>Total discounts: </td>
                             <td id = "discountTotal">-$0.65</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
+                            <td scope = "row" colspan="3"></td>
                             <td>Tax: </td>
                             <td id = "tax">$3.93</td>
+                            <td></td>
                         </tr>
                         <tr>
                         </tr>
                         <tr>
-                            <td scope = "row" colspan="2"></td>
+                            <td scope = "row" colspan="3"></td>
                             <th>Order Total: </th>
                             <th id = "orderTotal">$25.13</b></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -180,6 +194,7 @@
             </div>
         </form>
     </section>
+    <footer><a href="index.html">Back to Front Store</a></footer>
     
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
