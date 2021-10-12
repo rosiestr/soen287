@@ -285,6 +285,7 @@ label {
   align-items: flex-start;
 }
 
+
 /* styling for input type street*/
 input [type="text"] .user,input[type="street"] .user{
   display:block;
@@ -432,13 +433,12 @@ footer a:hover{
   border-radius: 50px;
   position: relative;
 }
-.product-form input, textarea, label{
+.product-form input, .product-form textarea, .product-form label{
   display:block;
   margin: auto;
-
 }
 
-.product-form input, textarea{
+.product-form input, .product-form textarea{
   margin-bottom: 10px;
 }
 /* end of styling*/
