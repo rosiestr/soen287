@@ -160,6 +160,7 @@ input[type=number]{
   width: 50px;
 }
 
+
 input [type="text"] .user,input[type="email"] .user{
   display:block;
   box-sizing: border-box;
@@ -317,8 +318,6 @@ label:hover{
 
 
 } */
-
-
 
 /*footer style*/
 
