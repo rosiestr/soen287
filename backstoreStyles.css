@@ -96,6 +96,7 @@ h1 {
 .button-bar{
   display: flex;
   justify-content: center;
+  margin: 20px;
 }
 
 .button {
@@ -112,6 +113,11 @@ h1 {
   background-color: white; 
   color: black; 
   border: 2px solid #76e3ed;
+}
+.button1 a{
+  background-color: inherit; 
+  color: inherit; 
+  text-decoration: inherit;
 }
   
 
@@ -161,7 +167,6 @@ input[type=number]{
 }
 
 /* styling for table for userList page*/
-=======
 input [type="text"] .user,input[type="email"] .user{
   display:block;
   box-sizing: border-box;
@@ -205,10 +210,7 @@ input[type="email"] .user:focus{
     color:#3498db;
     transition: 0.2s ease
 } 
-
-input[type="file"]{
-    display:none;
-}  
+ 
 
 
 .user-table {
@@ -310,12 +312,13 @@ input[type="email"] .user:focus{
     transition: 0.2s ease;
 
 } 
-input[type="file"]{
+/*input[type="file"]{
     display:none;
-}  
+}  */
 /* styling for input type city*/
 input [type="text"] .user,input[type="city"] .user{
   display:block;
+}
 
 #editOrder label {
   width: 100%;
@@ -417,5 +420,23 @@ footer a:hover{
 .bluebg {
   background-color: #f3f3f3;
   border-radius: 20px;
+}
+
+.product-form {
+  width: 100%;
+  padding: 30px 90px 90px 90px;
+  border: 10px solid #76e3ed;
+  box-shadow: 20px 20px 0 #76e3ed;
+  border-radius: 50px;
+  position: relative;
+}
+.product-form input, textarea, label{
+  display:block;
+  margin: auto;
+
+}
+
+.product-form input, textarea{
+  margin-bottom: 10px;
 }
 /* end of styling*/
