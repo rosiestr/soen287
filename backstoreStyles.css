@@ -160,6 +160,8 @@ input[type=number]{
   width: 50px;
 }
 
+/* styling for table for userList page*/
+=======
 input [type="text"] .user,input[type="email"] .user{
   display:block;
   box-sizing: border-box;
@@ -170,6 +172,7 @@ input [type="text"] .user,input[type="email"] .user{
   width: 40%;
 }
 
+
 input [type="text"] .user,input[type="password"] .user{
   display:block;
   box-sizing: border-box;
@@ -178,7 +181,6 @@ input [type="text"] .user,input[type="password"] .user{
   float: right;
   clear:both;
   width: 40%;
-
 }
 
     /* display:block;
@@ -208,6 +210,7 @@ input[type="file"]{
     display:none;
 }  
 
+
 .user-table {
 
   font-family: Helvetica, Verdana, sans-serif;
@@ -222,16 +225,12 @@ input[type="file"]{
   box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
   transition: all 1s;
 
-  
-
 }
 
 .user-table thead tr {
   background-color: #f3f3f3;
   color: #76e3ed;
   text-align: left;
-  /* width: 100%; */
-
   
 }
 
@@ -240,7 +239,7 @@ input[type="file"]{
   padding: 12px 15px;
   text-align: center;
   vertical-align: middle;
-  /* width: 100%; */
+  
   
 }
 .user-table tbody tr {
@@ -264,18 +263,60 @@ input[type="file"]{
   
 }
 .user-table:hover{
-  /* width:100px;
-    height:100px;
-    margin:20px 31%; */
+  
 box-shadow: 0px 8px 30px;
 
 }
+
 
 label {
   width:240px;
   display: inline-block;
   text-align: right;
 }
+
+/* styling for input type street*/
+input [type="text"],input[type="street"]{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+}
+input[type="text"] .user:focus, 
+input[type="steet"] .user:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+input[type="text"] .user:focus, 
+input[type="street"] .user:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+
+input[type="text"] .user:focus, 
+input[type="email"] .user:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+input[type="file"]{
+    display:none;
+}  
+/* styling for input type city*/
+input [type="text"] .user,input[type="city"] .user{
+  display:block;
+
 #editOrder label {
   width: 100%;
   display: block;
@@ -283,38 +324,72 @@ label {
 }
 
 /* label{
+
   box-sizing: border-box;
-  font-size:20px;
-  background-color: white;
-  color: white;
-  border:1px solid #3498db;
-  padding:2px 15px;
-  border-radius: 5px;
-  transition: all 0.3s;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
 
 }
-label:hover{
-  background-color: #3498db;
-  color: black;
+input[type="text"]:focus, 
+input[type="city"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
 
-} */
+} input[type="text"]:focus, 
+input[type="city"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
 
-
-
-
-
-/* img{
+} 
+/* styling for input type zipt*/
+input [type="text"] .user,input[type="zip"]{
+  display:block;
   box-sizing: border-box;
-  width:149px;
-  height:149px;
-  border-radius:50px;
-  margin:0;
-  
-  padding:3px;
-  background-color: white;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
 
+}
+input[type="text"] .user:focus, 
+input[type="zip"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
 
-} */
+} 
+input[type="text"] .user:focus, 
+input[type="zip"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+
+/* styling for input type province*/
+select#province{
+  width: 70px;
+  margin-top:0;
+  height: 40px;
+  font-size: 10px;
+  float: center;
+  clear:both;
+}
+
+select.province:hover {
+  color: #3498db;
+  box-shadow: 0px 0px 8px;
+}
 
 /*footer style*/
 
@@ -343,3 +418,4 @@ footer a:hover{
   background-color: #f3f3f3;
   border-radius: 20px;
 }
+/* end of styling*/
