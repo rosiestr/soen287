@@ -160,7 +160,6 @@ input[type=number]{
   width: 50px;
 }
 
-
 input [type="text"] .user,input[type="email"] .user{
   display:block;
   box-sizing: border-box;
@@ -208,8 +207,6 @@ input[type="email"] .user:focus{
 input[type="file"]{
     display:none;
 }  
-
-
 
 .user-table {
 
