@@ -208,14 +208,6 @@ input[type="file"]{
     display:none;
 }  
 
-
-
-
-input[type=text], input[type=tel], input[type=email] {
-  width: 100%;
-  border: black;
-} 
-
 .user-table {
 
   font-family: Helvetica, Verdana, sans-serif;
