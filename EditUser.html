@@ -18,17 +18,17 @@
       </head>
       <body>
            <!--NAVIGATION BAR -->
-        <nav class="nav-top" id = "topbar">
-            <!--first row of navigation bar-->
-            <section>
-                <div><a class="active" href="/index.html">Home</a></div>
-                <div><a href="products.html">Products</a></div>
-                <div><a href="editOrder.html">Orders</a></div>
-                <div><a href="UserList.html">Users</a></div>
-                <img src="images/KMicon.ico">
-            </section>
-          </nav>
-            <!--end of html for first row of topbar -->
+                <nav class="nav-top" id = "topbar">
+                    <!--first row of navigation bar-->
+                    <section>
+                        <div><a class="active" href="/index.html">Home</a></div>
+                        <div><a href="products.html">Products</a></div>
+                        <div><a href="editOrder.html">Orders</a></div>
+                        <div><a href="UserList.html">Users</a></div>
+                        <img src="images/KMicon.ico">
+                    </section>
+                </nav>
+                    <!--end of html for first row of topbar -->
         <main>
             <h1> Edit a User Profile</h1>
             <table class="user-table">
@@ -89,7 +89,6 @@
                                     required>
                               </div>
                               <br>
-                              
                               <div class="userdiv" id="confirmPass">
                                 <label for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
@@ -99,7 +98,57 @@
                                     required>
                               </div>
                               <br>
-                            <button class="button button2">Save </button>
+
+                              <div class="userdiv" id="registerStreet">
+                                <label for="street">*New Street: </label>
+                                <input type="street"
+                                  name="street"
+                                   class="user"
+                                   id="inputStreet"
+                                   reqired>
+                              </div>
+                            <br>
+
+                            <div class="userdiv" id="registerCity">
+                                <label for="city">*New City: </label>
+                                <input type="city"
+                                  name="city"
+                                  class="user"
+                                   id="inputCity"
+                                   required>
+                              </div>
+                              <br>
+                              <div class="userdiv" id="registerProvince">
+                                    <label for="province">*Province: </label>
+                                    <select id="province" name="province" class="province" required>
+                                        <option value="Alberta">AB</option>
+                                        <option value="Britich Columbia">BC</option>
+                                        <option value="Manitoba">MB</option>
+                                        <option value="New Brunswick">NB</option>
+                                        <option value="Newfoundland and Labrador">NL</option>
+                                        <option value="Nova Scotia">NS</option>
+                                        <option value="Ontario">ON</option>
+                                        <option value="Prince Edward Island">PE</option>
+                                        <option value="Quebec">QC</option>
+                                        <option value="Saskatchewan">SK</option>
+                                        <option value="Nortwest">NT</option>
+                                        <option value="Nunavut">NU</option>
+                                        <option value="Yukon">YT</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div class="userdiv" id="registerZip">
+                                    <label for="zip">*New Postal Code: </label>
+                                    <input type="zip"
+                                         class="user"
+                                         id="inputZip"
+                                         required>
+                                  </div>
+                                  <br>
+                              
+                            <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
                           </a></th> 
                         
@@ -133,6 +182,7 @@
                                     required>
                               </div>
                               <br>
+                              
                               <div class="userdiv" id="registerEmail">
                                 <label for="emailAddress"> Old Email: </label>
                                 <input type="email"
@@ -166,7 +216,6 @@
                                     required>
                               </div>
                               <br>
-                              
                               <div class="userdiv" id="confirmPass">
                                 <label for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
@@ -176,8 +225,57 @@
                                     required>
                               </div>
                               <br>
+
+                              <div class="userdiv" id="registerStreet">
+                                <label for="street">*New Street: </label>
+                                <input type="street"
+                                  name="street"
+                                   class="user"
+                                   id="inputStreet"
+                                   reqired>
+                              </div>
+                            <br>
+
+                            <div class="userdiv" id="registerCity">
+                                <label for="city">*New City: </label>
+                                <input type="city"
+                                  name="city"
+                                  class="user"
+                                   id="inputCity"
+                                   required>
+                              </div>
+                              <br>
+                              <div class="userdiv" id="registerProvince">
+                                    <label for="province">*Province: </label>
+                                    <select id="province" name="province" class="province" required>
+                                        <option value="Alberta">AB</option>
+                                        <option value="Britich Columbia">BC</option>
+                                        <option value="Manitoba">MB</option>
+                                        <option value="New Brunswick">NB</option>
+                                        <option value="Newfoundland and Labrador">NL</option>
+                                        <option value="Nova Scotia">NS</option>
+                                        <option value="Ontario">ON</option>
+                                        <option value="Prince Edward Island">PE</option>
+                                        <option value="Quebec">QC</option>
+                                        <option value="Saskatchewan">SK</option>
+                                        <option value="Nortwest">NT</option>
+                                        <option value="Nunavut">NU</option>
+                                        <option value="Yukon">YT</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div class="userdiv" id="registerZip">
+                                    <label for="zip">*New Postal Code: </label>
+                                    <input type="zip"
+                                         class="user"
+                                         id="inputZip"
+                                         required>
+                                  </div>
+                                  <br>
                         
-                            <button class="button button2">Save </button>
+                            <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
                           </a></th> 
                         
@@ -210,6 +308,7 @@
                                     required>
                               </div>
                               <br>
+                              
                               <div class="userdiv" id="registerEmail">
                                 <label for="emailAddress"> Old Email: </label>
                                 <input type="email"
@@ -243,7 +342,6 @@
                                     required>
                               </div>
                               <br>
-                              
                               <div class="userdiv" id="confirmPass">
                                 <label for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
@@ -254,8 +352,57 @@
                               </div>
                               <br>
 
+                              <div class="userdiv" id="registerStreet">
+                                <label for="street">*New Street: </label>
+                                <input type="street"
+                                  name="street"
+                                   class="user"
+                                   id="inputStreet"
+                                   reqired>
+                              </div>
+                            <br>
+
+                            <div class="userdiv" id="registerCity">
+                                <label for="city">*New City: </label>
+                                <input type="city"
+                                  name="city"
+                                  class="user"
+                                   id="inputCity"
+                                   required>
+                              </div>
+                              <br>
+                              <div class="userdiv" id="registerProvince">
+                                    <label for="province">*Province: </label>
+                                    <select id="province" name="province" class="province" required>
+                                        <option value="Alberta">AB</option>
+                                        <option value="Britich Columbia">BC</option>
+                                        <option value="Manitoba">MB</option>
+                                        <option value="New Brunswick">NB</option>
+                                        <option value="Newfoundland and Labrador">NL</option>
+                                        <option value="Nova Scotia">NS</option>
+                                        <option value="Ontario">ON</option>
+                                        <option value="Prince Edward Island">PE</option>
+                                        <option value="Quebec">QC</option>
+                                        <option value="Saskatchewan">SK</option>
+                                        <option value="Nortwest">NT</option>
+                                        <option value="Nunavut">NU</option>
+                                        <option value="Yukon">YT</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div class="userdiv" id="registerZip">
+                                    <label for="zip">*New Postal Code: </label>
+                                    <input type="zip"
+                                         class="user"
+                                         id="inputZip"
+                                         required>
+                                  </div>
+                                  <br>
+
                            
-                            <button class="button button2">Save </button>
+                            <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
                           </a></th> 
                         
