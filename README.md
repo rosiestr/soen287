@@ -1,3 +1,3 @@
 # soen287  KALAMARI MARKET WEBSITE 
-url : kalamarimarket.com <br> 
-backstore url : kalamarimarket.com/products
+url : http://kalamarimarket.com <br> 
+backstore url : http://kalamarimarket.com/products
