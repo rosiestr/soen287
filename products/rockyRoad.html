@@ -26,6 +26,7 @@
     <title>Kalamari Market: Klondike Ice Cream Bars</title>
   </head>
   <body>
+
     <!-- HEADER -->
     <header class="container-fluid"> <!--container that fills width of page-->
       <div class="row">
@@ -37,7 +38,6 @@
         </div>
       </div>
     </header>
-  
   
     <!--NAVIGATION BAR -->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
@@ -105,42 +105,44 @@
           </ul>
         </nev>
     </aside>
-
-    <!--<header>-->
-    <article class="musselsarticle">
-      <img
-        src="/images/Frozen/rockyRoad.jpg"
-        alt="rockyRoad"
-        height="450"
-        class="imgmussels"
-      />
-      <!--</header>-->
-      <div class="container">
-        <h4>KLONDIKE</h4>
-        <h3>Frozen Rocky Road Light Ice Cream Bars</h3>
-        <p>
-          <strong style="font-size: larger">$6.99</strong>
-          4 x 125ML
-        </p>
-        <hr />
-        <p>Sold by the box</p>
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description">
-          <img src="/images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Quantity :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
+    <!--MAIN-->
+    <article class="container-fluid">
+      <div class = "row">
+        <section class = "col-sm-6 d-flex align-items-center">
+          <img
+            src="/images/Frozen/rockyRoad.jpg"
+            alt="rockyRoad"
+            height="450"
+            class="img-fluid"
+          />
+        </section>
+        <section class="col-sm-6">
+          <h4>KLONDIKE</h4>
+          <h3>Frozen Rocky Road Light Ice Cream Bars</h3>
+          <p>
+            <strong style="font-size: larger">$6.99</strong>
+            4 x 125ML
+          </p>
+          <hr />
+          <p>Sold by the box</p>
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button>
+            <img src="/images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
           <br />
-        </form>
-        <br />
-        <p>Get this item with your grocery order:</p>
-        <button class="cart">Add To Cart</button>
-        <br /><br /><br />
+          <br />
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Quantity :</label><br />
+            <input type="text" class="quantity" name="quantity" value="0" />
+            <br />
+          </form>
+          <br />
+          <p>Get this item with your grocery order:</p>
+          <button class="cart">Add To Cart</button>
+          <br /><br /><br />
+        </section>
       </div>
     </article>
     <!-- STICKY FOOTER-->
@@ -151,7 +153,7 @@
       </div>
     </footer> 
     <!--end of sticky footer -->
-    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>
