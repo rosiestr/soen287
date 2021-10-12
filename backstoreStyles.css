@@ -159,6 +159,12 @@ input[type=submit] {
 input[type=number]{
   width: 50px;
 }
+
+/*
+input[type=text], input[type=tel], input[type=email] {
+  width: 100%;
+} */ 
+
 .user-table {
 
   font-family: Helvetica, Verdana, sans-serif;
@@ -316,8 +322,6 @@ label:hover{
 
 
 } */
-
-
 
 /*footer style*/
 
