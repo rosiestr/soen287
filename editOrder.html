@@ -27,10 +27,14 @@
             <img src="images/KMicon.ico">
         </section>
     </nav>
+    <!--HEADER-->
     <h1>Edit Order</h1>
+    <!--MAIN-->
     <section class = "container d-flex justify-content-center py-3 bluebg">
+        <!--CUSTOMER INFO AND SHIPPING FIELDS-->
         <form>
             <div class = "row">
+                <!--CUSTOMER NAME, EMAIL, PHONE -->
                 <div class = "col-sm-4 d-flex flex-column">
                     <label for="name"><b>Customer Name</b></label>
                     <input type="text" id="name" name="name" value = "Jane Doe" class = "editOrder"> 
@@ -39,33 +43,32 @@
                     <label for="phone"><b>Phone</b></label> 
                     <input type = "tel" id = "phone" name ="phone" value = 438889999>
                 </div>
+                <!--CUSTOMER BILLING ADDRESS-->
                 <div class = "col-sm-4 d-flex flex-column">
                     <label for="billingAddress"><b>Billing Address</b></label>
                     <textarea id = "billingAddress" name = "billingAddress" cols = "20" rows="6"
                     >8888 Ave Stuart Montreal, QC T5H 5H6</textarea>
                 </div> 
+                <!--CUSTOMER SHIPPING ADDRESS-->
                 <div class = "col-sm-4 d-flex flex-column">
                     <label for="shippingAddress"><b>Shipping Address</b></label>
                     <textarea id = "shippingAddress" cols ="20" rows="6"
                     >9999 Oak Avenue Montreal, QC T1S 2G4
-                    </textarea>
-                
+                    </textarea>              
                     <span class = "d-flex align-items-center">
                         <input type = "checkbox" id = "sameAddress" name = "sameAddress">
                         <label for="sameAddress">Same as billing address</label>
-                    </span>
-                
-                
+                    </span>                         
                     <span class = "d-flex align-items-center">
                         <input type = "checkbox" id = "pickup" name = "pickup">
                         <label for="pickup">Order for pickup</label>
-                    </span>
-                    
+                    </span>      
                 </div> 
             </div>
         </form>
     </section> 
     <section class = "container pb-3">  
+        <!--TABLE WITH ORDER ITEMS AND COST-->
         <form>
             <div class = "table-responsive row">
                 <table class = "product-table order-table table col">
@@ -189,11 +192,13 @@
                     </tfoot>
                 </table>
             </div>
+            <!--SAVE BUTTON-->
             <div class = "d-flex justify-content-end row"> 
                 <input type ="submit" id = "save" name = "save" value="SAVE CHANGES">
             </div>
         </form>
     </section>
+    <!--FOOTER-->
     <footer><a href="index.html">Back to Front Store</a></footer>
     
 
