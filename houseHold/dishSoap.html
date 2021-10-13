@@ -51,7 +51,9 @@
         </div>
         <div class="col-2">
           <button>
-            <a href="../shoppingCart.html"><i class="fas fa-shopping-cart px-1"></i></a>
+            <a href="../shoppingCart.html"
+              ><i class="fas fa-shopping-cart px-1"></i
+            ></a>
           </button>
         </div>
         <div class="col-2">
@@ -165,51 +167,60 @@
       </section>
     </nav>
     <!-- end of navigation-->
-    <!--<header>-->
-    <article class="musselsarticle">
-      <img
-        src="../images/Household/dish.jpg"
-        alt="Dish Soap"
-        height="450"
-        class="imgmussels"
-      />
-      <!--</header>-->
-      <div class="container">
-        <h3>Dish Soap</h3>
-        <p>
-          <strong style="font-size: larger">$2.99/bottle</strong>
-        </p>
-        <hr />
-        <p>Sold in bottles of 700mL</p>
+    <!-- MAIN -->
+    <article class="container-fluid">
+      <div class="row">
+        <section class="col-sm-6 d-flex align-items-center">
+          <img
+            src="../images/Household/dish.jpg"
+            alt="Dish Soap"
+            height="450"
+            class="img-fluid"
+          />
+        </section>
+        <section class="col-sm-6">
+          <h3>Dish Soap</h3>
+          <p>
+            <strong style="font-size: larger">$2.99/bottle</strong>
+          </p>
+          <hr />
+          <p>Sold in bottles of 700mL</p>
 
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description">
-          <img src="../images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <!-- for MORE DESCRIPTION: -->
-        <!-- Make all your tableware shiny with this dish soap. Available scents -->
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Number of Bottles :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button class="description">
+            <img src="../images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
+          <!-- for MORE DESCRIPTION: -->
+          <!-- Make all your tableware shiny with this dish soap. Available scents -->
           <br />
-          <label for="scents"></label><br />
-          <select name="scents" class="selects">
-            <option value="none">Select Scent</option>
-            <option value="lemon">Lemon</option>
-            <option value="apple">Apple</option>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="free">Fragrance-free</option>
-          </select>
-          <br /><br />
-        </form>
-        <br />
-        <p>Get this item with your grocery order:</p>
-        <button class="cart">Add To Cart</button>
-        <br /><br /><br />
+          <br />
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Number of Bottles :</label
+            ><br />
+            <input
+              type="text"
+              class="quantity"
+              name="quantity"
+              value="0"
+            /><br />
+            <br />
+            <label for="scents"></label><br />
+            <select name="scents" class="selects">
+              <option value="none">Select Scent</option>
+              <option value="lemon">Lemon</option>
+              <option value="apple">Apple</option>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="free">Fragrance-free</option>
+            </select>
+            <br /><br />
+          </form>
+          <br />
+          <p>Get this item with your grocery order:</p>
+          <button class="cart">Add To Cart</button>
+          <br /><br /><br />
+        </section>
       </div>
     </article>
     <!-- footer -->
