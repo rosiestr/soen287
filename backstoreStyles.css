@@ -251,7 +251,7 @@ background-color: #f3f3f3;
 border-radius: 20px;
 }
 
-label {
+.edit {
   font-family: Helvetica, Verdana, sans-serif;
   color: #76e3ed;
 
@@ -480,13 +480,27 @@ h4{
     width: 40%;
   
   }
-  label {
+  .edit {
     font-family: Helvetica, Verdana, sans-serif;
     color: #76e3ed;
     
     width:240px;
     display: inline-block;
     text-align: center;
+  }
+
+  .nav-top{
+    width:100%;
+  }
+  select#province{
+    width: auto;
+    margin-top:0;
+    border-color: #3498db;
+    align-items: left;
+    /* height: 40px; */
+    font-size: 10px;
+    /* float: center; */
+    /* clear:both; */
   }
   
 
@@ -509,7 +523,7 @@ h4{
     text-align: left;
     color: #635039;
 }
-label {
+.edit {
   font-family: Helvetica, Verdana, sans-serif;
   color: #76e3ed;
 
