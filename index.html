@@ -328,17 +328,13 @@
               </a>
             </div>
             <div class="col">
-              <a
-                href="products/iceCreamSandwich.html"
-                target="_blank"
-                alt="Ice Cream Sandwich"
-              >
+              <a href="products/iceCreamSandwich.html"
+                target="_blank">
                 <figure>
                   <img
                     src="images/Frozen/iceCreamSandwich.jpg"
                     class="thumbnail"
-                    alt="Ice Cream Sandwich"
-                  />
+                    alt="Ice Cream Sandwich"/>
                 </figure>
                 <figcaption>
                   <s>$6.99 </s><b>$4.99 ea.</b> 12 X 120G<br />CHAPMAN'S Vanilla
@@ -346,6 +342,14 @@
                 </figcaption>
               </a>
             </div>
+            <div class = "col">
+              <a href = "houseHold/broom.html" target="_blank">
+                <figure>
+                  <img src = "images/Household/broom.jpg" class = "thumbnail" alt="Broom"></figure>
+                  <figcaption><strike>$20.99 </strike> <b>$15.99 ea.</b><br> Broom </figcaption>
+              </a>
+            </div>
+
           </section>
           <!-- end of deals section -->
           <!--ADVERTISEMENT SECTION-->
@@ -375,7 +379,6 @@
 
     <!-- STICKY FOOTER -->
     <footer>
-      <!-- first row -->
       <div class="outlined-t outlined-b greybg px-3" id="footer">
         <a href="contact.html"
           ><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp
@@ -429,7 +432,7 @@
       document.getElementById("phoneBtn").onclick = function () {
         dropContent();
       };
-      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      /* dropContent toggles between adding and removing the "show" class, which is used to hide and show the dropdown content */
       function dropContent() {
         document.getElementById("myDropdown").classList.toggle("show");
       }
