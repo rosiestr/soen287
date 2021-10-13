@@ -226,15 +226,8 @@ text-align: left;
 padding: 12px 15px;
 text-align: center;
 vertical-align: middle;
-
-
-
-.user-table th,
-.user-table td {
-padding: 12px 15px;
-text-align: center;
-vertical-align: middle;
 }
+
 .user-table tbody tr {
 border-bottom: 1px solid #dddddd;
 }
@@ -399,6 +392,23 @@ border-radius: 20px;
   align-items: flex-start;
 }
 
+.product-form {
+  width: 100%;
+  padding: 30px 90px 90px 90px;
+  border: 10px solid #76e3ed;
+  box-shadow: 20px 20px 0 #76e3ed;
+  border-radius: 50px;
+  position: relative;
+}
+.product-form input, textarea, label{
+  display:block;
+  margin: auto;
+
+}
+
+.product-form input, textarea{
+  margin-bottom: 10px;
+}
 /*----------EDIT USER LIST STYLES----------*/
 
 /*INPUT STYLES FOR EMAIL*/
@@ -731,7 +741,10 @@ h4{
 .product-form input, .product-form textarea{
   margin-bottom: 10px;
 }
-
+.product-form label{
+  display: block;
+  text-align: center;
+}
 
 /*-----For small screen styles--------*/
 
