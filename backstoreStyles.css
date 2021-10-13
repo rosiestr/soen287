@@ -13,29 +13,30 @@
   font-style: normal;
 }
 .nav-top section {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #f7c88d;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #f7c88d;
 }
 
 .nav-top div {
-  float: left;
+float: left;
 }
 
 .nav-top div a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 .nav-top div a:hover {
-  background-color: #a0e4eb;
+background-color: #a0e4eb;
 }
-.nav-top img {
+
+.nav-top img{
   width: 46px;
   height: 46px;
   float: right;
@@ -47,7 +48,7 @@ h1 {
   color: #635039;
 }
 
-/*Styles for backstore table*/
+/*---------Styles for backstore table (Product table)------------*/
 .product-table {
   font-family: Helvetica, Verdana, sans-serif;
   font-weight: 400;
@@ -89,10 +90,12 @@ h1 {
   color: #76e3ed;
 }
 
-.button-bar {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+
+
+.button-bar{
+display: flex;
+justify-content: center;
+margin:20px;
 }
 
 .button {
@@ -110,6 +113,7 @@ h1 {
   color: black;
   border: 2px solid #76e3ed;
 }
+
 .button1 a {
   background-color: inherit;
   color: inherit;
@@ -145,6 +149,26 @@ h1 {
   color: white;
 }
 
+
+/*------------USER LIST PAGE STYLES-------------------*/
+.user-table {
+font-family: Helvetica, Verdana, sans-serif;
+font-weight: 400;
+font-style: normal;
+border-collapse: collapse;
+width: 50%;
+border-radius: 15px;
+overflow: hidden;
+margin: 25px auto;
+box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
+transition: all 1s;
+}
+
+.user-table thead tr {
+background-color: #f3f3f3;
+color: #76e3ed;
+text-align: left;
+}
 /*input styles*/
 input[type="button"],
 input[type="submit"] {
@@ -206,28 +230,88 @@ input[type="email"] .user:focus {
   transition: 0.2s ease;
 }
 
-.user-table {
-  font-family: Helvetica, Verdana, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  border-collapse: collapse;
-  width: 50%;
-  /* height:150%; */
-  border-radius: 15px;
-  overflow: hidden;
-  margin: 25px auto;
-  box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
-  transition: all 1s;
-}
 
-.user-table thead tr {
-  background-color: #f3f3f3;
-  color: #76e3ed;
-  text-align: left;
-}
+
+
 
 .user-table th,
 .user-table td {
+padding: 12px 15px;
+text-align: center;
+vertical-align: middle;
+}
+.user-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+.user-table tbody tr:nth-of-type(even) {
+background-color: #f3f3f3;
+}
+
+.user-table tbody tr:last-of-type {
+border-bottom: 2px solid #f3f3f3;
+}
+
+.user-table tbody tr.active-row {
+font-weight: bold;
+color: #f3f3f3;
+}
+.user-table:hover{
+/* width:100px;
+  height:100px;
+  margin:20px 31%; */
+box-shadow: 0px 8px 30px;
+
+}
+
+
+/* img{
+box-sizing: border-box;
+width:149px;
+height:149px;
+border-radius:50px;
+margin:0;
+
+padding:3px;
+background-color: white;
+
+
+} */
+
+
+
+/*footer style*/
+
+footer {
+  position:sticky;
+  bottom:0;
+  width:100%;
+  height:30px;   /* Height of the footer */
+  background:#f7c88d;
+  text-align: center;
+}
+footer a{
+  color: white;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;     
+}
+footer a:hover{
+  color:#a0e4eb;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;     
+}
+/*styles for divs*/ 
+.bluebg {
+background-color: #f3f3f3;
+border-radius: 20px;
+}
+
+.edit {
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #76e3ed;
+  width:740px;
   padding: 12px 15px;
   text-align: center;
   vertical-align: middle;
@@ -262,10 +346,20 @@ label {
   display: block;
   text-align: left;
 }
+
 #editOrder textarea {
   width: 100%;
   display: flex;
   align-items: flex-start;
+}
+
+
+/*----------EDIT USER LIST STYLES----------*/
+
+/*INPUT STYLES FOR EMAIL*/
+
+input [type="text"] .user,input[type="email"]{
+  display:block;
 }
 
 /* styling for input type street*/
@@ -278,40 +372,66 @@ input[type="street"] .user {
   float: right;
   clear: both;
   width: 40%;
-}
-input[type="text"] .user:focus,
-input[type="steet"] .user:focus {
-  border-bottom: 2px solid #3498db;
-  border-bottom-right-radius: 20px;
-  color: #3498db;
-  transition: 0.2s ease;
-}
-input[type="text"] .user:focus,
-input[type="street"] .user:focus {
-  border-bottom: 2px solid #3498db;
-  border-bottom-right-radius: 20px;
-  color: #3498db;
-  transition: 0.2s ease;
+
 }
 
-input[type="text"] .user:focus,
-input[type="email"] .user:focus {
-  border-bottom: 2px solid #3498db;
-  border-bottom-right-radius: 20px;
-  color: #3498db;
-  transition: 0.2s ease;
+/*INPUT STYLES FOR PASSWORD*/
+input[type="text"] .user:focus, 
+input[type="email"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+} 
+input [type="text"] .user,input[type="password"]{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
 }
-/*input[type="file"]{
-    display:none;
-}  */
-/* styling for input type city*/
-input [type="text"] .user,
+input[type="text"] .user:focus, 
+input[type="password"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+} 
+
+
+/*INPUT STYLES FOR STREET*/
+ 
+input [type="text"].user,input[type="street"].user{
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+}
+input[type="text"] .user:focus, 
+input[type="steet"] .user:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+
+
+
+
+/*input [type="text"] .user,
 input[type="city"] .user {
   display: block;
-}
+} */ 
 
-/* label{
-
+/*INPUT STYLES FOR CITY*/
+input [type="text"] .user,input[type="city"]{
+  display:block;
   box-sizing: border-box;
   border: 1px solid #76e3ed;
   border-radius: 2px;
@@ -320,14 +440,7 @@ input[type="city"] .user {
   width: 40%;
 
 }
-input[type="text"]:focus, 
-input[type="city"]:focus{
-    border-bottom: 2px solid #3498db;
-    border-bottom-right-radius: 20px;
-    color:#3498db;
-    transition: 0.2s ease;
-
-} input[type="text"]:focus, 
+input[type="text"] .user:focus, 
 input[type="city"]:focus{
     border-bottom: 2px solid #3498db;
     border-bottom-right-radius: 20px;
@@ -335,6 +448,13 @@ input[type="city"]:focus{
     transition: 0.2s ease;
 
 } 
+
+
+/* input [type="text"] .user,input[type="city"] .user{
+  display:block;
+} */
+
+
 /* styling for input type zipt*/
 input [type="text"] .user,
 input[type="zip"] {
@@ -346,29 +466,26 @@ input[type="zip"] {
   clear: both;
   width: 40%;
 }
-input[type="text"] .user:focus,
-input[type="zip"]:focus {
-  border-bottom: 2px solid #3498db;
-  border-bottom-right-radius: 20px;
-  color: #3498db;
-  transition: 0.2s ease;
-}
-input[type="text"] .user:focus,
-input[type="zip"]:focus {
-  border-bottom: 2px solid #3498db;
-  border-bottom-right-radius: 20px;
-  color: #3498db;
-  transition: 0.2s ease;
-}
+
+input[type="text"] .user:focus, 
+input[type="zip"]:focus{
+    border-bottom: 2px solid #3498db;
+    border-bottom-right-radius: 20px;
+    color:#3498db;
+    transition: 0.2s ease;
+
+} 
+
 
 /* styling for input type province*/
-select#province {
-  width: 70px;
-  margin-top: 0;
-  height: 40px;
+select#province{
+  width: auto;
+  margin-top:0;
+  border-color: #3498db;
+  /* height: 40px; */
   font-size: 10px;
-  float: center;
-  clear: both;
+  /* float: center; */
+  /* clear:both; */
 }
 
 select.province:hover {
@@ -376,7 +493,172 @@ select.province:hover {
   box-shadow: 0px 0px 8px;
 }
 
-/*footer style*/
+.EDIT_DIV{
+  width: 100%;
+}
+h4{
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #76e3ed;
+  text-align: right;
+  
+
+
+}
+.img-banner{
+  float:right;
+
+}
+
+
+/*-----For small screen styles--------*/
+
+@media only screen and (max-width:375px){
+
+  .img-banner{
+    float:top;
+
+  }
+  .button2 {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 10px;
+    transition-duration: 0.4s;
+    margin: 4px;
+  }
+  input [type="text"] .user,input[type="zip"]{
+    display:block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    clear:both;
+    width: 40%;
+  
+  }
+  input [type="text"] .user,input[type="city"]{
+    display:block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    clear:both;
+    width: 40%;
+  
+  }
+  input [type="text"].user,input[type="street"].user{
+    display:block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    clear:both;
+    width: 40%;
+  }
+  input [type="text"] .user,input[type="password"]{
+    display:block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    clear:both;
+    width: 40%;
+  
+  }
+  input [type="text"] .user,input[type="email"]{
+    display:block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    clear:both;
+    width: 40%;
+  
+  }
+  .edit {
+    font-family: Helvetica, Verdana, sans-serif;
+    color: #76e3ed;
+    
+    width:240px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .nav-top{
+    width:100%;
+  }
+  select#province{
+    width: auto;
+    margin-top:0;
+    border-color: #3498db;
+    align-items: left;
+    /* height: 40px; */
+    font-size: 10px;
+    /* float: center; */
+    /* clear:both; */
+  }
+  
+
+
+}
+
+/*-----For medium screen styles--------*/
+@media only screen and (max-width:768px){
+  h4{
+    
+    text-align: center;
+  
+  }
+  .img-banner{
+    float:right;
+
+  }
+  h1 {
+    font-family: Helvetica, Verdana, sans-serif;
+    text-align: left;
+    color: #635039;
+}
+.edit {
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #76e3ed;
+
+  width:640px;
+  display: inline-block;
+  text-align: center;
+}
+select#province{
+  width: auto;
+  margin-top:0;
+  border-color: #3498db;
+  /* height: 40px; */
+  font-size: 10px;
+  /* float: center; */
+  /* clear:both; */
+}
+
+
+
+}
+
+
+
+/*---------END OF EDIT USER STYLES---------*/
+
+
+
+.product-form {
+  width: 100%;
+  padding: 30px 90px 90px 90px;
+  border: 10px solid #76e3ed;
+  box-shadow: 20px 20px 0 #76e3ed;
+  border-radius: 50px;
+  position: relative;
+}
+.product-form input, .product-form textarea, .product-form label{
+  display:block;
+  margin: auto;
+}
+
+.product-form input, .product-form textarea{
+  margin-bottom: 10px;
+}
+
+
+
 
 footer {
   position: sticky;
@@ -442,8 +724,5 @@ footer a:hover {
   transition-duration: 0.4s;
   margin: 4px;
 }
-
-.userTD {
-}
-
 /* end of styling*/ ;
+
