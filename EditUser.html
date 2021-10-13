@@ -14,14 +14,14 @@
         <!-- css for backstore.html -->
         <link rel="stylesheet" href="backstoreStyles.css">
         <!--title to appear in tab-->
-        <title>Kalamari Market:User List</title>
+        <title>Kalamari Market:Edit User List</title>
       </head>
       <body>
            <!--NAVIGATION BAR -->
                 <nav class="nav-top" id = "topbar">
                     <!--first row of navigation bar-->
                     <section>
-                        <div><a class="active" href="/index.html">Home</a></div>
+                        <!-- <div><a class="active" href="/index.html">Home</a></div> -->
                         <div><a href="products.html">Products</a></div>
                         <div><a href="ordersList.html">Orders</a></div>
                         <div><a href="UserList.html">Users</a></div>
@@ -31,16 +31,14 @@
                     <!--end of html for first row of topbar -->
         <main>
             <h1> Edit a User Profile</h1>
-            <table class="user-table">
-                <thead>
-                    <tr>
 
-                        <th> <img src = "images/km.1.png" width="150" height="90" align="left"></th>
-                        <th>Jackie Frost <br> jakie23@gmail.com <br> 
+            
+                <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left">
+                          <h4>Jackie Frost <br> jakie23@gmail.com </h4><br> 
                             <div class="userdiv" id="registerFirst">
-                                <label for="first">Old Name: </label>
+                                <label class="edit"for="first">Old Name: </label>
 
-                                <input type="text"
+                                <input type="street"
                                     name="first"
                                     class="user"
                                     required>
@@ -48,8 +46,8 @@
                               <br>
                               
                               <div class="userdiv" id="registerFirst">
-                                <label for="first">*New Name: </label>
-                                <input type="text"
+                                <label  class="edit" for="first">*New Name: </label>
+                                <input type="street"
                                     name="first"
                                     class="user"
                                     required>
@@ -57,15 +55,12 @@
                               <br>
                               
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> Old Email: </label>
-                                <input type="email"
-                                    name="emailAddress"
-                                    class="user"
-                                    required>
+                                <label class="edit" for="emailAddress"> Old Email: </label>
+                                <input type="email"name="emailAddress"class="user" required align:left>
                               </div>
                               <br>
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> *New Email: </label>
+                                <label class="edit" for="emailAddress"> *New Email: </label>
                                 <input type="email"
                                     name="emailAddress"
                                     class="user"
@@ -73,7 +68,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerPass">
-                                <label for="passWord"> Old Password: </label>
+                                <label class="edit" for="passWord"> Old Password: </label>
                               <input type="password"
                                   name="passWord"
                                   class="user"
@@ -81,7 +76,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">New Password: </label>
+                                <label class="edit"for="confirm-pass">New Password: </label>
                                 <input type="password"
                                     name="confirm-pass"
                                     placeholder=""
@@ -90,9 +85,9 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">*Confirm new Password: </label>
+                                <label class="edit" for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
-                                    name="confirm-pass"
+                                  name="confirm-pass"
                                     placeholder=""
                                     class="user"
                                     required>
@@ -100,7 +95,7 @@
                               <br>
 
                               <div class="userdiv" id="registerStreet">
-                                <label for="street">*New Street: </label>
+                                <label  class="edit" for="street">*New Street: </label>
                                 <input type="street"
                                   name="street"
                                    class="user"
@@ -110,7 +105,7 @@
                             <br>
 
                             <div class="userdiv" id="registerCity">
-                                <label for="city">*New City: </label>
+                                <label class="edit" for="city">*New City: </label>
                                 <input type="city"
                                   name="city"
                                   class="user"
@@ -119,7 +114,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerProvince">
-                                    <label for="province">*Province: </label>
+                                    <label  class="edit" for="province">*Province: </label>
                                     <select id="province" name="province" class="province" required>
                                         <option value="Alberta">AB</option>
                                         <option value="Britich Columbia">BC</option>
@@ -140,7 +135,7 @@
                                 <br>
 
                                 <div class="userdiv" id="registerZip">
-                                    <label for="zip">*New Postal Code: </label>
+                                    <label class="edit" for="zip">*New Postal Code: </label>
                                     <input type="zip"
                                          class="user"
                                          id="inputZip"
@@ -150,33 +145,35 @@
                               
                             <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
-                          </a></th> 
+                          </a>
                         
-                        <!-- <th>Status</th> -->
-                    </tr>
-                </thead>
+                        
+                    
+                
 
-            </table>
+            </div>
+                
+            
+            <div class="EDIT_DIV">
+                
+                        
 
-            <table class="user-table">
-                <thead>
-                    <tr>
+            <div class="EDIT_DIV">
+                
+                    
 
-                        <th> <img src = "images/km.1.png" width="150" height="90" align="left"></th>
-                        <th>Sophie McKnight <br> sophie@gmail.com <br> 
+                           <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left"></th>
+                          <h4>Sophie McKnight <br> sophie@gmail.com</h4> <br> 
                             <div class="userdiv" id="registerFirst">
-                                <label for="first">Old Name: </label>
+                                <label class="edit"for="first">Old Name: </label>
 
-                                <input type="text"
-                                    name="first"
-                                    class="user"
-                                    required>
+                                <input type="email" name="first" class="user" required>
                               </div>
                               <br>
                               
                               <div class="userdiv" id="registerFirst">
-                                <label for="first">*New Name: </label>
-                                <input type="text"
+                                <label class="edit" for="first">*New Name: </label>
+                                <input type="street"
                                     name="first"
                                     class="user"
                                     required>
@@ -184,7 +181,7 @@
                               <br>
                               
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> Old Email: </label>
+                                <label class="edit" for="emailAddress"> Old Email: </label>
                                 <input type="email"
                                     name="emailAddress"
                                     class="user"
@@ -192,7 +189,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> *New Email: </label>
+                                <label class="edit" for="emailAddress"> *New Email: </label>
                                 <input type="email"
                                     name="emailAddress"
                                     class="user"
@@ -200,7 +197,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerPass">
-                                <label for="passWord"> Old Password: </label>
+                                <label class="edit" for="passWord"> Old Password: </label>
                               <input type="password"
                                   name="passWord"
                                   class="user"
@@ -208,7 +205,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">New Password: </label>
+                                <label class="edit" for="confirm-pass">New Password: </label>
                                 <input type="password"
                                     name="confirm-pass"
                                     placeholder=""
@@ -217,7 +214,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">*Confirm new Password: </label>
+                                <label class="edit" for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
                                     name="confirm-pass"
                                     placeholder=""
@@ -227,7 +224,7 @@
                               <br>
 
                               <div class="userdiv" id="registerStreet">
-                                <label for="street">*New Street: </label>
+                                <label class="edit" for="street">*New Street: </label>
                                 <input type="street"
                                   name="street"
                                    class="user"
@@ -237,7 +234,7 @@
                             <br>
 
                             <div class="userdiv" id="registerCity">
-                                <label for="city">*New City: </label>
+                                <label class="edit" for="city">*New City: </label>
                                 <input type="city"
                                   name="city"
                                   class="user"
@@ -246,7 +243,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerProvince">
-                                    <label for="province">*Province: </label>
+                                    <label class="edit" for="province">*Province: </label>
                                     <select id="province" name="province" class="province" required>
                                         <option value="Alberta">AB</option>
                                         <option value="Britich Columbia">BC</option>
@@ -267,7 +264,7 @@
                                 <br>
 
                                 <div class="userdiv" id="registerZip">
-                                    <label for="zip">*New Postal Code: </label>
+                                    <label class="edit" for="zip">*New Postal Code: </label>
                                     <input type="zip"
                                          class="user"
                                          id="inputZip"
@@ -277,32 +274,29 @@
                         
                             <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
-                          </a></th> 
+                          </a>
                         
-                        <!-- <th>Status</th> -->
-                    </tr>
-                </thead>
+                        <!--      Status</th> -->
+                    
+                
 
-            </table>
-            <table class="user-table">
-                <thead>
-                    <tr>
+            </div>
+            <div class="EDIT_DIV">
+                
+                    
 
-                        <th> <img src = "images/km.1.png" width="150" height="90" align="left"></th>
-                        <th>Edward Eleric <br> edward@gmail.com <br> 
+                           <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left"></th>
+                         <h4> Edward Eleric <br> edward@gmail.com </h4> <br> 
                             <div class="userdiv" id="registerFirst">
-                                <label for="first">Old Name: </label>
+                                <label class="edit" for="first">Old Name: </label>
 
-                                <input type="text"
-                                    name="first"
-                                    class="user"
-                                    required>
+                                <input type="email" name="first" class="user" required>
                               </div>
                               <br>
                               
                               <div class="userdiv" id="registerFirst">
-                                <label for="first">*New Name: </label>
-                                <input type="text"
+                                <label class="edit" for="first">*New Name: </label>
+                                <input type="street"
                                     name="first"
                                     class="user"
                                     required>
@@ -310,7 +304,7 @@
                               <br>
                               
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> Old Email: </label>
+                                <label class="edit" for="emailAddress"> Old Email: </label>
                                 <input type="email"
                                     name="emailAddress"
                                     class="user"
@@ -318,7 +312,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerEmail">
-                                <label for="emailAddress"> *New Email: </label>
+                                <label class="edit" for="emailAddress"> *New Email: </label>
                                 <input type="email"
                                     name="emailAddress"
                                     class="user"
@@ -326,7 +320,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerPass">
-                                <label for="passWord"> Old Password: </label>
+                                <label class="edit" for="passWord"> Old Password: </label>
                               <input type="password"
                                   name="passWord"
                                   class="user"
@@ -334,7 +328,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">New Password: </label>
+                                <label class="edit" for="confirm-pass">New Password: </label>
                                 <input type="password"
                                     name="confirm-pass"
                                     placeholder=""
@@ -343,7 +337,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="confirmPass">
-                                <label for="confirm-pass">*Confirm new Password: </label>
+                                <label class="edit" for="confirm-pass">*Confirm new Password: </label>
                                 <input type="password"
                                     name="confirm-pass"
                                     placeholder=""
@@ -353,7 +347,7 @@
                               <br>
 
                               <div class="userdiv" id="registerStreet">
-                                <label for="street">*New Street: </label>
+                                <label class="edit" for="street">*New Street: </label>
                                 <input type="street"
                                   name="street"
                                    class="user"
@@ -363,7 +357,7 @@
                             <br>
 
                             <div class="userdiv" id="registerCity">
-                                <label for="city">*New City: </label>
+                                <label class="edit" for="city">*New City: </label>
                                 <input type="city"
                                   name="city"
                                   class="user"
@@ -372,7 +366,7 @@
                               </div>
                               <br>
                               <div class="userdiv" id="registerProvince">
-                                    <label for="province">*Province: </label>
+                                    <label class="edit" for="province">*Province: </label>
                                     <select id="province" name="province" class="province" required>
                                         <option value="Alberta">AB</option>
                                         <option value="Britich Columbia">BC</option>
@@ -393,7 +387,7 @@
                                 <br>
 
                                 <div class="userdiv" id="registerZip">
-                                    <label for="zip">*New Postal Code: </label>
+                                    <label class="edit" for="zip">*New Postal Code: </label>
                                     <input type="zip"
                                          class="user"
                                          id="inputZip"
@@ -404,25 +398,19 @@
                            
                             <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
-                          </a></th> 
+                          </a>
                         
                        
-                    </tr>
-                </thead>
+                    
+                
 
-            </table>
+            </div>
         </main>
 
         <!--For some reason, the footer in this page is not correctly placed-->
 
-            <!-- <footer><a href="index.html">Back to Front Store</a></footer> -->
+            <footer><a href="index.html">Back to Front Store</a></footer>
 
       </body>
 </html>
    
-
-
-       
-
-    
-
