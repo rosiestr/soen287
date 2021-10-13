@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome CSS - for icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <!-- Link to icon for title -->
+    <link rel="shortcut icon" href="../images/KMicon.ico" />
+
+    <link rel="stylesheet" href="../frontStyles.css" />
+    <title>Broom</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-md-auto">
+          <img class="img-fluid" src="../images/header.png" />
+        </div>
+        <div class="col d-flex align-items-center">
+          <h5>Buy Groceries Online!</h5>
+        </div>
+      </div>
+    </header>
+
+    <!--NAVIGATION BAR -->
+    <nav class="container-fluid outlined-b outlined-t" id="topbar">
+      <!--first row of navigation bar-->
+
+      <!-- only appears on small screens -->
+      <section class="row d-md-none">
+        <div class="col-5">
+          <button id="phoneBtn">
+            <i class="fas fa-arrow-circle-down px-1"></i>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="../shoppingCart.html"
+              ><i class="fas fa-shopping-cart px-1"></i
+            ></a>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="../login.html"><i class="fas fa-sign-in-alt px-1"></i></a>
+          </button>
+        </div>
+        <div class="col-2">
+          <button>
+            <a href="../register.html"><i class="fas fa-user-plus px-1"></i></a>
+          </button>
+        </div>
+      </section>
+      <!-- only appears on medium/large screens -->
+      <section class="d-none d-md-block">
+        <div class="row d-flex justify-content-between">
+          <div class="col-4">
+            <a href="../shoppingCart.html"
+              ><button>My Cart <i class="fas fa-shopping-cart"></i></button
+            ></a>
+          </div>
+          <div class="col-2 kmbg">
+            <!-- div backround is images/km.1.png alt = "Kalamari Market Logo"-->
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <a href="../login.html"
+              ><button>Login <i class="fas fa-sign-in-alt"></i></button
+            ></a>
+            <a href="../register.html"
+              ><button>Register <i class="fas fa-user-plus"></i></button
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <div id="myDropdown" class="clickdown-content orangeBox">
+        <ul>
+          <li><a href="../produce.html">Fruits & Vegetables</a></li>
+          <li><a href="../dairy.html">Dairy & Eggs</a></li>
+          <li><a href="../meat.html">Meat & Poultry</a></li>
+          <li><a href="../bakery.html">Bakery Products</a></li>
+          <li><a href="../seafood.html">Fish & Seafood</a></li>
+          <li><a href="../beverages.html">Beverages</a></li>
+          <li><a href="../frozen.html">Frozen</a></li>
+          <li><a href="../household.html">Household items</a></li>
+        </ul>
+      </div>
+      <!--end of html for first row of topbar -->
+
+      <!--second row of navigation, doesn't appear on small screens-->
+
+      <!-- only appears on medium screens -->
+      <section class="d-none d-md-block d-lg-none">
+        <div class="row px-0 bluebg outlined-t">
+          <div class="col">
+            <a href="../produce.html"><h6>Fruits and Vegetables</h6></a>
+          </div>
+          <div class="col">
+            <a href="../dairy.html"><h6>Dairy & Eggs</h6></a>
+          </div>
+          <div class="col">
+            <a href="../meat.html"><h6>Meat & Poultry</h6></a>
+          </div>
+          <div class="col dropdown">
+            <button>
+              <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+            </button>
+            <div class="dropdown-content orangeBox">
+              <ul>
+                <li><a href="../bakery.html">Bakery Products</a></li>
+                <li><a href="../seafood.html">Fish & Seafood</a></li>
+                <li><a href="../beverages.html">Beverages</a></li>
+                <li><a href="../frozen.html">Frozen</a></li>
+                <li><a href="../login.html">Household items</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- only appears on large screens -->
+      <section class="d-none d-lg-block">
+        <div class="row bluebg outlined-t px-0 pt-1">
+          <div class="col">
+            <a href="../produce.html"><h6>Fruits and Vegetables</h6></a>
+          </div>
+          <div class="col">
+            <a href="../dairy.html"><h6>Dairy & Eggs</h6></a>
+          </div>
+          <div class="col">
+            <a href="../meat.html"><h6>Meat & Poultry</h6></a>
+          </div>
+          <div class="col">
+            <a href="../bakery.html"><h6>Bakery Products</h6></a>
+          </div>
+          <div class="col">
+            <a href="../seafood.html"><h6>Fish & Seafood</h6></a>
+          </div>
+          <div class="col dropdown">
+            <button>
+              <h6>More Aisles<i class="fas fa-arrow-circle-down px-1"></i></h6>
+            </button>
+            <div class="dropdown-content orangeBox">
+              <ul>
+                <li><a href="../beverages.html">Beverages</a></li>
+                <li><a href="../frozen.html">Frozen</a></li>
+                <li><a href="../household.html">Household items</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- end of navigation-->
+    <!-- MAIN -->
+    <article class="container-fluid">
+      <div class="row">
+        <section class="col-sm-6 d-flex align-items-center">
+          <figure>
+            <p>ON SALE</p>
+            <img
+              src="../images/Household/broom.jpg"
+              alt="Broom"
+              height="450"
+              class="img-fluid"
+            />
+          </figure>
+        </section>
+        <section class="col-sm-6">
+          <h3>Broom</h3>
+          <p>
+            <strike>$20.99 </strike
+            ><strong style="font-size: larger">$15.99 ea.</strong>
+          </p>
+          <hr />
+          <p>Sold individually</p>
+
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button class="description">
+            <img src="../images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
+          <!-- for MORE DESCRIPTION: -->
+          <!--  -->
+          <br />
+          <br />
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Number of Products :</label
+            ><br />
+            <input
+              type="text"
+              class="quantity"
+              name="quantity"
+              value="0"
+            /><br />
+            <br />
+          </form>
+          <br />
+          <p>Get this item with your grocery order:</p>
+          <button class="cart">Add To Cart</button>
+          <br /><br /><br />
+        </section>
+      </div>
+    </article>
+    <!-- footer -->
+    <footer>
+      <!-- first row -->
+      <div class="outlined-t outlined-b greybg px-3" id="footer">
+        <a href><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp </a>
+        <a href><i class="fas fa-map-pin"></i> Find a Store</a>
+      </div>
+      <!-- second row -->
+      <div class="outlined-t inset-b smallp px-2" id="bottom">
+        <!--table with hours-->
+        <table>
+          <tr>
+            <th>Hours</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>7AM - 10PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>7AM - 10PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>7AM - 10PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8AM - 11PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8AM - 11PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9AM - 10PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>9AM - 9PM</td>
+          </tr>
+        </table>
+      </div>
+    </footer>
+
+    <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("phoneBtn").onclick = function () {
+        dropContent();
+      };
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function dropContent() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+
+    <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
