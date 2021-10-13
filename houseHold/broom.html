@@ -51,7 +51,9 @@
         </div>
         <div class="col-2">
           <button>
-            <a href="../shoppingCart.html"><i class="fas fa-shopping-cart px-1"></i></a>
+            <a href="../shoppingCart.html"
+              ><i class="fas fa-shopping-cart px-1"></i
+            ></a>
           </button>
         </div>
         <div class="col-2">
@@ -165,45 +167,55 @@
       </section>
     </nav>
     <!-- end of navigation-->
-    <!--<header>-->
-    <article class="musselsarticle">
-      <figure>
-        <p>ON SALE</p>
-        <img
-          src="../images/Household/broom.jpg"
-          alt="Broom"
-          height="450"
-          class="imgmussels"
-        />
-        </figure>
-      <!--</header>-->
-      <div class="container">
-        <h3>Broom</h3>
-        <p>
-          <strike>$20.99 </strike><strong style="font-size: larger">$15.99 ea.</strong>
-        </p>
-        <hr />
-        <p>Sold individually</p>
+    <!-- MAIN -->
+    <article class="container-fluid">
+      <div class="row">
+        <section class="col-sm-6 d-flex align-items-center">
+          <figure>
+            <p>ON SALE</p>
+            <img
+              src="../images/Household/broom.jpg"
+              alt="Broom"
+              height="450"
+              class="img-fluid"
+            />
+          </figure>
+        </section>
+        <section class="col-sm-6">
+          <h3>Broom</h3>
+          <p>
+            <strike>$20.99 </strike
+            ><strong style="font-size: larger">$15.99 ea.</strong>
+          </p>
+          <hr />
+          <p>Sold individually</p>
 
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description">
-          <img src="../images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <!-- for MORE DESCRIPTION: -->
-        <!--  -->
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Number of Products :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button class="description">
+            <img src="../images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
+          <!-- for MORE DESCRIPTION: -->
+          <!--  -->
           <br />
-        </form>
-        <br />
-        <p>Get this item with your grocery order:</p>
-        <button class="cart">Add To Cart</button>
-        <br /><br /><br />
+          <br />
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Number of Products :</label
+            ><br />
+            <input
+              type="text"
+              class="quantity"
+              name="quantity"
+              value="0"
+            /><br />
+            <br />
+          </form>
+          <br />
+          <p>Get this item with your grocery order:</p>
+          <button class="cart">Add To Cart</button>
+          <br /><br /><br />
+        </section>
       </div>
     </article>
     <!-- footer -->

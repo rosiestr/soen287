@@ -51,7 +51,9 @@
         </div>
         <div class="col-2">
           <button>
-            <a href="../shoppingCart.html"><i class="fas fa-shopping-cart px-1"></i></a>
+            <a href="../shoppingCart.html"
+              ><i class="fas fa-shopping-cart px-1"></i
+            ></a>
           </button>
         </div>
         <div class="col-2">
@@ -165,51 +167,60 @@
       </section>
     </nav>
     <!-- end of navigation-->
-    <!--<header>-->
-    <article class="musselsarticle">
-      <img
-        src="../images/Household/cleaner.jpg"
-        alt="Mutli Purpose Cleaner"
-        height="450"
-        class="imgmussels"
-      />
-      <!--</header>-->
-      <div class="container">
-        <h3>Mutli-Purpose Cleaner</h3>
-        <p>
-          <strong style="font-size: larger">$1.99/bottle</strong>
-        </p>
-        <hr />
-        <p>Sold in bottles of 500mL</p>
+    <!-- MAIN -->
+    <article class="container-fluid">
+      <div class="row">
+        <section class="col-sm-6 d-flex align-items-center">
+          <img
+            src="../images/Household/cleaner.jpg"
+            alt="Mutli Purpose Cleaner"
+            height="450"
+            class="img-fluid"
+          />
+        </section>
+        <section class="col-sm-6">
+          <h3>Mutli-Purpose Cleaner</h3>
+          <p>
+            <strong style="font-size: larger">$1.99/bottle</strong>
+          </p>
+          <hr />
+          <p>Sold in bottles of 500mL</p>
 
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description">
-          <img src="../images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <!-- for MORE DESCRIPTION: -->
-        <!-- Muti-purpose cleaner with differents bleach concentration to meet all your needs  -->
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Number of Bottles :</label><br />
-          <input type="text" class="quantity" name="quantity" value="0" /><br />
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button class="description">
+            <img src="../images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
+          <!-- for MORE DESCRIPTION: -->
+          <!-- Muti-purpose cleaner with differents bleach concentration to meet all your needs  -->
           <br />
-          <label for="bleach"></label><br />
-          <select name="bleach" class="selects">
-            <option value="none">Bleach Concentration</option>
-            <option value="null">No Bleach (0%)</option>
-            <option value="<low">Low (5-25%)</option>
-            <option value="medium">Medium (30-50%)</option>
-            <option value="high">High (55-95%)</option>
-          </select>
-          <br /><br />
-        </form>
-        <br />
-        <p>Get this item with your grocery order:</p>
-        <button class="cart">Add To Cart</button>
-        <br /><br /><br />
+          <br />
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Number of Bottles :</label
+            ><br />
+            <input
+              type="text"
+              class="quantity"
+              name="quantity"
+              value="0"
+            /><br />
+            <br />
+            <label for="bleach"></label><br />
+            <select name="bleach" class="selects">
+              <option value="none">Bleach Concentration</option>
+              <option value="null">No Bleach (0%)</option>
+              <option value="<low">Low (5-25%)</option>
+              <option value="medium">Medium (30-50%)</option>
+              <option value="high">High (55-95%)</option>
+            </select>
+            <br /><br />
+          </form>
+          <br />
+          <p>Get this item with your grocery order:</p>
+          <button class="cart">Add To Cart</button>
+          <br /><br /><br />
+        </section>
       </div>
     </article>
     <!-- footer -->
