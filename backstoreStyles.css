@@ -389,7 +389,7 @@ border-radius: 20px;
 
 /*INPUT STYLES FOR EMAIL*/
 
-input [type="text"] .user,input[type="email"]{
+input [type="text"] .user,input[type="email"] .user{
   display: block;
   box-sizing: border-box;
   border: 1px solid #76e3ed;
@@ -419,7 +419,7 @@ input[type="street"] .user {
 /*INPUT STYLES FOR PASSWORD*/
 
 input[type="text"] .user:focus, 
-input[type="email"]:focus{
+input[type="email"] .user:focus{
     border-bottom: 2px solid #3498db;
     border-bottom-right-radius: 20px;
     color:#3498db;
@@ -812,7 +812,7 @@ h4{
     width: 40%;
   
   }
-  input [type="text"] .user,input[type="email"]{
+  input [type="text"] .user,input[type="email"] .user{
     display:block;
     box-sizing: border-box;
     border: 1px solid #76e3ed;
