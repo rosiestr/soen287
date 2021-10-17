@@ -275,6 +275,16 @@ border-radius: 20px;
 /*INPUT STYLES FOR EMAIL*/
 
 input [type="text"] .user,input[type="email"]{
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+}
+
+/* input [type="text"] .user,input[type="email"]{
   display:block;
   box-sizing: border-box;
   border: 1px solid #76e3ed;
@@ -283,7 +293,7 @@ input [type="text"] .user,input[type="email"]{
   clear:both;
   width: 40%;
 
-}
+} */
 input[type="text"] .user:focus, 
 input[type="email"]:focus{
     border-bottom: 2px solid #3498db;
@@ -389,16 +399,22 @@ input[type="zip"]:focus{
 } 
 
 
-/* styling for input type province*/
 select#province{
+  display:block;
+  margin: auto;
+  font-size: 10px;
+}
+
+/* styling for input type province*/
+/* select#province{
   width: auto;
   margin-top:0;
   border-color: #3498db;
-  /* height: 40px; */
+  height: 40px; 
   font-size: 10px;
-  /* float: center; */
-  /* clear:both; */
-}
+  float: center; 
+  clear:both; 
+} */
 
 select.province:hover {
   color: #3498db;
@@ -472,6 +488,18 @@ h4{
   
   }
   input [type="text"] .user,input[type="email"]{
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    float: right;
+    clear:both;
+    width: 40%;
+  }
+
+
+
+  /* input [type="text"] .user,input[type="email"]{
     display:block;
     box-sizing: border-box;
     border: 1px solid #76e3ed;
@@ -479,7 +507,7 @@ h4{
     clear:both;
     width: 40%;
   
-  }
+  } */
   .edit {
     font-family: Helvetica, Verdana, sans-serif;
     color: #76e3ed;
@@ -492,16 +520,25 @@ h4{
   .nav-top{
     width:100%;
   }
+
   select#province{
+    display:block;
+    margin: auto;
+    font-size: 10px;
+    float:right;
+  }
+
+
+  /* select#province{
     width: auto;
     margin-top:0;
     border-color: #3498db;
     align-items: left;
-    /* height: 40px; */
+     height: 40px; 
     font-size: 10px;
-    /* float: center; */
-    /* clear:both; */
-  }
+    float: center; 
+    clear:both; 
+  } */
   
 
 
@@ -531,15 +568,24 @@ h4{
   display: inline-block;
   text-align: center;
 }
+
+
 select#province{
+  display:block;
+  margin: auto;
+  font-size: 10px;
+  float:center;
+}
+
+/* select#province{
   width: auto;
   margin-top:0;
   border-color: #3498db;
-  /* height: 40px; */
+  height: 40px; 
   font-size: 10px;
-  /* float: center; */
-  /* clear:both; */
-}
+  float: center; 
+  clear:both; 
+} */
 
 
 
