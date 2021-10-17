@@ -704,6 +704,8 @@ select#province{
 
 .product-form input, .product-form textarea{
   margin-bottom: 10px;
+  border: 2px solid #76e3ed;
+  box-shadow: 4px 4px 0 #76e3ed;
 }
 
 
