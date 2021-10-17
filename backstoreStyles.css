@@ -185,7 +185,7 @@ margin:20px;
 }
 
 /*input styles*/ 
-/*input[type=button], input[type=submit] {
+input[type=button], input[type=submit] {
 border: 2px solid #76e3ed;
 border-radius: 5px;
 }
@@ -197,7 +197,7 @@ background-color: #dddddd;
 }
 input[type=number]{
 width: 50px;
-}*/
+}
 
 /*------------USER LIST PAGE STYLES-------------------*/
 .user-table {
@@ -411,7 +411,17 @@ border-radius: 20px;
 
 /*INPUT STYLES FOR EMAIL*/
 
-input [type="text"] .user,input[type="email"]{
+input [type="text"] .user,input[type="email"] .user{
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: right;
+  clear:both;
+  width: 40%;
+}
+
+/* input [type="text"] .user,input[type="email"]{
   display:block;
 }
 
@@ -426,12 +436,12 @@ input[type="street"] .user {
   clear:both;
   width: 40%;
 
-
 }
 
 /*INPUT STYLES FOR PASSWORD*/
+
 input[type="text"] .user:focus, 
-input[type="email"]:focus{
+input[type="email"] .user:focus{
     border-bottom: 2px solid #3498db;
     border-bottom-right-radius: 20px;
     color:#3498db;
@@ -524,16 +534,22 @@ input[type="zip"]:focus{
 } 
 
 
-/* styling for input type province*/
 select#province{
+  display:block;
+  margin: auto;
+  font-size: 10px;
+}
+
+/* styling for input type province*/
+/* select#province{
   width: auto;
   margin-top:0;
   border-color: #3498db;
-  /* height: 40px; */
+  height: 40px; 
   font-size: 10px;
-  /* float: center; */
-  /* clear:both; */
-}
+  float: center; 
+  clear:both; 
+} */
 
 select.province:hover {
   color: #3498db;
@@ -608,6 +624,18 @@ h4{
   
   }
   input [type="text"] .user,input[type="email"]{
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #76e3ed;
+    border-radius: 2px;
+    float: right;
+    clear:both;
+    width: 40%;
+  }
+
+
+
+  /* input [type="text"] .user,input[type="email"]{
     display:block;
     box-sizing: border-box;
     border: 1px solid #76e3ed;
@@ -615,11 +643,11 @@ h4{
     clear:both;
     width: 40%;
   
-  }
+  } */
   .edit {
     font-family: Helvetica, Verdana, sans-serif;
     color: #76e3ed;
-    
+
     width:240px;
     display: inline-block;
     text-align: center;
@@ -628,16 +656,25 @@ h4{
   .nav-top{
     width:100%;
   }
+
   select#province{
+    display:block;
+    margin: auto;
+    font-size: 10px;
+    float:right;
+  }
+
+
+  /* select#province{
     width: auto;
     margin-top:0;
     border-color: #3498db;
     align-items: left;
-    /* height: 40px; */
+     height: 40px; 
     font-size: 10px;
-    /* float: center; */
-    /* clear:both; */
-  }
+    float: center; 
+    clear:both; 
+  } */
   
 
 
@@ -667,15 +704,24 @@ h4{
   display: inline-block;
   text-align: center;
 }
+
+
 select#province{
+  display:block;
+  margin: auto;
+  font-size: 10px;
+  float:center;
+}
+
+/* select#province{
   width: auto;
   margin-top:0;
   border-color: #3498db;
-  /* height: 40px; */
+  height: 40px; 
   font-size: 10px;
-  /* float: center; */
-  /* clear:both; */
-}
+  float: center; 
+  clear:both; 
+} */
 
 
 
@@ -702,6 +748,8 @@ select#province{
 
 .product-form input, .product-form textarea{
   margin-bottom: 10px;
+  border: 2px solid #76e3ed;
+  box-shadow: 4px 4px 0 #76e3ed;
 }
 
 
@@ -794,7 +842,7 @@ h4{
     width: 40%;
   
   }
-  input [type="text"] .user,input[type="email"]{
+  input [type="text"] .user,input[type="email"] .user{
     display:block;
     box-sizing: border-box;
     border: 1px solid #76e3ed;

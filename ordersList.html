@@ -38,9 +38,9 @@
       </section>
     </nav>
     <!--end of html for first row of topbar -->
-    <div class="container">
-      <main>
-        <h1>Orders List</h1>
+    <h1>Orders List</h1>
+    <article class="container-fluid">
+      <div style="overflow-x: auto">
         <table class="product-table" id="orders-table">
           <thead>
             <tr>
@@ -118,32 +118,29 @@
             </tr>
           </tbody>
         </table>
+      </div>
 
-        <!-- <div class="button-bar"> -->
-        <a href="/editOrder.html">
-          <button class="button button1">
-            Add
-            <i class="fas fa-plus-square"></i>
-          </button>
-        </a>
-
+      <a href="/editOrder.html">
         <button class="button button1">
-          Delete <i class="fas fa-trash-alt"></i>
+          Add
+          <i class="fas fa-plus-square"></i>
         </button>
-        <a href="/editOrder.html">
-          <button class="button button1">
-            Edit <i class="fas fa-edit"></i>
-          </button>
-        </a>
+      </a>
 
-        <a href="#top">
-          <button class="button button1">
-            <i class="fas fa-arrow-up"></i>
-          </button>
-        </a>
-        <!-- </div> -->
-      </main>
-    </div>
+      <button class="button button1">
+        Delete <i class="fas fa-trash-alt"></i>
+      </button>
+      <a href="/editOrder.html">
+        <button class="button button1">Edit <i class="fas fa-edit"></i></button>
+      </a>
+
+      <a href="#top">
+        <button class="button button1">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </a>
+    </article>
+
     <footer><a href="index.html">Back to Front Store</a></footer>
   </body>
 </html>
