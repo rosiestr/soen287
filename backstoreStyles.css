@@ -376,13 +376,13 @@ border-radius: 20px;
   border-radius: 50px;
   position: relative;
 }
-.product-form input, textarea, label{
+.product-form input, .product-form textarea, .product-form label{
   display:block;
   margin: auto;
 
 }
 
-.product-form input, textarea{
+.product-form input, .product-form textarea{
   margin-bottom: 10px;
 }
 /*----------EDIT USER LIST STYLES----------*/
