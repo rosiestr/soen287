@@ -185,7 +185,7 @@ margin:20px;
 }
 
 /*input styles*/ 
-/*input[type=button], input[type=submit] {
+input[type=button], input[type=submit] {
 border: 2px solid #76e3ed;
 border-radius: 5px;
 }
@@ -197,7 +197,7 @@ background-color: #dddddd;
 }
 input[type=number]{
 width: 50px;
-}*/
+}
 
 /*------------USER LIST PAGE STYLES-------------------*/
 .user-table {
