@@ -267,12 +267,6 @@ background-color: white;
 
 } */
 
-/*styles for divs*/ 
-.bluebg {
-background-color: #f3f3f3;
-border-radius: 20px;
-}
-
 .edit {
   font-family: Helvetica, Verdana, sans-serif;
   color: #76e3ed;
@@ -344,7 +338,7 @@ footer a:hover{
 }
 /*styles for divs*/ 
 .bluebg {
-background-color: #f3f3f3;
+background-color:#d6fbff;
 border-radius: 20px;
 }
 
