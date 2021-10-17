@@ -57,10 +57,10 @@ ul {
 
 /* product description pages */
 .selects {
+  width: 50%;
   border: none;
   font-size: 12px;
   text-transform: uppercase;
-  /* text-shadow: 1px 1px 8px rgba(0,0,0,0.75); */
   background-color: #f7c88d;
   color: white;
   padding: 10px 10px;
@@ -101,89 +101,91 @@ select {
   box-sizing: border-box;
 }
 
-  /*BEGINING of Styles for particular elements of LOGIN and REGISTRATION pages */
-  label {
-    display: block;
-    font-style: italic;
-    font-size: 13px;
-  }
+/*BEGINING of Styles for particular elements of LOGIN and REGISTRATION pages */
+label {
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+}
 
-  .userdiv{
-    display:inline-block;
-    margin:7px
-  }
+.userdiv {
+  display: inline-block;
+  margin: 7px;
+}
 
-  legend{
-     font-family: 'Droid serif', serif;
-  }
+legend {
+  font-family: "Droid serif", serif;
+}
 
-#userform, #province{
-  background-color: #CDF0EA;
+#userform,
+#province {
+  background-color: #cdf0ea;
   border-radius: 10px;
   border: 2px solid;
   font-family: Helvetica, Verdana, sans-serif;
   height: auto;
   width: auto;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:20px;
-  margin-bottom:20px;
-  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
-input.user{
+input.user {
   border-radius: 10px;
-  width:200px;
-  height:35px;
+  width: 200px;
+  height: 35px;
 }
 
-#inputZip{
+#inputZip {
   width: 90px;
 }
 
-#inputStreet{
+#inputStreet {
   width: 400px;
 }
 
-select#province{
+select#province {
   width: 70px;
-  margin-top:0;
+  margin-top: 0;
   height: 40px;
   font-size: 10px;
 }
 
 select.province:hover {
-  color: #EEB76B;
+  color: #eeb76b;
   box-shadow: 0px 0px 8px;
 }
 
-input[type=checkbox]{
-  margin:0px;
-  width:15px;
-  height:15px;
+input[type="checkbox"] {
+  margin: 0px;
+  width: 15px;
+  height: 15px;
 }
 
-input[type=submit]{
+input[type="submit"] {
   height: 45px;
 }
 
-ul.news{
+ul.news {
   list-style-type: circle;
   margin-left: 10px;
 }
 /*END of Styles for particular elements of LOGIN and REGISTRATION pages */
 
 .cart {
-  width: 27%;
+  width: 50%;
 }
 .description {
-  width: 27%;
+  width: 50%;
+  overflow: hidden;
 }
 .quantity {
+  width: 50%;
   border: none;
   font-size: 12px;
   text-transform: uppercase;
-  /* text-shadow: 1px 1px 8px rgba(0,0,0,0.75); */
   background-color: #f7c88d;
   color: white;
   padding: 10px 10px;
@@ -221,7 +223,8 @@ a:active {
 }
 
 /*button styles */
-input[type=submit], button {
+input[type="submit"],
+button {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
@@ -285,7 +288,7 @@ figure p {
   background-repeat: repeat;
   background-position: center;
 }
-@media only screen and (min-width: 2000px){
+@media only screen and (min-width: 2000px) {
   #contactInfo {
     height: 55vh;
   }
@@ -367,7 +370,7 @@ figure p {
   padding-top: 20px;
   display: grid;
   align-items: flex-start;
-  border-bottom: 1px solid #BDFFF6;
+  border-bottom: 1px solid #bdfff6;
   justify-content: center;
 }
 
@@ -390,7 +393,7 @@ footer {
 }
 @media only screen and (min-width: 768px) {
   .thumbnail {
-    height: 140px; 
+    height: 140px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -424,8 +427,8 @@ footer {
   text-align: left;
 }
 .shoppingCart .container {
-  font-size: 25px;
-  padding-right: 100px;
+  font-size: 16px;
+  padding: 20%;
 }
 .shoppingCart .container .tab {
   text-align: right;
@@ -435,8 +438,9 @@ footer {
   border: 2px solid;
   display: block;
   margin-right: 20px;
+  margin-bottom: 20px;
   border-style: inset;
-  font-size: 20px;
+  font-size: 16px;
 }
 .price,
 .numOfItems {
