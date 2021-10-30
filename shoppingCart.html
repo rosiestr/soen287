@@ -24,8 +24,9 @@
 
     <link rel="stylesheet" href="frontStyles.css" />
     <title>Kalamari Market: Shopping Cart</title>
+    <script src = "cart.js" async></script>
   </head>
-  <body>
+  <body id = "shoppingCart">
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
@@ -111,90 +112,108 @@
     <!-- MAIN -->
     <article class="container-fluid">
       <div class = "row">
-        <section class = "col-sm-6 d-flex align-items-center">
-          <article class="shoppingCart">
-      <div class="container">
-        <ul>
-          <li>
+        <section class = "col-sm-6 d-flex align-items-center justify-content-start">
+        <form class = "shoppingCart"> 
+        <ul class = "cart-item-container">
+          <li class = "item">
+            <figure>
             <img
               src="/images/Frozen/iceCreamSandwich.jpg"
-              alt="Ice Cream Sandwich"
-              height="120"
+              alt="Ice Cream Sandwich"              
               class="cartIMG"
             />
-            <strong style="font-size: larger"> 1 x </strong> CHAPMAN'S Vanilla
-            Super Ice Cream Sandwiches
-            <p class="tab">$4.99</p>
-            <p class="tab">
-              <button>Change Quantity</button> <button>Delete Item</button>
+            <figcaption class = "item-name">CHAPMAN'S Vanilla Super Ice Cream Sandwiches</figcaption>
+            </figure>
+            <div class = "item-price-times"> 
+              <input type="number" name = "quantity" class = "cart-item-quantity" placeholder = 1> 
+              <span class = "type-of-quantity"></span>  x
+              <span class = "price">$2.99</span> 
+            </div>
+            <p>Item Total: <span class="item-total">$2.99</span>               
+              <button class = "remove-btn">Delete Item</button>
             </p>
-            <hr />
           </li>
 
-          <li>
+          <li class = "item">
+            <figure>
             <img
               src="/images/Dairy/eggs.png"
-              alt="Eggs"
-              height="120"
-              class="cartIMG"
-            />
-            <strong style="font-size: larger"> 1 x </strong> Brown Eggs, Extra
-            Large
-            <p class="tab">$2.99</p>
-            <p class="tab">
-              <button>Change Quantity</button> <button>Delete Item</button>
+              alt="Eggs"              
+              class="cartIMG"/>
+            <figcaption class = "item-name">Brown Eggs, Extra Large</figcaption>
+            </figure>
+            <div class = "item-price-times"> 
+              <input type="number" name = "quantity" class = "cart-item-quantity" placeholder = 1> 
+              <span class = "type-of-quantity"></span>  x
+              <span class = "price">$2.99</span> 
+            </div>
+            <p>Item Total: <span class="item-total">$2.99</span>               
+              <button class = "remove-btn">Delete Item</button>
             </p>
-            <hr />
+            <hr/>
           </li>
 
-          <li>
-            <img
+          <li class = "item">
+            <figure>
+              <img
               src="/images/Produce/banana.png"
               alt="Banana"
-              height="120"
               class="cartIMG"
             />
-            <strong style="font-size: larger"> 3lbs x </strong>Bananas
-
-            <p class="tab">$1.77</p>
-            <p class="tab">
-              <button>Change Quantity</button> <button>Delete Item</button>
+            <figcaption class = "item-name">Bananas</figcaption>
+            </figure>
+            <div class = "item-price-times"> 
+              <input type="number" name = "quantity" class = "cart-item-quantity" placeholder = 1> 
+              <span class = "type-of-quantity">lbs </span><span>x</span>
+              <span class = "price">$2.99</span> 
+            </div>
+            <p>Item Total: <span class="item-total">$2.99</span>               
+              <button class = "remove-btn">Delete Item</button>
             </p>
             <hr />
           </li>
 
-          <li>
+          <li class = "item">
+            <figure>
             <img
               src="/images/Dairy/milk.jpeg"
               alt="milk"
-              height="120"
               class="cartIMG"
             />
-            <strong style="font-size: larger"> 1 x </strong> 2% Milk 2L
-            <p class="tab">$3.90</p>
-            <p class="tab">
-              <button>Change Quantity</button> <button>Delete Item</button>
+            
+            <figcaption class = "item-name">1% Milk 2L</figcaption>
+            </figure>
+            <div class = "item-price-times"> 
+              <input type="number" name = "quantity" class = "cart-item-quantity" placeholder = 1> 
+              <span class = "type-of-quantity"></span>x
+              <span class = "price">$2.99</span> 
+            </div>
+            <p>Item Total: <span class="item-total">$2.99</span>               
+              <button class = "remove-btn">Delete Item</button>
             </p>
-            <hr />
           </li>
 
-          <li>
+          <li class = "item">
+            <figure>
             <img
               src="/images/Meat/beef.png"
               alt="Beef"
-              height="120"
               class="cartIMG"
-            />
-            <strong style="font-size: larger"> 3lbs x </strong> Fresh Beef Flank
-            <p class="tab">$5.97</p>
-            <p class="tab">
-              <button>Change Quantity</button> <button>Delete Item</button>
+            /> 
+            <figcaption class = "item-name">Fresh Beef Flank</figcaption> 
+            </figure>
+            <div class = "item-price-times"> 
+              <input type="number" name = "quantity" class = "cart-item-quantity" placeholder = 1> 
+              <span class = "type-of-quantity"></span>  x
+              <span class = "price">$2.99</span> 
+            </div>
+            <p>Item Total: <span class="item-total">$2.99</span>               
+              <button class = "remove-btn">Delete Item</button>
             </p>
-            <br />
             <br />
           </li>
         </ul>
-      </div>
+    </form> 
     </section>     
     <section class="col-sm-6">
       <div class="summary">
@@ -202,13 +221,13 @@
         <br />
         <p>Number of items: <span class="numOfItems">5</span></p>
         <p>
-          Subtotal: <span class="price"><strong>$18.71</strong></span>
+          Subtotal: <span class="cart-subtotal price"><strong>$18.71</strong></span>
         </p>
-        <p>Delivery Fee:<span class="price">$4.00</span></p>
-        <p>QST:<span class="price">$2.27</span></p>
-        <p>GST:<span class="price">$1.14</span></p>
+        <p>Delivery Fee:<span class="cart-delivery price">$4.00</span></p>
+        <p>QST:<span class="cart-qst price">$2.27</span></p>
+        <p>GST:<span class="cart-gst price">$1.14</span></p>
         <p>
-          Total: <span class="price"><strong>$26.12</strong></span>
+          Total: <span class="cart-total price"><strong>$26.12</strong></span>
         </p>
 
         <button>CHECKOUT</button>
@@ -276,10 +295,10 @@
     </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
-    ></script>
+    ></script> --> 
   </body>
 </html>

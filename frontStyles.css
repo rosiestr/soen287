@@ -452,5 +452,27 @@ footer {
   text-align: center;
   text-decoration: overline;
 }
+#shoppingCart figure {
+  display: flex; 
+  align-items: center;
+}
+#shoppingCart figcaption {
+  font-size: 18px; 
+  
+}
+#shoppingCart figcaption:hover {
+  color : black; 
+}
+.item-price-times {
+  display: flex; 
+  justify-content: start;
+}
+.item-price-times span {
+  margin-left: 10px;
+}
+.cartIMG {
+  max-width : 100px; 
+  max-height: 100px;
+}
 
 /* End of Shopping Cart style */
