@@ -107,7 +107,6 @@
       </aside>
     <br />
     <h2 class="cartHeader">MY CART</h2>
-    <br />
     <!-- <hr /> -->
     <!-- MAIN -->
     <article class="container-fluid">
@@ -129,9 +128,11 @@
               <span class = "type-of-quantity"></span>  x
               <span class = "price">$2.99</span> 
             </div>
-            <p>Item Total: <span class="item-total">$2.99</span>               
-              <button class = "remove-btn">Delete Item</button>
-            </p>
+            <div class = "item-row">
+            <p class = "item-total-col">Item Total: <span class="item-total">$2.99</span></p>              
+            <button class = "remove-btn">Delete Item</button>
+            </div>
+            <hr>
           </li>
 
           <li class = "item">
@@ -147,9 +148,11 @@
               <span class = "type-of-quantity"></span>  x
               <span class = "price">$2.99</span> 
             </div>
-            <p>Item Total: <span class="item-total">$2.99</span>               
-              <button class = "remove-btn">Delete Item</button>
-            </p>
+            <div class = "item-row">
+            <p class = "item-total-col">Item Total: <span class="item-total">$2.99</span></p>               
+            <button class = "remove-btn">Delete Item</button>
+            
+            </div>
             <hr/>
           </li>
 
@@ -167,9 +170,10 @@
               <span class = "type-of-quantity">lbs </span><span>x</span>
               <span class = "price">$2.99</span> 
             </div>
-            <p>Item Total: <span class="item-total">$2.99</span>               
+            <div class = "item-row">
+              <p class = "item-total-col">Item Total: <span class="item-total">$2.99</span></p>              
               <button class = "remove-btn">Delete Item</button>
-            </p>
+            </div>
             <hr />
           </li>
 
@@ -178,9 +182,7 @@
             <img
               src="/images/Dairy/milk.jpeg"
               alt="milk"
-              class="cartIMG"
-            />
-            
+              class="cartIMG"/>
             <figcaption class = "item-name">1% Milk 2L</figcaption>
             </figure>
             <div class = "item-price-times"> 
@@ -188,9 +190,10 @@
               <span class = "type-of-quantity"></span>x
               <span class = "price">$2.99</span> 
             </div>
-            <p>Item Total: <span class="item-total">$2.99</span>               
+            <div class = "item-row">
+              <p class = "item-total-col">Item Total: <span class="item-total">$2.99</span></p>              
               <button class = "remove-btn">Delete Item</button>
-            </p>
+            </div>
           </li>
 
           <li class = "item">
@@ -207,9 +210,11 @@
               <span class = "type-of-quantity"></span>  x
               <span class = "price">$2.99</span> 
             </div>
-            <p>Item Total: <span class="item-total">$2.99</span>               
-              <button class = "remove-btn">Delete Item</button>
-            </p>
+            <div class = "item-row">
+            <p class = "item-total-col">Item Total: <span class="item-total">$2.99</span> </p>             
+            <button class = "remove-btn">Delete Item</button>
+            
+            </div>
             <br />
           </li>
         </ul>
@@ -217,7 +222,7 @@
     </section>     
     <section class="col-sm-6">
       <div class="summary">
-        <h3 class="summaryHeader">SUMMARY</h3>
+        <h5 class="summaryHeader">SUMMARY</h5>
         <br />
         <p>Number of items: <span class="numOfItems">5</span></p>
         <p>
@@ -231,7 +236,7 @@
         </p>
 
         <button>CHECKOUT</button>
-        <button>CONTINUE SHOPPING</button>
+        <a href = "/index.html"><button >CONTINUE SHOPPING</button></a>
       
       </div>
     </section>

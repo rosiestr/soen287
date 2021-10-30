@@ -457,12 +457,16 @@ footer {
   align-items: center;
 }
 #shoppingCart figcaption {
-  font-size: 18px; 
-  
+  font-size: 18px;   
 }
 #shoppingCart figcaption:hover {
   color : black; 
 }
+#shoppingCart input[type = "number"] { 
+  border: 2px solid #f7c88d; 
+  text-align: center;
+}
+
 .item-price-times {
   display: flex; 
   justify-content: start;
@@ -474,5 +478,16 @@ footer {
   max-width : 100px; 
   max-height: 100px;
 }
+.item-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-total-col {
+  margin-top: 20px;
+}
+
+
 
 /* End of Shopping Cart style */
