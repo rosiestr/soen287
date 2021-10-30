@@ -317,9 +317,7 @@ figure p {
   font-size: 18px;
 }
 
-.show {
-  display: block;
-}
+
 /*styles for the hoverdown menu*/
 
 @media only screen and (min-width: 768px) {
@@ -436,7 +434,6 @@ footer {
 .summary {
   padding: 40px;
   border: 2px solid;
-  display: block;
   margin-right: 20px;
   margin-bottom: 20px;
   border-style: inset;
@@ -487,7 +484,15 @@ footer {
 .item-total-col {
   margin-top: 20px;
 }
-
+.cart-empty {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 
 
 /* End of Shopping Cart style */

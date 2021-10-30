@@ -22,8 +22,16 @@ function ready() {
 
     function removeCartItem(event) {
         var buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.remove();
-            updateCartTotal();
+        buttonClicked.parentElement.parentElement.remove();
+        updateCartTotal();
+        var itemContainer = document.getElementsByClassName('cart-item-container')[0];
+        if (itemContainer.getElementsByClassName('item').length == 0) {
+            document.getElementsByClassName('summary')[0].classList.toggle('hide');
+            document.getElementsByClassName('cart-empty')[0].classList.toggle('show');
+            
+        }
+        
+        
     }
     
     function quantityChange(event) {
