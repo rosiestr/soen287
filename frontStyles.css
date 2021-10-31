@@ -299,7 +299,7 @@ figure p {
   background-color: white;
   position: sticky; /*so it sticks to top of page even when scrolling down*/
   top: 0;
-  z-index: 1;
+  z-index: 9999;
 }
 /*styling for the clickdown menu*/
 .clickdown {
@@ -307,19 +307,30 @@ figure p {
 }
 .clickdown-content {
   display: none;
+  z-index: 999;
   position: absolute;
   min-width: 200px;
   overflow: auto;
-  transition: 0.5s;
+  transition: 0.5s;   
+}
+.clickdown-content ul {
+  list-style-position: outside;
+  padding : 0; 
+  margin: 0;
 }
 .clickdown-content a {
   display: block;
   font-size: 18px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.clickdown-content li {
+  border-top: 2px solid white;
+  width: 100%;
 }
 
-.show {
-  display: block;
-}
+
 /*styles for the hoverdown menu*/
 
 @media only screen and (min-width: 768px) {
@@ -330,17 +341,19 @@ figure p {
     display: none; /*not displated until hover over dropdown*/
     width: 80%;
     position: absolute;
-    z-index: 1;
+    z-index: 9999;
     margin-top: 30px;
   }
 
   .dropdown-content ul {
-    padding-left: 5px;
+    
+    padding-left: 10px;
+    padding-bottom: 0;
     font-size: 16px;
   }
   .dropdown-content li {
     padding-top: 5px;
-    padding-bottom: 5px;
+    
   }
   .dropdown:hover .dropdown-content {
     display: block;
@@ -359,8 +372,6 @@ figure p {
 .orangeBox {
   box-shadow: 1px 4px 15px 3px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
   background-color: #f7c88d; /* peach*/
 }
 
@@ -436,7 +447,6 @@ footer {
 .summary {
   padding: 40px;
   border: 2px solid;
-  display: block;
   margin-right: 20px;
   margin-bottom: 20px;
   border-style: inset;
@@ -452,5 +462,71 @@ footer {
   text-align: center;
   text-decoration: overline;
 }
+#shoppingCart figure {
+  display: flex; 
+  align-items: center;
+}
+#shoppingCart figcaption {
+  font-size: 18px;   
+}
+#shoppingCart figcaption:hover {
+  color : black; 
+}
+.item-price-times {
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+}
+.item-price-times span {
+  margin-left: 10px;
+}
+.cartIMG {
+  max-width : 100px; 
+  max-height: 100px;
+}
+.item-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-total-col {
+  margin-top: 20px;
+}
+.cart-empty {
+  display: none;
+}
+.plus-cart-quantity, .minus-cart-quantity {
+  height: 45px;
+  width: 40px;
+  margin-left: 0px;
+}
+.cart-item-quantity {
+  all: initial;
+  text-align: center;
+  font-family: Helvetica, Verdana, sans-serif;
+  height: 45px;
+  width: 40px; 
+  background-color: white;
+  border: 2px solid #f7c88d; 
+  color: black;
+  text-shadow: none; 
+  font-size: 18px;
+  padding: none;
+}
+.cart-item-quantity:hover {
+  box-shadow: initial;
+}
+.type-of-quantity {
+  padding-right: 5px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+
 
 /* End of Shopping Cart style */
