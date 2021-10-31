@@ -8,7 +8,8 @@ else {
 }
 
 //ready function
-function ready() { 
+function ready() {
+    updateCartTotal();
     //get an array of all the delete item buttons
     var removeCartItemButtons = document.getElementsByClassName('remove-btn');
     //loop through the array
@@ -19,7 +20,7 @@ function ready() {
         var button = removeCartItemButtons[i];
         button.addEventListener('click', removeCartItem)
     }
-   
+
     var quantityPlusButtons = document.getElementsByClassName('plus-cart-quantity');
     for (var i = 0; i < quantityPlusButtons.length; i++) {
         var plus = quantityPlusButtons[i];
@@ -106,9 +107,10 @@ function updateCartTotal() {
     }
     //Check to see if user is eligible for free delivery
     var deliveryFee = 4.00;
+
     //If their total is >= 100, they are. 
     if (total >= 100) {
-        deliveryFee = 0.00;
+        deliveryFee = 0.00; 
     }
     const GST = 0.05;
     const QST = 0.09975;
