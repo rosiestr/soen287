@@ -480,9 +480,9 @@ footer {
 .item-price-times span {
   margin-left: 10px;
 }
-.cartIMG {
-  max-width : 100px; 
+.cartIMG { 
   max-height: 100px;
+  max-width: 100px;
 }
 .item-row {
   margin-top: 10px;
