@@ -260,6 +260,8 @@ width:149px;
 height:149px;
 border-radius:50px;
 margin:0;
+padding:3px;
+background-color: white;
 
 padding:3px;
 background-color: white;
@@ -305,11 +307,8 @@ width:149px;
 height:149px;
 border-radius:50px;
 margin:0;
-
 padding:3px;
 background-color: white;
-
-
 } */
 
 
@@ -345,7 +344,6 @@ border-radius: 20px;
 /*label {
   font-family: Helvetica, Verdana, sans-serif;
   color: #76e3ed;
-
   width:740px;
   display: inline-block;
   text-align: right;
@@ -547,7 +545,7 @@ h4{
 
 /*-----For small screen styles--------*/
 
-@media only screen and (max-width:375px){
+
 
   .img-banner{
     float:top;
@@ -604,6 +602,7 @@ h4{
     clear:both;
     width: 40%;
   }
+  
 
 
 
@@ -648,12 +647,12 @@ h4{
     clear:both; 
   } */
   
+/*----------- end of small styles for user
 
 
-}
 
-/*-----For medium screen styles--------*/
-@media only screen and (max-width:768px){
+/*-----For medium screen styles and larger--------*/
+@media only screen and (min-width:768px){
   h4{
     
     text-align: center;
@@ -907,7 +906,6 @@ h4{
 /*label {
   font-family: Helvetica, Verdana, sans-serif;
   color: #76e3ed;
-
   width:640px;
   display: inline-block;
   text-align: center;
@@ -987,4 +985,3 @@ select#province{
 
 
 /* end of styling*/ 
-
