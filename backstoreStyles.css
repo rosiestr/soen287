@@ -575,7 +575,7 @@ h4{
 
 /*-----For small screen styles--------*/
 
-@media only screen and (max-width:375px){
+
 
   .img-banner{
     float:top;
@@ -632,6 +632,7 @@ h4{
     clear:both;
     width: 40%;
   }
+  
 
 
 
@@ -676,12 +677,12 @@ h4{
     clear:both; 
   } */
   
+/*----------- end of small styles for user
 
 
-}
 
-/*-----For medium screen styles--------*/
-@media only screen and (max-width:768px){
+/*-----For medium screen styles and larger--------*/
+@media only screen and (min-width:768px){
   h4{
     
     text-align: center;
