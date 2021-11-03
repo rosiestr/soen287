@@ -79,7 +79,7 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     //get an array of all the items
     var cartItems = cartItemContainer.getElementsByClassName('item');
-    var total = 0;
+    var overallTotal = 0;
     var numOfitems = 0;
     //loop through the array
     for (var i = 0; i < cartItems.length; i++) {
@@ -94,10 +94,10 @@ function updateCartTotal() {
         var quantity = parseFloat(quantityElement.innerText);
         
         //add (price*quantity) of the item to the total
-        total += (price * quantity);
+        overallTotal += (price * quantity);
         
         //add 1 to the number of item count
-        numOfitems++;
+        numOfitems+=quantity;
 
         //Calculate and round the item total
         var itemTotal = Math.round(quantity * price * 100) / 100;
@@ -109,23 +109,23 @@ function updateCartTotal() {
     var deliveryFee = 4.00;
 
     //If their total is >= 100, they are. 
-    if (total >= 100) {
+    if (overallTotal >= 100) {
         deliveryFee = 0.00; 
     }
     const GST = 0.05;
     const QST = 0.09975;
     //Round the total
-    total = Math.round(total * 100) / 100;
+    overallTotal = Math.round(overallTotal * 100) / 100;
     //Calculate and round the QST
-    var totalQst = Math.round((total + deliveryFee) * QST * 100) / 100;
+    var totalQst = Math.round((overallTotal + deliveryFee) * QST * 100) / 100;
     //Calculate and round the GST
-    var totalGst = Math.round((total + deliveryFee) * GST * 100) / 100;
+    var totalGst = Math.round((overallTotal + deliveryFee) * GST * 100) / 100;
     //Calculate and round the total + tax
-    var cartTotal = Math.round((total + totalQst + totalGst + deliveryFee) * 100) / 100;
+    var totalPlusTax = Math.round((overallTotal + totalQst + totalGst + deliveryFee) * 100) / 100;
     //set the number of items
     document.getElementsByClassName('numOfItems')[0].innerText = numOfitems;
     //set and format the subtotal 
-    document.getElementsByClassName('cart-subtotal')[0].innerText = '$' + total;
+    document.getElementsByClassName('cart-subtotal')[0].innerText = '$' + overallTotal;
     //set and format the delivery fee
     document.getElementsByClassName('cart-delivery')[0].innerText = '$' + deliveryFee + ".00";
     //set and format the total QST
@@ -133,7 +133,7 @@ function updateCartTotal() {
     //set and format the total GST
     document.getElementsByClassName('cart-gst')[0].innerText = '$' + totalGst;
     //set and format the total 
-    document.getElementsByClassName('cart-total')[0].innerText = '$' + cartTotal;
+    document.getElementsByClassName('cart-total')[0].innerText = '$' + totalPlusTax;
 }
 
 //checkCartEmptyFunction
