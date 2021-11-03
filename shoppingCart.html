@@ -256,8 +256,8 @@
           Total: <span class="cart-total price"><strong>$26.12</strong></span>
         </p>
 
-        <button>CHECKOUT</button>
-        <a href = "/index.html"><button >CONTINUE SHOPPING</button></a>
+        <button class="checkout_B"onclick="checkoutMsg()">CHECKOUT</button>
+        <a href = "/index.html"><button class="cont-shopping">CONTINUE SHOPPING</button></a>
       
       </div>
     </section>
@@ -319,11 +319,20 @@
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};
         document.getElementById("compBtn").onclick = function() {dropContent()};
+        //document.getElementById("checkout-btn").onclick= function(){checkoutMsg()};
     
         /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
         function dropContent() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
+        // function checkoutMsg(){
+        //   // var buttonClicked = event.target;
+        //   //var checkoutButton = document.getElementsByClassName('checkout-btn');
+        //   alert("Thank you for shopping with Kalamari Market!");
+    
+        // }
+        //button.addEventListener('click',checkoutMsg);
+
     </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->

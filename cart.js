@@ -147,3 +147,18 @@ function checkCartEmpty() {
         
     }
 }
+
+//CHECKOUTBUTTON FUNCTION
+function checkoutMsg(){
+   
+   var items=document.getElementsByClassName('item');
+
+    document.getElementsByClassName('cart-item-container')[0].classList.toggle('hide'); //hides all the items in the cart
+    document.getElementsByClassName('cart-empty')[0].classList.toggle('show'); //shows the empty cart
+    //document.getElementsByClassName('checkout_B')[0].classList.toggle('hide');
+    //document.getElementsByClassName('cont-shopping')[0].classList.toggle('hide');
+    document.getElementsByClassName('summary')[0].classList.toggle('hide'); //hides summary page
+    //sends alert message to the page once checkoutbutton is clciked
+    alert("Thank you for shopping with Kalamari Market!");
+    
+  }
