@@ -202,6 +202,9 @@ width: 50px;
 }
 
 /*------------USER LIST PAGE STYLES-------------------*/
+#userList-main {
+  height: 100vh;
+}
 .user-table {
 
 font-family: Helvetica, Verdana, sans-serif;
