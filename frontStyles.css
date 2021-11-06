@@ -435,8 +435,19 @@ footer {
   text-align: center;
   color: #5c5c5c;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
 .shoppingCart {
   text-align: left;
+  width: 100%;
+}
+@media only screen and (min-width: 1000px){
+  .shoppingCart {
+    width: 70%; 
+  }
+
 }
 .shoppingCart .container {
   font-size: 16px;
@@ -448,11 +459,10 @@ footer {
 .summary {
   padding: 40px;
   border: 2px solid;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 20px 20px 0px 20px;
   border-style: inset;
   font-size: 16px;
-  max-width: 400px;
+  height: fit-content;
 }
 .price,
 .numOfItems {
@@ -474,6 +484,8 @@ footer {
 #shoppingCart figcaption:hover {
   color : black; 
 }
+
+
 .item-price-times {
   display: flex; 
   justify-content: start;
@@ -509,6 +521,7 @@ footer {
   width: 40px;
   margin-left: 0px;
 }
+
 .cart-item-quantity {
   all: initial;
   text-align: center;
