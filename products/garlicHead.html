@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="/images/KMicon.ico" />
 
     <link rel="stylesheet" href="/frontStyles.css" />
+    <script src = "../description.js" async></script>
     <title>Vegetables : Garlic Head</title>
   </head>
   <body>
@@ -125,10 +126,11 @@
           <p>Sold individually (approx 100g)</p>
           <p>Curbside pickup eligible</p>
           <p>Free standard shipping</p>
-          <button>
-            <img src="/images/desc.png" alt="list" width="18" />
+          <button class="description" onclick="loadDescription()">
+            <img src="../images/desc.png" alt="list" width="18" />
             More Description
           </button>
+          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
           <br />
           <br />
           <form action="/action_page.php">

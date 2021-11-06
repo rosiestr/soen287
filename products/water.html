@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="../images/KMicon.ico" />
 
     <link rel="stylesheet" href="../frontStyles.css" />
+    <script src = "../description.js" async></script>
     <title>Boxed Water</title>
   </head>
   <body>
@@ -125,10 +126,11 @@
         <p>1L</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
-        <button class="description">
+        <button class="description" onclick="loadDescription()">
           <img src="../images/desc.png" alt="list" width="18" />
           More Description
         </button>
+        <div id="expandDesc">100% pure refreshing water free of any contaminants or things you don’t need</div>
         <br />
         <br />
         <form action="/action_page.php">

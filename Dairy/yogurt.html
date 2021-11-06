@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="../images/KMicon.ico" />
 
     <link rel="stylesheet" href="../frontStyles.css" />
+    <script src = "../description.js" async></script>
     <title>Activia Yogurt</title>
   </head>
   <body>
@@ -128,10 +129,11 @@
         </p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
-        <button class="description">
+        <button class="description" onclick="loadDescription()">
           <img src="../images/desc.png" alt="list" width="18" />
           More Description
         </button>
+        <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
         <!--for More Description:-->
         <!--<p>The KALAMARI market mussels can complement your seafood dishes.</p>-->
         <!-- Mussels are rich in the marine Omega-3s, EPA and DHA. If you are trying to lose weight, mussels give you a lot of nutrition without a lot of calories.-->
