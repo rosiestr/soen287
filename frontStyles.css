@@ -551,6 +551,13 @@ footer {
   display: none;
 }
 
+/*styling for the product descriptions*/
+
+#expandDesc{
+  max-width: 50%;
+  margin-left: 25%;
+
+}
 
 
 /* End of Shopping Cart style */

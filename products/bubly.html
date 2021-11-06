@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="../images/KMicon.ico" />
 
     <link rel="stylesheet" href="../frontStyles.css" />
+    <script src = "../description.js" async></script>
     <title>Bubly Sparkling Water</title>
   </head>
   <body>
@@ -125,10 +126,11 @@
         <p>Sold in cases of 12</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
-        <button class="description">
+        <button class="description" onclick="loadDescription()">
           <img src="../images/desc.png" alt="list" width="18" />
           More Description
         </button>
+        <div id="expandDesc"> bubly is an unsweetened sparkling water that playfully instigates fun and positivity in everyday life. Available in 16 flavors, bubly sparkling water pairs crisp, sparkling water with natural fruit flavors to provide a delicious taste with no calories, no sweeteners, all smiles.</div>
         <br />
         <br />
         <form action="/action_page.php">

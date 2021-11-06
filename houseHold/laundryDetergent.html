@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="../images/KMicon.ico" />
 
     <link rel="stylesheet" href="../frontStyles.css" />
+    <script src = "../description.js" async></script>
     <title>Laundry Detergent</title>
   </head>
   <body>
@@ -188,10 +189,11 @@
 
           <p>Curbside pickup eligible</p>
           <p>Free standard shipping</p>
-          <button class="description">
+          <button class="description" onclick="loadDescription()">
             <img src="../images/desc.png" alt="list" width="18" />
             More Description
           </button>
+          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
           <!-- for MORE DESCRIPTION: -->
           <!-- Your laundry will seem like new after using this liquid laundry detergent, Available in different scents -->
           <br />
