@@ -238,6 +238,22 @@ button {
   text-decoration: none;
   font-size: 16px;
 }
+/*button styles */
+input[type="text"] {
+  width: 50%;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
+  background-color: #f7c88d;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
 button:hover {
   box-shadow: 0px 0px 8px #76e3ed; /*turquoise*/
 }
@@ -311,11 +327,11 @@ figure p {
   position: absolute;
   min-width: 200px;
   overflow: auto;
-  transition: 0.5s;   
+  transition: 0.5s;
 }
 .clickdown-content ul {
   list-style-position: outside;
-  padding : 0; 
+  padding: 0;
   margin: 0;
 }
 .clickdown-content a {
@@ -329,7 +345,6 @@ figure p {
   border-top: 2px solid white;
   width: 100%;
 }
-
 
 /*styles for the hoverdown menu*/
 
@@ -346,14 +361,12 @@ figure p {
   }
 
   .dropdown-content ul {
-    
     padding-left: 10px;
     padding-bottom: 0;
     font-size: 16px;
   }
   .dropdown-content li {
     padding-top: 5px;
-    
   }
   .dropdown:hover .dropdown-content {
     display: block;
@@ -443,11 +456,10 @@ footer {
   text-align: left;
   width: 100%;
 }
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
   .shoppingCart {
-    width: 70%; 
+    width: 70%;
   }
-
 }
 .shoppingCart .container {
   font-size: 16px;
@@ -479,22 +491,21 @@ footer {
   align-items: center;
 }
 #shoppingCart figcaption {
-  font-size: 18px;   
+  font-size: 18px;
 }
 #shoppingCart figcaption:hover {
-  color : black; 
+  color: black;
 }
 
-
 .item-price-times {
-  display: flex; 
+  display: flex;
   justify-content: start;
   align-items: center;
 }
 .item-price-times span {
   margin-left: 10px;
 }
-.cartIMG { 
+.cartIMG {
   max-height: 100px;
   max-width: 100px;
 }
@@ -516,7 +527,8 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-.plus-cart-quantity, .minus-cart-quantity {
+.plus-cart-quantity,
+.minus-cart-quantity {
   height: 45px;
   width: 40px;
   margin-left: 0px;
@@ -527,11 +539,11 @@ footer {
   text-align: center;
   font-family: Helvetica, Verdana, sans-serif;
   height: 45px;
-  width: 40px; 
+  width: 40px;
   background-color: white;
-  border: 2px solid #f7c88d; 
+  border: 2px solid #f7c88d;
   color: black;
-  text-shadow: none; 
+  text-shadow: none;
   font-size: 18px;
   padding: none;
 }
@@ -553,11 +565,9 @@ footer {
 
 /*styling for the product descriptions*/
 
-#expandDesc{
+#expandDesc {
   max-width: 50%;
   margin-left: 25%;
-
 }
-
 
 /* End of Shopping Cart style */

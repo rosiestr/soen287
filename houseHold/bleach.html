@@ -23,7 +23,9 @@
     <link rel="shortcut icon" href="../images/KMicon.ico" />
 
     <link rel="stylesheet" href="../frontStyles.css" />
-    <script src = "../description.js" async></script>
+    <script src="../description.js" async></script>
+    <script src="../propertiesChange.js" async></script>
+
     <title>Concentrated Bleach</title>
   </head>
   <body>
@@ -193,7 +195,10 @@
             <img src="../images/desc.png" alt="list" width="18" />
             More Description
           </button>
-          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+          <div id="expandDesc" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
           <!-- for MORE DESCRIPTION: -->
           <!-- High-Concentration bleach for cleaning and sanitization, . -->
           <br />
@@ -203,14 +208,27 @@
             ><br />
             <input
               type="text"
-              class="quantity"
-              name="quantity"
-              value="0"
-            /><br />
+              value=""
+              name="QTY"
+              id="QTY"
+              onKeyUp="calculate()"
+            />
+            <br />
             <br />
           </form>
           <br />
-          <p>Get this item with your grocery order:</p>
+          <label for="subtotal">Subtotal :</label><br />
+          <input
+            type="hidden"
+            name="PPRICE"
+            id="PPRICE"
+            value="3.99"
+            disabled
+          />
+          <input type="text" name="TOTAL" id="TOTAL" readonly />
+
+          <br /><br />
+          <label>Get this item with your grocery order:</label>
           <button class="cart">Add To Cart</button>
           <br /><br /><br />
         </section>
@@ -220,8 +238,12 @@
     <footer>
       <!-- first row -->
       <div class="outlined-t outlined-b greybg px-3" id="footer">
-        <a href = "../contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "../map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+        <a href="../contact.html"
+          ><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp
+        </a>
+        <!--Contact button-->
+        <a href="../map.html"><i class="fas fa-map-pin"></i> Find a Store</a>
+        <!-- map pin button -->
       </div>
       <!-- second row -->
       <div class="outlined-t inset-b smallp px-2" id="bottom">

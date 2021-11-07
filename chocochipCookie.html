@@ -24,6 +24,8 @@
     <link rel="shortcut icon" href="images/KMicon.ico" />
 
     <link rel="stylesheet" href="frontStyles.css" />
+    <script src = "../propertiesChange.js" async></script>
+
     <title>Kalamari Market: Chocolate Chip cookies </title>
 </head>
 
@@ -135,13 +137,19 @@
         <br />
         <form action="/action_page.php">
             <label for="quantity">Enter Desired Number of Boxes :</label><br />
-            <input type="text" class="quantity" name="quantity" value="0" /><br />
+            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
           
           <label for="size"></label><br />
 
         </form>
         
-        <p>Get this item with your grocery order:</p>
+        <label for="subtotal">Subtotal :</label><br>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="7.00" disabled/>
+        <input type="text" name="TOTAL" id="TOTAL" readonly/>
+      
+        <br /><br>
+        <label>Get this item with your grocery order:</label>
+        <br>
         <button class="cart">Add To Cart</button>
         <br /><br /><br />
       </section>

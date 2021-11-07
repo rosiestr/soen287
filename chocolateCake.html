@@ -23,6 +23,8 @@
     <link rel="shortcut icon" href="/images/KMicon.ico" />
 
     <link rel="stylesheet" href="/frontStyles.css" />
+    <script src="../propertiesChange.js" async></script>
+
     <title>Chocolate Cake</title>
   </head>
   <body>
@@ -151,9 +153,8 @@
           <h3>Chocolate cake</h3>
           <!--<h4>All sizes</h4>-->
           <p>
-            <strong style="font-size: larger"
-              >$9.99 for small, 12.99$ for medium, 15.99$ for large</strong
-            >
+            <strong style="font-size: larger">15.99$</strong>
+            <!-- >$9.99 for small, 12.99$ for medium, 15.99$ for large</strong> -->
           </p>
           <hr />
           <p>Curbside pickup eligible</p>
@@ -165,25 +166,39 @@
           <br />
           <br />
           <form action="/action_page.php">
-            <label for="quantity">Enter Desired Number of Boxes :</label><br />
+            <label for="quantity">Enter Desired Number of Cakes :</label><br />
             <input
               type="text"
-              class="quantity"
-              name="quantity"
-              value="0"
-            /><br />
-            <br />
+              value=""
+              name="QTY"
+              id="QTY"
+              onKeyUp="calculate()"
+            />
+
+            <!-- <br />
             <label for="size"></label><br />
             <select name="sizes" class="selects">
               <option value="none">Select Size</option>
               <option value="small">small</option>
               <option value="medium">medium</option>
               <option value="large">large</option>
-            </select>
+            </select> -->
             <br /><br />
           </form>
           <br />
-          <p>Get this item with your grocery order:</p>
+          <label for="subtotal">Subtotal :</label><br />
+          <input
+            type="hidden"
+            name="PPRICE"
+            id="PPRICE"
+            value="15.99"
+            disabled
+          />
+          <input type="text" name="TOTAL" id="TOTAL" readonly />
+
+          <br /><br />
+          <label>Get this item with your grocery order:</label>
+          <br />
           <button class="cart">Add To Cart</button>
           <br /><br /><br />
         </section>
