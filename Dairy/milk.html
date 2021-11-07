@@ -140,24 +140,26 @@
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Quantity :</label><br />
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-          <br />
-          <label for="size"></label><br />
-
-          <label for="types"></label><br />
-          <select name="types" class="selects">
-            <option value="none">Select Type</option>
-            <option value="skim">Skim Milk</option>
-            <option value="partly skimmed">Partly Skimmed Milk</option>
-            <option value="homogenized">Homogenized Milk</option>
-          </select>
+          <div class="">
+            <label for="quantity">Enter Desired Quantity :</label><br />
+            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+          </div>
+          <br/>
+          <div class="">
+            <label for="types"></label><br />
+            <select name="types" class="selects">
+              <option value="none">Select Type</option>
+              <option value="skim">Skim Milk</option>
+              <option value="partly skimmed">Partly Skimmed Milk</option>
+              <option value="homogenized">Homogenized Milk</option>
+            </select>
+          </div>
         </form>
         <br />
         <label for="subtotal">Subtotal :</label><br>
         <input type="hidden" name="PPRICE" id="PPRICE" value="3.90" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
-      
+
         <br /><br>
         <label>Get this item with your grocery order:</label>
         <button class="cart">Add To Cart</button>
@@ -212,6 +214,8 @@
         </table>
     </div>
 
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <script>
         // Get the button, and when the user clicks on it, execute myFunction

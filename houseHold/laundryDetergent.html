@@ -204,27 +204,28 @@
           <br />
           <br />
           <form action="/action_page.php">
-            <label for="quantity">Enter Desired Number of Bottles :</label
-            ><br />
-            <input
-              type="text"
-              value=""
-              name="QTY"
-              id="QTY"
-              onKeyUp="calculate()"
-            />
-
+            <div class="">
+              <label for="quantity">Enter Desired Number of Bottles :</label
+              ><br />
+              <input
+                type="text"
+                value=""
+                name="QTY"
+                id="QTY"
+                onKeyUp="calculate()"/>
+            </div>
             <br />
-            <label for="scents"></label><br />
-            <select name="scents" class="selects">
-              <option value="none">Select Scent</option>
-              <option value="original">Original</option>
-              <option value="lavender">Lavender</option>
-              <option value="mint">Mint &amp Eucalyptus</option>
-              <option value="citrus">Citrus</option>
-              <option value="free">Fragrance-free</option>
-            </select>
-            <br /><br />
+            <div class="">
+              <label for="scents"></label> <br>
+              <select name="scents" class="selects" id="select1">
+                <option value="none">Select Scent</option>
+                <option value="original">Original</option>
+                <option value="lavender">Lavender</option>
+                <option value="mint">Mint &amp Eucalyptus</option>
+                <option value="citrus">Citrus</option>
+                <option value="free">Fragrance-free</option>
+              </select>
+            </div>
           </form>
           <br />
           <label for="subtotal">Subtotal :</label><br />
@@ -295,6 +296,9 @@
         </table>
       </div>
     </footer>
+
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>

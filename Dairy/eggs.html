@@ -137,24 +137,26 @@
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Number of Boxes :</label><br />
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+          <div class="">
+            <label for="quantity">Enter Desired Number of Boxes :</label><br />
+            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+          </div>
           <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects">
-            <option value="none">Select Size</option>
-            <option value="small">12 Count</option>
-            <option value="medium">18 Count</option>
-            <option value="large">24 Count</option>
-          </select>
-          <br /><br />
-
+          <div class="">
+            <label for="size"></label><br />
+            <select name="sizes" class="selects">
+              <option value="none">Select Size</option>
+              <option value="small">12 Count</option>
+              <option value="medium">18 Count</option>
+              <option value="large">24 Count</option>
+            </select>
+          </div>
         </form>
         <br />
         <label for="subtotal">Subtotal :</label><br>
         <input type="hidden" name="PPRICE" id="PPRICE" value="2.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
-      
+
         <br /><br>
         <label>Get this item with your grocery order:</label>
         <button class="cart">Add To Cart</button>
@@ -209,7 +211,8 @@
         </table>
     </div>
 
-
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
     <script>
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};

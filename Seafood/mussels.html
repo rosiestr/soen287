@@ -145,7 +145,7 @@
           <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
           <br />
           <label for="size"></label><br />
-          <select name="sizes" class="selects">
+          <select name="sizes" class="selects" id="select1">
             <option value="none">Select Size</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -153,7 +153,7 @@
           </select>
           <br /><br />
           <label for="types"></label><br />
-          <select name="types" class="selects">
+          <select name="types" class="selects" id="select2">
             <option value="none">Select Type</option>
             <option value="canadian">Canadian Mussels</option>
             <option value="blue">Blue Mussels</option>
@@ -164,7 +164,7 @@
         <label for="subtotal">Subtotal :</label><br>
         <input type="hidden" name="PPRICE" id="PPRICE" value="2.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
-      
+
         <br /><br>
         <label>Get this item with your grocery order:</label>
         <br>
@@ -221,6 +221,8 @@
         </table>
     </div>
 
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <script>
         // Get the button, and when the user clicks on it, execute myFunction

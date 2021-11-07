@@ -149,7 +149,7 @@
           <br />
 
           <label for="types"></label><br />
-          <select name="types" class="selects">
+          <select name="types" class="selects" id="select1">
             <option value="none">Select Type</option>
             <option value="canadian">Fresh Cooked Calamari Rings</option>
             <option value="blue">Frozen Calamari Rings</option>
@@ -159,7 +159,7 @@
         <label for="subtotal">Subtotal :</label><br>
         <input type="hidden" name="PPRICE" id="PPRICE" value="12.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
-      
+
         <br /><br>
         <label>Get this item with your grocery order:</label>
         <button class="cart">Add To Cart</button>
@@ -214,6 +214,8 @@
         </table>
     </div>
 
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <script>
         // Get the button, and when the user clicks on it, execute myFunction

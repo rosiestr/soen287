@@ -9,8 +9,8 @@ else {
 
 //ready function
 function ready() {
-    //load saved date from local storage 
-    loadItemsFromStorage(); 
+    //load saved data from local storage 
+    loadItemsFromStorage();
 
     //NOT PERMANENT, just for testing (until add to cart buttons are programed)
     if (checkCartEmpty()) {
@@ -59,51 +59,51 @@ function removeCartItem(event) {
     updateCartTotal();
     saveItemsToStorage();
     //run the checkCartEmpty function
-    checkCartEmpty();    
+    checkCartEmpty();
 }
 
-//Function to add one quantity 
+//Function to add one quantity
 function quantityAddOne(event) {
-    //get the clicked button's grandparent 
+    //get the clicked button's grandparent
     let item = event.target.parentElement.parentElement;
-    //get the quantity 
+    //get the quantity
     let quantityElement = item.getElementsByClassName('cart-item-quantity')[0];
     let quantity = parseFloat(quantityElement.innerText);
-    //change the quantity 
+    //change the quantity
     if (isNaN(quantity)) {
         quantity = 1
     }
     else {
         quantity++
     }
-    //set the quantity 
+    //set the quantity
     quantityElement.innerText = quantity
-    //set it to storage 
+    //set it to storage
     saveItemsToStorage();
-    //update cart total 
+    //update cart total
     updateCartTotal();
 }
-//Function to subtract one quantity 
+//Function to subtract one quantity
 function quantitySubtractOne(event) {
-    //get the clicked button's grandparent 
+    //get the clicked button's grandparent
     let item = event.target.parentElement.parentElement;
-    //get the quantity 
+    //get the quantity
     let quantityElement = item.getElementsByClassName('cart-item-quantity')[0];
     let quantity = parseFloat(quantityElement.innerText);
-    
-    //change the quantity 
+
+    //change the quantity
     if (isNaN(quantity)) {
         quantity = 1;
     }
     quantity--;
     if (quantity <= 0) {
-        quantity = 1; 
+        quantity = 1;
     }
-    //update the quantity 
+    //update the quantity
     quantityElement.innerText = quantity;
-    //save it to storage 
+    //save it to storage
     saveItemsToStorage();
-    //update cart total 
+    //update cart total
     updateCartTotal();
 }
 
@@ -117,7 +117,7 @@ function updateCartTotal() {
     //loop through the array
     for (let i = 0; i < cartItems.length; i++) {
         let item = cartItems[i];
-        console.log(item); 
+        console.log(item);
         //get the price element on an item
         let priceElement = item.getElementsByClassName('price')[0];
         //get the quantity element on an item
@@ -126,25 +126,25 @@ function updateCartTotal() {
         let price = parseFloat(priceElement.innerText.replace('$', ''));
         //convert the quantity element to a float
         let quantity = parseFloat(quantityElement.innerText);
-        
+
         //add (price*quantity) of the item to the total
         overallTotal += (price * quantity);
-        
+
         //add 1 to the number of item count
         numOfitems+=quantity;
 
         //Calculate and round the item total
         let itemTotal = Math.round(quantity * price * 100) / 100;
         let itemTotalElement = item.getElementsByClassName('item-total')[0];
-        //set and format the item total 
+        //set and format the item total
         itemTotalElement.innerText = '$' + itemTotal;
     }
     //Check to see if user is eligible for free delivery
     let deliveryFee = 4.00;
 
-    //If their total is >= 100, they are. 
+    //If their total is >= 100, they are.
     if (overallTotal >= 100) {
-        deliveryFee = 0.00; 
+        deliveryFee = 0.00;
     }
     let GST = 0.05;
     let QST = 0.09975;
@@ -158,7 +158,7 @@ function updateCartTotal() {
     let totalPlusTax = Math.round((overallTotal + totalQst + totalGst + deliveryFee) * 100) / 100;
     //set the number of items
     document.getElementsByClassName('numOfItems')[0].innerText = numOfitems;
-    //set and format the subtotal 
+    //set and format the subtotal
     document.getElementsByClassName('cart-subtotal')[0].innerText = '$' + overallTotal;
     //set and format the delivery fee
     document.getElementsByClassName('cart-delivery')[0].innerText = '$' + deliveryFee + ".00";
@@ -166,7 +166,7 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-qst')[0].innerText = '$' + totalQst;
     //set and format the total GST
     document.getElementsByClassName('cart-gst')[0].innerText = '$' + totalGst;
-    //set and format the total 
+    //set and format the total
     document.getElementsByClassName('cart-total')[0].innerText = '$' + totalPlusTax;
 }
 
@@ -178,7 +178,7 @@ function checkCartEmpty() {
         document.getElementsByClassName('summary')[0].classList.toggle('hide');
         //show the hidden cart empty section
         document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex');
-        return true; 
+        return true;
     }
 }
 
@@ -194,16 +194,16 @@ function checkoutMsg(){
     document.getElementsByClassName('summary')[0].classList.toggle('hide'); //hides summary page
     //sends alert message to the page once checkoutbutton is clciked
     alert("Thank you for shopping with Kalamari Market!");
-    localStorage.clear(); 
-    
+    localStorage.clear();
+
 }
-//Save items to local storage function 
+//Save items to local storage function
 function saveItemsToStorage() {
     let cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     let cartItems = cartItemContainer.getElementsByClassName('item');
 
     let cart = [];
-    //go through all the cart items 
+    //go through all the cart items
     for (let i = 0; i < cartItems.length; i++) {
         let item = cartItems[i];
         //get their attributes
@@ -212,7 +212,7 @@ function saveItemsToStorage() {
         let itemPrice = item.getElementsByClassName('price')[0].innerText;
         let itemImageSrc = item.getElementsByClassName('cartIMG')[0].getAttribute('src');
 
-        //create an object from their attributes 
+        //create an object from their attributes
         let cartItem = {
             name: itemName,
             quantity: itemQuantity,
@@ -220,59 +220,59 @@ function saveItemsToStorage() {
             IMGsrc : itemImageSrc
         }
         //add that object to the cart array
-        cart.push(cartItem); 
+        cart.push(cartItem);
     }
     //add the array to local storage
     localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-//Function to load items from local storage 
+//Function to load items from local storage
 function loadItemsFromStorage() {
-    //get the array of cart objects 
+    //get the array of cart objects
     let cart = JSON.parse(localStorage.getItem("CART"));
     if (cart != null) {
         for (let i = 0; i < cart.length; i++) {
-            //get each cart object 
+            //get each cart object
             let item = cart[i];
-            //and add it to the page 
+            //and add it to the page
             addCartItem(item.name, item.quantity, item.price, item.IMGsrc)
         }
     }
 }
-//Function to add a cart item to the page 
+//Function to add a cart item to the page
 function addCartItem(itemName, quantity, price, IMGsrc) {
-    //create an <li class = "item"></li> element 
+    //create an <li class = "item"></li> element
     let cartRow = document.createElement('li');
     cartRow.classList.add('item');
-    //If cart item is already in the page, don't add it. 
+    //If cart item is already in the page, don't add it.
     let cartItems = document.getElementsByClassName('cart-item-container')[0];
     let cartNames = cartItems.getElementsByClassName('item-name');
     for (let i = 0; i < cartNames.length; i++){
         if (cartNames[i].innerText === itemName) {
-            return; 
+            return;
         }
     }
-    //otherwise append the html to the end of the list 
+    //otherwise append the html to the end of the list
     let cartRowContents = `
     <figure>
     <img
         src="${IMGsrc}"
-        alt="${itemName}"              
+        alt="${itemName}"
         class="cartIMG"
     />
     <figcaption class = "item-name">${itemName}</figcaption>
     </figure>
-    <div class = "item-price-times"> 
+    <div class = "item-price-times">
         <div class = "cart-quantity-change">
         <button class = "minus-cart-quantity"><i class="fas fa-minus"></i></button>
-        <button class = "plus-cart-quantity"><i class="fas fa-plus"></i></button> 
+        <button class = "plus-cart-quantity"><i class="fas fa-plus"></i></button>
         <button class = "cart-item-quantity">${quantity}</button>
         </div>
         <span class = "type-of-quantity"></span>  x
-        <span class = "price">${price}</span>   
+        <span class = "price">${price}</span>
     </div>
     <div class = "item-row">
-    <p class = "item-total-col">Item Total: <span class="item-total"></span></p>              
+    <p class = "item-total-col">Item Total: <span class="item-total"></span></p>
     <button class = "remove-btn">Delete Item</button>
     </div>
     <hr>

@@ -39,8 +39,8 @@
         </div>
       </div>
     </header>
-  
-  
+
+
     <!--NAVIGATION BAR -->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
     <!--first row of navigation bar-->
@@ -91,7 +91,7 @@
     </section>
 
     </nav> <!-- end of navigation-->
-  
+
       <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
@@ -118,7 +118,7 @@
       />
       <class class="container">
         <h3>Chocolate Chip Cookies</h3>
-        <!--<h4>All sizes</h4>--> 
+        <!--<h4>All sizes</h4>-->
         <p>
           <strong style="font-size: larger">$7.00 per 10 pieces</strong>
         </p>
@@ -139,7 +139,7 @@
           <label for="size"></label><br />
 
         </form>
-        
+
         <p>Get this item with your grocery order:</p>
         <button class="cart">Add To Cart</button>
         <br /><br /><br />
@@ -147,12 +147,12 @@
 
     </article>
     <!-- STICKY FOOTER-->
-    <footer> 
+    <footer>
       <div class = "outlined-t outlined-b greybg px-3">
         <a href = "/contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
         <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
-    </footer> 
+    </footer>
     <!--end of sticky footer -->
     <!-- FOOTER FOR BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
@@ -193,12 +193,15 @@
         </table>
     </div>
 
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
+
 
     <script>
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};
         document.getElementById("compBtn").onclick = function() {dropContent()};
-    
+
         /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
         function dropContent() {
             document.getElementById("myDropdown").classList.toggle("show");

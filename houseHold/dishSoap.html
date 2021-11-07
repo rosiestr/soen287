@@ -204,26 +204,27 @@
           <br />
           <br />
           <form action="/action_page.php">
-            <label for="quantity">Enter Desired Number of Bottles :</label
-            ><br />
-            <input
-              type="text"
-              value=""
-              name="QTY"
-              id="QTY"
-              onKeyUp="calculate()"
-            />
-
-            <br />
-            <label for="scents"></label><br />
-            <select name="scents" class="selects">
-              <option value="none">Select Scent</option>
-              <option value="lemon">Lemon</option>
-              <option value="apple">Apple</option>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="free">Fragrance-free</option>
-            </select>
-            <br /><br />
+            <div class="">
+              <label for="quantity">Enter Desired Number of Bottles :</label
+              ><br />
+              <input
+                type="text"
+                value=""
+                name="QTY"
+                id="QTY"
+                onKeyUp="calculate()"/>
+            </div>
+            <br>
+            <div class="">
+              <label for="scents"></label><br />
+              <select name="scents" class="selects" required="required" id="select1">
+                <option value="none"></option>
+                <option value="lemon">Lemon</option>
+                <option value="apple">Apple</option>
+                <option value="grapefruit">Grapefruit</option>
+                <option value="free">Fragrance-free</option>
+              </select>
+            </div>
           </form>
           <br />
           <label for="subtotal">Subtotal :</label><br />
@@ -294,6 +295,9 @@
         </table>
       </div>
     </footer>
+
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>

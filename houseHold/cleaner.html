@@ -204,26 +204,28 @@
           <br />
           <br />
           <form action="/action_page.php">
-            <label for="quantity">Enter Desired Number of Bottles :</label
-            ><br />
-            <input
-              type="text"
-              value=""
-              name="QTY"
-              id="QTY"
-              onKeyUp="calculate()"
-            />
-            <br />
-            <br />
-            <label for="bleach"></label><br />
-            <select name="bleach" class="selects">
-              <option value="none">Bleach Concentration</option>
-              <option value="null">No Bleach (0%)</option>
-              <option value="<low">Low (5-25%)</option>
-              <option value="medium">Medium (30-50%)</option>
-              <option value="high">High (55-95%)</option>
-            </select>
-            <br /><br />
+            <div class="">
+              <label for="quantity">Enter Desired Number of Bottles :</label
+              ><br />
+              <input
+                type="text"
+                value=""
+                name="QTY"
+                id="QTY"
+                onKeyUp="calculate()"
+              />
+            </div>
+            <br>
+            <div class="">
+              <label for="bleach"></label><br />
+              <select name="bleach" class="selects" id="select1">
+                <option value="none">Select Bleach Concentration</option>
+                <option value="null">No Bleach (0%)</option>
+                <option value="<low">Low (5-25%)</option>
+                <option value="medium">Medium (30-50%)</option>
+                <option value="high">High (55-95%)</option>
+              </select>
+            </div>
           </form>
           <br />
           <label for="subtotal">Subtotal :</label><br />
@@ -294,6 +296,9 @@
         </table>
       </div>
     </footer>
+
+    <!-- Javascript for Refresh page  -->
+    <script src="../refresh.js" charset="utf-8"></script>
 
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>
