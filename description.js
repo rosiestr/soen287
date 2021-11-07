@@ -1,3 +1,4 @@
+
 function loadDescription() {
     var x = document.getElementById("expandDesc");
     if (x.style.display === "none") {
