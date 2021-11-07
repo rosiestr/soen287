@@ -37,17 +37,20 @@ function ready() {
         button.addEventListener('click', removeCartItem)
     }
 
+    //get an array of all the plus cart quantity buttons
     let quantityPlusButtons = document.getElementsByClassName('plus-cart-quantity');
+    //loop through array and add event listeners
     for (let i = 0; i < quantityPlusButtons.length; i++) {
         let plus = quantityPlusButtons[i];
         plus.addEventListener('click', quantityAddOne);
     }
+    //get an array of all the minus cart quantity buttons 
     let quantityMinusButtons = document.getElementsByClassName('minus-cart-quantity');
+    //loop through the array and add event listeners
     for (let i = 0; i < quantityMinusButtons.length; i++) {
         let minus = quantityMinusButtons[i];
         minus.addEventListener('click', quantitySubtractOne);
     }
-    saveItemsToStorage();
 }
 
 //removeCartItem function

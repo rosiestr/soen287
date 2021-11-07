@@ -158,7 +158,7 @@ function checkoutMsg(){
     //document.getElementsByClassName('checkout_B')[0].classList.toggle('hide');
     //document.getElementsByClassName('cont-shopping')[0].classList.toggle('hide');
     document.getElementsByClassName('summary')[0].classList.toggle('hide'); //hides summary page
-    //sends alert message to the page once checkoutbutton is clciked
+    //sends alert message to the page once checkoutbutton is clicked
     alert("Thank you for shopping with Kalamari Market!");
     
   }
