@@ -41,11 +41,11 @@
                 <!--CUSTOMER NAME, EMAIL, PHONE -->
                 <div class = "col-sm-4 d-flex flex-column">
                     <label for="name"><b>Customer Name</b></label>
-                    <input type="text" id="name" name="name" value = "Jane Doe" class = "editOrder" required> 
+                    <input type="text" id="name" name="name" value = "Jane Doe" class = "editOrder"> 
                     <label for="email"><b>Email</b></label>
-                    <input type = "email" id="email" name="email" value = "janedoe@gmail.com" class = "editOrder" required> 
+                    <input type = "email" id="email" name="email" value = "janedoe@gmail.com" class = "editOrder"> 
                     <label for="phone"><b>Phone</b></label> 
-                    <input type = "tel" id = "phone" name ="phone" value = 438889999 required>
+                    <input type = "tel" id = "phone" name ="phone" value = 438889999>
                 </div>
                 <!--CUSTOMER BILLING ADDRESS-->
                 <div class = "col-sm-4 d-flex flex-column">
