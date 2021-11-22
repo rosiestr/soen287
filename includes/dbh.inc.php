@@ -1,6 +1,6 @@
 <?php 
 
-$dbServername = "localhost";
+$dbServerName = "localhost";
 $dbUsername = "root"; 
 $dbPassword = ""; 
 $dbName = "kalamari_orders";

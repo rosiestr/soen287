@@ -21,6 +21,16 @@
     <title>Edit Order</title>
 </head>
 <body id = "editOrder">
+    <?php 
+        $sql = "SELECT * FROM orders;"; 
+        $result = mysqli_query($conn, $sql); 
+        $resultCheck = mysqli_num_rows($result); 
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo $row['billing_address'];
+            }
+        }
+    ?>
     <!--NAVIGATION BAR -->
     <nav class="nav-top pb-2" id = "topbar">
         <!--first row of navigation bar-->
