@@ -112,6 +112,8 @@ function quantitySubtractOne(event) {
 
 //updateCartTotal function
 function updateCartTotal() {
+    const cartForm = document.getElementById('order-details');
+    const cartTotalValue = cartForm.getElementsByClassName('order-items')[0]; 
     let cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     //get an array of all the items
     let cartItems = cartItemContainer.getElementsByClassName('item');
@@ -120,7 +122,6 @@ function updateCartTotal() {
     //loop through the array
     for (let i = 0; i < cartItems.length; i++) {
         let item = cartItems[i];
-        console.log(item);
         //get the price element on an item
         let priceElement = item.getElementsByClassName('price')[0];
         //get the quantity element on an item
@@ -171,6 +172,7 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-gst')[0].innerText = '$' + totalGst;
     //set and format the total
     document.getElementsByClassName('cart-total')[0].innerText = '$' + totalPlusTax;
+    cartTotalValue.value = totalPlusTax; 
 }
 
 //checkCartEmptyFunction
@@ -187,9 +189,6 @@ function checkCartEmpty() {
 
 //CHECKOUTBUTTON FUNCTION
 function checkoutMsg(){
-
-    var items=document.getElementsByClassName('item');
-
     document.getElementsByClassName('cart-item-container')[0].classList.toggle('hide'); //hides all the items in the cart
     document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex'); //shows the empty cart
     //document.getElementsByClassName('checkout_B')[0].classList.toggle('hide');
@@ -198,13 +197,13 @@ function checkoutMsg(){
     //sends alert message to the page once checkoutbutton is clciked
     alert("Thank you for shopping with Kalamari Market!");
     localStorage.clear();
-
 }
 //Save items to local storage function
 function saveItemsToStorage() {
-    let cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
+    const cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     let cartItems = cartItemContainer.getElementsByClassName('item');
-
+    const cartForm = document.getElementById('order-details');
+    const cartItemFormValue = cartForm.getElementsByClassName('order-items')[0]; 
     let cart = [];
     //go through all the cart items
     for (let i = 0; i < cartItems.length; i++) {
@@ -227,6 +226,7 @@ function saveItemsToStorage() {
     }
     //add the array to local storage
     localStorage.setItem("CART", JSON.stringify(cart));
+    cartItemFormValue.value = JSON.stringify(cart);
 }
 
 //Function to load items from local storage
