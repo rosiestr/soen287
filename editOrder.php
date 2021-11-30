@@ -1,6 +1,3 @@
-<?php 
-    include_once 'includes/dbh.inc.php';
-?>
 
 <!DOCTYPE HTML>
 <html>
@@ -17,20 +14,12 @@
     <link rel="shortcut icon" href="images/KMicon.ico" />
     <!-- css for index.html -->
     <link rel="stylesheet" href="backstoreStyles.css">
+    <script src="orderHandler/editOrder.js" async></script>
     <!--title to appear in tab-->
-    <title>Edit Order</title>
+    <title>Edit Order</title> 
 </head>
 <body id = "editOrder">
-    <?php 
-        $sql = "SELECT * FROM orders;"; 
-        $result = mysqli_query($conn, $sql); 
-        $resultCheck = mysqli_num_rows($result); 
-        if ($resultCheck > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo $row['billing_address'];
-            }
-        }
-    ?>
+
     <!--NAVIGATION BAR -->
     <nav class="nav-top pb-2" id = "topbar">
         <!--first row of navigation bar-->
@@ -70,11 +59,11 @@
                     >9999 Oak Avenue Montreal, QC T1S 2G4
                     </textarea>              
                     <span class = "d-flex align-items-center">
-                        <input type = "checkbox" id = "sameAddress" name = "sameAddress">
+                        <input type = "checkbox" id = "sameBillingAddress" name = "sameAddress">
                         <label for="sameAddress">Same as billing address</label>
                     </span>                         
                     <span class = "d-flex align-items-center">
-                        <input type = "checkbox" id = "pickup" name = "pickup">
+                        <input type = "checkbox" id = "forPickup" name = "pickup">
                         <label for="pickup">Order for pickup</label>
                     </span>      
                 </div> 
@@ -97,37 +86,37 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class = "item">
                             <td scope = "row">Ristorante Frozen Spinach Thin Crust Pizza</td>
-                            <td>$6.49</td>
+                            <td class = 'price'>$6.49</td>
                             <td>
-                                <input type="number" id ="quantity" name = "quantity" value = 1>
+                                <input type="number" id ="quantity" name = "quantity" value = 1 class = 'quantity'>
                             </td>
                             <td>
-                                <input type="number" id ="discount" name = "discount" value = 10>
+                                <input type="number" id ="discount" name = "discount" value = 10 class = 'discount'>
                             </td>
                             <td>
-                                <input type ="button" id = "apply" name = "apply" value = "APPLY">
+                                <input type ="button" id = "apply" name = "apply" value = "APPLY" class = 'apply'>
                             </td>
-                            <td>
+                            <td class = 'item-total'>
                                 $5.84
                             </td>
                         </tr>
-                        <tr>
+                        <tr class = "item">
                             <td scope = "row">Key Lime</td>
                             <td>$0.49</td>
                             <td>
-                                <input type="number" id ="quantity" name = "quantity" value = 5>
+                                <input type="number" id ="quantity" name = "quantity" value = 5 class = 'quantity'>
                             </td>
                             <td>
                                 <input type="number" id ="discount" name = "discount">
                             </td>
                             <td>
-                                <input type ="button" id = "apply" name = "apply" value = "APPLY">
+                                <input type ="button" id = "apply" name = "apply" value = "APPLY" class = 'apply'>
                             </td>
                             <td>$2.45</td>
                         </tr>
-                        <tr>
+                        <tr class = "item">
                             <td scope = "row">Mandarin Orange</td>
                             <td>$0.99</td>
                             <td>
