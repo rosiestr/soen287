@@ -1,3 +1,6 @@
+<?php 
+    include_once 'includes/dbh.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +27,7 @@
 
     <link rel="stylesheet" href="frontStyles.css" />
     <title>Kalamari Market: Shopping Cart</title>
-    <script src = "myCart.js" async></script>
+    <script src = "scripts/myCart.js" async></script>
   </head>
   <body id = "shoppingCart">
     <!-- HEADER -->
@@ -252,7 +255,7 @@
             <p>
               Total: <span class="cart-total price"><strong>$26.12</strong></span>
             </p>
-            <button class="checkout_B"onclick="checkoutMsg()">CHECKOUT</button>
+            <button type = "submit" form = "order-details" class="checkout_B" onclick="checkoutMsg()">CHECKOUT</button>
             <a href = "/index.html"><button class="cont-shopping">CONTINUE SHOPPING</button></a>
           </div>
         </section>
@@ -264,6 +267,10 @@
         </section>
       </div>
     </main>
+    <form id = "order-details" method="post" action="action/saveOrder.php"> 
+      <input type = "hidden" name = "order-items" class = "order-items" value = "test" id = "order-items-saved"> 
+      <input type = "hidden" name = "order-total" class = "order-total" value = "test" id = "order-total-saved"> 
+    </form>
     <br> 
     <!-- STICKY FOOTER-->
     <footer> 

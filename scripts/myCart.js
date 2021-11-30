@@ -11,9 +11,9 @@ else {
 function ready() {
     //load saved data from local storage 
     loadItemsFromStorage();
-
+ 
     //NOT PERMANENT, just for testing (until add to cart buttons are programed)
-    if (checkCartEmpty()) {
+    /*if (checkCartEmpty()) {
         if (confirm("Would you like to add default items to cart?")) {
             addCartItem("CHAPMAN'S Vanilla Super Ice Cream Sandwiches", 1, "$5.99", "/images/Frozen/iceCreamSandwich.jpg")
             addCartItem("Brown Eggs, Extra Large", 1, "$2.88", "/images/Dairy/eggs.png")
@@ -24,7 +24,8 @@ function ready() {
             //show the hidden cart empty section
             document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex');
         }
-    }
+    }*/
+    checkCartEmpty(); 
     updateCartTotal();
 
     //get an array of all the delete item buttons
@@ -112,8 +113,7 @@ function quantitySubtractOne(event) {
 
 //updateCartTotal function
 function updateCartTotal() {
-    const cartForm = document.getElementById('order-details');
-    const cartTotalValue = cartForm.getElementsByClassName('order-items')[0]; 
+    const cartTotalValue = document.getElementById('order-total-saved'); 
     let cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     //get an array of all the items
     let cartItems = cartItemContainer.getElementsByClassName('item');
@@ -188,22 +188,47 @@ function checkCartEmpty() {
 }
 
 //CHECKOUTBUTTON FUNCTION
-function checkoutMsg(){
-    document.getElementsByClassName('cart-item-container')[0].classList.toggle('hide'); //hides all the items in the cart
-    document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex'); //shows the empty cart
-    //document.getElementsByClassName('checkout_B')[0].classList.toggle('hide');
-    //document.getElementsByClassName('cont-shopping')[0].classList.toggle('hide');
-    document.getElementsByClassName('summary')[0].classList.toggle('hide'); //hides summary page
-    //sends alert message to the page once checkoutbutton is clciked
-    alert("Thank you for shopping with Kalamari Market!");
-    localStorage.clear();
+function checkoutMsg() {
+    let loggedIn = getCookie('logged-in');
+    if (loggedIn === "" || loggedIn === null) {
+        alert("Please login or register before purchasing your items!");
+    }
+    else {
+        document.getElementsByClassName('cart-item-container')[0].classList.toggle('hide'); //hides all the items in the cart
+        document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex'); //shows the empty cart
+        //document.getElementsByClassName('checkout_B')[0].classList.toggle('hide');
+        //document.getElementsByClassName('cont-shopping')[0].classList.toggle('hide');
+        document.getElementsByClassName('summary')[0].classList.toggle('hide'); //hides summary page
+        //sends alert message to the page once checkoutbutton is clciked
+        alert("Thank you for shopping with Kalamari Market!");
+        localStorage.clear();
+    }
 }
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+} 
 //Save items to local storage function
 function saveItemsToStorage() {
     const cartItemContainer = document.getElementsByClassName('cart-item-container')[0];
     let cartItems = cartItemContainer.getElementsByClassName('item');
-    const cartForm = document.getElementById('order-details');
-    const cartItemFormValue = cartForm.getElementsByClassName('order-items')[0]; 
+    const cartItemFormValue = document.getElementById('order-items-saved'); 
     let cart = [];
     //go through all the cart items
     for (let i = 0; i < cartItems.length; i++) {
@@ -225,12 +250,14 @@ function saveItemsToStorage() {
         cart.push(cartItem);
     }
     //add the array to local storage
-    localStorage.setItem("CART", JSON.stringify(cart));
-    cartItemFormValue.value = JSON.stringify(cart);
+    let cartString = JSON.stringify(cart);
+    localStorage.setItem("CART", cartString);
+    cartItemFormValue.value = cartString;
 }
 
 //Function to load items from local storage
 function loadItemsFromStorage() {
+    const cartItemFormValue = document.getElementById('order-items-saved'); 
     //get the array of cart objects
     let cart = JSON.parse(localStorage.getItem("CART"));
     if (cart != null) {
@@ -241,6 +268,9 @@ function loadItemsFromStorage() {
             addCartItem(item.name, item.quantity, item.price, item.IMGsrc)
         }
     }
+    let cartString = JSON.stringify(cart);
+    localStorage.setItem("CART", cartString);
+    cartItemFormValue.value = cartString;
 }
 //Function to add a cart item to the page
 function addCartItem(itemName, quantity, price, IMGsrc) {
