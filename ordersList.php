@@ -38,6 +38,7 @@
                 <thead>
                     <tr>
                         <th></th>
+                        <th></th>
                         <th>User</th>
                         <th># of Products</th>
                         <th>Total</th>
@@ -53,7 +54,7 @@
             </table>
         </div>
 
-        <a href="/editOrder.html">
+        <a href="action/loadOrderToEdit.php">
             <button class="button button1">
                 Add
                 <i class="fas fa-plus-square"></i>

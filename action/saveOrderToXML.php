@@ -11,6 +11,7 @@ else {
     $cartTotal = $_POST["order-total"];
     $orderID = uniqid("#"); 
     $orderShippingAddress = ""; 
+    $orderDiscount = 0; 
 
     $file = "xml/orders.xml";
     $simplexml = simplexml_load_file($file);
@@ -19,6 +20,7 @@ else {
     $order->addAttribute('id', $orderID);
     $order->addChild('username', $username);
     $order->addChild('cartItems', $cartItems);
+    $order->addChild('orderDiscount', $orderDiscount);
     $order->addChild('cartTotal', $cartTotal);
     $order->addChild('shippingAddress', $orderShippingAddress); 
 

@@ -11,20 +11,24 @@ foreach($xml->orders->order as $order) {
     $orderArray = json_decode($orderItems, true);  
     
     $email = "jackie23@gmail.com"; 
-    $address = "111 Guy Street"; 
+    $billingAddress = "1234 Oak Avenue"; 
+    if ($shippingAddress == ""){
+        $shippingAddress = $billingAddress; 
+    }
+    
 
     if ($orderArray != null) {
     echo 
     "<tr>
             <input type = 'hidden' class = 'editOrderID' value = $orderID id = 'itemOrderID'> 
             <td><input type='checkbox'/></td>
+            <td><img src='images/KMicon.ico' width='20' height='20'/></td>
             <td>
-                <img src='images/KMicon.ico' width='70' height='50'/>
                 $username
             </td>
             <td>". count($orderArray)."</td>
             <td>$orderTotal</td>
-            <td>$address</td>
+            <td>$shippingAddress</td>
             <td>**** **** **** 1111</td>
             <td>$email</td>
             <td>
