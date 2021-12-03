@@ -5,6 +5,9 @@
 #5cf2ff : light turqoise
 #f7c88d : peach
 */
+body {
+  height: 100vh; 
+}
 
 /*Styles for backstore navigation bar top*/
 .nav-top {
