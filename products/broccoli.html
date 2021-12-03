@@ -223,14 +223,14 @@
     <!-- Javascript for clicking a button to reveal menu - provided by w3schools.com-->
     <script>
       // Get the button, and when the user clicks on it, execute myFunction
-      document.getElementById("phoneBtn").onclick = function () {
-        dropContent();
-      };
+      document.getElementById("phoneBtn").onclick = function() {dropContent()};
+      document.getElementById("compBtn").onclick = function() {dropContent()};
+
       /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
       function dropContent() {
-        document.getElementById("myDropdown").classList.toggle("show");
+          document.getElementById("myDropdown").classList.toggle("show");
       }
-    </script>
+  </script>
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script
