@@ -1,5 +1,9 @@
 
-#61a5634b2155a
+#61a6b0c1de641
 testUsername
-[{"name":"Navel Orange","quantity":"4","price":"$0.69","IMGsrc":"/images/Produce/orange.jpg"}]
-7.77
+[{"name":"Fuji Apple","quantity":"4","price":"$0.89","IMGsrc":"../images/Produce/appleFuji.png"},{"name":"Apples, Granny Smith","quantity":"11","price":"$4.99","IMGsrc":"../images/Produce/apples.png"}]
+71.8
+#61a6b0fb0acfa
+testUsername
+[{"name":"Fuji Apple","quantity":1,"price":"$0.89","IMGsrc":"../images/Produce/appleFuji.png"}]
+5.62

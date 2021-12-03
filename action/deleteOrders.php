@@ -1,4 +1,4 @@
-<?php 
+<?php   
     if (isset($_POST['orders'])) {
         $orders = $_POST['orders']; 
         $deleteIDs = json_decode($_POST['orders']);

@@ -1,4 +1,3 @@
-console.log('waiting...')
 //if document is still loading, wait until buttons are ready before running program
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
@@ -8,29 +7,27 @@ else {
     ready();
 }
 function ready() {
-    console.log('working'); 
-    const deleteOrderButton = document.getElementById('deleteOrderButton');
+    let deleteOrderButton = document.getElementById('deleteOrderButton');
     if (deleteOrderButton != null) {
         deleteOrderButton.addEventListener('click', deleteOrders);
     }
-    const editOrderButtons = document.getElementsByClassName('editOrderButton');
-    console.log(editOrderButtons);
+    let editOrderButtons = document.getElementsByClassName('editOrderButton');
     if (editOrderButtons != null) {
-        editOrderButtons.array.forEach(element => {
-            element.addEventListener('click', saveOrderID);
-        });
+        for (let i = 0; i < editOrderButtons.length; i++) {
+            editOrderButtons[i].addEventListener('click', saveOrderID);
+        };
     }
 } 
 function deleteOrders() {
-    
     const orderTable = document.getElementById('orders-table');
     let checkboxes = orderTable.querySelectorAll('input[type=checkbox]');
     let ordersToDelete = []; 
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             let row = checkboxes[i].parentElement.parentElement;
-            let orderID = row.getElementsByClassName('orderID')[0].value;
-            ordersToDelete.push(orderID); 
+            let orderID = row.getElementsByClassName('editOrderID')[0].value;
+            ordersToDelete.push(orderID);
+            console.log(orderID); 
             checkboxes[i].parentElement.parentElement.remove(); 
         }
     }
