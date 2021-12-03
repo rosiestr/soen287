@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="backstoreStyles.css" />
     <!--title to appear in tab-->
     <title>Kalamari Market: Orders List</title>
-    <script src="orderHandler/orderList.js" async></script>
+    <script type = "text/javascript" src="orderHandler/orderListener.js" async></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php include "includes/loadOrders.php" ?>
+                <?php include 'orderHandler/loadOrders.php' ?>
                 </tbody>
             </table>
         </div>
@@ -73,6 +73,9 @@
     
     <form id = "toDelete" method = "post" action = "action/deleteOrders.php">
         <input type = "hidden" id = "deleteIDs" name = "orders"></input>
+    </form> 
+    <form method = 'POST' action = 'action/loadOrderToEdit.php' id = 'editOrder'>
+        <input type = "hidden" id = "orderToEdit" name = "orderToEdit"></input> 
     </form> 
     <footer><a href="index.html">Back to Front Store</a></footer>
 

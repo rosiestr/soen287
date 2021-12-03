@@ -1,21 +1,21 @@
-<?php 
+<?php   
     if (isset($_POST['orders'])) {
         $orders = $_POST['orders']; 
         $deleteIDs = json_decode($_POST['orders']);
-        echo $deleteIDs[0]; 
-        $file = "orderData.txt";
+        $file = "xml/orders.xml";
+        $xml =simplexml_load_file($file) or die("Error: Cannot create object");
     
-        $arr = file($file);
-
         foreach($deleteIDs as $value){
-            foreach ($arr as $key=> $line) {
-                //removing the line
-                if(stristr($line,$value)!== false){
-                    array_splice($arr, $key, $key + 3); 
-                break;}
+            foreach($xml->orders->order as $order) {
+                if ((strcmp(trim($order['id']), trim($value)) == 0)){
+                    $dom = dom_import_simplexml($order); 
+                    $dom->parentNode->removeChild($dom);
+                }      
             }
         }
-        //writing to file
-        file_put_contents($file, implode($arr));
+        $xml->asXML($file);
     }
     header("Location:" . $_SERVER['HTTP_REFERER']);
+    
+    
+    

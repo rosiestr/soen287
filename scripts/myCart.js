@@ -11,20 +11,6 @@ else {
 function ready() {
     //load saved data from local storage 
     loadItemsFromStorage();
- 
-    //NOT PERMANENT, just for testing (until add to cart buttons are programed)
-    /*if (checkCartEmpty()) {
-        if (confirm("Would you like to add default items to cart?")) {
-            addCartItem("CHAPMAN'S Vanilla Super Ice Cream Sandwiches", 1, "$5.99", "/images/Frozen/iceCreamSandwich.jpg")
-            addCartItem("Brown Eggs, Extra Large", 1, "$2.88", "/images/Dairy/eggs.png")
-            addCartItem("Bananas", 1, "$2.99", "/images/Produce/banana.png")
-            addCartItem("1% Milk 2L", 1, "$3.99", "/images/Dairy/milk.jpeg")
-            addCartItem("Fresh Beef Flank", 1, "$2.99", "/images/Meat/beef.png")
-            document.getElementsByClassName('summary')[0].classList.toggle('hide');
-            //show the hidden cart empty section
-            document.getElementsByClassName('cart-empty')[0].classList.toggle('show-flex');
-        }
-    }*/
     checkCartEmpty(); 
     updateCartTotal();
 
@@ -244,7 +230,8 @@ function saveItemsToStorage() {
             name: itemName,
             quantity: itemQuantity,
             price: itemPrice,
-            IMGsrc : itemImageSrc
+            IMGsrc: itemImageSrc,
+            discount: 0
         }
         //add that object to the cart array
         cart.push(cartItem);

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<order-data>
+    <config>
+    </config>
+    <orders>
+        
+    <order id="#61a92b7553bb8"><username>testUsername</username><cartItems>[{"name":"Apples, Granny Smith","quantity":9,"price":"$4.99","IMGsrc":"../images/Produce/apples.png"}]</cartItems><cartTotal>56.24</cartTotal><shippingAddress/></order></orders> 
+</order-data>
