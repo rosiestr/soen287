@@ -12,7 +12,6 @@ function ready() {
     const shippingAddress = document.getElementById('shippingAddress');
     const billingCheck = document.querySelector("input[name = sameAddress]");
     billingCheck.addEventListener('change', () => {
-        console.log(billingCheck);
         let billingElement = document.getElementById('billingAddress');    
         if (billingCheck.checked) {
             shippingAddress.value = billingElement.value;
@@ -23,8 +22,12 @@ function ready() {
     pickupCheck.addEventListener('change', () => {       
         if (pickupCheck.checked) {
         shippingAddress.value = "ORDER FOR PICKUP";
-        billingCheck.checked = false;       
-    }
+        billingCheck.checked = false;           
+        }
+        else {
+            shippingAddress.value = ""; 
+        }
+        updateCartTotal(); 
     });
 
     const shippingElement = document.getElementById('shippingAddress');
@@ -54,8 +57,6 @@ function ready() {
 
 function removeRow(event) {
     let button = event.target;
-    console.log(button);
-    console.log(button.parentElement.parentElement);
     button.parentElement.parentElement.parentElement.remove();
     updateCartTotal(); 
 }
@@ -96,7 +97,6 @@ function addItemRow() {
     `;
     itemRow.innerHTML = itemRowContents;
     table.append(itemRow);
-    console.log(itemRow.getElementsByClassName('deleteItem')[0])
     itemRow.getElementsByClassName('deleteItem')[0].addEventListener('click', removeRow);
     itemRow.getElementsByClassName('apply')[0].addEventListener('click', updateItemTotal); 
 }
@@ -107,6 +107,7 @@ function updateCartTotal() {
     let overallTotal = 0;
     let discountElement = document.getElementById('overall-discount');
     let overallDiscount = parseFloat(discountElement.value);
+    console.log(overallDiscount); 
     let allDiscounts = 0; 
     //loop through the array
     for (let i = 0; i < cartItems.length; i++) {
@@ -143,8 +144,9 @@ function updateCartTotal() {
     //Check to see if user is eligible for free delivery
     let deliveryFee = 4.00;
 
+    const orderForPicked = document.getElementById('forPickup');
     //If their total is >= 100, they are.
-    if (overallTotal >= 100 || cartItems.length == 0) {
+    if (overallTotal >= 100 || cartItems.length == 0 || orderForPicked.checked) {
         deliveryFee = 0.00;
     }
     let GST = 0.05;
@@ -158,7 +160,7 @@ function updateCartTotal() {
     overallDiscountAmount = Math.round(overallTotal * overallDiscount) / 100;
     allDiscounts += overallDiscountAmount; 
     //Calculate and round the total + tax
-    let totalPlusTax = Math.round((overallTotal + totalQst + totalGst + deliveryFee) * 100) / 100;
+    let totalPlusTax = Math.round((overallTotal + totalQst + totalGst + deliveryFee - overallDiscountAmount) * 100) / 100;
    
     //set and format the subtotal
     document.getElementsByClassName('cart-subtotal')[0].innerText = '$' + overallTotal;
@@ -171,6 +173,9 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-gst')[0].innerText = '$' + totalGst;
     //set and format the total
     document.getElementsByClassName('cart-total')[0].innerText = '$' + totalPlusTax;
+    console.log(totalPlusTax);
+    document.getElementsByClassName('cart-total-input')[0].value = totalPlusTax; 
+    saveItemsForPhp(); 
 }
 
 function updateItemTotal(event) {
@@ -186,12 +191,50 @@ function updateItemTotal(event) {
     else {
         price = priceElement.innerText.replace("$", "");
     }
-    console.log(price); 
     price =  parseFloat(price);
     let discount = parseFloat(itemElement.getElementsByClassName('discount')[0].value);
     let itemTotal = (price * quantity) - ((price * quantity) * (discount / 100));
    
     let itemTotalElement = itemElement.getElementsByClassName('item-total')[0];
-    itemTotalElement.innerText = "$" + Math.round(itemTotal*100)/100;
-    updateCartTotal(); 
+    itemTotalElement.innerText = "$" + Math.round(itemTotal * 100) / 100;
+    updateCartTotal();
+}
+
+//Save items to local storage function
+function saveItemsForPhp() {
+    const cartItemContainer = document.getElementsByClassName('order-table')[0];
+    let cartItems = cartItemContainer.getElementsByClassName('item');
+    const cartItemFormValue = document.getElementsByClassName('cart-items-saved')[0]; 
+    let cart = [];
+    //go through all the cart items
+    for (let i = 0; i < cartItems.length; i++) {
+        let item = cartItems[i];
+        let itemName, itemPrice; 
+        if (item.classList.contains('old')) {
+            //get their attributes
+            itemName = item.getElementsByClassName('item-name')[0].innerText;
+            itemPrice = item.getElementsByClassName('price')[0].innerText;
+        }
+        else {
+            itemName = item.getElementsByClassName('newItem')[0].value;
+            itemPrice = "$" + item.getElementsByClassName('newItemPrice')[0].value;
+        }
+        let itemQuantity = item.getElementsByClassName('quantity')[0].value;
+        let itemDiscount = item.getElementsByClassName('discount')[0].value; 
+
+        //create an object from their attributes
+        let cartItem = {
+            name: itemName,
+            quantity: itemQuantity,
+            price: itemPrice,
+            discount: itemDiscount
+        }
+        //add that object to the cart array
+        cart.push(cartItem);
+    }
+    //add the array to local storage
+    let cartString = JSON.stringify(cart);
+    if (cartString != null) {
+        cartItemFormValue.value = cartString;
+    }
 }

@@ -1,5 +1,6 @@
 <?php 
 $orderID; 
+$orderItems; 
 if (isset($_POST['orderToEdit'])){
     $orderID = $_POST['orderToEdit'];  
     $xml = simplexml_load_file("xml/orders.xml") or die("Error: Cannot create object");
@@ -8,6 +9,7 @@ if (isset($_POST['orderToEdit'])){
             $username = $order->username; 
             $orderItems = $order->cartItems; 
             $orderTotal = $order->cartTotal; 
+            $orderDiscount = $order->orderDiscount; 
             $shippingAddress = $order->shippingAddress;
             break; 
         }      
@@ -17,14 +19,20 @@ if (isset($_POST['orderToEdit'])){
     $lastName = 'lastName';
     $email = "jackie23@gmail.com"; 
     $address = "111 Guy Street";
+    $checked = ""; 
+    if ($shippingAddress == "") {
+        $shippingAddress = $address; 
+    }
 } 
 else {
     $name = ""; 
     $email = ""; 
     $address = ""; 
+    $shippingAddress = ""; 
     $orderID = uniqid("#"); 
     $orderTotal = 0.00;
     $orderArray = []; 
+    $orderDiscount = 0; 
 }
 
 echo "<!DOCTYPE HTML>
@@ -63,10 +71,10 @@ echo "<!DOCTYPE HTML>
         <!--MAIN-->
         <section class = 'container d-flex justify-content-center py-3 bluebg'>
             <!--CUSTOMER INFO AND SHIPPING FIELDS-->
-            <form> 
+    <form method = 'post' action = 'updateOrderInXML.php' name = 'updateOrderInfo'> 
 
     <input type = 'hidden' name = 'orderID' value = '$orderID'>
-<div class = 'row'>
+    <div class = 'row'>
     <!--CUSTOMER NAME, EMAIL, PHONE -->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='name'><b>Customer Name</b></label>
@@ -83,8 +91,8 @@ echo "<!DOCTYPE HTML>
     <!--CUSTOMER SHIPPING ADDRESS-->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='shippingAddress'><b>Shipping Address</b></label>
-        <textarea id = 'shippingAddress' cols ='20' rows='6'
-        >$address
+        <textarea id = 'shippingAddress' name = 'shippingAddress' cols ='20' rows='6'
+        >$shippingAddress
         </textarea>              
         <span class = 'd-flex align-items-center'>
             <input type = 'checkbox' id = 'sameBillingAddress' name = 'sameAddress'>
@@ -96,11 +104,11 @@ echo "<!DOCTYPE HTML>
         </span>      
     </div> 
 </div>
-</form>
+
 </section> 
 <section class = 'container pb-3'>  
 <!--TABLE WITH ORDER ITEMS AND COST-->
-<form> 
+
     <div class = 'table-responsive row'>
         <table class = 'product-table order-table table col'>
             <thead class = 'table-head'>
@@ -121,8 +129,8 @@ echo "<!DOCTYPE HTML>
             $price = $orderArray[$key]["price"]; 
             $quantity = $orderArray[$key]["quantity"]; 
 
-            echo "<tr class = 'item'>
-            <td scope = 'row'>
+            echo "<tr class = 'item old'>
+            <td scope = 'row' class = 'item-name'>
             $itemName</td>
             <td class = 'price'>$price</td>
             <td>
@@ -158,16 +166,10 @@ echo "
                 <td colspan='2'></td>
             </tr>
             <tr>
-                <td scope ='row' colspan='2'></td>
-                <td colspan = '2'>Delivery fee: </td>
-                <td class = 'cart-delivery'>$5.00</td>
-                <td colspan='2'></td>
-            </tr>
-            <tr>
                 <td scope = 'row' colspan='2'></td>
                 <td colspan = '2'>Discount (%): </td>
                 <td>
-                    <input type='number' id ='overall-discount' name = 'discount' value = 0 class = 'discount'>
+                    <input type='number' id ='overall-discount' name = 'orderDiscount' value = $orderDiscount class = 'discount'>
                 </td>
                 <td>
                     <input type ='button' id = 'discount-apply' name = 'apply' value = 'APPLY'>
@@ -178,6 +180,12 @@ echo "
                 <td colspan = '2'>Total Saved: </td>
                 <td id = 'discountTotal'>-$0.65</td>
                 <td></td>
+            </tr>
+            <tr>
+                <td scope ='row' colspan='2'></td>
+                <td colspan = '2'>Delivery fee: </td>
+                <td class = 'cart-delivery'>$5.00</td>
+                <td colspan='2'></td>
             </tr>
             <tr>
                 <td scope = 'row' colspan='2'></td>
@@ -197,16 +205,17 @@ echo "
                 <td scope = 'row' colspan='2'></td>
                 <th colspan = '2'>Order Total: </th>
                 <th id = 'orderTotal' class = 'cart-total'></b></th>
+                <input type = 'hidden' name = 'cart-total' class = 'cart-total-input'> 
                 <th></th>
             </tr>
             <tr></tr> 
         </tfoot>
     </table>
 </div>
-
+<input type = 'hidden' class = 'cart-items-saved' name = 'cart-items-saved'> 
 <!--SAVE BUTTON-->
 <div class = 'd-flex justify-content-end row'> 
-    <input type ='submit' id = 'save' name = 'save' value='SAVE CHANGES' method = 'POST' action = 'updateOrders.php'>
+    <input type ='submit' id = 'save' name = 'save' value='SAVE CHANGES'>
 </div>
 </form>
 </section>

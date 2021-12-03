@@ -32,6 +32,7 @@ function deleteOrders() {
         }
     }
     document.getElementById('deleteIDs').value = JSON.stringify(ordersToDelete);
+    document.location.reload()
 }
 function saveOrderID(event) {
     let buttonClicked = event.target;
