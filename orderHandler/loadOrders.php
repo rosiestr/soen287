@@ -1,16 +1,14 @@
 <?php 
-$orderData = fopen("action/orderData.txt", "r") or die("Unable to open file!");
+$xml =simplexml_load_file("action\xml\orders.xml") or die("Error: Cannot create object");
 // Output one line until end-of-file
-while(!feof($orderData)) {
-    $line = fgets($orderData); 
-    if ($line == "" || $line == null || $line == "\n") { 
-        continue; 
-    }
-    $orderID = $line; 
-    $username = fgets($orderData); 
-    $orderItems = fgets($orderData); 
-    $orderTotal = fgets($orderData); 
-    $orderArray = json_decode($orderItems, true); 
+
+foreach($xml->orders->order as $order) {
+    $orderID = $order['id'];  
+    $username = $order->username; 
+    $orderItems = $order->cartItems; 
+    $orderTotal = $order->cartTotal; 
+    $shippingAddress = $order->shippingAddress;
+    $orderArray = json_decode($orderItems, true);  
     
     $email = "jackie23@gmail.com"; 
     $address = "111 Guy Street"; 
@@ -40,5 +38,5 @@ while(!feof($orderData)) {
         echo "<p>No orders have been made. </p>"; 
     }
 }
-fclose($orderData);
+
 

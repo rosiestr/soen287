@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="images/KMicon.ico" />
     <!-- css for index.html -->
     <link rel="stylesheet" href="backstoreStyles.css">
-    <script src="orderHandler/editOrder.js" async></script>
+    <script src="orderHandler/editOrderListener.js" async></script>
     <!--title to appear in tab-->
     <title>Edit Order</title> 
 </head>

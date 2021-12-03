@@ -2,23 +2,21 @@
 $orderID; 
 if (isset($_POST['orderToEdit'])){
     $orderID = $_POST['orderToEdit'];  
-    $orderData = fopen("orderData.txt", "r") or die("Unable to open file!");
-    // Output one line until end-of-file
-    while(!feof($orderData)) {
-        $line = fgets($orderData);  
-        if (strcmp(trim($line), trim($orderID)) == 0) {
+    $xml = simplexml_load_file("xml/orders.xml") or die("Error: Cannot create object");
+    foreach($xml->orders->order as $order) {
+        if ((strcmp(trim($order['id']), trim($orderID)) == 0)){
+            $username = $order->username; 
+            $orderItems = $order->cartItems; 
+            $orderTotal = $order->cartTotal; 
+            $shippingAddress = $order->shippingAddress;
             break; 
-        }
+        }      
     }
-    $username = fgets($orderData); 
-    $orderItems = fgets($orderData); 
-    $orderTotal = fgets($orderData); 
     $orderArray = json_decode($orderItems, true); 
     $name = 'testName'; 
     $lastName = 'lastName';
     $email = "jackie23@gmail.com"; 
     $address = "111 Guy Street";
-    fclose($orderData);
 } 
 else {
     $name = ""; 
@@ -44,7 +42,7 @@ echo "<!DOCTYPE HTML>
         <link rel='shortcut icon' href='../images/KMicon.ico' />
         <!-- css for index.html -->
         <link rel='stylesheet' href='../backstoreStyles.css'>
-        <script src='../orderHandler/editOrder.js' async></script>
+        <script src='../orderHandler/editOrderListener.js' async></script>
         <!--title to appear in tab-->
         <title>Edit Order</title> 
         </head>
@@ -57,7 +55,7 @@ echo "<!DOCTYPE HTML>
                 <div><a href='products.php'>Products</a></div>
                 <div><a href='/ordersList.php'>Orders</a></div>
                 <div><a href='UserList.php'>Users</a></div>
-                <img src='images/KMicon.ico'>
+                <img src='../images/KMicon.ico'>
             </section>
         </nav>
         <!--HEADER-->
@@ -102,20 +100,21 @@ echo "<!DOCTYPE HTML>
 </section> 
 <section class = 'container pb-3'>  
 <!--TABLE WITH ORDER ITEMS AND COST-->
-<form>
+<form> 
     <div class = 'table-responsive row'>
-            <table class = 'product-table order-table table col'>
-                <thead>
-                    <tr>
-                        <th scope = 'col'>Item</th>
-                        <th scope = 'col'>Cost</th>
-                        <th scope = 'col'>Quantity</th>
-                        <th scope = 'col'>Discount (%)</th>
-                        <th scope = 'col'></th>
-                        <th scope = 'col'>Total</th>
-                    </tr>
-                </thead>
-    <tbody>"; 
+        <table class = 'product-table order-table table col'>
+            <thead class = 'table-head'>
+                <tr>
+                    <th scope = 'col'>Item</th>
+                    <th scope = 'col'>Cost</th>
+                    <th scope = 'col'>Quantity</th>
+                    <th scope = 'col'>Discount (%)</th>
+                    <th scope = 'col'></th>
+                    <th scope = 'col'>Total</th>
+                    <th scope = 'col'></th> 
+                </tr>
+            </thead>
+        <tbody class = 'table-body'>"; 
     if ($orderArray != null){
         foreach($orderArray as $key => $value) {
             $itemName = $orderArray[$key]["name"]; 
@@ -123,75 +122,91 @@ echo "<!DOCTYPE HTML>
             $quantity = $orderArray[$key]["quantity"]; 
 
             echo "<tr class = 'item'>
-            <td scope = 'row'>$itemName</td>
+            <td scope = 'row'>
+            $itemName</td>
             <td class = 'price'>$price</td>
             <td>
                 <input type='number' id ='quantity' name = 'quantity' value = $quantity class = 'quantity'>
             </td>
             <td>
-                <input type='number' id ='discount' name = 'discount' value = 10 class = 'discount'>
+                <input type='number' id ='discount' name = 'discount' value = '0' class = 'discount' >
             </td>
             <td>
                 <input type ='button' id = 'apply' name = 'apply' value = 'APPLY' class = 'apply'>
             </td>
             <td class = 'item-total'>
-                $5.84
             </td> 
+            <td>
+            <button class = 'button1'><i class='deleteItem far fa-trash-alt'></i></button>
+            </td>
             </tr> ";
         }
     }
+    
 
-echo "      </tbody>
+echo "
+    </tbody>
         <tfoot>
             <tr>
-                <td scope = 'row' colspan='3'></td>
-                <td>Total before tax: </td>
-                <td id = 'totalBeforeTax'>$21.20</td>
-                <td></td>
+                <td><input type = 'button' id = 'addItem' name = 'addItem' value = 'ADD ITEM' class = 'addItem' onClick = 'addItemRow()'>
+                <td scope = 'row' colspan='6'></td>
             </tr>
             <tr>
-                <td scope ='row' colspan='3'></td>
-                <td>Delivery fee: </td>
-                <td>$5.00</td>
-                <td></td>
+                <td scope = 'row' colspan='2'></td>
+                <td colspan = '2'>Total before tax: </td>
+                <td id = 'totalBeforeTax' class = 'cart-subtotal'>$21.20</td>
+                <td colspan='2'></td>
             </tr>
             <tr>
-                <td scope = 'row' colspan='3'></td>
-                <td>Discount (%): </td>
+                <td scope ='row' colspan='2'></td>
+                <td colspan = '2'>Delivery fee: </td>
+                <td class = 'cart-delivery'>$5.00</td>
+                <td colspan='2'></td>
+            </tr>
+            <tr>
+                <td scope = 'row' colspan='2'></td>
+                <td colspan = '2'>Discount (%): </td>
                 <td>
-                    <input type='number' id ='discount' name = 'discount'>
+                    <input type='number' id ='overall-discount' name = 'discount' value = 0 class = 'discount'>
                 </td>
                 <td>
-                    <input type ='button' id = 'apply' name = 'apply' value = 'APPLY'>
+                    <input type ='button' id = 'discount-apply' name = 'apply' value = 'APPLY'>
                 </td>
             </tr>
             <tr>
-                <td scope = 'row' colspan='3'></td>
-                <td>Total discounts: </td>
+                <td scope = 'row' colspan='2'></td>
+                <td colspan = '2'>Total Saved: </td>
                 <td id = 'discountTotal'>-$0.65</td>
                 <td></td>
             </tr>
             <tr>
-                <td scope = 'row' colspan='3'></td>
-                <td>Tax: </td>
-                <td id = 'tax'>$3.93</td>
+                <td scope = 'row' colspan='2'></td>
+                <td colspan = '2'>GST: </td>
+                <td id = 'tax' class = 'cart-gst'>$3.93</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td scope = 'row' colspan='2'></td>
+                <td colspan = '2'>QST: </td>
+                <td id = 'tax' class = 'cart-qst'>$3.93</td>
                 <td></td>
             </tr>
             <tr>
             </tr>
             <tr>
-                <td scope = 'row' colspan='3'></td>
-                <th>Order Total: </th>
-                <th id = 'orderTotal'>$<?php $orderTotal ?></b></th>
+                <td scope = 'row' colspan='2'></td>
+                <th colspan = '2'>Order Total: </th>
+                <th id = 'orderTotal' class = 'cart-total'></b></th>
                 <th></th>
             </tr>
+            <tr></tr> 
         </tfoot>
     </table>
 </div>
 
 <!--SAVE BUTTON-->
 <div class = 'd-flex justify-content-end row'> 
-    <input type ='submit' id = 'save' name = 'save' value='SAVE CHANGES'>
+    <input type ='submit' id = 'save' name = 'save' value='SAVE CHANGES' method = 'POST' action = 'updateOrders.php'>
 </div>
 </form>
 </section>

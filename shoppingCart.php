@@ -42,7 +42,7 @@
         </section>
       </div>
     </main>
-    <form id = "order-details" method="post" action="action/saveOrder.php"> 
+    <form id = "order-details" method="post" action="action/saveOrderToXML.php"> 
       <input type = "hidden" name = "order-items" class = "order-items" value = "test" id = "order-items-saved"> 
       <input type = "hidden" name = "order-total" class = "order-total" value = "test" id = "order-total-saved"> 
     </form>
@@ -94,6 +94,7 @@
         </table>
     </div>
 
+
     <script>
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};
@@ -111,6 +112,8 @@
     
         // }
         //button.addEventListener('click',checkoutMsg);
+
+
 
     </script>
   </body>
