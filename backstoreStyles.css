@@ -5,6 +5,9 @@
 #5cf2ff : light turqoise
 #f7c88d : peach
 */
+body {
+  height: 100vh; 
+}
 
 /*Styles for backstore navigation bar top*/
 .nav-top {
@@ -982,9 +985,12 @@ select#province{
   color: #76e3ed;
 }
 
-}
 
-/*---------END OF EDIT USER STYLES---------*/
+}
+.no-over {
+  font-size: 12px;
+  overflow: hidden;
+}
 
 
 /* end of styling*/ 

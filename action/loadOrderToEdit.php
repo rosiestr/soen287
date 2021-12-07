@@ -6,19 +6,17 @@ if (isset($_POST['orderToEdit'])){
     $xml = simplexml_load_file("xml/orders.xml") or die("Error: Cannot create object");
     foreach($xml->orders->order as $order) {
         if ((strcmp(trim($order['id']), trim($orderID)) == 0)){
-            $username = $order->username; 
+            $name = $order->name; 
             $orderItems = $order->cartItems; 
             $orderTotal = $order->cartTotal; 
             $orderDiscount = $order->orderDiscount; 
             $shippingAddress = $order->shippingAddress;
+            $email = $order->email; 
+            $address = $order->billingAddress; 
             break; 
         }      
     }
     $orderArray = json_decode($orderItems, true); 
-    $name = 'testName'; 
-    $lastName = 'lastName';
-    $email = "jackie23@gmail.com"; 
-    $address = "111 Guy Street";
     $checked = ""; 
     if ($shippingAddress == "") {
         $shippingAddress = $address; 
@@ -78,21 +76,21 @@ echo "<!DOCTYPE HTML>
     <!--CUSTOMER NAME, EMAIL, PHONE -->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='name'><b>Customer Name</b></label>
-        <input type='text' id='name' name='name' value = '$name' class = 'editOrder'> 
+        <input type='text' id='name' name='name' value = '$name' class = 'editOrder' required> 
         <label for='email'><b>Email</b></label>
-        <input type = 'email' id='email' name='email' value = '$email' class = 'editOrder'> 
+        <input type = 'email' id='email' name='email' value = '$email' class = 'editOrder' required> 
     </div>
     <!--CUSTOMER BILLING ADDRESS-->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for= 'billingAddress'><b>Billing Address</b></label>
         <textarea id = 'billingAddress' name = 'billingAddress' cols = '20' rows='6'
-        >$address</textarea>
+        required>$address</textarea>
     </div> 
     <!--CUSTOMER SHIPPING ADDRESS-->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='shippingAddress'><b>Shipping Address</b></label>
         <textarea id = 'shippingAddress' name = 'shippingAddress' cols ='20' rows='6'
-        >$shippingAddress
+        required>$shippingAddress
         </textarea>              
         <span class = 'd-flex align-items-center'>
             <input type = 'checkbox' id = 'sameBillingAddress' name = 'sameAddress'>
@@ -119,7 +117,7 @@ echo "<!DOCTYPE HTML>
                     <th scope = 'col'>Discount (%)</th>
                     <th scope = 'col'></th>
                     <th scope = 'col'>Total</th>
-                    <th scope = 'col'></th> 
+                    <th scope = 'col'><i class='far fa-trash-alt'></i></th> 
                 </tr>
             </thead>
         <tbody class = 'table-body'>"; 
@@ -134,7 +132,7 @@ echo "<!DOCTYPE HTML>
             $itemName</td>
             <td class = 'price'>$price</td>
             <td>
-                <input type='number' id ='quantity' name = 'quantity' value = $quantity class = 'quantity'>
+                <input type='number' id ='quantity' name = 'quantity' value = $quantity class = 'quantity' required>
             </td>
             <td>
                 <input type='number' id ='discount' name = 'discount' value = '0' class = 'discount' >
@@ -145,7 +143,7 @@ echo "<!DOCTYPE HTML>
             <td class = 'item-total'>
             </td> 
             <td>
-            <button class = 'button1'><i class='deleteItem far fa-trash-alt'></i></button>
+            <button class = 'deleteItem button1'>x</i></button>
             </td>
             </tr> ";
         }
@@ -220,7 +218,7 @@ echo "
 </form>
 </section>
 <!--FOOTER-->
-<footer><a href='index.html'>Back to Front Store</a></footer>
+<footer><a href='../index.html'>Back to Front Store</a></footer>
 
 
 <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->

@@ -4,5 +4,5 @@
     </config>
     <orders>
         
-    <order id="#61aa306418e98"><username>testUsername</username><cartItems>[{"name":"Brown Eggs","quantity":5,"price":"$2.99/carton","IMGsrc":"../images/Dairy/eggs.png"},{"name":"Frozen 3 Cheese Pizza Snacks, Pizza Pops","quantity":3,"price":"$3.99","IMGsrc":"/images/Frozen/pizzaPops.jpg"}]</cartItems><orderDiscount>0</orderDiscount><cartTotal>35.55</cartTotal><shippingAddress/></order></orders> 
+    <order id="#61afb1fa5ab7c"><email>testUsername@gmail.com</email><name>Test Name</name><cartItems>[{"name":"Apples, Granny Smith","quantity":"2","price":"$4.99","discount":"0"},{"name":"Tomatoes, On the Vine","quantity":"2","price":"$1.99","discount":"0"}]</cartItems><orderDiscount>0</orderDiscount><cartTotal>16.05</cartTotal><shippingAddress>ORDER FOR PICKUP</shippingAddress><billingAddress>1234 Oak Street, Montreal, QC, T8A6P6</billingAddress></order></orders> 
 </order-data>

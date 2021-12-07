@@ -50,25 +50,28 @@ function ready() {
 
     for (let i = 0; i < deleteButtons.length; i++){
         deleteButtons[i].addEventListener('click', removeRow);
-    } 
+    }
+    
+    const numberInputs = document.querySelectorAll('input[type=number]');
+    for (let i = 0; i < numberInputs.length; i++) {
+        numberInputs[i].addEventListener('change', stayWithinBounds);
+    }
     
 }
 
 
-function removeRow(event) {
-    let button = event.target;
-    button.parentElement.parentElement.parentElement.remove();
-    updateCartTotal(); 
-}
-
 function stayWithinBounds(event) {
-    let discountInput = event.target;
-    let discountValue = discountInput.value;
-    if (discountValue < 0) {
-        discountInput.value = 0; 
+    let input = event.target;
+    if (input.value < 0 || isNaN(input.value)) {
+        if (input.classList.contains('quantity')) {
+            input.value = 1;
+        }
+        else {
+            input.value = 0;
+        } 
     }
-    else if (discountValue > 100) {
-        discountInput.value = 100; 
+    else if (input.classList.contains('discount') & input.value > 100){
+        input.value = 100; 
     }
 }
 function addItemRow() {
@@ -76,12 +79,12 @@ function addItemRow() {
     let itemRow = document.createElement('TR');
     itemRow.classList.add('item');
     let itemRowContents = `<td scope = 'row'>
-    <input class = 'newItem' id = 'newItem' name = 'addedItemName' type = 'text'>
+    <input class = 'newItem' id = 'newItem' name = 'addedItemName' type = 'text' required>
     </td>
-    <td class = 'price'><input class = 'newItemPrice' name = 'addedItemPrice' value = '0' type = 'number'>
+    <td class = 'price'><input class = 'newItemPrice' name = 'addedItemPrice' value = '0' type = 'number' required>
     </td>
     <td>
-        <input type='number' id ='quantity' name = 'quantity' value = '0' class = 'quantity'>
+        <input type='number' id ='quantity' name = 'quantity' value = '0' class = 'quantity' required>
     </td>
     <td>
         <input type='number' id ='discount' name = 'discount' value = '0' class = 'discount'>
@@ -92,13 +95,23 @@ function addItemRow() {
     <td class = 'item-total'>
     </td> 
     <td>
-    <button class = 'button1'><i class='deleteItem far fa-trash-alt'></i></button>
+    <button class = 'deleteItem button1'>x</button>
     </td> 
     `;
     itemRow.innerHTML = itemRowContents;
     table.append(itemRow);
     itemRow.getElementsByClassName('deleteItem')[0].addEventListener('click', removeRow);
-    itemRow.getElementsByClassName('apply')[0].addEventListener('click', updateItemTotal); 
+    itemRow.getElementsByClassName('apply')[0].addEventListener('click', updateItemTotal);
+    itemRow.getElementsByClassName('discount')[0].addEventListener('change', stayWithinBounds);
+    itemRow.getElementsByClassName('quantity')[0].addEventListener('change', stayWithinBounds); 
+}
+
+function removeRow(event) {
+    let button = event.target;
+    console.log(button.parentElement);
+    console.log(button.parentElement.parentElement); 
+    button.parentElement.parentElement.remove();
+    updateCartTotal(); 
 }
 
 function updateCartTotal() {

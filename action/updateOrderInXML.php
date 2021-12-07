@@ -8,9 +8,8 @@ if (isset($_POST['orderID'])) {
         $name = $_POST['name']; 
         $email = $_POST['email']; 
         $billingAddress = $_POST['billingAddress']; 
-        echo $billingAddress; 
         $shippingAddress = $_POST['shippingAddress']; 
-        echo $shippingAddress; 
+
     $file = 'xml/orders.xml';
     $xml = simplexml_load_file($file);
     foreach($xml->orders->order as $order){
@@ -19,6 +18,9 @@ if (isset($_POST['orderID'])) {
             $order->orderDiscount = $orderDiscount; 
             $order->cartTotal = $cartTotal;
             $order->shippingAddress = $shippingAddress;
+            $order->email = $email; 
+            $order->name = $name; 
+            $order->billingAddress = $billingAddress; 
             $existingOrder = true; 
             break;
         }
@@ -28,16 +30,16 @@ if (isset($_POST['orderID'])) {
     }
     else {
         $orderID = uniqid('#'); 
-        $username = $email; 
-
         $orders = $xml->orders; 
         $order= $orders->addChild('order');
         $order->addAttribute('id', $orderID);
-        $order->addChild('username', $username);
+        $order->addChild('email', $email);
+        $order->addChild('name', $name); 
         $order->addChild('cartItems', $cartItems);
         $order->addChild('orderDiscount', $orderDiscount);
         $order->addChild('cartTotal', $cartTotal);
         $order->addChild('shippingAddress', $shippingAddress); 
+        $order->addChild('billingAddress', $billingAddress);
 
         $xml->asXML($file);
     }
