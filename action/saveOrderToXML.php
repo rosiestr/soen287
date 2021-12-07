@@ -6,7 +6,9 @@ if (!isset($_COOKIE['username'])) {
     header("Location:" . $_SERVER['HTTP_REFERER']);
 }
 else {  
-    $username = 'testUsername'; 
+    $email = 'testUsername@gmail.com'; 
+    $name = 'Test Name'; 
+    $userAddress = 'Default St., Montreal, QC, T8A5P5';
     $cartItems = $_POST["order-items"]; 
     $cartTotal = $_POST["order-total"];
     $orderID = uniqid("#"); 
@@ -18,11 +20,13 @@ else {
     $orders = $simplexml->orders; 
     $order= $orders->addChild('order');
     $order->addAttribute('id', $orderID);
-    $order->addChild('username', $username);
+    $order->addChild('email', $email);
+    $order->addChild('name', $name);
     $order->addChild('cartItems', $cartItems);
     $order->addChild('orderDiscount', $orderDiscount);
     $order->addChild('cartTotal', $cartTotal);
     $order->addChild('shippingAddress', $orderShippingAddress); 
+    $order->addChild('billingAddress', $userAddress); 
 
     $simplexml->asXML($file);
 }

@@ -985,9 +985,12 @@ select#province{
   color: #76e3ed;
 }
 
-}
 
-/*---------END OF EDIT USER STYLES---------*/
+}
+.no-over {
+  font-size: 12px;
+  overflow: hidden;
+}
 
 
 /* end of styling*/ 

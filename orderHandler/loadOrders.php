@@ -3,15 +3,13 @@ $xml =simplexml_load_file("action\xml\orders.xml") or die("Error: Cannot create 
 // Output one line until end-of-file
 
 foreach($xml->orders->order as $order) {
-    $orderID = $order['id'];  
-    $username = $order->username; 
+    $orderID = $order['id'];   
+    $email = $order->email; 
     $orderItems = $order->cartItems; 
     $orderTotal = $order->cartTotal; 
     $shippingAddress = $order->shippingAddress;
     $orderArray = json_decode($orderItems, true);  
-    
-    $email = "jackie23@gmail.com"; 
-    $billingAddress = "1234 Oak Avenue"; 
+    $billingAddress = $order->billingAddress; 
     if ($shippingAddress == ""){
         $shippingAddress = $billingAddress; 
     }
@@ -24,13 +22,12 @@ foreach($xml->orders->order as $order) {
             <td><input type='checkbox'/></td>
             <td><img src='images/KMicon.ico' width='20' height='20'/></td>
             <td>
-                $username
+                $email
             </td>
             <td>". count($orderArray)."</td>
             <td>$orderTotal</td>
-            <td>$shippingAddress</td>
+            <td class = 'no-over'>$shippingAddress</td>
             <td>**** **** **** 1111</td>
-            <td>$email</td>
             <td>
                 <button class='button button1 editOrderButton' type = 'submit' form = 'editOrder'>
                 Edit <i class='fas fa-edit'></i>

@@ -34,17 +34,16 @@
     <h1>Orders List</h1>
     <article class="container-fluid">
         <div style="overflow-x: auto">
-            <table class="product-table" id="orders-table">
+            <table class="product-table no-over-table" id="orders-table">
                 <thead>
                     <tr>
                         <th></th>
                         <th></th>
-                        <th>User</th>
+                        <th>Email</th>
                         <th># of Products</th>
                         <th>Total</th>
                         <th>Shipping Address</th>
                         <th>Payment Information</th>
-                        <th>Email</th>
                         <th>Change Order</th>
                     </tr>
                 </thead>
