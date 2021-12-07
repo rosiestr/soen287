@@ -28,7 +28,7 @@ if(isset($_POST['Register']))
         $simplexml->addChild('province',$province);
         $simplexml->addChild('zipcode',$zipcode);
 
-        //$simplexml->asXML('users/'. $lastName . '.xml');
+        // $simplexml->asXML('users/'. $lastName . '.xml');
         $simplexml->asXML($file);
 
         //header("Location: random.html");

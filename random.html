@@ -12,13 +12,13 @@ if(isset($_POST['Register']))
     $zipcode = $_POST['zipcode'];
 
 
-        // $file = "users.xml";
-        // $simplexml = simplexml_load_file($file);
+         $file = "users.xml";
+         $simplexml = simplexml_load_file($file);
 
-        // $users = $simplexml->users; 
-        // $user= $users->addChild('user');
+         $users = $simplexml->users; 
+         $user= $users->addChild('user');
 
-        $simplexml = new SimpleXMLElement('<user></user>');
+        //$simplexml = new SimpleXMLElement('<user></user>');
         $simplexml->addChild('firstName',$firstName);
         $simplexml->addChild('lastName',$lastName);
         $simplexml->addChild('useremail',$useremail);
@@ -28,8 +28,8 @@ if(isset($_POST['Register']))
         $simplexml->addChild('province',$province);
         $simplexml->addChild('zipcode',$zipcode);
 
-        $simplexml->asXML('users/'. $lastName . '.xml');
-       // $simplexml->asXML($file);
+        //$simplexml->asXML('users/'. $lastName . '.xml');
+        $simplexml->asXML($file);
 
         //header("Location: random.html");
         die;
