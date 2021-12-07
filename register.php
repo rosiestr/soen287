@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -123,46 +125,49 @@
       <div class="row">
         <!-- section with deals and foods -->
         <main class="col-xl-10" id="userform">
-          <form class="" action="index.html" method="post">
+          <form class="" action="registerProcess.php" method="POST">
 
             <fieldset>
               <legend>Personal Information</legend>
               <div class="userdiv" id="registerFirst">
                 <label for="first">*First Name</label>
                 <input type="text"
-                    name="first"
+                    name="firstName"
                     class="user"
                     required>
               </div>
-              <div class="userdiv" id="registerMidlle">
-                <label for="middle">Middle Name</label> <!--Fixed a spelling-->
+
+              <!-- <div class="userdiv" id="registerMidlle">
+                <label for="middle">Middle Name</label> 
                 <input type="text"
-                    name="middle"
+                    name="middleName"
                     class="user">
-              </div>
+              </div> -->
+
+              
               <div class="userdiv" id="registerLast">
                 <label for="last">*Last Name</label>
                 <input type="text"
-                    name="last"
+                    name="lastName"
                     class="user required">
               </div>
 
               <br>
 
               <div class="userdiv" id="registerEmail">
-                <label for="emailAddress">Email</label>
+                <label for="emailAddress">*Email</label>
                 <input type="email"
                     name="emailAddress"
                     class="user"
                     required>
               </div>
-              <div class="userdiv" id="confirmEmail">
+              <!-- <div class="userdiv" id="confirmEmail">
                 <label for="confirmEmail">*Confirm Email</label>
                 <input type="email"
                     name="confirmEmail"
                     class="user"
                     required>
-                  </div>
+                  </div> -->
 
                   <br>
 
@@ -173,14 +178,14 @@
                       class="user"
                       required>
                   </div>
-                  <div class="userdiv" id="confirmPass">
+                  <!-- <div class="userdiv" id="confirmPass">
                     <label for="confirm-pass">*Confirm Password</label>
                     <input type="password"
                         name="confirm-pass"
                         placeholder=""
                         class="user"
                         required>
-                  </div>
+                  </div> -->
 
                   <br>
 
@@ -227,6 +232,7 @@
                        <label for="zip">*Postal Code</label>
                        <input type="zip"
                             class="user"
+                            name = "zipcode"
                             id="inputZip"
                             required>
                      </div>
@@ -331,3 +337,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
+<!-- <?php
+
+if (file_exists("usersMaroua.txt")){
+    $file = "usersMaroua.txt";
+}
+else{
+    $myfile = fopen("usersMaroua.txt","a");
+    header("Refresh:0");
+}
+
+$firstName = $_POST["firstName"];
+file_put_contents($file,$firstName);
+
+?> -->
