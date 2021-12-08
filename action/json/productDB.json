@@ -1,0 +1,32 @@
+{
+    "productTable": [
+      {
+        "productImage" :"images/Dairy/cheese.png",
+        "productName": "cheese",
+        "productPrice": "2.00",
+        "productInventory": "100",
+        "productSize": [
+          "One Size"
+        ],
+        "productType": [
+          "One Type"
+        ]
+      },
+      {
+        "productImage" :"images/Produce/lime.jpg",
+        "productName": "lime",
+        "productPrice": "0.99",
+        "productInventory": "30",
+        "productSize": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "productType": [
+          "Key Limes",
+          "Calamansi Limes",
+          "Mandarin Limes"
+        ]
+      }
+    ]
+  }
