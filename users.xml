@@ -1,12 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<user-data>
 <user>
-    <firstName/>
-    <lastName/>
-    <useremail/>
-    <passWord/>
-    <street/>
-    <city/>
-    <province/>
-    <zipcode/>
+
 
 <firstName>Maroua</firstName><lastName>krim</lastName><useremail>marouakrim@outlook.com</useremail><passWord>d9308f32f8c6cf370ca5aaaeafc0d49b</passWord><street>1111 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode><firstName>Test</firstName><lastName>Me</lastName><useremail>test@company.com</useremail><passWord>202cb962ac59075b964b07152d234b70</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode><firstName>John</firstName><lastName>doe</lastName><useremail>john@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode><firstName>Layla</firstName><lastName>stone</lastName><useremail>laylastone@test.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user>
+</user-data> 
