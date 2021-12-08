@@ -24,7 +24,7 @@
     <nav class="nav-top" id="topbar">
         <!--first row of navigation bar-->
         <section>
-            <div><a href="products.html">Products</a></div>
+            <div><a href="products.php">Products</a></div>
             <div><a href="ordersList.html">Orders</a></div>
             <div><a href="UserList.html">Users</a></div>
             <img src="images/KMicon.ico" />

@@ -22,7 +22,7 @@
   <nav class="nav-top" id = "topbar">
     <!--first row of navigation bar-->
     <section>
-        <div><a href="products.html">Products</a></div>
+        <div><a href="products.php">Products</a></div>
         <div><a href="ordersList.html">Orders</a></div>
         <div><a href="UserList.html">Users</a></div>
         <img src="images/KMicon.ico">
@@ -32,47 +32,8 @@
 <main>
     <h1>Edit Product</h1>
     <main>
-        <form class="product-form">
-            <div>
-                <label>Product Name</label>
-                <input type="text">
-            </div>
-
-            <div>
-                <label>Price</label>
-                <input type="text">
-            </div>
-
-            <div>
-                <label>Inventory</label>
-                <input type="text">
-            </div>
-        
-        
-            <div>
-                <label>Types (comma separated)</label>
-                <input type="text">
-            </div>
-        
-
-            <div>
-                <label>Sizes (comma separated)</label>
-                <input type="text">
-            </div>
-        
-            <div >
-                <label>Product Description</label>
-                <textarea></textarea>
-            </div>
-
-            <div>
-                <label>Add Image</label>
-                <input type="file">
-                </div>
-        
-            <div>
-            <input type="submit" value="Submit">
-            </div>
+        <form class="product-form" method = 'post' action = 'updateProductInJSON.php' name = 'updateProductInfo'>
+            <?php include 'action/loadOrderToEdit.php' ?> 
     </form>
     <div class="button-bar">
         <a href="#">
