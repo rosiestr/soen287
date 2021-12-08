@@ -10,7 +10,7 @@ else {
     $file = "../users.xml"; 
     $simplexml = simplexml_load_file($file) or die("Unable to open file"); 
     $name = "Default Name"; $userAddress = "Default Address"; 
-    foreach($simplexml->user as $user){
+    foreach($simplexml->users->user as $user){
         if ((strcmp(trim($user->useremail), trim($email)) == 0)) {
             $fullname = $user->firstName . " " . $user->lastName; 
             $name = $fullname; 
