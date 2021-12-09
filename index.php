@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 echo print_r($_SESSION);
+echo($_SESSION['loggedFirstName']);
 ?>
 
 <!DOCTYPE html>
