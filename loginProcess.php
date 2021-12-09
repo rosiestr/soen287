@@ -4,7 +4,6 @@ $userdata=simplexml_load_file("users.xml");
 $error = false;
 $loggedUser;
 
-
 if (isset($_POST['Login'])) {
   $email = $_POST['emailAddress'];
   $password = $_POST['passWord'];
@@ -37,8 +36,10 @@ if (isset($_POST['Login'])) {
       $_SESSION['loggedEmail'] = $email; 
      
       //echo $_SESSION['firstName'] ;
-
-      header('Location: index.php');
+      //ADDED THIS FOR TESTING... TOOK AWAY THE HEADER FOR TESTING 
+      echo "TESTING FOR SESSION EMAIL SAVED? ";
+      echo $_SESSION['loggedEmail']; 
+      //header('Location: index.php');
     }
   }
 }
