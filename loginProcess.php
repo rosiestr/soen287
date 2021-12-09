@@ -1,4 +1,5 @@
 <?php 
+session_start(); 
 $userdata=simplexml_load_file("users.xml");
 $error = false;
 $loggedUser;
@@ -13,7 +14,6 @@ if (isset($_POST['Login'])) {
  }
 
  if ($email=="admin@soen287.com" && $password=="Admin") {
-     session_start();
     $_SESSION['backFirstName'] = "Admin";
     header('Location: ordersList.php');
   exit();
@@ -32,7 +32,6 @@ if (isset($_POST['Login'])) {
       //echo "Invalid email and/or password";
     }
     else {
-      session_start();
       //echo $loggedUser; 
       $_SESSION['loggedFirstName'] = $loggedUser;
       $_SESSION['loggedEmail'] = $email; 
