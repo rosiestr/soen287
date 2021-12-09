@@ -15,10 +15,17 @@ else {
 
     if (isset($_POST['Register'])) {
 
+<<<<<<< Updated upstream
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
       $emailAddress = $_POST['emailAddress'];
       $password = $_POST['passWord'];
+=======
+      $firstName = $_POST['first'];
+      $lastName = $_POST['last'];
+      $emailAddress = $_POST['email'];
+      $password = $_POST['password'];
+>>>>>>> Stashed changes
 
       $address = $_POST['street'].", ".$_POST['city'].", ".$_POST['province'].", ".$_POST['zipcode'];
 
@@ -43,7 +50,11 @@ else {
       $xml->save("users.xml") or die("Error, Unable to creste XML File");
 
       session_start();
+<<<<<<< Updated upstream
     $_SESSION['registeredFirstName'] = $firstName;
+=======
+    $_SESSION['firstName'] = $firstName;
+>>>>>>> Stashed changes
     header('Location: index.php');
     exit();
     }

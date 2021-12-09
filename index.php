@@ -40,6 +40,7 @@ session_start();
         </div>
         <div class="col d-flex align-items-center">
           <?php
+<<<<<<< Updated upstream
           if ($_SESSION['loggedFirstName']) {
           echo "<h5>Hello, ".$_SESSION['loggedFirstName']."</h5>";
           }
@@ -49,6 +50,14 @@ session_start();
           else {
             echo "<h5>Buy Groceries Online!</h5>";
           }
+=======
+          //if ($_SESSION['firstName'] != null) {
+          echo "<h5>Hello, ".$_SESSION['firstName']."</h5>";
+          /*}
+          else {
+            echo "<h5>Buy Groceries Online!</h5>";
+          }*/
+>>>>>>> Stashed changes
            ?>
         </div>
       </div>

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="utf-8"?>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+>>>>>>> Stashed changes
 <users>
   <user>
     <userFirstName>Maroua</userFirstName>
@@ -21,6 +25,7 @@
     <userPasssword>TestMe</userPasssword>
     <userAddress>2222 concordia street, Montreal, Quebec, H2H2H2</userAddress>
   </user>
+<<<<<<< Updated upstream
   <user>
     <userFirstName>Layla</userFirstName>
     <userLastName>Stone</userLastName>
@@ -42,4 +47,6 @@
     <userPasssword>Test</userPasssword>
     <userAddress>777 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
   </user>
+=======
+>>>>>>> Stashed changes
 </users>
