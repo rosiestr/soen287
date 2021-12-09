@@ -22,6 +22,7 @@ if (isset($_POST['Login'])) {
     for ($i=0; $i < count($userdata->user) ; $i++) {
       if ($userdata->user[$i]->userEmail==$email && $userdata->user[$i]->userPasssword==$password) {
         $loggedUser=$userdata->user[$i]->userFirstName;
+        $i=count($userdata->user);
       }
     }
 
