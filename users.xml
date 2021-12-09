@@ -42,4 +42,11 @@
     <userPasssword>Test</userPasssword>
     <userAddress>777 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
   </user>
+  <user>
+    <userFirstName>Kaleb</userFirstName>
+    <userLastName>Nord</userLastName>
+    <userEmail>kalebnord@company.com</userEmail>
+    <userPasssword>TestMe2</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H3H3H3</userAddress>
+  </user>
 </users>

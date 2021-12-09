@@ -1,11 +1,6 @@
 <?php
 session_start();
  ?>
-<<<<<<< Updated upstream
- 
-=======
-
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,15 +35,11 @@ session_start();
     </nav>
     <!--end of html for first row of topbar -->
     <h1>Orders List</h1>
-<<<<<<< Updated upstream
     <?php
     if ($_SESSION['backFirstName']) {
       echo "<h5>Hello, ".$_SESSION['backFirstName']." </h5>";
     }
      ?>
-=======
-  <h5>Hello, Admin</h5>
->>>>>>> Stashed changes
     <article class="container-fluid">
         <div style="overflow-x: auto">
             <table class="product-table no-over-table" id="orders-table">
