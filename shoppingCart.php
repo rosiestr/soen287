@@ -51,7 +51,7 @@ include 'includes/frontstoreHead.php'?>
     <form id = "order-details" method="post" action="action/saveOrderToXML.php"> 
       <input type = "hidden" name = "order-items" class = "order-items" value = "test" id = "order-items-saved"> 
       <input type = "hidden" name = "order-total" class = "order-total" value = "test" id = "order-total-saved"> 
-      <input type = "hidden" name = "user-email" class = "user-email" value = $email > 
+      <input type = "hidden" name = "user-email" class = "user-email" value = <?php echo $email ?> > 
       <?php echo $email ?>
     </form>
     <br> 
