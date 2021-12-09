@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<userdata>
 <users>
-<user>
-<firstName>Maroua</firstName><lastName>krim</lastName><useremail>marouakrim@outlook.com</useremail><passWord>d9308f32f8c6cf370ca5aaaeafc0d49b</passWord><street>1111 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode>
-</user>
-<user>
-<firstName>Test</firstName><lastName>Me</lastName><useremail>test@company.com</useremail><passWord>202cb962ac59075b964b07152d234b70</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode>
-</user>
-<user>
-<firstName>John</firstName><lastName>doe</lastName><useremail>john@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode>
-</user>
-<user>
-<firstName>Layla</firstName><lastName>stone</lastName><useremail>laylastone@test.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>2222 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode>
-</user> 
-<user><firstName>MARIA</firstName><lastName>bURKINSHAW</lastName><useremail>MPBURKINSHAW@GMAIL.COM</useremail><passWord>1614903a2f6281603e6f9a72fb79f614</passWord><street>8450 Avenue Stuart</street><city>Montréal</city><province>Quebec</province><zipcode>H3N 2S3</zipcode></user><user><firstName>Stayc</firstName><lastName>girls</lastName><useremail>staycgirls@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>3333 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user><user><firstName>kaleb</firstName><lastName>nord</lastName><useremail>kalebnord@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>3333 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user><user><firstName>kaleb</firstName><lastName>nord</lastName><useremail>kalebnord@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>3333 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user><user><firstName>ronald</firstName><lastName>snow</lastName><useremail>ronaldsnow@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>3333 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user><user><firstName>Random</firstName><lastName>name</lastName><useremail>randomname@company.com</useremail><passWord>4a7d1ed414474e4033ac29ccb8653d9b</passWord><street>3333 concordia street</street><city>Montreal</city><province>Quebec</province><zipcode>H1H1H1</zipcode></user></users> 
-</userdata>
+  <user>
+    <userFirstName>Maroua</userFirstName>
+    <userLastName>Krim</userLastName>
+    <userEmail>marouakrim@outlook.com</userEmail>
+    <userPasssword>12345</userPasssword>
+    <userAddress>1111 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>Hilary</userFirstName>
+    <userLastName>Fotso</userLastName>
+    <userEmail>hilary.fotso22@gmail.com</userEmail>
+    <userPasssword>ILovePHP</userPasssword>
+    <userAddress>123 Canada Street, Ottawa, Ontario, K1K1K1</userAddress>
+  </user>
+  <user>
+    <userFirstName>John</userFirstName>
+    <userLastName>Doe</userLastName>
+    <userEmail>john@company.com</userEmail>
+    <userPasssword>TestMe</userPasssword>
+    <userAddress>2222 concordia street, Montreal, Quebec, H2H2H2</userAddress>
+  </user>
+  <user>
+    <userFirstName>Layla</userFirstName>
+    <userLastName>Stone</userLastName>
+    <userEmail>laylastone@test.com</userEmail>
+    <userPasssword>Test2</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>Random</userFirstName>
+    <userLastName>Name</userLastName>
+    <userEmail>randomname@company.com</userEmail>
+    <userPasssword>Test3</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>David</userFirstName>
+    <userLastName>Aluma</userLastName>
+    <userEmail>david@gmail.com</userEmail>
+    <userPasssword>Test</userPasssword>
+    <userAddress>777 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
+  </user>
+</users>

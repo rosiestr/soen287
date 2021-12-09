@@ -1,50 +1,50 @@
 <?php
 
-if(isset($_POST['Register']))
-{
+$xml = new DOMDocument("1.0","UTF-8");
+$xml -> formatOutput = true;
+$xml -> preserveWhiteSpace = false;
+$xml->load("users.xml");
 
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $useremail = $_POST['emailAddress'];
-    $password = $_POST['passWord'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
-    $province = $_POST['province'];
-    $zipcode = $_POST['zipcode'];
-
-
-    // $xmltemp = file_get_contents('users.xml');
-    // if(strpos($xmltemp,$useremail)!==false)
-    // {
-    //     echo 'Errooooor';
-    // }
-
-
-         $file = "users.xml";
-         $simplexml = simplexml_load_file($file);
-
-        $users = $simplexml->users; 
-        $user= $users->addChild('user');
-
-        $user->addChild('firstName',$firstName);
-        $user->addChild('lastName',$lastName);
-        $user->addChild('useremail',$useremail);
-        $user->addChild('passWord',md5($password));
-        $user->addChild('street',$street);
-        $user->addChild('city',$city);
-        $user->addChild('province',$province);
-        $user->addChild('zipcode',$zipcode);
-
-        $simplexml->asXML($lastName . $firstName . '.xml');
-        $simplexml->asXML($file);
-        header("Location: " .$lastName . $firstName . ".xml");
-        die;
-        //header("Location: ".$_SERVER['HTTP_REFERER']);
-        //header("Location: random.html");
-
-
-    
-
+if (!$xml) {
+  $users = $xml->createElement("users");
+  $xml->appendChild($users);
+}
+else {
+  $users=$xml->firstChild;
 }
 
-?>
+    if (isset($_POST['Register'])) {
+
+      $firstName = $_POST['firstName'];
+      $lastName = $_POST['lastName'];
+      $emailAddress = $_POST['emailAddress'];
+      $password = $_POST['passWord'];
+
+      $address = $_POST['street'].", ".$_POST['city'].", ".$_POST['province'].", ".$_POST['zipcode'];
+
+      $emp=$xml->createElement("user");
+      $users->appendChild($emp);
+
+      $fName=$xml->createElement("userFirstName",$firstName);
+      $emp->appendChild($fName);
+
+      $lName=$xml->createElement("userLastName",$lastName);
+      $emp->appendChild($lName);
+
+      $email=$xml->createElement("userEmail",$emailAddress);
+      $emp->appendChild($email);
+
+      $passWord=$xml->createElement("userPasssword",$password);
+      $emp->appendChild($passWord);
+
+      $fullAddress=$xml->createElement("userAddress",$address);
+      $emp->appendChild($fullAddress);
+
+      $xml->save("users.xml") or die("Error, Unable to creste XML File");
+
+      session_start();
+    $_SESSION['registeredFirstName'] = $firstName;
+    header('Location: index.php');
+    exit();
+    }
+ ?>

@@ -42,7 +42,7 @@
 
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
       <!--first row of navigation bar-->
-  
+
       <!-- only appears on small screens -->
       <section class="row pb-2 d-md-none">
         <div class = "col-3">
@@ -87,9 +87,9 @@
           </div>
         </div>
       </section>
-  
+
     </nav> <!-- end of navigation-->
-    
+
     <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
@@ -122,7 +122,7 @@
     <section class="container-fluid" id="main">
       <div class="row">
         <main class="col-xl-10" id="userform">
-          <form class="" action="index.html" method="post">
+          <form class="" action="loginProcess.php" method="post">
             <div class="userdiv" id="loginEmail">
               <label for="emailAddress">Email</label>
                 <input type="email"
@@ -160,12 +160,12 @@
           </div>
     </section>
     <!-- STICKY FOOTER-->
-    <footer> 
+    <footer>
       <div class = "outlined-t outlined-b greybg px-3">
         <a href = "/contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
         <a href = "/map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
-    </footer> 
+    </footer>
     <!--end of sticky footer -->
     <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
@@ -211,7 +211,7 @@
         // Get the button, and when the user clicks on it, execute myFunction
         document.getElementById("phoneBtn").onclick = function() {dropContent()};
         document.getElementById("compBtn").onclick = function() {dropContent()};
-    
+
         /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
         function dropContent() {
             document.getElementById("myDropdown").classList.toggle("show");
