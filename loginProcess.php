@@ -1,4 +1,4 @@
-<?php
+<?php 
 $userdata=simplexml_load_file("users.xml");
 $error = false;
 $loggedUser;
@@ -13,9 +13,9 @@ if (isset($_POST['Login'])) {
  }
 
  if ($email=="admin@soen287.com" && $password=="Admin") {
-    session_start();
+     session_start();
     $_SESSION['backFirstName'] = "Admin";
-  header('Location: ordersList.php');
+    header('Location: ordersList.php');
   exit();
   }
   else {
@@ -23,6 +23,7 @@ if (isset($_POST['Login'])) {
       if ($userdata->user[$i]->userEmail==$email && $userdata->user[$i]->userPasssword==$password) {
         $loggedUser=$userdata->user[$i]->userFirstName;
         $i=count($userdata->user);
+        break; 
       }
     }
 
@@ -31,12 +32,14 @@ if (isset($_POST['Login'])) {
       //echo "Invalid email and/or password";
     }
     else {
-      //echo $loggedUser;
       session_start();
+      //echo $loggedUser; 
       $_SESSION['loggedFirstName'] = $loggedUser;
+      $_SESSION['loggedEmail'] = $email; 
+     
       //echo $_SESSION['firstName'] ;
+
       header('Location: index.php');
-      exit();
     }
   }
 }

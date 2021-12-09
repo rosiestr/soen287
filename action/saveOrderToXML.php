@@ -1,12 +1,10 @@
 <?php
-setcookie('logged-in', 'true', time() + (86400 * 30), "/"); 
-setcookie('user-email', 'marouakrim@outlook.com', time() + (86400 * 30), "/" ); 
-if (!isset($_COOKIE['user-email'])) {
+if ($_POST["user-email"] == "unknown") {
     setcookie('logged-in', 'true',  time() - 1, "/");
     header("Location:" . $_SERVER['HTTP_REFERER']);
 }
 else {  
-    $email = $_COOKIE['user-email']; 
+    $email = $_POST["user-email"]; 
     $file = "../users.xml"; 
     $simplexml = simplexml_load_file($file) or die("Unable to open file"); 
     $name = "Default Name"; $userAddress = "Default Address"; 

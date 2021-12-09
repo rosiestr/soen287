@@ -1,4 +1,10 @@
-<?php include 'includes/frontstoreHead.php'?>
+<?php session_start();
+print_r($_SESSION);
+if (isset($_SESSION["loggedEmail"])) {
+  $email = $_SESSION["loggedEmail"];
+  } 
+  else $email = "unknown"; 
+include 'includes/frontstoreHead.php'?>
 <title>Kalamari Market: Shopping Cart</title>
     <script src = 'scripts/myCart.js' async></script>
   </head>
@@ -45,6 +51,8 @@
     <form id = "order-details" method="post" action="action/saveOrderToXML.php"> 
       <input type = "hidden" name = "order-items" class = "order-items" value = "test" id = "order-items-saved"> 
       <input type = "hidden" name = "order-total" class = "order-total" value = "test" id = "order-total-saved"> 
+      <input type = "hidden" name = "user-email" class = "user-email" value = $email > 
+      <?php echo $email ?>
     </form>
     <br> 
     <!-- STICKY FOOTER-->
