@@ -37,9 +37,10 @@ if (isset($_POST['Login'])) {
      
       //echo $_SESSION['firstName'] ;
       //ADDED THIS FOR TESTING... TOOK AWAY THE HEADER FOR TESTING 
-      echo "TESTING FOR SESSION EMAIL SAVED? ";
-      echo $_SESSION['loggedEmail']; 
-      //header('Location: index.php');
+      //echo "TESTING FOR SESSION EMAIL SAVED? ";
+      //echo $_SESSION['loggedEmail']; 
+      header('Location: index.php');
+      exit();
     }
   }
 }
