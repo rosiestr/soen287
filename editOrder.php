@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,7 +23,7 @@
     <link rel="stylesheet" href="backstoreStyles.css">
     <script src="orderHandler/editOrderListener.js" async></script>
     <!--title to appear in tab-->
-    <title>Edit Order</title> 
+    <title>Edit Order</title>
 </head>
 <body id = "editOrder">
 
@@ -31,21 +39,26 @@
     </nav>
     <!--HEADER-->
     <h1>Edit Order</h1>
+    <?php
+    if ($_SESSION['backFirstName']) {
+      echo "<h6>Hello, ".$_SESSION['backFirstName']." </h6>";
+    }
+     ?>
     <!--MAIN-->
     <section class = "container d-flex justify-content-center py-3 bluebg">
         <!--CUSTOMER INFO AND SHIPPING FIELDS-->
-        <form> 
-            <?php include 'action/loadOrderToEdit.php' ?> 
-            
+        <form>
+            <?php include 'action/loadOrderToEdit.php' ?>
+
             <!--SAVE BUTTON-->
-            <div class = "d-flex justify-content-end row"> 
+            <div class = "d-flex justify-content-end row">
                 <input type ="submit" id = "save" name = "save" value="SAVE CHANGES">
             </div>
         </form>
     </section>
     <!--FOOTER-->
     <footer><a href="index.html">Back to Front Store</a></footer>
-    
+
 
     <!-- Bootstrap Bundle with Popper - provided by https.getbootstrap.com -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

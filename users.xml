@@ -36,17 +36,24 @@
     <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
   </user>
   <user>
-    <userFirstName>David</userFirstName>
-    <userLastName>Aluma</userLastName>
-    <userEmail>david@gmail.com</userEmail>
-    <userPasssword>Test</userPasssword>
-    <userAddress>777 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
-  </user>
-  <user>
     <userFirstName>Kaleb</userFirstName>
     <userLastName>Nord</userLastName>
     <userEmail>kalebnord@company.com</userEmail>
     <userPasssword>TestMe2</userPasssword>
     <userAddress>3333 concordia street, Montreal, Quebec, H3H3H3</userAddress>
+  </user>
+  <user>
+    <userFirstName>Daniel</userFirstName>
+    <userLastName>Mars</userLastName>
+    <userEmail>daniel@company.com</userEmail>
+    <userPasssword>test2.0</userPasssword>
+    <userAddress>555 Canada Street, Montreal, Quebec, H5H5H5</userAddress>
+  </user>
+  <user>
+    <userFirstName>David</userFirstName>
+    <userLastName>Aluma</userLastName>
+    <userEmail>david@gmail.com</userEmail>
+    <userPasssword>Test</userPasssword>
+    <userAddress>77 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
   </user>
 </users>

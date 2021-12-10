@@ -1,36 +1,43 @@
-<?php 
-$orderID; 
-$orderItems; 
+<?php
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
+
+$orderID;
+$orderItems;
 if (isset($_POST['orderToEdit'])){
-    $orderID = $_POST['orderToEdit'];  
+    $orderID = $_POST['orderToEdit'];
     $xml = simplexml_load_file("xml/orders.xml") or die("Error: Cannot create object");
     foreach($xml->orders->order as $order) {
         if ((strcmp(trim($order['id']), trim($orderID)) == 0)){
-            $name = $order->name; 
-            $orderItems = $order->cartItems; 
-            $orderTotal = $order->cartTotal; 
-            $orderDiscount = $order->orderDiscount; 
+            $name = $order->name;
+            $orderItems = $order->cartItems;
+            $orderTotal = $order->cartTotal;
+            $orderDiscount = $order->orderDiscount;
             $shippingAddress = $order->shippingAddress;
-            $email = $order->email; 
-            $address = $order->billingAddress; 
-            break; 
-        }      
+            $email = $order->email;
+            $address = $order->billingAddress;
+            break;
+        }
     }
-    $orderArray = json_decode($orderItems, true); 
-    $checked = ""; 
+    $orderArray = json_decode($orderItems, true);
+    $checked = "";
     if ($shippingAddress == "") {
-        $shippingAddress = $address; 
+        $shippingAddress = $address;
     }
-} 
+}
 else {
-    $name = ""; 
-    $email = ""; 
-    $address = ""; 
-    $shippingAddress = ""; 
-    $orderID = uniqid("#"); 
+    $name = "";
+    $email = "";
+    $address = "";
+    $shippingAddress = "";
+    $orderID = uniqid("#");
     $orderTotal = 0.00;
-    $orderArray = []; 
-    $orderDiscount = 0; 
+    $orderArray = [];
+    $orderDiscount = 0;
 }
 
 echo "<!DOCTYPE HTML>
@@ -50,7 +57,7 @@ echo "<!DOCTYPE HTML>
         <link rel='stylesheet' href='../backstoreStyles.css'>
         <script src='../orderHandler/editOrderListener.js' async></script>
         <!--title to appear in tab-->
-        <title>Edit Order</title> 
+        <title>Edit Order</title>
         </head>
         <body id = 'editOrder'>
 
@@ -66,45 +73,46 @@ echo "<!DOCTYPE HTML>
         </nav>
         <!--HEADER-->
         <h1>Edit Order</h1>
+        <h6>Hello, ".$_SESSION['backFirstName']." </h6>
         <!--MAIN-->
         <section class = 'container d-flex justify-content-center py-3 bluebg'>
             <!--CUSTOMER INFO AND SHIPPING FIELDS-->
-    <form method = 'post' action = 'updateOrderInXML.php' name = 'updateOrderInfo'> 
+    <form method = 'post' action = 'updateOrderInXML.php' name = 'updateOrderInfo'>
 
     <input type = 'hidden' name = 'orderID' value = '$orderID'>
     <div class = 'row'>
     <!--CUSTOMER NAME, EMAIL, PHONE -->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='name'><b>Customer Name</b></label>
-        <input type='text' id='name' name='name' value = '$name' class = 'editOrder' required> 
+        <input type='text' id='name' name='name' value = '$name' class = 'editOrder' required>
         <label for='email'><b>Email</b></label>
-        <input type = 'email' id='email' name='email' value = '$email' class = 'editOrder' required> 
+        <input type = 'email' id='email' name='email' value = '$email' class = 'editOrder' required>
     </div>
     <!--CUSTOMER BILLING ADDRESS-->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for= 'billingAddress'><b>Billing Address</b></label>
         <textarea id = 'billingAddress' name = 'billingAddress' cols = '20' rows='6'
         required>$address</textarea>
-    </div> 
+    </div>
     <!--CUSTOMER SHIPPING ADDRESS-->
     <div class = 'col-sm-4 d-flex flex-column'>
         <label for='shippingAddress'><b>Shipping Address</b></label>
         <textarea id = 'shippingAddress' name = 'shippingAddress' cols ='20' rows='6'
         required>$shippingAddress
-        </textarea>              
+        </textarea>
         <span class = 'd-flex align-items-center'>
             <input type = 'checkbox' id = 'sameBillingAddress' name = 'sameAddress'>
             <label for='sameAddress'>Same as billing address</label>
-        </span>                         
+        </span>
         <span class = 'd-flex align-items-center'>
             <input type = 'checkbox' id = 'forPickup' name = 'pickup'>
             <label for='pickup'>Order for pickup</label>
-        </span>      
-    </div> 
+        </span>
+    </div>
 </div>
 
-</section> 
-<section class = 'container pb-3'>  
+</section>
+<section class = 'container pb-3'>
 <!--TABLE WITH ORDER ITEMS AND COST-->
 
     <div class = 'table-responsive row'>
@@ -117,15 +125,15 @@ echo "<!DOCTYPE HTML>
                     <th scope = 'col'>Discount (%)</th>
                     <th scope = 'col'></th>
                     <th scope = 'col'>Total</th>
-                    <th scope = 'col'><i class='far fa-trash-alt'></i></th> 
+                    <th scope = 'col'><i class='far fa-trash-alt'></i></th>
                 </tr>
             </thead>
-        <tbody class = 'table-body'>"; 
+        <tbody class = 'table-body'>";
     if ($orderArray != null){
         foreach($orderArray as $key => $value) {
-            $itemName = $orderArray[$key]["name"]; 
-            $price = $orderArray[$key]["price"]; 
-            $quantity = $orderArray[$key]["quantity"]; 
+            $itemName = $orderArray[$key]["name"];
+            $price = $orderArray[$key]["price"];
+            $quantity = $orderArray[$key]["quantity"];
 
             echo "<tr class = 'item old'>
             <td scope = 'row' class = 'item-name'>
@@ -141,14 +149,14 @@ echo "<!DOCTYPE HTML>
                 <input type ='button' id = 'apply' name = 'apply' value = 'APPLY' class = 'apply'>
             </td>
             <td class = 'item-total'>
-            </td> 
+            </td>
             <td>
             <button class = 'deleteItem button1'>x</i></button>
             </td>
             </tr> ";
         }
     }
-    
+
 
 echo "
     </tbody>
@@ -203,16 +211,16 @@ echo "
                 <td scope = 'row' colspan='2'></td>
                 <th colspan = '2'>Order Total: </th>
                 <th id = 'orderTotal' class = 'cart-total'></b></th>
-                <input type = 'hidden' name = 'cart-total' class = 'cart-total-input'> 
+                <input type = 'hidden' name = 'cart-total' class = 'cart-total-input'>
                 <th></th>
             </tr>
-            <tr></tr> 
+            <tr></tr>
         </tfoot>
     </table>
 </div>
-<input type = 'hidden' class = 'cart-items-saved' name = 'cart-items-saved'> 
+<input type = 'hidden' class = 'cart-items-saved' name = 'cart-items-saved'>
 <!--SAVE BUTTON-->
-<div class = 'd-flex justify-content-end row'> 
+<div class = 'd-flex justify-content-end row'>
     <input type ='submit' id = 'save' name = 'save' value='SAVE CHANGES'>
 </div>
 </form>
@@ -225,4 +233,4 @@ echo "
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ' crossorigin='anonymous'></script>
 </body>
 
-</html>"; 
+</html>";

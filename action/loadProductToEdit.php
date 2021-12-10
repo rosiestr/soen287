@@ -1,28 +1,35 @@
-<?php 
+<?php
+
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
 
 if (isset($_POST['productToEdit'])){
-    $productName = $_POST['productToEdit'];  
+    $productName = $_POST['productToEdit'];
     $json =file_get_contents(".\json\productDB.json") or die("Error: Cannot create object");
     $array = json_decode($json,true);
     foreach($array['productTable'] as $product) {
         if ((strcmp(trim($product['productName']), trim($productName)) == 0)){
-            $image = $product['productImage'];   
-            $name = $product['productName']; 
-            $price = $product['productPrice']; 
-            $inventory = $product['productInventory']; 
+            $image = $product['productImage'];
+            $name = $product['productName'];
+            $price = $product['productPrice'];
+            $inventory = $product['productInventory'];
             $size = $product['productSize'];
-            $type = $product['productType']; 
-            break; 
+            $type = $product['productType'];
+            break;
         }
-    } 
+    }
 }
 else {
-    $image = "";   
-    $name = ""; 
-    $price = 0.00; 
-    $inventory = 0; 
+    $image = "";
+    $name = "";
+    $price = 0.00;
+    $inventory = 0;
     $size = [];
-    $type = []; 
+    $type = [];
 }
 
 echo "<!DOCTYPE html>
@@ -58,6 +65,7 @@ echo "<!DOCTYPE html>
     <!--end of html for first row of topbar -->
 <main>
     <h1>Edit Product</h1>
+    <h6>Hello, ".$_SESSION['backFirstName']." </h6>
     <main>
 
         <form class='product-form'>
@@ -75,19 +83,19 @@ echo "<!DOCTYPE html>
                 <label>Inventory</label>
                 <input type='text' name='productInventory' value= $inventory>
             </div>
-        
-        
+
+
             <div>
                 <label>Types (comma separated)</label>
                 <input type='text' name='productType' value=$name>
             </div>
-        
+
 
             <div>
                 <label>Sizes (comma separated)</label>
                 <input type='text' name='productSize' value=$name>
             </div>
-        
+
             <div >
                 <label>Product Description</label>
                 <textarea></textarea>
@@ -97,7 +105,7 @@ echo "<!DOCTYPE html>
                 <label>Add Image</label>
                 <input type='file'>
                 </div>
-        
+
             <div>
             <input type='submit' value='Save'>
             </div>

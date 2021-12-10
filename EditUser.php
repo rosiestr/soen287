@@ -1,10 +1,19 @@
+<?php
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
+ ?>
+
  <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
     <head>
         <!-- Required meta tags for Bootstrap, provided by https.getbootstrap.com-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      
+
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <!-- FontAwesome CSS - for icons -->
@@ -22,20 +31,25 @@
                     <!--first row of navigation bar-->
                     <section>
                         <!-- <div><a class="active" href="/index.html">Home</a></div> -->
-                        <div><a href="products.html">Products</a></div>
-                        <div><a href="ordersList.html">Orders</a></div>
-                        <div><a href="UserList.html">Users</a></div>
+                        <div><a href="products.php">Products</a></div>
+                        <div><a href="ordersList.php">Orders</a></div>
+                        <div><a href="UserList.php">Users</a></div>
                         <img src="images/KMicon.ico">
                     </section>
                 </nav>
                     <!--end of html for first row of topbar -->
         <main>
-        
+
           </article>
             <h1> Edit/Add a User Profile</h1>
+            <?php
+            if ($_SESSION['backFirstName']) {
+              echo "<h6>Hello, ".$_SESSION['backFirstName']." </h6>";
+            }
+             ?>
             <div class="EDIT_DIV">
 
-           
+
             <form  method="POST" name="edit">
             Full Name: <input type="addName" name="name" class="user" id="fullName" placeholder="Full Name" required >
             Email: <input type="addEmail" name="email" class="user" id="fullEmail" placeholder="example@example.com" required >
@@ -64,7 +78,7 @@
                         <a href="#">
                             <a href="EditUser.php"> <button class="button button1" name= "add-btn">Add <i class="fas fa-plus-square"></i></button></a>
                         </a>
-  
+
                     </div> -->
             </form>
             <script>
@@ -77,7 +91,7 @@
                   name: document.edit.name.value ,
                   email: document.edit.email.value
                  }
-                
+
                 users.push(user);
                 document.forms[0].reset();
                 var name= document.edit.name.value;
@@ -90,7 +104,7 @@
                 var td3 = tr.appendChild(document.createElement('td'));
                 var td4 = tr.appendChild(document.createElement('td'));
 
-                 
+
                 td1.innerHTML=name;
                 td2.innerHTML=email;
                 td3.innerHTML='<input type="button" name="del" value="Delete" onclick="deleteUser(this);" class="btn btn-danger">'
@@ -101,19 +115,19 @@
                  localStorage.setItem('UserList',JSON.stringify(users));
 
               }
-             
+
               function UpdateUser(user){
-                var name=document.edit.name.value; 
-                var email=document.edit.email.value; 
+                var name=document.edit.name.value;
+                var email=document.edit.email.value;
                 var u = user.parentNode.parentNode;
                 var tr = document.createElement('tr');
-                
+
                 var td1 = tr.appendChild(document.createElement('td'));
                 var td2 = tr.appendChild(document.createElement('td'));
                 var td3 = tr.appendChild(document.createElement('td'));
                 var td4 = tr.appendChild(document.createElement('td'));
-                
-                
+
+
                 td1.innerHTML='<input type="addName" name="name1">';
                 td2.innerHTML='<input type="addEmail" name="email1">';
                 td3.innerHTML='<input type="button" name="del" value="Delete" onclick="deleteUser(this);" class="btn btn-danger">'
@@ -125,17 +139,17 @@
               }
 
               function addUpdateUser(user){
-                var name=document.edit.name1.value; 
-                var email=document.edit.email1.value; 
+                var name=document.edit.name1.value;
+                var email=document.edit.email1.value;
                 var u2 = user.parentNode.parentNode;
                 var tr = document.createElement('tr');
-                
+
                 var td1 = tr.appendChild(document.createElement('td'));
                 var td2 = tr.appendChild(document.createElement('td'));
                 var td3 = tr.appendChild(document.createElement('td'));
                 var td4 = tr.appendChild(document.createElement('td'));
-                
-                
+
+
                 td1.innerHTML=name;
                 td2.innerHTML=email;
                 td3.innerHTML='<input type="button" name="del" value="Delete" onclick="deleteUser(this);" class="btn btn-danger">'
@@ -153,19 +167,19 @@
             </script>
 
                   <!-- <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left"> -->
-                    <!-- <h4>Jackie Frost <br> jakie23@gmail.com </h4><br> 
+                    <!-- <h4>Jackie Frost <br> jakie23@gmail.com </h4><br>
                         <div class="user" id="registerFirst">
                            <label class="edit"for="first">Old Name: </label>
                             <input type="street"  name="first" class="user" required>
                         </div>
                            <br>
-                                  
+
                             <div class="user" id="registerFirst">
                               <label  class="edit" for="first">*New Name: </label>
                                 <input type="street" name="first"class="user" required>
                             </div>
                             <br>
-                                  
+
                             <div class="user" id="registerEmail">
                               <label class="edit" for="emailAddress"> Old Email: </label>
                               <input type="street" name="first" class="user"required>
@@ -231,17 +245,17 @@
                                       <input type="zip" class="user" id="inputZip"required>
                                 </div>
                                       <br>
-                                  
+
                                 <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                                 <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
                               </a>
-                            
+
 
             </div> -->
             <!-- <div class="EDIT_DIV">
 
                   <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left"></th>
-                          <h4>Sophie McKnight <br> sophie@gmail.com</h4> <br> 
+                          <h4>Sophie McKnight <br> sophie@gmail.com</h4> <br>
                             <div class="user" id="registerFirst">
                                 <label class="edit"for="first">Old Name: </label>
 
@@ -252,7 +266,7 @@
                           </div>
                               </div>
                               <br>
-                              
+
                               <div class="user" id="registerFirst">
                                 <label class="edit" for="first">*New Name: </label>
                                 <input type="street"
@@ -261,7 +275,7 @@
                                     required>
                               </div>
                               <br>
-                              
+
                               <div class="user" id="registerEmail">
                                 <label class="edit" for="emailAddress"> Old Email: </label>
                                 <input type="street"
@@ -355,21 +369,21 @@
                                          required>
                                   </div>
                                   <br>
-                        
+
                             <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
                           </a> -->
-                        
+
                         <!--      Status</th> -->
-                    
-                
+
+
 
              <!-- </div>
             <div class="EDIT_DIV">
-              
+
 
                            <img src = "images/km.1.png" class="img-banner" width="150" height="90" align="left"></th>
-                         <h4> Edward Eleric <br> edward@gmail.com </h4> <br> 
+                         <h4> Edward Eleric <br> edward@gmail.com </h4> <br>
                             <div class="user" id="registerFirst">
                                 <label class="edit" for="first">Old Name: </label>
 
@@ -380,7 +394,7 @@
                           </div>
                               </div>
                               <br>
-                              
+
                               <div class="user" id="registerFirst">
                                 <label class="edit" for="first">*New Name: </label>
                                 <input type="street"
@@ -389,7 +403,7 @@
                                     required>
                               </div>
                               <br>
-                              
+
                               <div class="user" id="registerEmail">
                                 <label class="edit" for="emailAddress"> Old Email: </label>
                                 <input type="street"
@@ -485,7 +499,7 @@
                                   <br>
                             <button class="button button2">Edit <i class="fas fa-edit"></i></button>
                             <button class="button button2">Delete <i class="fas fa-trash-alt"></i></button>
-                          
+
             </div> -->
         </main>
 
@@ -514,10 +528,10 @@
         <br>
         <br>
         <br>
-        
 
-        
-        
+
+
+
             <footer><a href="index.html">Back to Front Store</a></footer>
 
       </body>
