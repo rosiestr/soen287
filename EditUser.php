@@ -93,7 +93,7 @@ session_start();
                  }
 
                 users.push(user);
-                document.forms[0].reset();
+                //document.forms[0].reset();
                 var name= document.edit.name.value;
                 var email= document.edit.email.value;
 
