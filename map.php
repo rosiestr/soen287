@@ -4,9 +4,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required meta tags for Bootstrap, provided by https.getbootstrap.com-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -23,21 +23,21 @@ session_start();
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="/images/KMicon.ico" />
-
-    <link rel="stylesheet" href="/frontStyles.css" />
-    <script src = "../description.js" async></script>
-    <script src = "../propertiesChange.js" async></script>
-    <script src = "addToCart.js" async></script>
-
-    <title>Kalamari Market: Frozen Mango</title>
+    <link rel="shortcut icon" href="images/KMicon.ico" />
+    <!-- css for index.html -->
+    <link rel="stylesheet" href="frontStyles.css" />
+    <!--title to appear in tab-->
+    <title>Kalamari Market: Locations</title>
   </head>
+
   <body>
     <!-- HEADER -->
     <header class="container-fluid">
+      <!--container that fills width of page-->
       <div class="row">
         <div class="col-md-auto">
-          <img class="img-fluid" src="../images/header.png" alt = "KALAMARI MARKET"/>
+          <!--column width is size of its contents-->
+          <img class="img-fluid" src="images/header.png" alt = "KALAMARI MARKET"/>
         </div>
         <div class="col d-flex align-items-center">
           <?php
@@ -51,38 +51,38 @@ session_start();
         </div>
       </div>
     </header>
-
-    <!--NAVIGATION BAR -->
+    <!--NAVIGATION-->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
       <!--first row of navigation bar-->
 
       <!-- only appears on small screens -->
       <section class="row pb-2 d-md-none">
-        <div class = "col-3">
-          <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
-        </div>
-        <div class = "col-2">
-          <button><a href="../index.php"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
-        </div>
-        <div class = "col-2">
-          <button><a href="../shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
-        </div>
-        <div class = "col-2">
-          <button><a href="../logout.php"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
-        </div>
+          <div class = "col-3">
+              <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+          </div>
+          <div class = "col-2">
+              <button><a href="index.php"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+          </div>
+          <div class = "col-2">
+              <button><a href="shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+          </div>
+          <div class = "col-2">
+              <button><a href="logout.php"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+          </div>
       </section>
       <!-- only appears on medium/large screens -->
       <section class = "d-none d-md-block">
-        <div class = "row">
-          <div class = "col-md-auto">
-            <a href="../shoppingCart.php"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
+          <div class = "row">
+              <div class = "col-md-auto">
+              <a href="shoppingCart.php"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
+              </div>
+              <div class= "col d-flex justify-content-center align-items-center">
+              <h4>MEAT & POULTRY</h4>
+              </div>
+              <div class="col-md-auto d-flex justify-content-end">
+              <a href="logout.php"><button>Logout  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+              </div>
           </div>
-          <div class= "col d-flex justify-content-center align-items-center kmbg">
-          </div>
-          <div class="col-md-auto d-flex justify-content-end">
-            <a href="../logout.php"><button>Logout  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-          </div>
-        </div>
       </section>
       <!--end of html for first row of topbar -->
       <!--second row of navigation, doesn't appear on small screens-->
@@ -92,74 +92,51 @@ session_start();
             <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
           </div>
           <div class = "col">
-            <a href = "../index.php"><i class="fas fa-home"></i> HOME</a> <!--home button-->
+            <a href = "index.php"><i class="fas fa-home"></i> HOME</a> <!--home button-->
           </div>
         </div>
       </section>
 
     </nav> <!-- end of navigation-->
 
-      <!-- SIDEBAR -->
+    <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
-          <li><a href="../produce.php">Fruits and Vegetables</a></li>
-          <li><a href="../dairy.php">Dairy and Eggs</a></li>
-          <li><a href="../meat.php">Meat & Poultry</a></li>
-          <li><a href="../bakery.php">Bakery Products</a></li>
-          <li><a href="../seafood.php">Fish & Seafood</a></li>
-          <li><a href="../beverages.php">Beverages</a></li>
-          <li><a href="../frozen.php">Frozen</a></li>
-          <li><a href="../household.php">Household items</a></li>
+            <li><a href="produce.php">Fruits and Vegetables</a></li>
+            <li><a href="dairy.php">Dairy and Eggs</a></li>
+            <li><a href="meat.php">Meat & Poultry</a></li>
+            <li><a href="bakery.php">Bakery Products</a></li>
+            <li><a href="seafood.php">Fish & Seafood</a></li>
+            <li><a href="beverages.php">Beverages</a></li>
+            <li><a href="frozen.php">Frozen</a></li>
+            <li><a href="household.php">Household items</a></li>
         </ul>
       </nev>
     </aside>
 
-    <!-- MAIN -->
-    <article class="container-fluid">
-      <div class = "row">
-        <section class = "col-sm-6 d-flex align-items-center">
-          <img
-            src="/images/Frozen/frozenMango.jpg"
-            alt="Frozen Mango"
+    <!--WRAPPER-->
+    <section class="container-fluid">
+      <div class="row">
+        <aside class="col-xl-1 gradientbg"></aside>
+        <!-- MAIN -->
+        <main class="col-xl-10 d-flex justify-content-center py-5">
+          <!--Once we make our site dynamic, I want to try to put in a maps API-->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.1591538028056!2d22.94827381469676!3d40.58224225348183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a83ed8e27f5757%3A0x7ed15a51b436d96a!2sMARKET%20IN!5e0!3m2!1sen!2sca!4v1633200735051!5m2!1sen!2sca"
+            width="600"
             height="450"
-            class="img-fluid"
-          />
-        </section>
-
-        <section class="col-sm-6">
-          <h4>IRRESISTIBLES</h4>
-          <h3>Frozen Mango Chunks</h3>
-          <p><strong style="font-size: larger">$4.99</strong> (600g)</p>
-          <hr />
-          <p>Sold by the packed</p>
-          <p>Curbside pickup eligible</p>
-          <p>Free standard shipping</p>
-          <button class="description" onclick="loadDescription()">
-            <img src="../images/desc.png" alt="list" width="18" />
-            More Description
-          </button>
-          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-          <br />
-          <br />
-          <form action="/action_page.php">
-            <label for="quantity">Enter Desired Quantity :</label><br />
-            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-            <br />
-          </form>
-          <br />
-          <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
-        <input type="text" name="TOTAL" id="TOTAL" readonly/>
-
-        <br /><br>
-        <label>Get this item with your grocery order:</label>
-        <br>
-        <button class="cart">Add To Cart</button>
-          <br /><br /><br />
-        </section>
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </main>
+        <!--end of main content-->
+        <aside class="col-xl-1 gradientbg"></aside>
       </div>
-    </article>
+    </section>
+
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
@@ -168,7 +145,7 @@ session_start();
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>
@@ -206,9 +183,6 @@ session_start();
             </tr>
         </table>
     </div>
-
-    <!-- Javascript for Refresh page  -->
-    <script src="../refresh.js" charset="utf-8"></script>
 
 
     <script>

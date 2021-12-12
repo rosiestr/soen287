@@ -23,14 +23,14 @@ session_start();
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="/images/KMicon.ico" />
+    <link rel="shortcut icon" href="../images/KMicon.ico" />
 
-    <link rel="stylesheet" href="/frontStyles.css" />
+    <link rel="stylesheet" href="../frontStyles.css" />
     <script src = "../description.js" async></script>
     <script src = "../propertiesChange.js" async></script>
     <script src = "addToCart.js" async></script>
 
-    <title>Kalamari Market: Frozen Mango</title>
+    <title>Boxed Water</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -114,57 +114,56 @@ session_start();
         </ul>
       </nev>
     </aside>
-
     <!-- MAIN -->
     <article class="container-fluid">
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-            src="/images/Frozen/frozenMango.jpg"
-            alt="Frozen Mango"
-            height="450"
-            class="img-fluid"
-          />
-        </section>
-
-        <section class="col-sm-6">
-          <h4>IRRESISTIBLES</h4>
-          <h3>Frozen Mango Chunks</h3>
-          <p><strong style="font-size: larger">$4.99</strong> (600g)</p>
-          <hr />
-          <p>Sold by the packed</p>
-          <p>Curbside pickup eligible</p>
-          <p>Free standard shipping</p>
-          <button class="description" onclick="loadDescription()">
-            <img src="../images/desc.png" alt="list" width="18" />
-            More Description
-          </button>
-          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-          <br />
-          <br />
-          <form action="/action_page.php">
-            <label for="quantity">Enter Desired Quantity :</label><br />
-            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-            <br />
-          </form>
-          <br />
-          <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        src="../images/Beverages/water.jpg"
+        alt="Water"
+        height="450"
+        class="img-fluid"
+      />
+    </section>
+    <section class="item col-sm-6">
+      <h3>Boxed Water</h3>
+        <p>
+          <strong style="font-size: larger">$1.99</strong>
+        </p>
+        <hr />
+        <p>1L</p>
+        <p>Curbside pickup eligible</p>
+        <p>Free standard shipping</p>
+        <button class="description" onclick="loadDescription()">
+          <img src="../images/desc.png" alt="list" width="18" />
+          More Description
+        </button>
+        <div id="expandDesc">100% pure refreshing water free of any contaminants or things you don’t need</div>
+        <br />
+        <br />
+        <form action="/action_page.php">
+          <label for="quantity">Enter Desired Quantity :</label><br />
+          <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+        </form>
+        <br />
+        <label for="subtotal">Subtotal :</label><br>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="1.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
         <label>Get this item with your grocery order:</label>
         <br>
         <button class="cart">Add To Cart</button>
-          <br /><br /><br />
-        </section>
+        <br /><br /><br />
+      </section>
+
       </div>
     </article>
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
-        <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+          <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+          <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
     </footer>
     <!--end of sticky footer -->

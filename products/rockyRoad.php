@@ -30,9 +30,10 @@ session_start();
     <script src = "../propertiesChange.js" async></script>
     <script src = "addToCart.js" async></script>
 
-    <title>Kalamari Market: Frozen Mango</title>
+    <title>Kalamari Market: Klondike Ice Cream Bars</title>
   </head>
   <body>
+
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
@@ -114,25 +115,26 @@ session_start();
         </ul>
       </nev>
     </aside>
-
-    <!-- MAIN -->
+    <!--MAIN-->
     <article class="container-fluid">
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-            src="/images/Frozen/frozenMango.jpg"
-            alt="Frozen Mango"
+            src="/images/Frozen/rockyRoad.jpg"
+            alt="rockyRoad"
             height="450"
             class="img-fluid"
           />
         </section>
-
         <section class="col-sm-6">
-          <h4>IRRESISTIBLES</h4>
-          <h3>Frozen Mango Chunks</h3>
-          <p><strong style="font-size: larger">$4.99</strong> (600g)</p>
+          <h4>KLONDIKE</h4>
+          <h3>Frozen Rocky Road Light Ice Cream Bars</h3>
+          <p>
+            <strong style="font-size: larger">$6.99</strong>
+            4 x 125ML
+          </p>
           <hr />
-          <p>Sold by the packed</p>
+          <p>Sold by the box</p>
           <p>Curbside pickup eligible</p>
           <p>Free standard shipping</p>
           <button class="description" onclick="loadDescription()">
@@ -149,7 +151,7 @@ session_start();
           </form>
           <br />
           <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="6.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
@@ -163,12 +165,12 @@ session_start();
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
-        <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+          <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+          <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>

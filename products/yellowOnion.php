@@ -30,9 +30,10 @@ session_start();
     <script src = "../propertiesChange.js" async></script>
     <script src = "addToCart.js" async></script>
 
-    <title>Kalamari Market: Frozen Mango</title>
+    <title>Vegetables : Yellow Onion</title>
   </head>
   <body>
+
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
@@ -115,24 +116,25 @@ session_start();
       </nev>
     </aside>
 
-    <!-- MAIN -->
+    <!--MAIN-->
     <article class="container-fluid">
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-            src="/images/Frozen/frozenMango.jpg"
-            alt="Frozen Mango"
+            src="/images/Produce/onion.jpg"
+            alt="Yellow Onion"
             height="450"
-            class="img-fluid"
+            class="imgmussels"
           />
         </section>
 
         <section class="col-sm-6">
-          <h4>IRRESISTIBLES</h4>
-          <h3>Frozen Mango Chunks</h3>
-          <p><strong style="font-size: larger">$4.99</strong> (600g)</p>
+          <h3>Yellow Onion</h3>
+          <p>
+            <strong style="font-size: larger">$2.99 ea.</strong>
+          </p>
           <hr />
-          <p>Sold by the packed</p>
+          <p>Sold individually (approx. 300g ea.)</p>
           <p>Curbside pickup eligible</p>
           <p>Free standard shipping</p>
           <button class="description" onclick="loadDescription()">
@@ -143,13 +145,13 @@ session_start();
           <br />
           <br />
           <form action="/action_page.php">
-            <label for="quantity">Enter Desired Quantity :</label><br />
-            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-            <br />
+              <label for="quantity">Enter Desired Quantity :</label><br />
+              <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+              <br />
           </form>
           <br />
           <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="2.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
@@ -160,6 +162,7 @@ session_start();
         </section>
       </div>
     </article>
+
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
@@ -168,9 +171,9 @@ session_start();
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
-    <!--table with hours-->
+        <!--table with hours-->
         <table>
             <tr>
                 <th>Hours</th>

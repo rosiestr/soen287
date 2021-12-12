@@ -30,9 +30,10 @@ session_start();
     <script src = "../propertiesChange.js" async></script>
     <script src = "addToCart.js" async></script>
 
-    <title>Kalamari Market: Frozen Mango</title>
+    <title>Kalamari Market: Butterball Turkey</title>
   </head>
   <body>
+
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
@@ -114,25 +115,26 @@ session_start();
         </ul>
       </nev>
     </aside>
-
-    <!-- MAIN -->
+    <!-- end of navigation-->
+    <!--MAIN-->
     <article class="container-fluid">
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-            src="/images/Frozen/frozenMango.jpg"
-            alt="Frozen Mango"
+            src="/images/Meat/butterballTurkey.jpg"
+            alt="Butterball Turkey"
             height="450"
             class="img-fluid"
           />
         </section>
-
         <section class="col-sm-6">
-          <h4>IRRESISTIBLES</h4>
-          <h3>Frozen Mango Chunks</h3>
-          <p><strong style="font-size: larger">$4.99</strong> (600g)</p>
+          <h4>BUTTERBALL</h4>
+          <h3>Whole Turkey</h3>
+          <p>
+            <strong style="font-size: larger">$32.69</strong>  (390g)
+          </p>
           <hr />
-          <p>Sold by the packed</p>
+          <p>Sold individually</p>
           <p>Curbside pickup eligible</p>
           <p>Free standard shipping</p>
           <button class="description" onclick="loadDescription()">
@@ -140,16 +142,16 @@ session_start();
             More Description
           </button>
           <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-          <br />
-          <br />
+          <br/>
+          <br/>
           <form action="/action_page.php">
             <label for="quantity">Enter Desired Quantity :</label><br />
             <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-            <br />
+            <br/>
           </form>
-          <br />
+          <br/>
           <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="32.69" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
@@ -168,7 +170,7 @@ session_start();
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- FOOTER FOR BOTTOM OF PAGE -->
+    <!-- BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>
