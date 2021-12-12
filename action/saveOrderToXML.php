@@ -1,9 +1,9 @@
 <?php
-if ($_POST["user-email"] == "unknown") {
-    setcookie('logged-in', 'true',  time() - 1, "/");
+if ($_POST["user-email"] == "NONE") {
     header("Location:" . $_SERVER['HTTP_REFERER']);
 }
-else {  
+else { 
+    setcookie('logged-in', 'true',  time() + (86400 * 30), "/"); 
     $email = $_POST["user-email"]; 
     $file = "../users.xml"; 
     $simplexml = simplexml_load_file($file) or die("Unable to open file"); 

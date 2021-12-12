@@ -1,5 +1,11 @@
-<?php session_start();
-include 'includes/frontstoreHead.php'?>
+<?php include 'includes/frontstoreHead.php'; 
+  if(isset($_COOKIE['loggedEmail'])) {
+    $email = $_COOKIE['loggedEmail']; 
+  }
+  else {
+    $email = "NONE";
+  }
+?>
 <title>Kalamari Market: Shopping Cart</title>
     <script src = 'scripts/myCart.js' async></script>
   </head>
@@ -47,7 +53,6 @@ include 'includes/frontstoreHead.php'?>
       <input type = "hidden" name = "order-items" class = "order-items" value = "test" id = "order-items-saved">
       <input type = "hidden" name = "order-total" class = "order-total" value = "test" id = "order-total-saved">
       <input type = "hidden" name = "user-email" class = "user-email" value = <?php echo $email ?> >
-      <?php echo $email ?>
     </form>
     <br>
     <!-- STICKY FOOTER-->

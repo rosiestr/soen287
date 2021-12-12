@@ -35,7 +35,8 @@ if (isset($_POST['Login'])) {
     else {
       //Cookie setting
       setcookie('loggedFirstName', $loggedUser, time() + (86400 * 30), "/");
-
+      setcookie('loggedEmail', $email, time() + (86400 * 30), "/"); 
+      setcookie('logged-in', 'true',  time() + (86400 * 30), "/"); 
       header('Location: index.php');
       exit();
     }

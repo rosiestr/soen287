@@ -176,7 +176,8 @@ function checkCartEmpty() {
 //CHECKOUTBUTTON FUNCTION
 function checkoutMsg() {
     let loggedIn = getCookie('logged-in');
-    if (loggedIn === "" || loggedIn === null) {
+    console.log(loggedIn);
+    if (loggedIn == null) {
         alert("Please login or register before purchasing your items!");
     }
     else {
