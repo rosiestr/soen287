@@ -36,7 +36,7 @@ echo "<!-- HEADER -->
 <section class = 'd-none d-md-block'>
   <div class = 'row'>
     <div class = 'col-md-auto'>
-      <a href='/shoppingCart.html'><button>My Cart  <i class='fas fa-shopping-cart'></i></button></a> <!--shopping cart butoon-->
+      <a href='/shoppingCart.php'><button>My Cart  <i class='fas fa-shopping-cart'></i></button></a> <!--shopping cart butoon-->
     </div>
     <div class= 'col d-flex justify-content-center align-items-center kmbg'>
     </div>
@@ -115,7 +115,7 @@ else {
   <section class = 'd-none d-md-block'>
     <div class = 'row'>
       <div class = 'col-md-auto'>
-        <a href='/shoppingCart.html'><button>My Cart  <i class='fas fa-shopping-cart'></i></button></a> <!--shopping cart butoon-->
+        <a href='/shoppingCart.php'><button>My Cart  <i class='fas fa-shopping-cart'></i></button></a> <!--shopping cart butoon-->
       </div>
       <div class= 'col d-flex justify-content-center align-items-center kmbg'>
       </div>
