@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="backstoreStyles.css" />
     <!--title to appear in tab-->
     <title>Kalamari Market</title>
+    <script type = "text/javascript" src="productHandler/productListener.js" async></script>
   </head>
   <body>
     <!--NAVIGATION BAR -->
@@ -67,17 +68,20 @@
             Add <i class="fas fa-plus-square"></i>
           </button>
         </a>
+        <button class='button button1' id= 'deleteProductButton' type = 'submit' form = 'toDelete'>
+          Delete <i class='fas fa-trash-alt'></i>
+        </button>
         <a href="#top">
           <button class="button button1">
             <i class="fas fa-arrow-up"></i>
           </button>
         </a>
-        <form id = "toDelete" method = "post" action = "action/deleteProducts.php">
+      <form id = "toDelete" method = "post" action = "action/deleteProducts.php">
           <input type = "hidden" id = "deleteIDs" name = "products"></input>
-        </form> 
-        <form method = 'POST' action = 'action/loadProductToEdit.php' id = 'editProduct'>
-          <input type = "hidden" id = "productToEdit" name = "productToEdit"></input> 
-        </form> 
+      </form> 
+      <form method = 'POST' action = '/action/loadProductToEdit.php' id = 'editProduct'>
+        <input type = "hidden" id ='productToEdit' name = 'productToEdit'></input> 
+    </form> 
     </main>
     <footer><a href="index.html">Back to Front Store</a></footer>
   </body>

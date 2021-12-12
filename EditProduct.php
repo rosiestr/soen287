@@ -32,12 +32,12 @@
 <main>
     <h1>Edit Product</h1>
     <main>
-        <form class="product-form" method = 'post' action = 'updateProductInJSON.php' name = 'updateProductInfo'>
+        <form class="product-form" method = 'POST' action = 'updateProductInJSON.php' name = 'updateProductInfo'>
             <?php include 'action/loadOrderToEdit.php' ?> 
     </form>
     <div class="button-bar">
         <a href="#">
-            <button class="button button1">Save <i class="far fa-save"></i></button>
+            <button class="button button1">Save <i class="far fa-save"></i></button>  
     </div>
 </main>
 
