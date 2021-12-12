@@ -413,7 +413,28 @@ input[type="street"] .user {
   width: 40%;
 
 }
+input [type="text"] .user,
+input[type="addName"] .user {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: left;
+  clear:both;
+  width: 40%;
 
+}
+input [type="text"] .user,
+input[type="addEmail"] .user {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #76e3ed;
+  border-radius: 2px;
+  float: left;
+  clear:both;
+  width: 40%;
+
+}
 /*INPUT STYLES FOR PASSWORD*/
 
 input[type="text"] .user:focus, 
