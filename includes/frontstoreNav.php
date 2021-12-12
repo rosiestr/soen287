@@ -41,7 +41,7 @@ echo "<!-- HEADER -->
     <div class= 'col d-flex justify-content-center align-items-center kmbg'>
     </div>
     <div class='col-md-auto d-flex justify-content-end'>
-      <a href='/logout.php'><button>Login  <i class='fas fa-sign-in-alt'></i></button></a> <!--Logout button -->
+      <a href='/logout.php'><button>Logout  <i class='fas fa-sign-in-alt'></i></button></a> <!--Logout button -->
     </div>
   </div>
 </section>
