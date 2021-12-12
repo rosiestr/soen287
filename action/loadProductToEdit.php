@@ -1,4 +1,13 @@
-<?php 
+
+<?php
+
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
+
 $productID;
 if (isset($_POST['productToEdit'])){
     $productID = $_POST['productToEdit'];  
@@ -11,19 +20,20 @@ if (isset($_POST['productToEdit'])){
             $price = $product['productPrice']; 
             $inventory = $product['productInventory']; 
             $size = $product['productSize'];
-            $type = $product['productType']; 
-            break; 
+            $type = $product['productType'];
+            break;
         }
-    } 
+    }
 }
 else {
+
     $productID = uniqid("#"); 
     $image = "";   
     $name = ""; 
     $price = 0.00; 
     $inventory = 0; 
     $size = [];
-    $type = []; 
+    $type = [];
 }
 
 echo "<!DOCTYPE html>
@@ -62,6 +72,9 @@ echo "<!DOCTYPE html>
     <h1>Edit Product</h1>
     <form class= 'product-form' method = 'post' action = 'updateProductInJSON.php' name = 'updateProductInfo'> 
 
+    <h6>Hello, ".$_SESSION['backFirstName']." </h6>
+
+
         <input type = 'hidden' name = 'productID' value = '$productID'>
             <div>
                 <label>Product Name</label>
@@ -77,19 +90,19 @@ echo "<!DOCTYPE html>
                 <label>Inventory</label>
                 <input type='text' name='productInventory' value='$inventory' class='editProduct'>
             </div>
-        
-        
+
+
             <div>
                 <label>Types (comma separated)</label>
                 <input type='text' name='productType' value='$name' class = 'editProduct' >
             </div>
-        
+
 
             <div>
                 <label>Sizes (comma separated)</label>
                 <input type='text' name='productSize' value='$name' class='editProduct'>
             </div>
-        
+
             <div >
                 <label>Product Description</label>
                 <textarea></textarea>
@@ -99,7 +112,7 @@ echo "<!DOCTYPE html>
                 <label>Add Image</label>
                 <input type='file' class='editProduct' name='productImage' class='editProduct'>
                 </div>
-        
+
             <div>
             <input type='submit' id = 'save' name = 'save' value='Save'>
             </div>

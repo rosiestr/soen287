@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,14 +23,14 @@
       crossorigin="anonymous"
     />
     <!-- Link to icon for title -->
-    <link rel="shortcut icon" href="../images/KMicon.ico" />
+    <link rel="shortcut icon" href="/images/KMicon.ico" />
 
-    <link rel="stylesheet" href="../frontStyles.css" />
+    <link rel="stylesheet" href="/frontStyles.css" />
     <script src = "../description.js" async></script>
     <script src = "../propertiesChange.js" async></script>
-    <script src = "../products/addToCart.js" async></script>
+    <script src = "addToCart.js" async></script>
 
-    <title>Fresh Shrimp</title>
+    <title>Kalamari Market: Chicken Wings</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -37,7 +40,14 @@
           <img class="img-fluid" src="../images/header.png" alt = "KALAMARI MARKET"/>
         </div>
         <div class="col d-flex align-items-center">
-          <h5>Buy Groceries Online!</h5>
+          <?php
+          if (isset($_COOKIE['loggedFirstName'])) {
+          echo "<h5>Hello, ".$_COOKIE['loggedFirstName']."</h5>";
+          }
+          else {
+            echo "<h5>Buy Groceries Online!</h5>";
+          }
+           ?>
         </div>
       </div>
     </header>
@@ -52,16 +62,13 @@
           <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
         </div>
         <div class = "col-2">
-          <button><a href="../index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+          <button><a href="../index.php"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
         </div>
         <div class = "col-2">
           <button><a href="../shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
         </div>
         <div class = "col-2">
-          <button><a href="../login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
-        </div>
-        <div class = "col-2">
-          <button><a href="../register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+          <button><a href="../logout.php"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
         </div>
       </section>
       <!-- only appears on medium/large screens -->
@@ -73,8 +80,7 @@
           <div class= "col d-flex justify-content-center align-items-center kmbg">
           </div>
           <div class="col-md-auto d-flex justify-content-end">
-            <a href="../login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-            <a href="../register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
+            <a href="../logout.php"><button>Logout  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
           </div>
         </div>
       </section>
@@ -86,7 +92,7 @@
             <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
           </div>
           <div class = "col">
-            <a href = "../index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
+            <a href = "../index.php"><i class="fas fa-home"></i> HOME</a> <!--home button-->
           </div>
         </div>
       </section>
@@ -97,14 +103,14 @@
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
-          <li><a href="../produce.html">Fruits and Vegetables</a></li>
-          <li><a href="../dairy.html">Dairy and Eggs</a></li>
-          <li><a href="../meat.html">Meat & Poultry</a></li>
-          <li><a href="../bakery.html">Bakery Products</a></li>
-          <li><a href="../seafood.html">Fish & Seafood</a></li>
-          <li><a href="../beverages.html">Beverages</a></li>
-          <li><a href="../frozen.html">Frozen</a></li>
-          <li><a href="../household.html">Household items</a></li>
+          <li><a href="../produce.php">Fruits and Vegetables</a></li>
+          <li><a href="../dairy.php">Dairy and Eggs</a></li>
+          <li><a href="../meat.php">Meat & Poultry</a></li>
+          <li><a href="../bakery.php">Bakery Products</a></li>
+          <li><a href="../seafood.php">Fish & Seafood</a></li>
+          <li><a href="../beverages.php">Beverages</a></li>
+          <li><a href="../frozen.php">Frozen</a></li>
+          <li><a href="../household.php">Household items</a></li>
         </ul>
       </nev>
     </aside>
@@ -113,71 +119,55 @@
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-        src="../images/Seafood/shrimp.jpeg"
-        alt="Shrimp"
-        height="550"
-        class="img-fluid"
-      />
-    </section>
-    <section class="col-sm-6">
-        <h3>Fresh Raw Shrimp</h3>
-        <p>
-          <strong style="font-size: larger">$4.99 ea.</strong><br>100g
-        </p>
-        <hr />
-        <p>
-          Fresh raw shrimp of various sizes and types imported from a wide range of
-          locations
-        </p>
-        <p>Curbside pickup eligible</p>
-        <p>Free standard shipping</p>
-        <button class="description" onclick="loadDescription()">
-          <img src="../images/desc.png" alt="list" width="18" />
-          More Description
-        </button>
-        <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-        <br />
-        <br />
-        <form action="/action_page.php">
-          <label for="quantity">Enter Desired Quantity :</label><br />
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
-          <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects" id="select1">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br /><br />
-          <label for="types"></label><br />
-          <select name="types" class="selects" id="select2">
-            <option value="none">Select Type</option>
-            <option value="white">White Shrimp</option>
-            <option value="pink">Pink Shrimp</option>
-            <option value="rock">Rock Shrimp</option>
-          </select>
-        </form>
-        <br />
-        <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+            src="/images/Meat/chickenWings.png"
+            alt="Chicken Wings"
+            height="450"
+            class="img-fluid"
+          />
+        </section>
+        <section class="col-sm-6">
+          <h3>Raw Chicken Wings</h3>
+          <p>
+            <strong style="font-size: larger">$2.49</strong>  (220g)
+          </p>
+          <hr />
+          <p>Sold by pack of 4</p>
+          <p>Curbside pickup eligible</p>
+          <p>Free standard shipping</p>
+          <button class="description" onclick="loadDescription()">
+            <img src="../images/desc.png" alt="list" width="18" />
+            More Description
+          </button>
+          <div id="expandDesc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+          <br/>
+          <br/>
+          <form action="/action_page.php">
+            <label for="quantity">Enter Desired Quantity :</label><br />
+            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+            <br/>
+          </form>
+          <br/>
+          <label for="subtotal">Subtotal :</label><br>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="2.49" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
         <label>Get this item with your grocery order:</label>
+        <br>
         <button class="cart">Add To Cart</button>
-        <br /><br /><br />
+          <br/><br/><br/>
+        </section>
       </div>
     </article>
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
-        <a href = "../contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "../map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+        <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+        <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- BOTTOM OF PAGE -->
+    <!-- FOOTER FOR BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>

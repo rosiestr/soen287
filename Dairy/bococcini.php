@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,17 +30,24 @@
     <script src = "../propertiesChange.js" async></script>
     <script src = "../products/addToCart.js" async></script>
 
-    <title>Fresh Shrimp</title>
+    <title>Bocconcini</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-auto">
-          <img class="img-fluid" src="../images/header.png" alt = "KALAMARI MARKET"/>
+          <img class="img-fluid" src="../images/header.png" />
         </div>
         <div class="col d-flex align-items-center">
-          <h5>Buy Groceries Online!</h5>
+          <?php
+          if (isset($_COOKIE['loggedFirstName'])) {
+          echo "<h5>Hello, ".$_COOKIE['loggedFirstName']."</h5>";
+          }
+          else {
+            echo "<h5>Buy Groceries Online!</h5>";
+          }
+           ?>
         </div>
       </div>
     </header>
@@ -52,16 +62,13 @@
           <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
         </div>
         <div class = "col-2">
-          <button><a href="../index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+          <button><a href="../index.php"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
         </div>
         <div class = "col-2">
           <button><a href="../shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
         </div>
         <div class = "col-2">
-          <button><a href="../login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
-        </div>
-        <div class = "col-2">
-          <button><a href="../register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+          <button><a href="../logout.php"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
         </div>
       </section>
       <!-- only appears on medium/large screens -->
@@ -73,8 +80,7 @@
           <div class= "col d-flex justify-content-center align-items-center kmbg">
           </div>
           <div class="col-md-auto d-flex justify-content-end">
-            <a href="../login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-            <a href="../register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
+            <a href="../logout.php"><button>Logout<i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
           </div>
         </div>
       </section>
@@ -86,25 +92,25 @@
             <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
           </div>
           <div class = "col">
-            <a href = "../index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
+            <a href = "../index.php"><i class="fas fa-home"></i> HOME</a> <!--home button-->
           </div>
         </div>
       </section>
 
     </nav> <!-- end of navigation-->
 
-      <!-- SIDEBAR -->
+    <!-- SIDEBAR -->
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
-          <li><a href="../produce.html">Fruits and Vegetables</a></li>
-          <li><a href="../dairy.html">Dairy and Eggs</a></li>
-          <li><a href="../meat.html">Meat & Poultry</a></li>
-          <li><a href="../bakery.html">Bakery Products</a></li>
-          <li><a href="../seafood.html">Fish & Seafood</a></li>
-          <li><a href="../beverages.html">Beverages</a></li>
-          <li><a href="../frozen.html">Frozen</a></li>
-          <li><a href="../household.html">Household items</a></li>
+          <li><a href="../produce.php">Fruits and Vegetables</a></li>
+          <li><a href="../dairy.php">Dairy and Eggs</a></li>
+          <li><a href="../meat.php">Meat & Poultry</a></li>
+          <li><a href="../bakery.php">Bakery Products</a></li>
+          <li><a href="../seafood.php">Fish & Seafood</a></li>
+          <li><a href="../beverages.php">Beverages</a></li>
+          <li><a href="../frozen.php">Frozen</a></li>
+          <li><a href="../household.php">Household items</a></li>
         </ul>
       </nev>
     </aside>
@@ -113,21 +119,22 @@
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
           <img
-        src="../images/Seafood/shrimp.jpeg"
-        alt="Shrimp"
-        height="550"
+        src="../images/Dairy/bococcini.jpg"
+        alt="Mussels"
+        height="350"
         class="img-fluid"
       />
     </section>
     <section class="col-sm-6">
-        <h3>Fresh Raw Shrimp</h3>
+      <h3>Cocktail Bocconcini,Saputo</h3>
         <p>
-          <strong style="font-size: larger">$4.99 ea.</strong><br>100g
+          <strong style="font-size: larger">$2.99/lb</strong>
+          <s>$3.99</s> Save $1.00
+          <br>300g
         </p>
         <hr />
         <p>
-          Fresh raw shrimp of various sizes and types imported from a wide range of
-          locations
+            Lightly brined oval, bite-size cheeses made from fresh milk
         </p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
@@ -139,28 +146,24 @@
         <br />
         <br />
         <form action="/action_page.php">
-          <label for="quantity">Enter Desired Quantity :</label><br />
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+          <div class="">
+            <label for="quantity">Enter Desired Quantity :</label><br />
+            <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
+          </div>
           <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects" id="select1">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br /><br />
-          <label for="types"></label><br />
-          <select name="types" class="selects" id="select2">
-            <option value="none">Select Type</option>
-            <option value="white">White Shrimp</option>
-            <option value="pink">Pink Shrimp</option>
-            <option value="rock">Rock Shrimp</option>
-          </select>
+          <div class="">
+            <label for="types"></label><br />
+            <select name="types" class="selects">
+              <option value="none">Select Type</option>
+              <option value="regular">Regular Bocconcini</option>
+              <option value="lite">Lite Bocconcini</option>
+              <option value="cocktail">Cocktail Bocconcini</option>
+            </select>
+          </div>
         </form>
         <br />
         <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="2.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
@@ -171,9 +174,10 @@
     </article>
     <!-- STICKY FOOTER-->
     <footer>
-      <div class = "outlined-t outlined-b greybg px-3">
-        <a href = "../contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "../map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+      <section class = "outlined-t outlined-b greybg px-3">
+        <a href = "../contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+        <a href = "../map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+      </section>
       </div>
     </footer>
     <!--end of sticky footer -->
@@ -218,7 +222,6 @@
 
     <!-- Javascript for Refresh page  -->
     <script src="../refresh.js" charset="utf-8"></script>
-
 
     <script>
         // Get the button, and when the user clicks on it, execute myFunction

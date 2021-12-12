@@ -4,5 +4,5 @@
     </config>
     <orders>
         
-    <order id="#61afb1fa5ab7c"><email>testUsername@gmail.com</email><name>Test Name</name><cartItems>[{"name":"Apples, Granny Smith","quantity":"2","price":"$4.99","discount":"0"},{"name":"Tomatoes, On the Vine","quantity":"2","price":"$1.99","discount":"0"}]</cartItems><orderDiscount>0</orderDiscount><cartTotal>16.05</cartTotal><shippingAddress>ORDER FOR PICKUP</shippingAddress><billingAddress>1234 Oak Street, Montreal, QC, T8A6P6</billingAddress></order></orders> 
+    <order id="#61afb1fa5ab7c"><email>testUsername@gmail.com</email><name>Test Name</name><cartItems>[{"name":"Apples, Granny Smith","quantity":"2","price":"$4.99","discount":"0"},{"name":"Tomatoes, On the Vine","quantity":"2","price":"$1.99","discount":"0"}]</cartItems><orderDiscount>0</orderDiscount><cartTotal>16.05</cartTotal><shippingAddress>ORDER FOR PICKUP</shippingAddress><billingAddress>1234 Oak Street, Montreal, QC, T8A6P6</billingAddress></order><order id="#61b01c5a6eef9"><email>marouakrim@outlook.com</email><name>Maroua krim</name><cartItems>[{"name":"Australian Swiss Cheese","quantity":3,"price":"$4.99/lb","IMGsrc":"../images/Dairy/cheese.png"}]</cartItems><orderDiscount>0</orderDiscount><cartTotal>21.81</cartTotal><shippingAddress/><billingAddress>1111 concordia street, Montreal, Quebec, H1H1H1</billingAddress></order></orders> 
 </order-data>

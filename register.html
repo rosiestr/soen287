@@ -50,16 +50,16 @@
           <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
         </div>
         <div class = "col-2">
-          <button><a href="index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+          <button><a href="index.php"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
         </div>
         <div class = "col-2">
           <button><a href="shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
         </div>
         <div class = "col-2">
-          <button><a href="login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+          <button><a href="login.php"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
         </div>
         <div class = "col-2">
-          <button><a href="register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+          <button><a href="register.php"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
         </div>
       </section>
       <!-- only appears on medium/large screens -->
@@ -71,8 +71,8 @@
           <div class= "col d-flex justify-content-center align-items-center kmbg">
           </div>
           <div class="col-md-auto d-flex justify-content-end">
-            <a href="login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-            <a href="register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
+            <a href="login.php"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+            <a href="register.php"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
           </div>
         </div>
       </section>
@@ -84,7 +84,7 @@
             <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
           </div>
           <div class = "col">
-            <a href = "index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
+            <a href = "index.php"><i class="fas fa-home"></i> HOME</a> <!--home button-->
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@
       <div class="row">
         <!-- section with deals and foods -->
         <main class="col-xl-10" id="userform">
-          <form class="" action="index.html" method="post">
+          <form class="" action="registerProcess.php" method="post">
 
             <fieldset>
               <legend>Personal Information</legend>
@@ -152,7 +152,7 @@
               <div class="userdiv" id="registerEmail">
                 <label for="emailAddress">Email</label>
                 <input type="email"
-                    name="emailAddress"
+                    name="email"
                     class="user"
                     required>
               </div>
@@ -169,7 +169,7 @@
                   <div class="userdiv" id="registerPass">
                     <label for="passWord">*Password</label>
                   <input type="password"
-                      name="passWord"
+                      name="password"
                       class="user"
                       required>
                   </div>
@@ -227,6 +227,7 @@
                        <label for="zip">*Postal Code</label>
                        <input type="zip"
                             class="user"
+                            name="zipcode"
                             id="inputZip"
                             required>
                      </div>
@@ -261,7 +262,7 @@
           <hr>
             Already got an Account?
             <br>
-          <a href="login.html">  <button type="button" name="button">Welcome back!</button> </a>
+          <a href="login.php">  <button type="button" name="button">Welcome back!</button> </a>
             </main>
           </div>
     </section>

@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
+    header('Location: index.php');
+    exit;
+}
+
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,8 +42,8 @@
       <!--first row of navigation bar-->
       <section>
         <div><a href="products.php">Products</a></div>
-        <div><a href="ordersList.html">Orders</a></div>
-        <div><a href="UserList.html">Users</a></div>
+        <div><a href="ordersList.php">Orders</a></div>
+        <div><a href="UserList.php">Users</a></div>
         <img src="images/KMicon.ico" />
       </section>
     </nav>
@@ -43,6 +52,11 @@
       <article class="container-fluid">
       <div style="overflow-x: auto">
       <h1>Product List</h1>
+      <?php
+      if ($_SESSION['backFirstName']) {
+        echo "<h6>Hello, ".$_SESSION['backFirstName']." </h6>";
+      }
+       ?>
       <table class="product-table">
         <thead>
           <tr>
@@ -78,10 +92,10 @@
         </a>
       <form id = "toDelete" method = "post" action = "action/deleteProducts.php">
           <input type = "hidden" id = "deleteIDs" name = "products"></input>
-      </form> 
-      <form method = 'POST' action = '/action/loadProductToEdit.php' id = 'editProduct'>
-        <input type = "hidden" id ='productToEdit' name = 'productToEdit'></input> 
-    </form> 
+        </form>
+        <form method = 'POST' action = 'action/loadProductToEdit.php' id = 'editProduct'>
+          <input type = "hidden" id = "productToEdit" name = "productToEdit"></input>
+        </form>
     </main>
     <footer><a href="index.html">Back to Front Store</a></footer>
   </body>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,71 +28,72 @@
     <link rel="stylesheet" href="../frontStyles.css" />
     <script src = "../description.js" async></script>
     <script src = "../propertiesChange.js" async></script>
-    <script src = "../products/addToCart.js" async></script>
+    <script src = "addToCart.js" async></script>
 
-    <title>Fresh Shrimp</title>
+    <title>Juice Box</title>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="container-fluid">
+    <header class="container-fluid"> <!--container that fills width of page-->
       <div class="row">
-        <div class="col-md-auto">
-          <img class="img-fluid" src="../images/header.png" alt = "KALAMARI MARKET"/>
+        <div class="col-md-auto"> <!--column width is size of its contents-->
+          <img class = "img-fluid" src = "/images/header.png">
         </div>
-        <div class="col d-flex align-items-center">
+        <div class = "col d-flex align-items-center">
           <h5>Buy Groceries Online!</h5>
         </div>
       </div>
     </header>
 
+
     <!--NAVIGATION BAR -->
     <nav class="container-fluid outlined-b outlined-t" id = "topbar">
-      <!--first row of navigation bar-->
+    <!--first row of navigation bar-->
 
-      <!-- only appears on small screens -->
-      <section class="row pb-2 d-md-none">
-        <div class = "col-3">
-          <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+    <!-- only appears on small screens -->
+    <section class="row pb-2 d-md-none">
+      <div class = "col-3">
+        <button id = "phoneBtn" class = "dropbtn"><a href="#"><i class="fas fa-bars px-1"></i></a></button> <!--menu button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+      </div>
+      <div class = "col-2">
+        <button><a href="/register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+      </div>
+    </section>
+    <!-- only appears on medium/large screens -->
+    <section class = "d-none d-md-block">
+      <div class = "row">
+        <div class = "col-md-auto">
+          <a href="/shoppingCart.php"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
         </div>
-        <div class = "col-2">
-          <button><a href="../index.html"><i class="fas fa-home px-1"></i></a></button> <!--home button-->
+        <div class= "col d-flex justify-content-center align-items-center kmbg">
         </div>
-        <div class = "col-2">
-          <button><a href="../shoppingCart.php"><i class="fas fa-shopping-cart px-1"></i></a></button> <!--shopping cart button-->
+        <div class="col-md-auto d-flex justify-content-end">
+          <a href="/login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
+          <a href="/register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
         </div>
-        <div class = "col-2">
-          <button><a href="../login.html"><i class="fas fa-sign-in-alt px-1"></i></a></button> <!--sign in button-->
+      </div>
+    </section>
+    <!--end of html for first row of topbar -->
+    <!--second row of navigation, doesn't appear on small screens-->
+    <section class = "d-none d-md-block">
+      <div class = "row px-0 bluebg outlined-t">
+        <div class = "col-md-auto">
+          <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
         </div>
-        <div class = "col-2">
-          <button><a href="../register.html"><i class="fas fa-user-plus px-1"></i></a></button> <!--new user button-->
+        <div class = "col">
+          <a href = "/index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
         </div>
-      </section>
-      <!-- only appears on medium/large screens -->
-      <section class = "d-none d-md-block">
-        <div class = "row">
-          <div class = "col-md-auto">
-            <a href="../shoppingCart.php"><button>My Cart  <i class="fas fa-shopping-cart"></i></button></a> <!--shopping cart butoon-->
-          </div>
-          <div class= "col d-flex justify-content-center align-items-center kmbg">
-          </div>
-          <div class="col-md-auto d-flex justify-content-end">
-            <a href="../login.html"><button>Login  <i class="fas fa-sign-in-alt"></i></button></a> <!--Login button -->
-            <a href="../register.html"><button>Register <i class="fas fa-user-plus"></i></button></a> <!--Register button-->
-          </div>
-        </div>
-      </section>
-      <!--end of html for first row of topbar -->
-      <!--second row of navigation, doesn't appear on small screens-->
-      <section class = "d-none d-md-block">
-        <div class = "row px-0 bluebg outlined-t">
-          <div class = "col-md-auto">
-            <a href="#" id = "compBtn" class = "dropbtn"><i class="fas fa-bars px-1"></i> AISLES</a> <!--menu button-->
-          </div>
-          <div class = "col">
-            <a href = "../index.html"><i class="fas fa-home"></i> HOME</a> <!--home button-->
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
     </nav> <!-- end of navigation-->
 
@@ -97,38 +101,36 @@
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
-          <li><a href="../produce.html">Fruits and Vegetables</a></li>
-          <li><a href="../dairy.html">Dairy and Eggs</a></li>
-          <li><a href="../meat.html">Meat & Poultry</a></li>
-          <li><a href="../bakery.html">Bakery Products</a></li>
-          <li><a href="../seafood.html">Fish & Seafood</a></li>
-          <li><a href="../beverages.html">Beverages</a></li>
-          <li><a href="../frozen.html">Frozen</a></li>
-          <li><a href="../household.html">Household items</a></li>
+          <li><a href="/produce.html">Fruits and Vegetables</a></li>
+          <li><a href="/dairy.html">Dairy and Eggs</a></li>
+          <li><a href="/meat.html">Meat & Poultry</a></li>
+          <li><a href="/bakery.html">Bakery Products</a></li>
+          <li><a href="/seafood.html">Fish & Seafood</a></li>
+          <li><a href="/beverages.html">Beverages</a></li>
+          <li><a href="/frozen.html">Frozen</a></li>
+          <li><a href="/household.html">Household items</a></li>
         </ul>
       </nev>
     </aside>
+    <!-- end of navigation-->
     <!-- MAIN -->
     <article class="container-fluid">
       <div class = "row">
         <section class = "col-sm-6 d-flex align-items-center">
-          <img
-        src="../images/Seafood/shrimp.jpeg"
-        alt="Shrimp"
-        height="550"
+        <img
+        src="../images/Beverages/juicebox.jpg"
+        alt="Juice Boxes"
+        height="450"
         class="img-fluid"
       />
     </section>
     <section class="col-sm-6">
-        <h3>Fresh Raw Shrimp</h3>
+     <h3>Juice Box</h3>
         <p>
-          <strong style="font-size: larger">$4.99 ea.</strong><br>100g
+          <strong style="font-size: larger">$2.99 per case</strong>
         </p>
         <hr />
-        <p>
-          Fresh raw shrimp of various sizes and types imported from a wide range of
-          locations
-        </p>
+        <p>Sold in cases of 6</p>
         <p>Curbside pickup eligible</p>
         <p>Free standard shipping</p>
         <button class="description" onclick="loadDescription()">
@@ -142,42 +144,37 @@
           <label for="quantity">Enter Desired Quantity :</label><br />
           <input type="text" value="" name="QTY" id="QTY" onKeyUp="calculate()"/>
           <br />
-          <label for="size"></label><br />
-          <select name="sizes" class="selects" id="select1">
-            <option value="none">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br /><br />
           <label for="types"></label><br />
-          <select name="types" class="selects" id="select2">
+          <select name="types" class="selects">
             <option value="none">Select Type</option>
-            <option value="white">White Shrimp</option>
-            <option value="pink">Pink Shrimp</option>
-            <option value="rock">Rock Shrimp</option>
+            <option value="Orange Blend">Orange Blend</option>
+            <option value="Mixed Berry">Mixed Berry</option>
+            <option value="Apple Juice">Apple Juice</option>
+            <option value="Mango-Orange">Mango-Orange</option>
           </select>
         </form>
         <br />
         <label for="subtotal">Subtotal :</label><br>
-        <input type="hidden" name="PPRICE" id="PPRICE" value="4.99" disabled/>
+        <input type="hidden" name="PPRICE" id="PPRICE" value="2.99" disabled/>
         <input type="text" name="TOTAL" id="TOTAL" readonly/>
 
         <br /><br>
         <label>Get this item with your grocery order:</label>
+        <br>
         <button class="cart">Add To Cart</button>
         <br /><br /><br />
+        </section>
       </div>
     </article>
     <!-- STICKY FOOTER-->
     <footer>
       <div class = "outlined-t outlined-b greybg px-3">
-        <a href = "../contact.html"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
-        <a href = "../map.html"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
+        <a href = "/contact.php"><i class="fas fa-phone-square"></i>  Contact Us&nbsp&nbsp   </a> <!--Contact button-->
+        <a href = "/map.php"><i class="fas fa-map-pin"></i> Find a Store</a> <!-- map pin button -->
       </div>
     </footer>
     <!--end of sticky footer -->
-    <!-- BOTTOM OF PAGE -->
+    <!-- FOOTER FOR BOTTOM OF PAGE -->
     <div class = "outlined-t inset-b smallp px-2" id = "bottom">
     <!--table with hours-->
         <table>

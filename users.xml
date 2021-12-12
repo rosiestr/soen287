@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <userFirstName>Maroua</userFirstName>
+    <userLastName>Krim</userLastName>
+    <userEmail>marouakrim@outlook.com</userEmail>
+    <userPasssword>12345</userPasssword>
+    <userAddress>1111 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>Hilary</userFirstName>
+    <userLastName>Fotso</userLastName>
+    <userEmail>hilary.fotso22@gmail.com</userEmail>
+    <userPasssword>ILovePHP</userPasssword>
+    <userAddress>123 Canada Street, Ottawa, Ontario, K1K1K1</userAddress>
+  </user>
+  <user>
+    <userFirstName>John</userFirstName>
+    <userLastName>Doe</userLastName>
+    <userEmail>john@company.com</userEmail>
+    <userPasssword>TestMe</userPasssword>
+    <userAddress>2222 concordia street, Montreal, Quebec, H2H2H2</userAddress>
+  </user>
+  <user>
+    <userFirstName>Layla</userFirstName>
+    <userLastName>Stone</userLastName>
+    <userEmail>laylastone@test.com</userEmail>
+    <userPasssword>Test2</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>Random</userFirstName>
+    <userLastName>Name</userLastName>
+    <userEmail>randomname@company.com</userEmail>
+    <userPasssword>Test3</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+  <user>
+    <userFirstName>Kaleb</userFirstName>
+    <userLastName>Nord</userLastName>
+    <userEmail>kalebnord@company.com</userEmail>
+    <userPasssword>TestMe2</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H3H3H3</userAddress>
+  </user>
+  <user>
+    <userFirstName>Daniel</userFirstName>
+    <userLastName>Mars</userLastName>
+    <userEmail>daniel@company.com</userEmail>
+    <userPasssword>test2.0</userPasssword>
+    <userAddress>555 Canada Street, Montreal, Quebec, H5H5H5</userAddress>
+  </user>
+  <user>
+    <userFirstName>David</userFirstName>
+    <userLastName>Aluma</userLastName>
+    <userEmail>david@gmail.com</userEmail>
+    <userPasssword>Test</userPasssword>
+    <userAddress>77 Ottawa Street, Montreal, Quebec, H2H2H2</userAddress>
+  </user>
+  <user>
+    <userFirstName>Ronald</userFirstName>
+    <userLastName>Snow</userLastName>
+    <userEmail>ronaldsnow@company.com</userEmail>
+    <userPasssword>Test05</userPasssword>
+    <userAddress>3333 concordia street, Montreal, Quebec, H1H1H1</userAddress>
+  </user>
+</users>
