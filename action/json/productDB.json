@@ -1,6 +1,7 @@
 {
     "productTable": [
       {
+        "productID": "124352453633",
         "productImage" :"images/Dairy/cheese.png",
         "productName": "cheese",
         "productPrice": "2.00",
@@ -13,6 +14,7 @@
         ]
       },
       {
+        "productID": "1547487453633",
         "productImage" :"images/Produce/lime.jpg",
         "productName": "lime",
         "productPrice": "0.99",
@@ -29,4 +31,4 @@
         ]
       }
     ]
-  }
+}
