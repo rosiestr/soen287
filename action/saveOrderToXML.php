@@ -8,12 +8,11 @@ else {
     $file = "../users.xml"; 
     $simplexml = simplexml_load_file($file) or die("Unable to open file"); 
     $name = "Default Name"; $userAddress = "Default Address"; 
-    foreach($simplexml->users->user as $user){
-        if ((strcmp(trim($user->useremail), trim($email)) == 0)) {
-            $fullname = $user->firstName . " " . $user->lastName; 
+    foreach($simplexml->user as $user){ 
+        if ((strcmp(trim($user->userEmail), trim($email)) == 0)) {
+            $fullname = $user->userFirstName . " " . $user->userLastName; 
             $name = $fullname; 
-            $fullAddress = $user->street . ", " . $user->city . ", ". $user->province . ", " . $user->zipcode;  
-            $userAddress = $fullAddress;
+            $userAddress = $user->userAddress;
             break; 
         }
     } 
