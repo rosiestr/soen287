@@ -108,9 +108,12 @@ function addItemRow() {
 
 function removeRow(event) {
     let button = event.target;
-    console.log(button.parentElement);
-    console.log(button.parentElement.parentElement); 
     button.parentElement.parentElement.remove();
+    let cartItems = document.getElementsByClassName('item'); 
+    console.log(cartItems); 
+    if (cartItems.length == 0) {
+        alert("Order will be deleted if no items are in it."); 
+    }
     updateCartTotal(); 
 }
 
@@ -120,7 +123,6 @@ function updateCartTotal() {
     let overallTotal = 0;
     let discountElement = document.getElementById('overall-discount');
     let overallDiscount = parseFloat(discountElement.value);
-    console.log(overallDiscount); 
     let allDiscounts = 0; 
     //loop through the array
     for (let i = 0; i < cartItems.length; i++) {
@@ -215,9 +217,9 @@ function updateItemTotal(event) {
 
 //Save items to local storage function
 function saveItemsForPhp() {
-    const cartItemContainer = document.getElementsByClassName('order-table')[0];
+    let cartItemContainer = document.getElementsByClassName('order-table')[0];
     let cartItems = cartItemContainer.getElementsByClassName('item');
-    const cartItemFormValue = document.getElementsByClassName('cart-items-saved')[0]; 
+    let cartItemFormValue = document.getElementsByClassName('cart-items-saved')[0]; 
     let cart = [];
     //go through all the cart items
     for (let i = 0; i < cartItems.length; i++) {
@@ -249,5 +251,8 @@ function saveItemsForPhp() {
     let cartString = JSON.stringify(cart);
     if (cartString != null) {
         cartItemFormValue.value = cartString;
+    }
+    else {
+        cartItemFormValue.value = 'none';
     }
 }

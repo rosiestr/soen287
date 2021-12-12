@@ -6,6 +6,11 @@ foreach($xml->orders->order as $order) {
     $orderID = $order['id'];
     $email = $order->email;
     $orderItems = $order->cartItems;
+    if ($orderItems == 'none') {
+        $dom = dom_import_simplexml($order); 
+        $dom->parentNode->removeChild($dom);
+        continue; 
+    }
     $orderTotal = $order->cartTotal;
     $shippingAddress = $order->shippingAddress;
     $orderArray = json_decode($orderItems, true);
@@ -34,8 +39,5 @@ foreach($xml->orders->order as $order) {
                 </button>
             </td>
     </tr>";
-    }
-    else {
-        echo "<p>No orders have been made. </p>";
     }
 }

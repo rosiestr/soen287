@@ -14,6 +14,11 @@ if (isset($_POST['orderID'])) {
     $xml = simplexml_load_file($file);
     foreach($xml->orders->order as $order){
         if($order['id'] == $updateID){
+            if ($cartItems == 'none') {
+                $dom = dom_import_simplexml($order); 
+                $dom->parentNode->removeChild($dom);
+            }
+            else {
             $order->cartItems = $cartItems;
             $order->orderDiscount = $orderDiscount; 
             $order->cartTotal = $cartTotal;
@@ -22,6 +27,7 @@ if (isset($_POST['orderID'])) {
             $order->name = $name; 
             $order->billingAddress = $billingAddress; 
             $existingOrder = true; 
+            }
             break;
         }
     }
