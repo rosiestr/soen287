@@ -1,3 +1,4 @@
+
 <?php
 
 if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front store even if they enter the URL manually
@@ -7,16 +8,17 @@ if(!isset($_SERVER['HTTP_REFERER'])){   // redirect unwanted user to the front s
 
 session_start();
 
+$productID;
 if (isset($_POST['productToEdit'])){
-    $productName = $_POST['productToEdit'];
+    $productID = $_POST['productToEdit'];  
     $json =file_get_contents(".\json\productDB.json") or die("Error: Cannot create object");
     $array = json_decode($json,true);
     foreach($array['productTable'] as $product) {
-        if ((strcmp(trim($product['productName']), trim($productName)) == 0)){
-            $image = $product['productImage'];
-            $name = $product['productName'];
-            $price = $product['productPrice'];
-            $inventory = $product['productInventory'];
+        if ((strcmp(trim($product['productID']), trim($productID)) == 0)){
+            $image = $product['productImage'];   
+            $name = $product['productName']; 
+            $price = $product['productPrice']; 
+            $inventory = $product['productInventory']; 
             $size = $product['productSize'];
             $type = $product['productType'];
             break;
@@ -24,10 +26,12 @@ if (isset($_POST['productToEdit'])){
     }
 }
 else {
-    $image = "";
-    $name = "";
-    $price = 0.00;
-    $inventory = 0;
+
+    $productID = uniqid("#"); 
+    $image = "";   
+    $name = ""; 
+    $price = 0.00; 
+    $inventory = 0; 
     $size = [];
     $type = [];
 }
@@ -45,13 +49,14 @@ echo "<!DOCTYPE html>
   <!-- FontAwesome CSS - for icons -->
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
   <!-- Link to icon for title -->
-  <link rel='shortcut icon' href='images/KMicon.ico' />
+  <link rel='shortcut icon' href='../images/KMicon.ico' />
   <!-- css for backstore.html -->
   <link rel='stylesheet' href='../backstoreStyles.css'>
+  <script src='../productHandler/editProductListener.js' async></script>
   <!--title to appear in tab-->
   <title>Kalamari Market</title>
 </head>
-<body>
+<body id='editProduct' >
   <!--NAVIGATION BAR -->
   <nav class='nav-top' id = 'topbar'>
     <!--first row of navigation bar-->
@@ -59,41 +64,43 @@ echo "<!DOCTYPE html>
         <div><a href='products.php'>Products</a></div>
         <div><a href='ordersList.html'>Orders</a></div>
         <div><a href='UserList.html'>Users</a></div>
-        <img src='images/KMicon.ico'>
+        <img src='../images/KMicon.ico'>
     </section>
   </nav>
     <!--end of html for first row of topbar -->
 <main>
     <h1>Edit Product</h1>
-    <h6>Hello, ".$_SESSION['backFirstName']." </h6>
-    <main>
+    <form class= 'product-form' method = 'post' action = 'updateProductInJSON.php' name = 'updateProductInfo'> 
 
-        <form class='product-form'>
+    <h6>Hello, ".$_SESSION['backFirstName']." </h6>
+
+
+        <input type = 'hidden' name = 'productID' value = '$productID'>
             <div>
                 <label>Product Name</label>
-                <input type='text' name='productName' value=$name>
+                <input type='text' name='productName' value='$name' class='editProduct'>
             </div>
 
             <div>
                 <label>Price</label>
-                <input type='text' name='productPrice' value= $price>
+                <input type='text' name='productPrice' value='$price' class='editProduct'>
             </div>
 
             <div>
                 <label>Inventory</label>
-                <input type='text' name='productInventory' value= $inventory>
+                <input type='text' name='productInventory' value='$inventory' class='editProduct'>
             </div>
 
 
             <div>
                 <label>Types (comma separated)</label>
-                <input type='text' name='productType' value=$name>
+                <input type='text' name='productType' value='$name' class = 'editProduct' >
             </div>
 
 
             <div>
                 <label>Sizes (comma separated)</label>
-                <input type='text' name='productSize' value=$name>
+                <input type='text' name='productSize' value='$name' class='editProduct'>
             </div>
 
             <div >
@@ -103,11 +110,11 @@ echo "<!DOCTYPE html>
 
             <div>
                 <label>Add Image</label>
-                <input type='file'>
+                <input type='file' class='editProduct' name='productImage' class='editProduct'>
                 </div>
 
             <div>
-            <input type='submit' value='Save'>
+            <input type='submit' id = 'save' name = 'save' value='Save'>
             </div>
     </form>
 

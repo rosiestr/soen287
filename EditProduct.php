@@ -44,13 +44,12 @@ session_start();
       echo "<h6>Hello, ".$_SESSION['backFirstName']." </h6>";
     }
      ?>
-    <main>
         <form class="product-form" method = 'post' action = 'updateProductInJSON.php' name = 'updateProductInfo'>
             <?php include 'action/loadOrderToEdit.php' ?>
     </form>
     <div class="button-bar">
         <a href="#">
-            <button class="button button1">Save <i class="far fa-save"></i></button>
+            <button class="button button1">Save <i class="far fa-save"></i></button>  
     </div>
 </main>
 
