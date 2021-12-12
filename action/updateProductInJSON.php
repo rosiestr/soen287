@@ -1,6 +1,7 @@
 <?php 
-if (isset($_POST['productName'])) {
+if (isset($_POST['productID'])) {
         $existingOrder = false; 
+        $updateId = $_POST['productID'];
         $image = $_POST['productImage'];   
         $name = $_POST['productName']; 
         $price = $_POST['productPrice']; 
@@ -9,10 +10,10 @@ if (isset($_POST['productName'])) {
         $type = $_POST['productType'];  
 
     $file = 'json/productDB.json';
-    $json =file_get_contents("action\json\productDB.json") or die("Error: Cannot create object");
+    $json =file_get_contents("json\productDB.json") or die("Error: Cannot create object");
     $array = json_decode($json,true);
     foreach($array['productTable'] as $product){
-        if($product['name'] == $name){
+        if($product['productID'] == $updateId){
             $product['productImage'] = $image;  
             $product['productName']=$name; 
             $product['productPrice'] =$price; 
@@ -28,7 +29,9 @@ if (isset($_POST['productName'])) {
         file_put_contents('json/productDB.json', $updatedJson);
     }
     else {
+        $productID = uniqid('#');
         $array['productTable'][] = array(
+            'productID' =>$productID,
             'productImage'=>$image, 
             'productName'=>$name,
             'productPrice'=>$price,

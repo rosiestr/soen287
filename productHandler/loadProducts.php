@@ -3,6 +3,7 @@ $json =file_get_contents("action\json\productDB.json") or die("Error: Cannot cre
 $array = json_decode($json,true);
 
 foreach($array['productTable'] as $product) {
+    $productID = $product['productID'];
     $image = $product['productImage'];   
     $name = $product['productName']; 
     $price = $product['productPrice']; 
@@ -12,7 +13,7 @@ foreach($array['productTable'] as $product) {
     
     echo 
     "<tr>
-    <input type = 'hidden' class = 'editProductName' value = $name id = 'itemProductName'> 
+    <input type = 'hidden' class = 'editProductID' value ='$productID' id = 'itemProductID' > 
     <td><input type='checkbox' /></td>
     <td>
       <img src='$image' width='70' height='50' />
@@ -38,15 +39,19 @@ foreach($array['productTable'] as $product) {
     "</select></td>
     <td>
       <div class=button-table>
-        <button class='button-t button-t-1'id='deleteProductButton' type = 'submit' form = 'toDelete'>
-          Delete <i class='fas fa-trash-alt'></i>
-        </button>
-        <button class='button-t button-t-1' type = 'submit' form = 'editProduct'>
+        <button class='button-t button-t-1 editProductButton' type = 'submit' form = 'editProduct'>
           Edit <i class='as fa-edit'></i>
         </button>
       </div>
     </td>
-  </tr>";
+  </tr>
+  <form id = 'toDelete' method = 'post' action = 'action/deleteProducts.php'>
+    <input type = 'hidden' id = 'deleteIDs' name = 'products'></input>
+</form> 
+<form method = 'POST' action = '/action/loadProductToEdit.php' id = 'editProduct'>
+<input type = 'hidden' id ='productToEdit' name = 'productToEdit' value='$productID'></input> 
+</form> 
+ ";
 
  
 
