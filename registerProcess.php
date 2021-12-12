@@ -51,7 +51,7 @@ else {
 
       session_start();
     $_SESSION['registeredFirstName'] = $firstName;
-    header('Location: index.php');
+    header('Location: loginProcess.php');
     exit();
     }
  ?>

@@ -1,8 +1,10 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 $userdata=simplexml_load_file("users.xml");
 $error = false;
 $loggedUser;
+
+
 
 if (isset($_POST['Login'])) {
   $email = $_POST['emailAddress'];
@@ -22,7 +24,7 @@ if (isset($_POST['Login'])) {
       if ($userdata->user[$i]->userEmail==$email && $userdata->user[$i]->userPasssword==$password) {
         $loggedUser=$userdata->user[$i]->userFirstName;
         $i=count($userdata->user);
-        break; 
+        break;
       }
     }
 
@@ -31,14 +33,9 @@ if (isset($_POST['Login'])) {
       //echo "Invalid email and/or password";
     }
     else {
-      //echo $loggedUser; 
-      $_SESSION['loggedFirstName'] = $loggedUser;
-      $_SESSION['loggedEmail'] = $email; 
-     
-      //echo $_SESSION['firstName'] ;
-      //ADDED THIS FOR TESTING... TOOK AWAY THE HEADER FOR TESTING 
-      //echo "TESTING FOR SESSION EMAIL SAVED? ";
-      //echo $_SESSION['loggedEmail']; 
+      //Cookie setting
+      setcookie('loggedFirstName', $loggedUser, time() + (86400 * 30), "/");
+
       header('Location: index.php');
       exit();
     }
@@ -171,7 +168,11 @@ if (isset($_POST['Login'])) {
          <main class="col-xl-10" id="userform">
            <?php
            if ($error) {
-             echo "<h5>Invalid email and/or password</h5>";
+             echo "<strong>Invalid email and/or password</strong>";
+           }
+           elseif ($_SESSION['registeredFirstName']) {
+              echo "<em>Now you can login to your account!</em>";
+               $_SESSION['registeredFirstName']=null;
            }
             ?>
            <form class="" action="loginProcess.php" method="post">

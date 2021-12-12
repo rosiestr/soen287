@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-//echo print_r($_SESSION);
-//echo($_SESSION['loggedFirstName']);
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +40,8 @@ session_start();
         </div>
         <div class="col d-flex align-items-center">
           <?php
-          if ($_SESSION['loggedFirstName']) {
-          echo "<h5>Hello, ".$_SESSION['loggedFirstName']."</h5>";
-          }
-          elseif ($_SESSION['registeredFirstName']) {
-            echo "<h5>Hello, ".$_SESSION['registeredFirstName']."</h5>";
+          if (isset($_COOKIE['loggedFirstName'])) {
+          echo "<h5>Hello, ".$_COOKIE['loggedFirstName']."</h5>";
           }
           else {
             echo "<h5>Buy Groceries Online!</h5>";
@@ -107,13 +101,13 @@ session_start();
       <section class="d-none d-md-block d-lg-none">
         <div class="row px-0 bluebg outlined-t">
           <div class="col">
-            <a href="produce.html"><h6>Fruits and Vegetables</h6></a>
+            <a href="produce.php"><h6>Fruits and Vegetables</h6></a>
           </div>
           <div class="col">
-            <a href="dairy.html"><h6>Dairy & Eggs</h6></a>
+            <a href="dairy.php"><h6>Dairy & Eggs</h6></a>
           </div>
           <div class="col">
-            <a href="meat.html"><h6>Meat & Poultry</h6></a>
+            <a href="meat.php"><h6>Meat & Poultry</h6></a>
           </div>
           <div class="col dropdown">
             <button>
@@ -121,11 +115,11 @@ session_start();
             </button>
             <div class="dropdown-content orangeBox">
               <ul>
-                <li><a href="bakery.html">Bakery Products</a></li>
-                <li><a href="seafood.html">Fish & Seafood</a></li>
-                <li><a href="beverages.html">Beverages</a></li>
-                <li><a href="frozen.html">Frozen</a></li>
-                <li><a href="household.html">Household items</a></li>
+                <li><a href="bakery.php">Bakery Products</a></li>
+                <li><a href="seafood.php">Fish & Seafood</a></li>
+                <li><a href="beverages.php">Beverages</a></li>
+                <li><a href="frozen.php">Frozen</a></li>
+                <li><a href="household.php">Household items</a></li>
               </ul>
             </div>
           </div>
@@ -135,16 +129,16 @@ session_start();
       <section class="d-none d-lg-block">
         <div class="row bluebg outlined-t px-0 pt-1">
           <div class="col">
-            <a href="produce.html"><h6>Fruits & Vegetables</h6></a>
+            <a href="produce.php"><h6>Fruits & Vegetables</h6></a>
           </div>
           <div class="col">
-            <a href="dairy.html"><h6>Dairy & Eggs</h6></a>
+            <a href="dairy.php"><h6>Dairy & Eggs</h6></a>
           </div>
           <div class="col">
-            <a href="meat.html"><h6>Meat & Poultry</h6></a>
+            <a href="meat.php"><h6>Meat & Poultry</h6></a>
           </div>
           <div class="col">
-            <a href="bakery.html"><h6>Bakery Products</h6></a>
+            <a href="bakery.php"><h6>Bakery Products</h6></a>
           </div>
           <div class="col dropdown">
             <button>
@@ -152,10 +146,10 @@ session_start();
             </button>
             <div class="dropdown-content orangeBox">
               <ul>
-                <li><a href="seafood.html">Fish & Seafood</a></li>
-                <li><a href="beverages.html">Beverages</a></li>
-                <li><a href="frozen.html">Frozen</a></li>
-                <li><a href="household.html">Household items</a></li>
+                <li><a href="seafood.php">Fish & Seafood</a></li>
+                <li><a href="beverages.php">Beverages</a></li>
+                <li><a href="frozen.php">Frozen</a></li>
+                <li><a href="household.php">Household items</a></li>
               </ul>
             </div>
           </div>
@@ -166,14 +160,14 @@ session_start();
     <aside class = "clickdown">
       <nav class="col-md-auto clickdown-content orangeBox" id="myDropdown">
         <ul>
-          <li><a href="/produce.html">Fruits and Vegetables</a></li>
-          <li><a href="/dairy.html">Dairy and Eggs</a></li>
-          <li><a href="/meat.html">Meat & Poultry</a></li>
-          <li><a href="/bakery.html">Bakery Products</a></li>
-          <li><a href="/seafood.html">Fish & Seafood</a></li>
-          <li><a href="/beverages.html">Beverages</a></li>
-          <li><a href="/frozen.html">Frozen</a></li>
-          <li><a href="/household.html">Household items</a></li>
+          <li><a href="/produce.php">Fruits and Vegetables</a></li>
+          <li><a href="/dairy.php">Dairy and Eggs</a></li>
+          <li><a href="/meat.php">Meat & Poultry</a></li>
+          <li><a href="/bakery.php">Bakery Products</a></li>
+          <li><a href="/seafood.php">Fish & Seafood</a></li>
+          <li><a href="/beverages.php">Beverages</a></li>
+          <li><a href="/frozen.php">Frozen</a></li>
+          <li><a href="/household.php">Household items</a></li>
         </ul>
       </nev>
     </aside>
@@ -217,7 +211,7 @@ session_start();
           <!-- SECTION WITH DEALS -->
           <section class="row" id="deals">
             <div class="col">
-              <a href="products/beef.html" target="_blank">
+              <a href="products/beef.php" target="_blank">
                 <figure>
                   <img
                     src="images/Meat/beef.png"
@@ -232,7 +226,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="Seafood/mussels.html" target="_blank">
+              <a href="Seafood/mussels.php" target="_blank">
                 <figure>
                   <img
                     src="images/Seafood/transparent-mussel.png"
@@ -247,7 +241,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="Dairy/eggs.html" target="_blank">
+              <a href="Dairy/eggs.php" target="_blank">
                 <figure>
                   <img
                     src="images/Dairy/eggs.png"
@@ -262,7 +256,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="products/broccoli.html" target="_blank">
+              <a href="products/broccoli.php" target="_blank">
                 <figure>
                   <img
                     src="images/Produce/broccoli.png"
@@ -277,7 +271,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="products/lime.html" target="_blank">
+              <a href="products/lime.php" target="_blank">
                 <figure>
                   <img
                     src="images/Produce/lime2.jpg"
@@ -292,7 +286,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="/Dairy/cheese.html" target="_blank">
+              <a href="/Dairy/cheese.php" target="_blank">
                 <figure>
                   <img
                     src="images/Dairy/cheese.png"
@@ -307,7 +301,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="/Dairy/bococcini.html" target="_blank">
+              <a href="/Dairy/bococcini.php" target="_blank">
                 <figure>
                   <img
                     src="images/Dairy/bococcini.jpg"
@@ -322,7 +316,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="/Dairy/yogurt.html" target="_blank">
+              <a href="/Dairy/yogurt.php" target="_blank">
                 <figure>
                   <img
                     src="images/Dairy/yogurtVanilla.jpg"
@@ -337,7 +331,7 @@ session_start();
               </a>
             </div>
             <div class="col">
-              <a href="products/iceCreamSandwich.html"
+              <a href="products/iceCreamSandwich.php"
                 target="_blank">
                 <figure>
                   <img
@@ -352,7 +346,7 @@ session_start();
               </a>
             </div>
             <div class = "col">
-              <a href = "houseHold/broom.html" target="_blank">
+              <a href = "houseHold/broom.php" target="_blank">
                 <figure>
                   <img src = "images/Household/broom.jpg" class = "thumbnail" alt="Broom"></figure>
                   <figcaption><strike>$20.99 </strike> <b>$15.99 ea.</b><br> Broom </figcaption>
@@ -371,7 +365,7 @@ session_start();
               />
             </div>
             <div class="col-sm-6 pt-2">
-              <a href="seafood.hmtl">
+              <a href="seafood.php">
                 <img
                   src="images/kalamariAdTwo.jpg"
                   class="img-fluid"
@@ -389,10 +383,10 @@ session_start();
     <!-- STICKY FOOTER -->
     <footer>
       <div class="outlined-t outlined-b greybg px-3" id="footer">
-        <a href="contact.html"
+        <a href="contact.php"
           ><i class="fas fa-phone-square"></i> Contact Us&nbsp&nbsp
         </a>
-        <a href="map.html"><i class="fas fa-map-pin"></i> Find a Store</a>
+        <a href="map.php"><i class="fas fa-map-pin"></i> Find a Store</a>
       </div>
     </footer>
     <!-- BOTTOM OF PAGE -->
